@@ -40,9 +40,8 @@ Howto
    ``searchlight_ui/enabled`` directory
    to ``openstack_dashboard/local/enabled``
 
-   Example::
+   Example (from searchlight-ui)::
 
-   cd <searchlight>
    cp -rv searchlight_ui/enabled/_1001_project_search_panel.py ../horizon/openstack_dashboard/local/enabled/
 
 3. (Optional) Copy the policy file into horizon's policy files folder, and
