@@ -38,7 +38,8 @@ Howto
 
 2. Copy ``_1001_project_search_panel.py`` in
    ``searchlight_ui/enabled`` directory
-   to ``openstack_dashboard/local/enabled``::
+   to ``openstack_dashboard/local/enabled``
+   Example::
 
    cd <searchlight>
    cp -rv searchlight_ui/enabled/_1001_project_search_panel.py ../horizon/openstack_dashboard/local/enabled/
