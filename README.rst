@@ -39,6 +39,7 @@ Howto
 2. Copy ``_1001_project_search_panel.py`` in
    ``searchlight_ui/enabled`` directory
    to ``openstack_dashboard/local/enabled``
+
    Example::
 
    cd <searchlight>
