@@ -150,8 +150,10 @@
         initializeBoolQuery(query);
         query.bool.must = query.bool.must || [];
         var queryString = {
+          //We don't want to support regex right now.
+          //https://bugs.launchpad.net/searchlight/+bug/1551946
           query_string: {
-            query: inputQueryString,
+            query: inputQueryString.replace(/\//g, '\\/'),
             phrase_slop: settingsService.settings.fullTextSearch.phrase_slop,
             lenient: settingsService.settings.fullTextSearch.lenient,
             analyze_wildcard: settingsService.settings.fullTextSearch.analyze_wildCard
@@ -169,6 +171,9 @@
 
       if (~facet.value.indexOf('~') || facet.name === 'name') {
         //TODO handle nested
+        //We don't want to support regex right now.
+        //https://bugs.launchpad.net/searchlight/+bug/1551946
+        facet.value = facet.value.replace(/\//g, '\\/');
         var queryString = {
           fuzzy_prefix_length: 2,
           fields: [facet.name],

@@ -56,14 +56,6 @@
     ctrl.hits = [];
     ctrl.hitsSrc = [];
     ctrl.initialized = false;
-    ctrl.isNested = function(input) {
-      var result = angular.isArray(input) &&
-        input.length > 0 &&
-        angular.isObject(input[0]) &&
-        Object.keys(input[0]).length > 1;
-
-      return result;
-    };
     ctrl.resourceLocator = resourceLocator;
     ctrl.searchFacets = [];
     ctrl.excludedTypes = ['OS::Glance::Metadef'];
@@ -72,6 +64,8 @@
     ctrl.defaultFacets = searchlightFacetUtils.defaultFacets();
     ctrl.registry = registry;
     ctrl.actionResultHandler = actionResultHandler;
+
+    //ctrl.isNested;
 
     init();
 
@@ -87,6 +81,15 @@
         ctrl.searchFacets = ctrl.defaultFacets;
       }
     }
+
+    /*function isNested (input) {
+      var result = angular.isArray(input) &&
+        input.length > 0 &&
+        angular.isObject(input[0]) &&
+        Object.keys(input[0]).length > 1;
+
+      return result;
+    }*/
 
     var pluginsUpdatedWatcher = $scope.$on(
       ctrl.searchSettings.events.pluginsUpdatedEvent,
