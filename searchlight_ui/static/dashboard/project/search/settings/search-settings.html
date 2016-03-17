@@ -1,0 +1,99 @@
+<div ng-form="searchSettingsForm">
+  <div class="modal-header ui-draggable-handle">
+    <a href="#" class="close" ng-click="$dismiss()">
+      <span class="fa fa-times"></span>
+    </a>
+    <div class="h3 modal-title" translate>Search Settings</div>
+  </div>
+
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <fieldset>
+          <div class="form-group required"
+               ng-class="{'has-error': searchSettingsForm.name.$invalid && searchSettingsForm.name.$dirty}">
+            <div>
+              <label class="required" for="id_resultLimit">
+                <span translate>Result Limit</span>
+                <span class="hz-icon-required fa fa-asterisk"></span>
+                <input class="form-control"
+                       id="id_resultLimit"
+                       name="resultLimit"
+                       ng-model="ctrl.settings.general.limit"
+                       type="number"
+                       min="1"
+                       max="1000"
+                       placeholder="{$ '1 to 1000' | translate $}">
+              </label>
+            </div>
+            <span class="help-block"
+                  ng-show="searchSettingsForm.resultLimit.$error.max"
+                  translate>
+              Do not exceed 1000. Recommended is less than 100.
+            </span>
+          </div>
+          <div class="form-group">
+            <div>
+              <label for="id_pollEnabled">
+                <span translate>Poll for Updates</span>
+                <input type="checkbox"
+                       ng-model="ctrl.settings.polling.enabled"
+                       name="pollEnabled"
+                       checked id="id_pollEnabled">
+              </label>
+            </div>
+            <div>
+              <label for="id_pollInterval">
+                <span translate>Update Interval (milliseconds)</span>
+                <input class="form-control"
+                       id="id_pollInterval"
+                       name="pollInterval"
+                       ng-disabled="!ctrl.settings.polling.enabled"
+                       ng-model="ctrl.settings.polling.interval"
+                       type="number"
+                       min="1000"
+                       max="60000"
+                       placeholder="{$ '1000 to 60000' | translate $}"
+                >
+              </label>
+              <span class="help-block"
+                    ng-show="searchSettingsForm.pollInterval.$error.max"
+                    translate>
+                Do not exceed 60000.
+              </span>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-sm-6">
+        <p translate>
+          These settings impact the processing of results returned
+          from the search service. Changing these settings may
+          impact search performance and results.
+        </p>
+        <p translate>
+          It is typically better to filter results further than to increase
+          the number of returned results and page through them.
+        </p>
+        <p translate>
+          Polling enables you to create a view of the data the updates
+          periodically.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <!-- button class="btn btn-default secondary" ng-click="$dismiss()">
+      <span class="fa fa-close"></span>
+      <translate>Cancel</translate>
+    </button -->
+    <button class="btn btn-primary"
+            ng-click="$close(ctrl.model)"
+            ng-disabled="searchSettingsForm.$invalid">
+      <span class="fa fa-refresh"></span>
+      <translate>Update Search</translate>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+[run]
+branch = True
+source = searchlight_ui
+omit = searchlight_ui/openstack/*
+
+[report]
+ignore_errors = True

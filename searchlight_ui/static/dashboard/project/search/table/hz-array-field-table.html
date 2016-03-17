@@ -1,0 +1,12 @@
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th ng-repeat="(key, val) in rawArray[0]">{{ key }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in rawArray">
+      <td ng-repeat="(key, val) in item">{{ val }}</td>
+    </tr>
+  </tbody>
+</table>

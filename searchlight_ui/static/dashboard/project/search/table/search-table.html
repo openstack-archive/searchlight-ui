@@ -1,0 +1,134 @@
+<table ng-controller="searchTableController as table"
+       hz-table ng-cloak
+       st-table="table.hits"
+       st-safe-src="table.hitsSrc"
+       class="table table-striped table-rsp table-detail">
+
+  <thead>
+  <tr>
+    <th colspan="100" class="search-header">
+      <hz-magic-search-bar
+        filter-facets="table.searchFacets"
+        client-full-text-search="false"
+        search-settings-callback="table.searchSettings.open">
+      </hz-magic-search-bar>
+    </th>
+  </tr>
+
+  <tr>
+    <!--
+      Please note, search result sorting should not be done client side.
+      Searchlight will provide the proper default sorting based on search
+      result scoring.
+    -->
+    <th class="expander"></th>
+
+
+    <th class="rsp-p1" st-sort="type" translate>Type</th>
+    <th class="rsp-p1" st-sort="name" translate>Name</th>
+    <th class="rsp-p1" st-sort="status" translate>Status</th>
+    <th class="rsp-p2" st-sort="updated" translate>Updated</th>
+    <th class="rsp-p2" st-sort="created" translate>Created</th>
+    <th class="rsp-p2" translate>Field Matches</th>
+    <!-- th class="rsp-p3" translate>Description</th -->
+    <th class="actions_column" translate>Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr ng-repeat-start="hit in table.hits track by hit._id">
+
+    <td class="expander">
+      <i class="fa fa-chevron-right"
+         hz-expand-detail
+         duration="200">
+      </i>
+    </td>
+
+    <!-- TODO Truncate not working because not in fixed container -->
+    <!-- TODO ng-cloak not working -->
+    <!-- TODO consider adding spinner when search is happening... -->
+    <td class="rsp-p1 truncate">{$ hit._type | resourceLabeler $}</td>
+
+    <td ng-cloak class="rsp-p1">
+      <a ng-href="{$ hit | resourceUrl $}">
+        <hz-search-highlighter hit="hit"
+                               field="'name'"
+                               default-value="hit._source.name || hit._source._id | noValue">
+        </hz-search-highlighter>
+      </a>
+    </td>
+
+    <td class="rsp-p1">{$ hit._source.status | commonStatus | noValue $}</td>
+    <td class="rsp-p2">{$ hit._source.updated_at | date:'short' | noValue $}</td>
+    <td class="rsp-p2">{$ hit._source.created_at | date:'short' | noValue $}</td>
+    <td class="rsp-p2">
+      <ul class="list-unstyled" ng-repeat="(field, value) in hit.highlight">
+        <li ng-if="!field.endsWith('.raw')">
+          {$ hit._type | resourceLabeler: field $}
+        </li>
+      </ul>
+    </td>
+    <!-- td class="rsp-p3 truncate">
+      <hz-search-highlighter hit="hit"
+                             field="'description'"
+                             default-value="hit._source.description | noValue">
+      </hz-search-highlighter>
+    </td -->
+
+    <td class="actions_column">
+      <actions allowed="table.registry.getResourceType(hit._type).itemActions"
+               type="row"
+               item="hit._source"
+               result-handler="table.actionResultHandler">
+      </actions>
+    </td>
+
+  </tr>
+
+  <tr ng-repeat-end class="detail-row">
+    <!--
+      Detail-row:
+      Contains detailed information on this item.
+      Can be toggled using the chevron button.
+      Ensure colspan is greater or equal to number of column-headers.
+    -->
+    <td class="detail" colspan="100">
+
+      <div class="row">
+        <dl class="dl-horizontal">
+          <div ng-repeat="(field, value) in hit._source">
+            <div ng-if="['_type'].indexOf(field) === -1 && !table.isNested(value)">
+              <dt data-toggle="tooltip" title="{$ field $}">
+                {$ hit._type | resourceLabeler: field $}
+              </dt>
+              <dd>
+                <hz-search-highlighter hit="hit"
+                                       field="field"
+                                       default-value="value | noValue">
+                </hz-search-highlighter>
+              </dd>
+            </div>
+
+          </div>
+        </dl>
+
+        <div ng-repeat="(field, value) in ::hit._source">
+          <div ng-if="table.isNested(value)"
+               class="col-md-12 detail">
+            <h3> {$ hit._type | resourceLabeler: field $}</h3>
+            <hr>
+            <hz-array-field-table array="value">
+            </hz-array-field-table>
+        </div>
+
+      </div>
+
+    </td>
+  </tr>
+
+  </tbody>
+
+  <tfoot hz-table-footer items="table.hits"></tfoot>
+
+</table>

@@ -1,0 +1,9 @@
+<div>
+  <div ng-if="hit.highlight[field]"
+      ng-bind-html="hit.highlight[field][0]">
+      <!-- TODO - This only shows first fragment right now-->
+  </div>
+  <div ng-if="!hit.highlight[field]">
+    {$ defaultValue $}
+  </div>
+</div>

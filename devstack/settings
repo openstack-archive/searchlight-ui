@@ -1,0 +1,3 @@
+SEARCHLIGHT_UI_DIR=$DEST/searchlight-ui
+
+SEARCHLIGHT_UI_DIR_ENABLE_FILE=SEARCHLIGHT_UI_DIR/searchlight_ui/enabled/_1001_project_search_panel.py
