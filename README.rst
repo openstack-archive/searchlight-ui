@@ -22,41 +22,69 @@ Features
 
 * Please see the searchlight-ui repository
 
-Howto
------
+Setup Local Dev Environment
+---------------------------
+
+Assumptions:
+
+ * horizon is installed / cloned into <basedir>/horizon
+ * searchlight-ui is installed / cloned into <basedir>/searchlight-ui
+ * current working directory is <basedir>/horizon
+ * horizon offline compression is not enabled (if so, alter step 4 to
+ collectstatic and compress first.)
+
+1. `./tools/with_venv.sh pip install -e ../searchlight-ui`
+
+2. `cp -rv ../searchlight-ui/searchlight_ui/enabled/_1001_project_search_panel.py openstack_dashboard/local/enabled/`
+
+3. (Optional) Copy the policy file into horizon's policy files folder, and
+   add this config `POLICY_FILES` to
+   `openstack_dashboard/local/local_settings.py`::
+
+    'searchlight_ui': 'searchlight_ui',
+
+4. (not under apache) `./run_tests.sh --runserver 0.0.0.0:8005` (use appropriate IP and port)
+
+5. (under apache) `$ sudo service apache2 restart`
+
+
+Create and Install Local Package to Apache
+------------------------------------------
+
+Assumptions:
+
+ * horizon is installed and running under Apache (e.g. devstack)
+ * searchlight-ui is cloned into <basedir>/searchlight-ui
+ * current working directory is <basedir>/searchlight-ui
+
 
 1. Package the searchlight_ui by running::
 
-    python setup.py sdist
+    `python setup.py sdist`
 
    This will create a python egg in the dist folder, which can be used to
    install on the horizon machine or within horizon's python virtual
-   environment::
+   environment (prepend wih `./tools/with_venv.sh`)::
 
-   cd ../horizon
-   ./tools/with_venv.sh pip install ../searchlight-ui/dist/searchlight-ui-0.0.0.tar.gz
+    `pip install dist/searchlight-ui-0.0.0.tar.gz`
 
-2. Copy ``_1001_project_search_panel.py`` in
-   ``searchlight_ui/enabled`` directory
-   to ``openstack_dashboard/local/enabled``
-
-   Example (from searchlight-ui)::
-
-   cp -rv searchlight_ui/enabled/_1001_project_search_panel.py ../horizon/openstack_dashboard/local/enabled/
+2. Copy `searchlight_ui/enabled/_1001_project_search_panel.py`
+   to <horizon_dir>/`openstack_dashboard/local/enabled/`
 
 3. (Optional) Copy the policy file into horizon's policy files folder, and
-   add this config ``POLICY_FILES``::
+   add this config `POLICY_FILES` to
+   `openstack_dashboard/local/local_settings.py`::
 
     'searchlight_ui': 'searchlight_ui',
 
 4. Django has a compressor feature that performs many enhancements for the
    delivery of static files. If the compressor feature is enabled in your
-   environment (``COMPRESS_OFFLINE = True``), run the following commands::
+   environment (`COMPRESS_OFFLINE = True`), run the following commands::
 
-    $ ./manage.py collectstatic
-    $ ./manage.py compress
+    `./manage.py collectstatic`
+    `./manage.py compress`
 
 5. Finally restart your web server to enable searchlight-ui
    in your Horizon::
 
-    $ sudo service apache2 restart
+    `sudo service apache2 restart`
