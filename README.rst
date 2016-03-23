@@ -46,7 +46,6 @@ Assumptions:
 
 5. (under apache) ``sudo service apache2 restart``
 
-
 Create and Install Local Package to Apache
 ------------------------------------------
 
@@ -59,7 +58,7 @@ Assumptions:
 
 1. Package the searchlight_ui by running::
 
-    python setup.py sdist
+    `python setup.py sdist`
 
    This will create a python egg in the dist folder, which can be used to
    install on the horizon machine or within horizon's python virtual
