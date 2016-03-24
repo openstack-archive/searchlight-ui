@@ -32,8 +32,12 @@
 
 
     <th class="rsp-p1" st-sort="type" translate>Type</th>
+    <th ng-if="table.searchSettings.settings.general.all_projects"
+        class="rsp-p1"
+        st-sort="project_id"
+        translate>Project</th>
     <th class="rsp-p1" st-sort="name" translate>Name</th>
-    <th class="rsp-p1" st-sort="status" translate>Status</th>
+    <th class="rsp-p2" st-sort="status" translate>Status</th>
     <th class="rsp-p2" st-sort="updated" translate>Updated</th>
     <th class="rsp-p2" st-sort="created" translate>Created</th>
     <th class="rsp-p2" translate>Field Matches</th>
@@ -56,6 +60,15 @@
     <!-- TODO ng-cloak not working -->
     <!-- TODO consider adding spinner when search is happening... -->
     <td class="rsp-p1 truncate">{$ hit._type | resourceLabeler $}</td>
+    <td ng-if="table.searchSettings.settings.general.all_projects"
+        class="rsp-p1">
+      <span tooltip="{$ hit._source.project_id $}"
+            tooltip-placement="top"
+            tooltip-popup-delay="500"
+            tooltip-trigger="mouseenter">
+        {$ hit._source.project_id | keystoneProjectName | noValue$}
+      </span>
+    </td>
 
     <td ng-cloak class="rsp-p1">
       <a ng-href="{$ hit | resourceUrl $}">
@@ -66,7 +79,7 @@
       </a>
     </td>
 
-    <td class="rsp-p1">{$ hit._source.status | commonStatus | noValue $}</td>
+    <td class="rsp-p2">{$ hit._source.status | commonStatus | noValue $}</td>
     <td class="rsp-p2">{$ hit._source.updated_at | date:'short' | noValue $}</td>
     <td class="rsp-p2">{$ hit._source.created_at | date:'short' | noValue $}</td>
     <td class="rsp-p2">

@@ -73,6 +73,7 @@
         query: options.query || {}
       };
 
+      searchlightQuery.all_projects = settingsService.settings.general.all_projects;
       searchlightQuery.limit = settingsService.settings.general.limit;
       searchlightQuery.sort = options.sort;
 

@@ -63,6 +63,8 @@
           analyze_wildCard: true
         },
         general: {
+          all_projects: false,
+          all_projects_policy: { rules: [["search", "search:allow_all_projects"]] },
           limit: 50,
           limit_max: 500,
           limit_min: 5

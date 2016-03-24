@@ -118,6 +118,12 @@
           settingsPollster = $timeout(
             repeatLastSearchWithLatestSettings, settingsService.settings.polling.getIntervalInMs());
         }
+
+        angular.forEach(response.hits, function (hit) {
+          //This sets up common fields that sometimes differ across projects.
+          hit._source.project_id = hit._source.project_id || hit._source._tenant_id || hit._source.owner;
+        });
+
         queryOptions.onSearchSuccess(response);
       }
     }
