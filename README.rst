@@ -27,8 +27,8 @@ Setup Local Dev Environment
 
 Assumptions:
 
- * horizon is installed / cloned into <basedir>/horizon/
- * searchlight-ui is installed / cloned into <basedir>/searchlight-ui/
+ * horizon is installed or cloned into <basedir>/horizon/
+ * searchlight-ui is installed or cloned into <basedir>/searchlight-ui/
  * current working directory is <basedir>/horizon/
 
 1. Install environment.::
@@ -40,11 +40,13 @@ Assumptions:
 
     cp -rv ../searchlight-ui/searchlight_ui/enabled/_1001_project_search_panel.py openstack_dashboard/local/enabled/
 
-3. (Optional) Copy the policy file into horizon's policy files folder, and
-   add this config ``POLICY_FILES`` to
+3. (Optional) Copy the policy file
+   <searchlight-ui>/``searchlight_ui/conf/searchlight_policy.json`` into
+   horizon's policy files <horizon_dir>/``openstack_dashboard/conf/`` folder,
+   and add the following config to the ``POLICY_FILES`` setting in
    ``openstack_dashboard/local/local_settings.py``::
 
-    'searchlight_ui': 'searchlight_ui',
+    'search': 'searchlight_policy.json',
 
 4. (Optional - usually only in production). Django has a compressor feature
    that performs many enhancements for the  delivery of static files. It can
@@ -58,8 +60,8 @@ Assumptions:
 
 5. Restart your horizon services.::
 
+    (under apache)      sudo service apache2 restart
     (not under apache) ./run_tests.sh --runserver 0.0.0.0:8005 (use appropriate IP and port)
-    (under apache) sudo service apache2 restart
 
 Create and Install Local Package
 --------------------------------
@@ -72,4 +74,4 @@ Create and Install Local Package
    install on the horizon machine or within horizon's python virtual
    environment (prepend wih ``./tools/with_venv.sh``)::
 
-    pip install dist/searchlight-ui-0.0.0.tar.gz
+    pip install dist/searchlight-ui-0.0.0.tar.gz (use appropriate version)
