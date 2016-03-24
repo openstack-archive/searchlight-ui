@@ -63,6 +63,7 @@
     ctrl.defaultResourceTypes = [];
     ctrl.defaultFacets = searchlightFacetUtils.defaultFacets();
     ctrl.registry = registry;
+    ctrl.refresh = searchlightSearchHelper.repeatLastSearchWithLatestSettings;
     ctrl.actionResultHandler = actionResultHandler;
 
     //ctrl.isNested;

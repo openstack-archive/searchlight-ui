@@ -13,6 +13,13 @@
         search-settings-callback="table.searchSettings.open">
       </hz-magic-search-bar>
     </th>
+    <!-- th colspan="1" class="table_caption">
+      <a href="" ng-click="table.refresh()"
+         tooltip="{$ 'Refresh results' | translate $}"
+         tooltip-placement="top" tooltip-trigger="mouseenter" class="btn btn-default">
+        <span class="fa fa-refresh"></span>
+      </a>
+    <th -->
   </tr>
 
   <tr>
@@ -99,8 +106,11 @@
         <dl class="dl-horizontal">
           <div ng-repeat="(field, value) in hit._source">
             <div ng-if="['_type'].indexOf(field) === -1"> <!-- &&table.isNested(value)"-->
-              <dt data-toggle="tooltip" title="{$ field $}">
+              <dt>
+                <span tooltip="{$ field $}" tooltip-placement="top"
+                    tooltip-popup-delay="500" tooltip-trigger="mouseenter">
                 {$ hit._type | resourceLabeler: field $}
+                </span>
               </dt>
               <dd>
                 <hz-search-highlighter hit="hit"
