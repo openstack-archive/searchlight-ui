@@ -3,7 +3,10 @@
 {% block title %}{% trans "Search" %}{% endblock %}
 
 {% block page_header %}
-  <hz-page-header header="{% trans "Search" %}"></hz-page-header>
+  <hz-page-header
+          header="{% trans 'Search' %}"
+          description="{$ 'Find your cloud resources by typing full text search queries or selecting specific facets.' | translate $}">
+  </hz-page-header>
 {% endblock page_header %}
 
 {% block main %}

@@ -63,11 +63,17 @@
           analyze_wildCard: true
         },
         general: {
-          limit: 50
+          limit: 50,
+          limit_max: 500,
+          limit_min: 5
         },
         polling: {
           enabled: false,
-          interval: 10000 //Milliseconds
+          interval: 10, //seconds
+          getIntervalInMs: getIntervalInMs,
+          interval_min: 1,
+          interval_max: 300,
+          policy: { rules: [["search", "search:allow_user_polling"]] }
         }
       }
     };
@@ -102,9 +108,15 @@
       }
     }
 
+    function getIntervalInMs() {
+      return service.settings.polling.interval * 1000
+    }
+
     function open() {
+      var editableSettings = angular.copy(service.settings);
+
       function getSearchSettings() {
-        return service.settings;
+        return editableSettings;
       }
 
       var resolve = {
@@ -119,12 +131,14 @@
         resolve: resolve
       };
 
-      $modal.open(options)
+      return $modal.open(options)
         .result
-        .then(notifySettingsUpdated);
+        .then(updateSettingsAndNotify);
 
-      function notifySettingsUpdated() {
+      function updateSettingsAndNotify() {
+        service.settings = angular.copy(editableSettings);
         scope.$emit(service.events.settingsUpdatedEvent);
+        return service.settings;
       }
     }
 

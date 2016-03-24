@@ -21,18 +21,24 @@
                        name="resultLimit"
                        ng-model="ctrl.settings.general.limit"
                        type="number"
-                       min="1"
-                       max="1000"
-                       placeholder="{$ '1 to 1000' | translate $}">
+                       min="{$ ctrl.settings.general.limit_min $}"
+                       max="{$ ctrl.settings.general.limit_max $}"
+                >
               </label>
             </div>
-            <span class="help-block"
-                  ng-show="searchSettingsForm.resultLimit.$error.max"
-                  translate>
-              Do not exceed 1000. Recommended is less than 100.
-            </span>
+              <span class="help-block"
+                    ng-show="searchSettingsForm.resultLimit.$error.min"
+                    translate>
+                You have gone below the minimum ({$ ctrl.settings.general.limit_min $}) allowed.
+              </span>
+              <span class="help-block"
+                    ng-show="searchSettingsForm.resultLimit.$error.max"
+                    translate>
+                You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) allowed.
+              </span>
           </div>
-          <div class="form-group">
+          <div class="form-group"
+               hz-if-policies="ctrl.settings.polling.policy">
             <div>
               <label for="id_pollEnabled">
                 <span translate>Poll for Updates</span>
@@ -44,22 +50,26 @@
             </div>
             <div>
               <label for="id_pollInterval">
-                <span translate>Update Interval (milliseconds)</span>
+                <span translate>Update Interval (seconds)</span>
                 <input class="form-control"
                        id="id_pollInterval"
                        name="pollInterval"
                        ng-disabled="!ctrl.settings.polling.enabled"
                        ng-model="ctrl.settings.polling.interval"
                        type="number"
-                       min="1000"
-                       max="60000"
-                       placeholder="{$ '1000 to 60000' | translate $}"
+                       min="{$ ctrl.settings.polling.interval_min $}"
+                       max="{$ ctrl.settings.polling.interval_max $}"
                 >
               </label>
               <span class="help-block"
+                    ng-show="searchSettingsForm.pollInterval.$error.min"
+                    translate>
+                You have gone below the minimum ({$ ctrl.settings.polling.interval_min $}) allowed.
+              </span>
+              <span class="help-block"
                     ng-show="searchSettingsForm.pollInterval.$error.max"
                     translate>
-                Do not exceed 60000.
+                You have exceeded the maximum ({$ ctrl.settings.polling.interval_max $}) allowed.
               </span>
             </div>
           </div>
@@ -85,10 +95,10 @@
   </div>
 
   <div class="modal-footer">
-    <!-- button class="btn btn-default secondary" ng-click="$dismiss()">
+    <button class="btn btn-default secondary" ng-click="$dismiss()">
       <span class="fa fa-close"></span>
       <translate>Cancel</translate>
-    </button -->
+    </button>
     <button class="btn btn-primary"
             ng-click="$close(ctrl.model)"
             ng-disabled="searchSettingsForm.$invalid">

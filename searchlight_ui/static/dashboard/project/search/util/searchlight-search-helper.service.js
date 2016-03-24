@@ -116,7 +116,7 @@
       function decoratedSearchSuccess(response) {
         if (settingsService.settings.polling.enabled) {
           settingsPollster = $timeout(
-            repeatLastSearchWithLatestSettings, settingsService.settings.polling.interval);
+            repeatLastSearchWithLatestSettings, settingsService.settings.polling.getIntervalInMs());
         }
         queryOptions.onSearchSuccess(response);
       }
@@ -124,7 +124,7 @@
 
     function startAdHocPolling(interval, maxTime) {
       stopAdHocPolling();
-      interval = interval ? interval : settingsService.settings.polling.interval;
+      interval = interval ? interval : settingsService.settings.polling.getIntervalInMs();
       adHocPollster = $interval(repeatLastSearchWithLatestSettings, interval);
       if (angular.isNumber(maxTime)) {
         $timeout(stopAdHocPolling, maxTime);

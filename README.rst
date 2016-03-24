@@ -31,16 +31,14 @@ Assumptions:
  * searchlight-ui is installed / cloned into <basedir>/searchlight-ui/
  * current working directory is <basedir>/horizon/
 
-1. Install environment.
-::
+1. Install environment.::
 
     ./tools/with_venv.sh pip install -e ../searchlight-ui
 
 2. Copy <searchlight-ui>/``searchlight_ui/enabled/_1001_project_search_panel.py``
-   to <horizon_dir>/``openstack_dashboard/local/enabled/``
-::
+   to <horizon_dir>/``openstack_dashboard/local/enabled/``::
 
-   cp -rv ../searchlight-ui/searchlight_ui/enabled/_1001_project_search_panel.py openstack_dashboard/local/enabled/
+    cp -rv ../searchlight-ui/searchlight_ui/enabled/_1001_project_search_panel.py openstack_dashboard/local/enabled/
 
 3. (Optional) Copy the policy file into horizon's policy files folder, and
    add this config ``POLICY_FILES`` to
@@ -53,17 +51,15 @@ Assumptions:
    be enable or disabled (``COMPRESS_ENABLED``). In addition, offline
    compression may be enabled or disabled (``COMPRESS_OFFLINE = True``). If
    offline compression is enabled in your environment , run the following
-   commands.
-::
+   commands.::
 
     ./manage.py collectstatic
     ./manage.py compress
 
-5. Restart your horizon services.
-::
+5. Restart your horizon services.::
 
-    (not under apache) ``./run_tests.sh --runserver 0.0.0.0:8005`` (use appropriate IP and port)
-    (under apache) ``sudo service apache2 restart``
+    (not under apache) ./run_tests.sh --runserver 0.0.0.0:8005 (use appropriate IP and port)
+    (under apache) sudo service apache2 restart
 
 Create and Install Local Package
 --------------------------------
