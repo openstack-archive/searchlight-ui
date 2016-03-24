@@ -393,6 +393,7 @@
         };
       }
 
+      result.options.sort(alphabeticalSortCompareByLabel);
       return result;
     }
 
