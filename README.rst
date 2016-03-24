@@ -35,6 +35,9 @@ Assumptions:
 
     ./tools/with_venv.sh pip install -e ../searchlight-ui
 
+    #Devstack only
+    pip install -e ../searchlight-ui
+
 2. Copy <searchlight-ui>/``searchlight_ui/enabled/_1001_project_search_panel.py``
    to <horizon_dir>/``openstack_dashboard/local/enabled/``::
 
@@ -58,6 +61,10 @@ Assumptions:
     ./manage.py collectstatic
     ./manage.py compress
 
+.. note::
+    For out of the box devstack environment you will need to execute the above.
+
+
 5. Restart your horizon services.::
 
     (under apache)      sudo service apache2 restart
@@ -65,6 +72,8 @@ Assumptions:
 
 Create and Install Local Package
 --------------------------------
+
+Change working directory to <basedir>/searchlight-ui/
 
 1. Package the searchlight_ui by running::
 
