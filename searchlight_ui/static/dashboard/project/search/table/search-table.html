@@ -83,7 +83,12 @@
     <td class="rsp-p2">{$ hit._source.status | commonStatus | noValue $}</td>
 
     <td class="rsp-p2">
-      {$ hit._type | commonVisibility: hit._source:table.userSession.project_id | noValue $}
+      <span tooltip="{$ 'Visibility is based on derived data. If Owned by Me, please inspect the resource to determine sharing status.' | translate $}"
+            tooltip-placement="top"
+            tooltip-popup-delay="500"
+            tooltip-trigger="mouseenter">
+        {$ hit._type | commonVisibility: hit._source:table.userSession.project_id | noValue $}
+      </span>
     </td>
 
     <td class="rsp-p2">{$ hit._source.updated_at | date:'short' | noValue $}</td>

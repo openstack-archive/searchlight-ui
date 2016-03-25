@@ -40,7 +40,7 @@
   function commonStatusFilter(imageVisibility, gettext) {
     var defaultVisibilities = {
       'public': gettext('Public'),
-      'private': gettext('Private'),
+      'private': gettext('Owned by Me'),
       'shared_with_me': gettext('Shared with Me'),
       'shared_by_me': gettext('Shared by Me'),
       'shared': gettext('Shared with Me'),
@@ -90,8 +90,10 @@
       if (angular.equals(defaultVisibilities.unknown, translatedVisibility)) {
         if (isOwnedByMe(resourceSource, currentProjectId)) {
           return defaultVisibilities.private;
-        } else {
+        } else if (angular.isDefined(resourceSource.project_id)) {
           return defaultVisibilities.shared_with_me;
+        } else {
+          return defaultVisibilities.unknown;
         }
       } else if (isOwnedByMe(resourceSource, currentProjectId) &&
         sharedByMeIfOwnedByMe.indexOf(translatedVisibility)) {
