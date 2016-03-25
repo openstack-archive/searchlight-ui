@@ -1,0 +1,126 @@
+/**
+ * (c) Copyright 2015 Hewlett-Packard Development Company, L.P.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+(function () {
+  'use strict';
+
+  angular
+    .module('horizon.dashboard.project.search')
+    .filter('commonVisibility', commonStatusFilter);
+
+  commonStatusFilter.$inject = [
+    'imageVisibilityFilter',
+    'horizon.framework.util.i18n.gettext'
+  ];
+
+  /**
+   * @ngdoc filter
+   * @name commonStatusFilter
+   * @description
+   * Takes raw status from the API and returns the user friendly status if found.
+   *
+   * @param {function} $filter angular filter
+   *
+   * @param {function} gettext internationalization
+   *
+   * @returns {String} User friendly status if found.
+   */
+  function commonStatusFilter(imageVisibility, gettext) {
+    var defaultVisibilities = {
+      'public': gettext('Public'),
+      'private': gettext('Private'),
+      'shared_with_me': gettext('Shared with Me'),
+      'shared': gettext('Shared with Me'),
+      'unknown': null
+    };
+
+    //TODO use the registry
+    var registeredFilters = {
+      'OS::Glance::Image': imageVisibility,
+      'OS::Glance::Snapshot': imageVisibility
+    };
+
+    return function getVisibility(resourceType, resourceSource, currentProjectId) {
+      if (null !== resourceSource && angular.isDefined(resourceSource)) {
+        if (registeredFilters[resourceType]) {
+          return registeredFilters[resourceType](resourceSource, currentProjectId);
+        }
+      }
+
+      return evaluateBasicVisbilityRules(resourceSource, currentProjectId);
+    };
+
+    function evaluateBasicVisbilityRules(resourceSource, currentProjectId) {
+      // visibility property is preferred over is_public property
+      var translatedVisibility;
+      if (angular.isDefined(resourceSource.visibility)) {
+        translatedVisibility = safeTranslateVisibility(resourceSource.visibility);
+      } else if (angular.isDefined(resourceSource.is_public)) {
+        translatedVisibility = translateIsPublic(resourceSource.is_public);
+      } else if (angular.isDefined(resourceSource.shared)) {
+        translatedVisibility = translateShared(resourceSource.shared);
+      } else {
+        translatedVisibility = defaultVisibilities.unknown;
+      }
+
+      return deriveSharingStatus(resourceSource, currentProjectId, translatedVisibility);
+    }
+
+    function deriveSharingStatus(resourceSource, currentProjectId, translatedVisibility) {
+      if (angular.equals(defaultVisibilities.unknown, translatedVisibility) &&
+        angular.isDefined(currentProjectId) &&
+        angular.isDefined(resourceSource.project_id)) {
+        if (angular.equals(resourceSource.project_id, currentProjectId)) {
+          return defaultVisibilities.private;
+        } else {
+          return defaultVisibilities.shared_with_me;
+        }
+      }
+      else {
+        return translatedVisibility;
+      }
+    }
+
+    function safeTranslateVisibility(visibility) {
+      // Rather than show a default visibility when the visibility is not found
+      // this will show the untranslated visibility. This allows the code
+      // to be more forgiving if a new status is added.
+      var translation = defaultVisibilities[visibility];
+      if (angular.isDefined(translation)) {
+        return translation;
+      } else {
+        return visibility;
+      }
+    }
+
+    function translateIsPublic(isPublic) {
+      if (isPublic) {
+        return defaultVisibilities.public;
+      } else {
+        return defaultVisibilities.private;
+      }
+    }
+
+    function translateShared(shared) {
+      if (shared) {
+        return defaultVisibilities.shared;
+      } else {
+        return defaultVisibilities.private;
+      }
+    }
+
+  }
+
+}());

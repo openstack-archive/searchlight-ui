@@ -31,15 +31,16 @@
     <th class="expander"></th>
 
 
-    <th class="rsp-p1" st-sort="type" translate>Type</th>
+    <th class="rsp-p1" translate>Type</th>
     <th ng-if="table.searchSettings.settings.general.all_projects"
         class="rsp-p1"
-        st-sort="project_id"
-        translate>Project</th>
-    <th class="rsp-p1" st-sort="name" translate>Name</th>
-    <th class="rsp-p2" st-sort="status" translate>Status</th>
-    <th class="rsp-p2" st-sort="updated" translate>Updated</th>
-    <th class="rsp-p2" st-sort="created" translate>Created</th>
+        translate>
+      Project
+    </th>
+    <th class="rsp-p1" translate>Name</th>
+    <th class="rsp-p2" translate>Status</th>
+    <th class="rsp-p2" translate>Visibility</th>
+    <th class="rsp-p2" translate>Updated</th>
     <th class="rsp-p2" translate>Field Matches</th>
     <!-- th class="rsp-p3" translate>Description</th -->
     <th class="actions_column" translate>Actions</th>
@@ -80,8 +81,12 @@
     </td>
 
     <td class="rsp-p2">{$ hit._source.status | commonStatus | noValue $}</td>
+
+    <td class="rsp-p2">
+      {$ hit._type | commonVisibility: hit._source:table.userSession.project_id | noValue $}
+    </td>
+
     <td class="rsp-p2">{$ hit._source.updated_at | date:'short' | noValue $}</td>
-    <td class="rsp-p2">{$ hit._source.created_at | date:'short' | noValue $}</td>
     <td class="rsp-p2">
       <ul class="list-unstyled" ng-repeat="(field, value) in hit.highlight">
         <li ng-if="!field.endsWith('.raw')">

@@ -28,7 +28,7 @@
    * @ngdoc filter
    * @name keystoneProjectNameFilter
    * @description
-   * Takes raw id from the API and returns the user friendly status if found.
+   * Takes raw id from the API and returns the user friendly name if found.
    *
    * @param {function} keystoneApi keystone API
    *

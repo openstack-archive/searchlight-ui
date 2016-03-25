@@ -40,6 +40,7 @@
   function commonStatusFilter($filter, gettext) {
     var commonStatuses = {
       'active': gettext('Active'),
+      'available': gettext('Available'),
       'down': gettext('Down'),
       'saving': gettext('Saving'),
       'queued': gettext('Queued'),
@@ -53,7 +54,8 @@
       'error': gettext('Error'),
       'rescue': gettext('Rescue'),
       'shelved': gettext('Shelved'),
-      'shelved_offloaded': gettext('Shelved Offloaded')
+      'shelved_offloaded': gettext('Shelved Offloaded'),
+      'unavailable': gettext('Unavailable')
     };
 
     return function findStatus(input) {
