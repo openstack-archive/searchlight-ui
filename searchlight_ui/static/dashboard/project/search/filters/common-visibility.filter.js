@@ -42,9 +42,17 @@
       'public': gettext('Public'),
       'private': gettext('Private'),
       'shared_with_me': gettext('Shared with Me'),
+      'shared_by_me': gettext('Shared by Me'),
       'shared': gettext('Shared with Me'),
       'unknown': null
     };
+
+    var sharedByMeIfOwnedByMe = [
+      defaultVisibilities.public,
+      defaultVisibilities.shared,
+      defaultVisibilities.shared_by_me,
+      defaultVisibilities.shared
+    ];
 
     //TODO use the registry
     var registeredFilters = {
@@ -79,14 +87,15 @@
     }
 
     function deriveSharingStatus(resourceSource, currentProjectId, translatedVisibility) {
-      if (angular.equals(defaultVisibilities.unknown, translatedVisibility) &&
-        angular.isDefined(currentProjectId) &&
-        angular.isDefined(resourceSource.project_id)) {
-        if (angular.equals(resourceSource.project_id, currentProjectId)) {
+      if (angular.equals(defaultVisibilities.unknown, translatedVisibility)) {
+        if (isOwnedByMe(resourceSource, currentProjectId)) {
           return defaultVisibilities.private;
         } else {
           return defaultVisibilities.shared_with_me;
         }
+      } else if (isOwnedByMe(resourceSource, currentProjectId) &&
+          sharedByMeIfOwnedByMe.indexOf(translatedVisibility)) {
+          return defaultVisibilities.shared_by_me;
       }
       else {
         return translatedVisibility;
@@ -121,6 +130,9 @@
       }
     }
 
+    function isOwnedByMe(resourceSource, currentProjectId) {
+      return angular.equals(resourceSource.project_id, currentProjectId)
+    }
   }
 
 }());
