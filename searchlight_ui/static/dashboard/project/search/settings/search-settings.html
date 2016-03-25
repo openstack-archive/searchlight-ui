@@ -37,6 +37,21 @@
                 You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) allowed.
               </span>
           </div>
+          <div class="form-group">
+            <div>
+              <label for="id_highlightingEnabled">
+                <span tooltip="{$ 'Search results will contain keyword match highlighting.' | translate $}"
+                      tooltip-placement="top"
+                      tooltip-popup-delay="500"
+                      tooltip-trigger="mouseenter"
+                      translate>Enable highlighting</span>
+                <input type="checkbox"
+                       ng-model="ctrl.settings.highlighting.enabled"
+                       name="highlightingEnabled"
+                       checked id="id_highlightingEnabled">
+              </label>
+            </div>
+          </div>
           <div class="form-group"
                hz-if-policies="ctrl.settings.general.all_projects_policy">
             <div>

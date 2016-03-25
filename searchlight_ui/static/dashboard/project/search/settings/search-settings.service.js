@@ -69,6 +69,16 @@
           limit_max: 500,
           limit_min: 5
         },
+        highlighting: {
+          enabled: true,
+          config: {
+            fields: {
+              "*": {}
+            },
+            pre_tags: ["<mark>"],
+            post_tags: ["</mark>"]
+          }
+        },
         polling: {
           enabled: false,
           interval: 10, //seconds

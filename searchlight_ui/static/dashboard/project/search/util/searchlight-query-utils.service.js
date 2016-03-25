@@ -199,15 +199,12 @@
       }
     }
 
-    // TODO (TravT) inputs? Also, only do if highlighting enabled in search-settings-service.
     function addHighlighting(searchlightQuery) {
-      searchlightQuery.highlight = {
-        fields: {
-          "*": {}
-        },
-        pre_tags: ["<mark>"],
-        post_tags: ["</mark>"]
-      };
+      if (settingsService.settings.highlighting.enabled) {
+        searchlightQuery.highlight = settingsService.settings.highlighting.config;
+      } else {
+        delete searchlightQuery.highlight;
+      }
     }
   }
 
