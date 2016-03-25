@@ -111,7 +111,7 @@
     }
 
     function getIntervalInMs() {
-      return service.settings.polling.interval * 1000
+      return service.settings.polling.interval * 1000;
     }
 
     function open() {

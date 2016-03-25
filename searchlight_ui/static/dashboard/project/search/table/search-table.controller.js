@@ -87,7 +87,7 @@
 
       userSession.get()
         .then(function onUserSessionGet(session) {
-          ctrl.userSession = session
+          ctrl.userSession = session;
         });
     }
 

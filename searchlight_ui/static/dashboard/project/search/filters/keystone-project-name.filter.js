@@ -39,17 +39,17 @@
     var lookupRequested = {};
 
     function findProjectName(input) {
-      if(!input) {
+      if (!input) {
         return input;
       }
 
-      if(projectNameCache[input]){
+      if (projectNameCache[input]) {
         return projectNameCache[input];
       }
 
       projectNameCache[input] = input;
 
-      if(!lookupRequested[input]){
+      if (!lookupRequested[input]) {
         keystone.getProject(input)
           .then(cacheProjectName);
         lookupRequested[input] = true;

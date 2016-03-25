@@ -41,11 +41,11 @@
                hz-if-policies="ctrl.settings.general.all_projects_policy">
             <div>
               <label for="id_allProjectsEnabled">
-                <span tooltip="{$ 'Data will be returned from more than just the current project.' | translate $}"
+                <span tooltip="{$ 'Admins are allowed to search across projects reguardless of visibility.' | translate $}"
                       tooltip-placement="top"
                       tooltip-popup-delay="500"
                       tooltip-trigger="mouseenter"
-                      translate>All Projects</span>
+                      translate>Search all projects</span>
                 <input type="checkbox"
                        ng-model="ctrl.settings.general.all_projects"
                        name="allProjectsEnabled"
