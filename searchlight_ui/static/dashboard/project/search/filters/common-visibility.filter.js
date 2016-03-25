@@ -94,8 +94,8 @@
           return defaultVisibilities.shared_with_me;
         }
       } else if (isOwnedByMe(resourceSource, currentProjectId) &&
-          sharedByMeIfOwnedByMe.indexOf(translatedVisibility)) {
-          return defaultVisibilities.shared_by_me;
+        sharedByMeIfOwnedByMe.indexOf(translatedVisibility)) {
+        return defaultVisibilities.shared_by_me;
       }
       else {
         return translatedVisibility;
@@ -131,7 +131,7 @@
     }
 
     function isOwnedByMe(resourceSource, currentProjectId) {
-      return angular.equals(resourceSource.project_id, currentProjectId)
+      return angular.equals(resourceSource.project_id, currentProjectId);
     }
   }
 
