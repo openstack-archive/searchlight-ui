@@ -64,7 +64,7 @@
         },
         general: {
           all_projects: false,
-          all_projects_policy: { rules: [["search", "search:allow_all_projects"]] },
+          all_projects_policy: { rules: [["search", "search:all_projects:allow"]] },
           limit: 50,
           limit_max: 500,
           limit_min: 5
@@ -75,7 +75,7 @@
           getIntervalInMs: getIntervalInMs,
           interval_min: 1,
           interval_max: 300,
-          policy: { rules: [["search", "search:allow_user_polling"]] }
+          policy: { rules: [["search", "search:user_polling:allow"]] }
         }
       }
     };
