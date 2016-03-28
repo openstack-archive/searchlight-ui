@@ -27,14 +27,16 @@ from openstack_dashboard.api.rest import utils as rest_utils
 @urls.register
 class Search(generic.View):
     """Pass-through API for executing searches against searchlight.
+
        Horizon only adds auth and CORS proxying.
     """
     url_regex = r'searchlight/search/$'
 
     @rest_utils.ajax()
     def post(self, request):
-        """Executes a search query against searchlight and returns the 'hits'
-        from the response. Currently accepted parameters are (all optional):
+        """Executes a search query against searchlight and returns the 'hits'.
+
+        Currently accepted parameters are (all optional):
 
         :param query: see Elasticsearch DSL or Searchlight documentation;
                       defaults to match everything
@@ -66,6 +68,7 @@ class Search(generic.View):
 @urls.register
 class Plugins(generic.View):
     """API call to interrogate searchlight for enabled resource types.
+
        Use to determine the types you can query.
     """
     url_regex = r'searchlight/plugins/$'
@@ -73,6 +76,7 @@ class Plugins(generic.View):
     @rest_utils.ajax()
     def get(self, request):
         """Requests enabled searchlight plugins.
+
         At this time the response looks like:
            {"plugins": [{
                "index": "searchlight",
@@ -135,8 +139,9 @@ class Facets(generic.View):
 
 
 def _searchlight_request(request_method, url, request, data=None, params=None):
-    """Makes a request to searchlight with an optional payload. Should set
-    any necessary auth headers and SSL parameters.
+    """Makes a request to searchlight with an optional payload.
+
+    Should set any necessary auth headers and SSL parameters.
     """
     # Set verify if a CACERT is set and SSL_NO_VERIFY isn't True
     verify = getattr(settings, 'OPENSTACK_SSL_CACERT', None)

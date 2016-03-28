@@ -13,8 +13,9 @@
 # limitations under the License.
 
 import mock
-from openstack_dashboard.api.rest import searchlight
 from openstack_dashboard.test import helpers as test
+
+from searchlight_ui.api.rest import searchlight
 
 
 # A fake requests response from searchlight's search api

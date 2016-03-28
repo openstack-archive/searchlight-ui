@@ -29,7 +29,13 @@ nosetests.xml
 .testrepository
 .venv
 node_modules
-coverage*
+cover*
+reports
+npm-shrinkwrap.json
+
+# files created in testing
+searchlight_ui/tests/.secret_key_store
+*.lock
 
 # Translations
 *.mo

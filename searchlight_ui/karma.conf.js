@@ -21,8 +21,10 @@ var path = require('path');
 
 module.exports = function (config) {
   var xstaticPath;
+  var horizonPath;
+  var dashboardPath;
   var basePaths = [
-    '../horizon/.venv'
+    '.tox/venv'
   ];
 
   for (var i = 0; i < basePaths.length; i++) {
@@ -30,12 +32,18 @@ module.exports = function (config) {
 
     if (fs.existsSync(basePath)) {
       xstaticPath = basePath + '/lib/python2.7/site-packages/xstatic/pkg/';
+      horizonPath = basePath + '/lib/python2.7/site-packages/horizon/';
+      dashboardPath = basePath + '/lib/python2.7/site-packages/openstack_dashboard/';
       break;
     }
   }
 
   if (!xstaticPath) {
-    console.error('xStatic libraries not found, please set up venv');
+    console.error('xStatic libraries not found, please set up tox karma env.');
+    console.error('basePath: ' + basePath);
+    console.error('dashboardPath: ' + dashboardPath);
+    console.error('horizonPath: ' + horizonPath);
+    console.error('xstaticPath: ' + xstaticPath);
     process.exit(1);
   }
 
@@ -64,7 +72,7 @@ module.exports = function (config) {
        * Contains expected items not provided elsewhere (dynamically by
        * Django or via jasmine template.
        */
-      '../../horizon/test-shim.js',
+      './test-shim.js',
 
       // from jasmine.html
       xstaticPath + 'jquery/data/jquery.js',
@@ -83,19 +91,19 @@ module.exports = function (config) {
       xstaticPath + 'spin/data/spin.jquery.js',
 
       // TODO: These should be mocked.
-      '../../horizon/horizon/static/horizon/js/horizon.js',
+      horizonPath + '/static/horizon/js/horizon.js',
 
       /**
        * Include framework source code from horizon that we need.
        * Otherwise, karma will not be able to find them when testing.
        * These files should be mocked in the foreseeable future.
        */
-      '../../horizon/horizon/static/framework/**/*.module.js',
-      '../../horizon/horizon/static/framework/**/!(*.spec|*.mock).js',
-      '../../horizon/openstack_dashboard/static/**/*.module.js',
-      '../../horizon/openstack_dashboard/static/**/!(*.spec|*.mock).js',
-      '../../horizon/openstack_dashboard/dashboards/**/static/**/*.module.js',
-      '../../horizon/openstack_dashboard/dashboards/**/static/**/!(*.spec|*.mock).js',
+      horizonPath + '/static/framework/**/*.module.js',
+      horizonPath + '/static/framework/**/!(*.spec|*.mock).js',
+      dashboardPath + '/static/**/*.module.js',
+      dashboardPath + '/static/**/!(*.spec|*.mock).js',
+      dashboardPath + '/dashboards/**/static/**/*.module.js',
+      dashboardPath + '/dashboards/**/static/**/!(*.spec|*.mock).js',
 
       /**
        * First, list all the files that defines application's angular modules.
@@ -116,7 +124,7 @@ module.exports = function (config) {
        * Then, list files for mocks with `mock.js` extension. The order
        * among them should not be significant.
        */
-      '../../horizon/openstack_dashboard/static/**/*.mock.js',
+      dashboardPath + '/static/**/*.mock.js',
       //'./static/**/*.mock.js',
 
       /**
@@ -155,7 +163,10 @@ module.exports = function (config) {
 
     coverageReporter: {
       type: 'html',
-      dir: '../coverage-karma/'
+      dir: '../cover',
+      instrumenterOptions: {
+        istanbul: {noCompact: true}
+      }
     },
 
     // Coverage threshold values.

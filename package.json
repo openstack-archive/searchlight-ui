@@ -1,9 +1,9 @@
 {
+  "name": "Searchlight-UI",
   "version": "0.2.0",
   "private": true,
-  "name": "Searchlight-UI",
-  "description": "Searchlight UI",
-  "repository": "none",
+  "description": "Searchlight UI plugin for horizon.",
+  "repository": "https://github.com/openstack/searchlight-ui",
   "license": "Apache 2.0",
   "devDependencies": {
     "eslint": "1.2.1",
@@ -21,7 +21,7 @@
     "phantomjs": "1.9.17"
   },
   "scripts": {
-    "test": "karma start searchlight_ui/karma.conf.js --single-run",
+    "test": "tox -evenv --notest; karma start searchlight_ui/karma.conf.js --single-run",
     "lint": "eslint --no-color searchlight_ui/static"
   },
   "dependencies": {}

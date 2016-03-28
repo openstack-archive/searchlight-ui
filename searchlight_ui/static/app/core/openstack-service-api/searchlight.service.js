@@ -76,13 +76,13 @@
      * Offset for search results
      */
     function postSearch(queryParams, suppressToast) {
-      queryParams = (queryParams) ? queryParams : {};
+      queryParams = queryParams ? queryParams : {};
 
       var promise = apiService.post('/api/searchlight/search/', queryParams);
 
       return suppressToast ? promise : promise.error(function () {
-          toastService.add('error', gettext('Unable to execute the search.'));
-        });
+        toastService.add('error', gettext('Unable to execute the search.'));
+      });
     }
 
     /**
@@ -124,9 +124,9 @@
       var config = (params) ? {'params': params} : {};
       var promise = apiService.get('/api/searchlight/facets/', config);
 
-      return suppressToast ? promise : promise.error(function() {
-          toastService.add('error', gettext('Unable to retrieve search facets.'));
-        });
+      return suppressToast ? promise : promise.error(function () {
+        toastService.add('error', gettext('Unable to retrieve search facets.'));
+      });
     }
 
   }
