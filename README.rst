@@ -33,9 +33,10 @@ Assumptions:
 
 1. Install environment.::
 
+    #Locally cloned Horizon environment
     ./tools/with_venv.sh pip install -e ../searchlight-ui
 
-    #Devstack only
+    #Devstack environment
     pip install -e ../searchlight-ui
 
 2. Copy <searchlight-ui>/``searchlight_ui/enabled/_1001_project_search_panel.py``
@@ -43,32 +44,35 @@ Assumptions:
 
     cp -rv ../searchlight-ui/searchlight_ui/enabled/_1001_project_search_panel.py openstack_dashboard/local/enabled/
 
-3. (Optional) Copy the policy file
+3. Set up the policy files. First copy the policy file
    <searchlight-ui>/``searchlight_ui/conf/searchlight_policy.json`` into
-   horizon's policy files <horizon_dir>/``openstack_dashboard/conf/`` folder,
-   and add the following config to the ``POLICY_FILES`` setting in
+   horizon's policy files <horizon_dir>/``openstack_dashboard/conf/`` folder
+   and then add the following config to the ``POLICY_FILES`` setting in
    ``openstack_dashboard/local/local_settings.py``::
 
+    cp ../searchlight-ui/searchlight_ui/conf/searchlight_policy.json openstack_dashboard/conf/
+
+    #Add to ``POLICY_FILES`` setting in ``openstack_dashboard/local/local_settings.py``
     'search': 'searchlight_policy.json',
 
-4. (Optional - usually only in production). Django has a compressor feature
-   that performs many enhancements for the  delivery of static files. It can
-   be enable or disabled (``COMPRESS_ENABLED``). In addition, offline
-   compression may be enabled or disabled (``COMPRESS_OFFLINE = True``). If
-   offline compression is enabled in your environment , run the following
-   commands.::
+4. (If offline compression is enabled - typical in production and devstack).
+   Django has a compressor feature that performs many enhancements for the
+   delivery of static files. It can be enable or disabled
+   (``COMPRESS_ENABLED``). In addition, offline compression may be enabled or
+   disabled (``COMPRESS_OFFLINE = True``). If offline compression is enabled
+   in your environment, you must run the following commands the first time
+   you install searchlight-ui and anytime you make changes to it.::
 
     ./manage.py collectstatic
     ./manage.py compress
 
-.. note::
-    For out of the box devstack environment you will need to execute the above.
-
-
 5. Restart your horizon services.::
 
-    (under apache)      sudo service apache2 restart
-    (not under apache) ./run_tests.sh --runserver 0.0.0.0:8005 (use appropriate IP and port)
+    #Locally cloned Horizon environment (not under apache)
+    ./run_tests.sh --runserver 0.0.0.0:8005 (use desired IP and port)
+
+    #Devstack
+    sudo service apache2 restart
 
 Create and Install Local Package
 --------------------------------
