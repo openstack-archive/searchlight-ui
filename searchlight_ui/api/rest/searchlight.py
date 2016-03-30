@@ -17,6 +17,7 @@ from django.views import generic
 import functools
 import json
 import requests
+from requests.exceptions import HTTPError
 
 from horizon import exceptions
 from openstack_dashboard.api import base
@@ -34,7 +35,7 @@ class Search(generic.View):
 
     @rest_utils.ajax()
     def post(self, request):
-        """Executes a search query against searchlight and returns the 'hits'.
+        """Executes a search query against searchlight.
 
         Currently accepted parameters are (all optional):
 
@@ -148,13 +149,24 @@ def _searchlight_request(request_method, url, request, data=None, params=None):
     if getattr(settings, 'OPENSTACK_SSL_NO_VERIFY', False):
         verify = False
 
-    return request_method(
+    response = request_method(
         _get_searchlight_url(request) + url,
         headers={'X-Auth-Token': request.user.token.id},
         data=json.dumps(data) if data else None,
         verify=verify,
         params=params
     )
+
+    try:
+        response.raise_for_status()
+    except HTTPError as e:
+        for error in rest_utils.http_errors:
+            if (e.response.status_code == getattr(error, 'status_code', 0) and
+                    exceptions.HorizonException in error.__bases__):
+                raise error
+        raise
+
+    return response
 
 
 # Create some convenience partial functions

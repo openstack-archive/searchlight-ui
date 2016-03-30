@@ -111,7 +111,7 @@
       searchlight
         .postSearch(searchlightQuery, true)
         .success(decoratedSearchSuccess)
-        .error(queryOptions.onSearchError);
+        .error(decoratedSearchError);
 
       function decoratedSearchSuccess(response) {
         if (settingsService.settings.polling.enabled) {
@@ -127,6 +127,16 @@
         });
 
         queryOptions.onSearchSuccess(response);
+      }
+
+      function decoratedSearchError(data, statusCode) {
+        var result = {
+          hits: [],
+          error: true,
+          data: data,
+          statusCode: statusCode
+        };
+        queryOptions.onSearchError(result);
       }
     }
 

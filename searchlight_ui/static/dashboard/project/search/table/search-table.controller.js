@@ -196,6 +196,7 @@
 
     function onSearchResult(response) {
       ctrl.hitsSrc = response.hits;
+      ctrl.queryResponse = response;
     }
 
     function actionResultHandler(result) {
