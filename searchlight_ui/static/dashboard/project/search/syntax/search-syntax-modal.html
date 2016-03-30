@@ -1,0 +1,168 @@
+<div class="modal-content ui-draggable">
+  <div class="modal-header ui-draggable-handle">
+    <a href="" class="close" ng-click="$dismiss()">
+      <span class="fa fa-times"></span>
+    </a>
+    <div class="h3 modal-title" translate>Full Text Search Syntax</div>
+  </div>
+  <div class="modal-body">
+    <span class="info detail">
+      <dl class="dl-horizontal">
+        <dt translate>Phrases</dt>
+        <dd>
+          <p>
+            <code>"i love openstack"</code>
+          </p>
+          <p translate>
+            By default, each word you type will be searched for
+            individually. You may also try to search an exact phrase by
+            using quotes ("my phrase") to surround a phrase. The search
+            service may allow a certain amount of phrase slop - meaning that
+            if you have some words out of order in the phrase it may still
+            match.
+          </p>
+        </dd>
+        <dt translate>Wildcards</dt>
+        <dd>
+          <p>
+            <code>python3.?</code>
+            <code>10.0.0.*</code>
+            <code>172.*.4.*</code>
+          </p>
+          <p translate>
+            By default, each word you type will match full words
+            only. You may also use wildcards to match parts of words. Wildcard
+            searches can be run on individual terms, using ? to replace a
+            single character, and * to replace zero or more character. 'demo'
+            will match the full word 'demo' only. However, 'de*'
+            will match anything that starts with 'de', such as 'demo_1'.
+            'de*1' will match
+            anything that starts with 'de' and ends with '1'.
+          </p>
+          <p class="text-warning" translate> Warning: Wildcard queries place
+            a heavy burden on the search service and may perform poorly.
+          </p>
+        </dd>
+        <dt translate>Term Operators</dt>
+        <dd>
+          <p>
+            <code>+apache</code>
+            <code>-apache</code>
+            <code>web +(apache OR python)</code>
+          </p>
+          <p translate>
+            Add a '+' or a '-' to indicate terms that must or must
+            not appear. For example '+python -apache web' would find
+            everything that has 'python' does NOT have 'apache' and should have
+            'web'. This may also be used with grouping. For example,
+            'web -(apache AND python)' would find anything with 'web', but does
+            not have either 'apache' or 'python'.
+          </p>
+        </dd>
+        <dt translate>Boolean Operators</dt>
+        <dd>
+          <p>
+            <code>python AND apache</code>
+            <code>nginx OR apache</code>
+            <code>web && !apache</code>
+          </p>
+          <p translate>
+            You can separate search terms and groups with
+            AND, OR and NOT (also written &&, || and !). For example,
+            'python OR javascript' will find anything with either term
+            (OR is used by default, so does not need to be specified).
+            However, 'python AND javascript' will find things that only have
+            both terms. You can do this with as many terms as you'd like (e.g.
+            'django AND javascript AND !unholy'). It is important to use all
+            caps or the alternate syntax (&&, ||), because 'and' will be
+            treated as another search term, but 'AND' will be treated as a
+            logical operator.
+          </p>
+        </dd>
+        <dt translate>Grouping</dt>
+        <dd>
+          <p>
+            <code>python AND (2.7 OR 3.4)</code>
+            <code>web && (apache !python)</code>
+          </p>
+          <p translate>
+            Use parenthesis to group different aspects of your
+            query to form sub-queries. For example, 'web OR (python AND
+            apache)' will return anything that either has 'web' OR has both
+            'python' AND 'apache'.
+          </p>
+        </dd>
+        <dt translate>Facets</dt>
+        <dd>
+          <p>
+            <code>name:cirros</code>
+            <code>name:cirros && protected:false</code>
+          </p>
+          <p translate>
+            You may decide to only look in a certain field for a
+            search term by setting a specific facet. This is accomplished by
+            either selecting a facet from the drop down or by typing the facet
+            manually. For example, if you are looking for an image, you
+            may choose to only look at the name field by adding 'name:foo'.
+            You may group facets and use logical operators.
+          </p>
+        </dd>
+        <dt translate>Range Queries</dt>
+        <dd>
+          <p>
+            <code>size:[1 TO 1000]</code>
+            <code>size:[1 TO *]</code>
+            <code>size:>=1</code>
+            <code>size:<1000</code>
+          </p>
+          <p translate>
+            Date, numeric or string fields can use range queries.
+            Use square brackets [min TO max] for inclusive ranges and curly
+            brackets {min TO max} for exclusive ranges.
+          </p>
+        </dd>
+        <dt translate>IP Addresses</dt>
+        <dd>
+          <p>
+            <code>172.24.4.0/16</code>
+            <code>[10.0.0.1 TO 10.0.0.4]</code>
+          </p>
+          <p translate>
+            IPv4 addresses may be searched based on ranges and with CIDR
+            notation.
+        </dd>
+        <dt translate>Boosting</dt>
+        <dd>
+          <p>
+            <code>web javascript^2 python^0.1</code>
+          </p>
+          <p translate>
+            You can increase or decrease the relevance of a search
+            term by boosting different terms, phrases, or groups. Boost one of
+            these by adding ^n to the term, phrase, or group where n is a
+            number greater than 1 to increase relevance and between 0 and 1 to
+            decrease relevance. For example 'web^4 python^0.1' would find
+            anything with both web and python, but would increase the
+            relevance for anything with 'web' in the result and decrease the
+            relevance for anything with 'python' in the result.
+          </p>
+        </dd>
+        <dt translate>Reserved Characters</dt>
+        <dd>
+          <p>
+            <code>python \(3.4\)</code>
+          </p>
+          <p translate>
+            The following characters are reserved and must be
+            escaped with a leading \ (backslash):
+            <code> + - = && || > < ! ( ) { } [ ] ^ " ~ * ? : \ </code>
+          </p>
+        </dd>
+      </dl>
+      </span>
+  </div>
+  <div class="modal-footer">
+    <a href="" ng-click="$dismiss()"
+       class="btn btn-default secondary cancel close" translate>Close</a>
+  </div>
+</div>
