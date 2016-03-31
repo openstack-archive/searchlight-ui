@@ -173,7 +173,8 @@
               label: facetLabel,
               name: searchlightFacet.name,
               singleton: true,
-              isServer: true
+              isServer: true,
+              type: searchlightFacet.type
             };
 
             if (searchlightFacet.type === 'date') {
@@ -259,7 +260,11 @@
     }
 
     function keyValueStringToKeyValueObject(keyValueString) {
-      var paramSplit = keyValueString.split('=');
+      // TODO we need to re-write magic search to not send things in non-encoded urls
+      // Range queries (size:>=1) will result in size=>=1), so for now,
+      // just split on the first = match and consider everything else to
+      // be the query.
+      var paramSplit = keyValueString.split(/\=(.*)/);
       var keyValuePair = {};
       if (angular.isDefined(paramSplit[1])) {
         keyValuePair[paramSplit[0]] = paramSplit[1];

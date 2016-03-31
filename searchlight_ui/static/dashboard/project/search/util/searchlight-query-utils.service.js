@@ -168,24 +168,31 @@
 
       query.bool.must = query.bool.must || [];
       var newMust = {};
+      var queryString = {};
+      //We don't want to support regex right now.
+      //https://bugs.launchpad.net/searchlight/+bug/1551946
+      facet.value = facet.value.replace(/\//g, '\\/');
 
       if (~facet.value.indexOf('~') || facet.name === 'name') {
-        //TODO handle nested
-        //We don't want to support regex right now.
-        //https://bugs.launchpad.net/searchlight/+bug/1551946
-        facet.value = facet.value.replace(/\//g, '\\/');
-        var queryString = {
+        queryString = {
           fuzzy_prefix_length: 2,
           fields: [facet.name],
           query: ~facet.value.indexOf('~') ? facet.value : facet.value + '~'
         };
         newMust.query_string = queryString;
-      } else if (~facet.value.indexOf('*')) {
-        newMust.wildcard = param;
       } else {
-        newMust.term = param;
+        // Treat all facets just like query string syntax allowing input to
+        // support a lot of the the same goodness as full text search, just
+        // limiting to selected facet. Don't try to do anything smart here
+        // let the server sort it out.
+        queryString = {
+          fields: [facet.name],
+          query: facet.value
+        };
+        newMust.query_string = queryString;
       }
 
+      //TODO handle nested better
       if (~facet.name.indexOf('.')) {
         var nestedMust = {
           'nested': {
