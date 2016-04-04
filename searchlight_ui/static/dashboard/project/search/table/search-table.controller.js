@@ -69,8 +69,6 @@
     ctrl.actionResultHandler = actionResultHandler;
     ctrl.userSession = {};
 
-    //ctrl.isNested;
-
     init();
 
     ////////////////////////////////
@@ -90,15 +88,6 @@
           ctrl.userSession = session;
         });
     }
-
-    /*function isNested (input) {
-      var result = angular.isArray(input) &&
-        input.length > 0 &&
-        angular.isObject(input[0]) &&
-        Object.keys(input[0]).length > 1;
-
-      return result;
-    }*/
 
     var pluginsUpdatedWatcher = $scope.$on(
       ctrl.searchSettings.events.pluginsUpdatedEvent,
