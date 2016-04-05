@@ -26,8 +26,9 @@
    * to support and display the project search panel.
    */
   angular
-    .module('horizon.dashboard.project.search', [])
-    .config(config);
+    .module('horizon.dashboard.project.search', ['horizon.framework.conf'])
+    .config(config)
+    .run(run);
 
   config.$inject = [
     '$provide',
@@ -53,6 +54,15 @@
       .when('/project/search/', {
         templateUrl: path + 'table/search-table.html'
       });
+  }
+
+  run.$inject = [
+    'horizon.framework.conf.resource-type-registry.service',
+    'horizon.dashboard.project.search.basePath'
+  ];
+
+  function run(registry, basePath) {
+    registry.setDefaultDrawerView(basePath + 'table/drawer.html');
   }
 
 })();
