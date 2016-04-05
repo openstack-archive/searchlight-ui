@@ -1,6 +1,6 @@
       <div class="row">
         <dl class="dl-horizontal">
-          <div ng-repeat="(field, value) in hit._source">
+          <div ng-repeat="(field, value) in item">
             <div ng-if="['_type'].indexOf(field) === -1"> <!-- &&table.isNested(value)"-->
               <dt>
                 <span tooltip="{$ field $}" tooltip-placement="top"
