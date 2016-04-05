@@ -22,6 +22,11 @@ Features
 
 * Please see the searchlight-ui repository
 
+Devstack Install
+----------------
+
+* See https://github.com/openstack/searchlight-ui/tree/master/devstack
+
 Setup Local Dev Environment
 ---------------------------
 
@@ -46,14 +51,14 @@ Assumptions:
 
 3. Set up the policy files. First copy the policy file
    <searchlight-ui>/``searchlight_ui/conf/searchlight_policy.json`` into
-   horizon's policy files <horizon_dir>/``openstack_dashboard/conf/`` folder
-   and then add the following config to the ``POLICY_FILES`` setting in
-   ``openstack_dashboard/local/local_settings.py``::
+   horizon's policy files <horizon_dir>/``openstack_dashboard/conf/`` folder.
+   Then copy
+   <searchlight-ui>/``local_settings.d/_1001_search_settings.py``
+   to <horizon_dir>/``local/local_settings.d/``::
 
     cp ../searchlight-ui/searchlight_ui/conf/searchlight_policy.json openstack_dashboard/conf/
 
-    #Add to ``POLICY_FILES`` setting in ``openstack_dashboard/local/local_settings.py``
-    'search': 'searchlight_policy.json',
+    cp ../searchlight-ui/searchlight_ui/local_settings.d/_1001_search_settings.py openstack_dashboard/local/local_settings.d/
 
 4. (If offline compression is enabled - typical in production and devstack).
    Django has a compressor feature that performs many enhancements for the

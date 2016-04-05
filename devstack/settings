@@ -1,3 +1,15 @@
-SEARCHLIGHT_UI_DIR=$DEST/searchlight-ui
+enable_service searchlight-ui
 
-SEARCHLIGHT_UI_DIR_ENABLE_FILE=SEARCHLIGHT_UI_DIR/searchlight_ui/enabled/_1001_project_search_panel.py
+SEARCHLIGHT_UI_DIR=${DEST}/searchlight-ui
+
+SEARCHLIGHT_UI_ENABLE_FILENAME=_1001_project_search_panel.py
+SEARCHLIGHT_UI_DIR_ENABLE_FILE=${SEARCHLIGHT_UI_DIR}/searchlight_ui/enabled/${SEARCHLIGHT_UI_ENABLE_FILENAME}
+HORIZON_ENABLE_DIR=${DEST}/horizon/openstack_dashboard/local/enabled/
+
+SEARCHLIGHT_UI_POLICY_FILENAME=searchlight_policy.json
+SEARCHLIGHT_UI_DIR_POLICY_FILE=${SEARCHLIGHT_UI_DIR}/searchlight_ui/conf/searchlight_policy.json
+HORIZON_POLICY_DIR=${DEST}/horizon/openstack_dashboard/conf/
+
+SEARCHLIGHT_UI_LOCAL_SETTINGS_D_FILENAME=_1001_search_settings.py
+SEARCHLIGHT_UI_DIR_LOCAL_SETTINGS_FILE=${SEARCHLIGHT_UI_DIR}/searchlight_ui/local_settings.d/${SEARCHLIGHT_UI_LOCAL_SETTINGS_D_FILENAME}
+HORIZON_LOCAL_SETTINGS_D_DIR=${DEST}/horizon/openstack_dashboard/local/local_settings.d/

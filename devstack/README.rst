@@ -17,6 +17,7 @@ For example:
 
     enable_plugin searchlight-ui https://git.openstack.org/openstack/searchlight-ui
 
-Once you enable the plugin in your local.conf, ensure ``horizon``,
-``searchlight-api``, and ``searchlight-listener`` services are enabled. If they
-are enabled, searchlight-ui will be enabled automatically.
+This plugin also depends on the following services to be enabled: ``horizon``,
+``searchlight-api``, and ``searchlight-listener``.
+
+* https://github.com/openstack/searchlight/tree/master/devstack
