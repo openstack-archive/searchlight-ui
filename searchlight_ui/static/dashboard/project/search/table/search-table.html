@@ -149,7 +149,7 @@
     -->
     <td class="detail" colspan="100">
 {$ table.registry.defaultDrawerView $}
-      <ng-include src="table.registry.getResourceType(hit._type).drawerView || table.registry.getDefaultDrawerView()"></ng-include>
+      <ng-include src="table.registry.getResourceType(hit._type).drawerTemplateUrl || table.registry.getDefaultDrawerTemplateUrl()"></ng-include>
 
     </td>
   </tr>

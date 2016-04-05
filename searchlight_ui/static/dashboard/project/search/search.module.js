@@ -62,7 +62,7 @@
   ];
 
   function run(registry, basePath) {
-    registry.setDefaultDrawerView(basePath + 'table/drawer.html');
+    registry.setDefaultDrawerTemplateUrl(basePath + 'table/drawer.html');
   }
 
 })();
