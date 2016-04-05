@@ -148,9 +148,7 @@
       Ensure colspan is greater or equal to number of column-headers.
     -->
     <td class="detail" colspan="100">
-{$ table.registry.defaultDrawerView $}
-      <ng-include src="table.registry.getResourceType(hit._type).drawerTemplateUrl || table.registry.getDefaultDrawerTemplateUrl()"></ng-include>
-
+      <hz-drawer item="hit._source" template-url="table.registry.getResourceType(hit._type).drawerTemplateUrl || table.registry.getDefaultDrawerTemplateUrl()"></hz-drawer>
     </td>
   </tr>
 
