@@ -63,6 +63,7 @@
 
   function run(registry, basePath) {
     registry.setDefaultDrawerTemplateUrl(basePath + 'table/drawer.html');
+    registry.setDefaultDetailsTemplateUrl(basePath + 'table/details.html');
   }
 
 })();
