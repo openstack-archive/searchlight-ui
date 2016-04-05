@@ -19,11 +19,15 @@
   <thead>
   <tr>
     <th colspan="100" class="search-header">
-      <hz-magic-search-bar
+      <div class="row">
+      <hz-magic-search-bar class="col-md-10"
         filter-facets="table.searchFacets"
         client-full-text-search="false"
         search-settings-callback="table.searchSettings.open">
       </hz-magic-search-bar>
+      <actions class="col-md-2" allowed="table.registry.getGlobalActions" type="row">
+      </actions>
+      </div>
     </th>
     <!-- th colspan="1" class="table_caption">
       <a href="" ng-click="table.refresh()"
