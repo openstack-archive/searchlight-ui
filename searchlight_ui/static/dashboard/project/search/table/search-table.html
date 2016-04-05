@@ -1,3 +1,15 @@
+<hz-page-header header="{$ 'Search' | translate $}">
+  <p translate>
+    Find your cloud resources by selecting specific facets or by specifying
+    full text search queries.
+    <a href=""
+       ng-controller="searchSyntaxController as syntaxCtrl"
+       ng-click="syntaxCtrl.show()">
+      <span class="fa fa-question-circle"></span>
+    </a>
+  </p>
+</hz-page-header>
+
 <table ng-controller="searchTableController as table"
        hz-table ng-cloak
        st-table="table.hits"
@@ -80,7 +92,7 @@
     </td>
 
     <td ng-cloak class="rsp-p1">
-      <a ng-href="{$ hit | resourceUrl $}">
+      <a ng-href="{$ table.registry.getResourceType(hit._type).detailsPath(hit._source.id) $}">
         <hz-search-highlighter hit="hit"
                                field="'name'"
                                default-value="hit._source.name || hit._source.id | noValue">

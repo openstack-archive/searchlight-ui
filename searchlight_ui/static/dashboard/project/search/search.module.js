@@ -31,7 +31,8 @@
 
   config.$inject = [
     '$provide',
-    '$windowProvider'
+    '$windowProvider',
+    '$routeProvider'
   ];
 
   /**
@@ -44,9 +45,14 @@
    *
    * @returns {undefined}
    */
-  function config($provide, $windowProvider) {
+  function config($provide, $windowProvider, $routeProvider) {
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/project/search/';
     $provide.constant('horizon.dashboard.project.search.basePath', path);
+
+    $routeProvider
+      .when('/project/search/', {
+        templateUrl: path + 'table/search-table.html'
+      });
   }
 
 })();
