@@ -25,12 +25,12 @@
    * Controller for search syntax.
    */
   angular
-    .module('searchlight-ui.dashboard.search.search')
+    .module('horizon.dashboard.project.search')
     .controller('searchSyntaxController', SearchSyntaxController);
 
   SearchSyntaxController.$inject = [
     '$modal',
-    'searchlight-ui.dashboard.search.search.basePath'
+    'horizon.dashboard.project.search.basePath'
   ];
 
   function SearchSyntaxController($modal, basePath)

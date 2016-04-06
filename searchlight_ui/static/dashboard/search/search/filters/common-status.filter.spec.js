@@ -16,9 +16,9 @@
 (function() {
   'use strict';
 
-  describe('searchlight-ui.dashboard.search.search.commonStatus Filter', function () {
+  describe('horizon.dashboard.project.search.commonStatus Filter', function () {
     beforeEach(module('horizon.framework.util.i18n'));
-    beforeEach(module('searchlight-ui.dashboard.search.search'));
+    beforeEach(module('horizon.dashboard.project.search'));
 
     describe('commonStatus', function () {
       var commonStatusFilter;

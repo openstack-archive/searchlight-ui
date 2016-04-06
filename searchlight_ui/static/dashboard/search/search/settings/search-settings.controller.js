@@ -19,13 +19,13 @@
 
   /**
    * @ngdoc controller
-   * @name searchlight-ui.dashboard.search.search.settingsController
+   * @name horizon.dashboard.project.search.settingsController
    *
    * @param(object) modal instance from angular-bootstrap
    * @param(object) the settings to display
    */
   angular
-    .module('searchlight-ui.dashboard.search.search')
+    .module('horizon.dashboard.project.search')
     .controller('searchSettingsController', SettingsController);
 
   SettingsController.$inject = [

@@ -17,11 +17,11 @@
   'use strict';
 
   angular
-    .module('searchlight-ui.dashboard.search.search')
+    .module('horizon.dashboard.project.search')
     .filter('resourceUrl', resourceUrlFilter);
 
   resourceUrlFilter.$inject = [
-    'searchlight-ui.dashboard.search.search.resourceLocator'
+    'horizon.dashboard.project.search.resourceLocator'
   ];
 
   /**

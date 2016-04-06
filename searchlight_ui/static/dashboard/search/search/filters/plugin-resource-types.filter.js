@@ -17,7 +17,7 @@
   'use strict';
 
   angular
-    .module('searchlight-ui.dashboard.search.search')
+    .module('horizon.dashboard.project.search')
     .filter('searchPluginResourceTypes', searchPluginResourceTypes);
 
   /**

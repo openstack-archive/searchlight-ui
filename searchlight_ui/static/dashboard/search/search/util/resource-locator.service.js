@@ -18,8 +18,8 @@
   'use strict';
 
   angular
-    .module('searchlight-ui.dashboard.search.search')
-    .factory('searchlight-ui.dashboard.search.search.resourceLocator', ResourceLocator);
+    .module('horizon.dashboard.project.search')
+    .factory('horizon.dashboard.project.search.resourceLocator', ResourceLocator);
 
   ResourceLocator.$inject = [
     '$window'
@@ -27,7 +27,7 @@
 
   /**
    * @ngdoc service
-   * @name searchlight-ui.dashboard.search.search.resourceLocator
+   * @name horizon.dashboard.project.search.resourceLocator
    * @description Locates resources in openstack dashboard.
    *
    * @param {function} $window ng $window service
@@ -45,7 +45,7 @@
     //////////////////
 
     /**
-     * @name searchlight-ui.dashboard.search.search.resourceLocator
+     * @name horizon.dashboard.project.search.resourceLocator
      * @description
      * Takes a search hit and maps it to the detail page URL for it.
      *

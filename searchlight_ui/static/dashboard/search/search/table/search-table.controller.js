@@ -26,7 +26,7 @@
    * Serves as the focal point for table actions.
    */
   angular
-    .module('searchlight-ui.dashboard.search.search')
+    .module('horizon.dashboard.project.search')
     .controller('searchTableController', SearchTableController);
 
   SearchTableController.$inject = [
@@ -36,10 +36,10 @@
     'searchPluginResourceTypesFilter',
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.app.core.openstack-service-api.userSession',
-    'searchlight-ui.dashboard.search.search.searchlightFacetUtils',
-    'searchlight-ui.dashboard.search.search.searchlightSearchHelper',
-    'searchlight-ui.dashboard.search.search.resourceLocator',
-    'searchlight-ui.dashboard.search.search.settingsService'
+    'horizon.dashboard.project.search.searchlightFacetUtils',
+    'horizon.dashboard.project.search.searchlightSearchHelper',
+    'horizon.dashboard.project.search.resourceLocator',
+    'horizon.dashboard.project.search.settingsService'
   ];
 
   function SearchTableController($scope,
