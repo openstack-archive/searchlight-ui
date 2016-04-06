@@ -17,7 +17,7 @@
 (function() {
   'use strict';
 
-  describe('searchlight-ui.dashboard.search.search.settingsService', function() {
+  describe('horizon.dashboard.project.search.settingsService', function() {
 
     var service, $scope;
 
@@ -25,11 +25,11 @@
 
     beforeEach(module('horizon.framework'));
     beforeEach(module('horizon.app.core'));
-    beforeEach(module('searchlight-ui.dashboard.search.search'));
+    beforeEach(module('horizon.dashboard.project.search'));
 
     beforeEach(inject(function($injector, _$rootScope_) {
       $scope = _$rootScope_.$new();
-      service = $injector.get('searchlight-ui.dashboard.search.search.settingsService');
+      service = $injector.get('horizon.dashboard.project.search.settingsService');
     }));
 
     it('should open the modal', function() {

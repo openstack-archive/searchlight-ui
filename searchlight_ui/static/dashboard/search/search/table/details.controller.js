@@ -16,7 +16,7 @@
   "use strict";
 
   angular
-    .module('searchlight-ui.dashboard.search.search')
+    .module('horizon.dashboard.project.search')
     .controller('DefaultDetailsController', controller);
 
   controller.$inject = [

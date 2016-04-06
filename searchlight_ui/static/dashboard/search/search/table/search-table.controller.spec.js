@@ -17,7 +17,7 @@
 (function () {
   'use strict';
 
-  describe('searchlight-ui.dashboard.search.search table controller', function () {
+  describe('horizon.dashboard.project.search table controller', function () {
 
     function fakeSearchlight() {
       return {
@@ -35,7 +35,7 @@
     beforeEach(module('horizon.framework'));
     beforeEach(module('horizon.app.core'));
 
-    beforeEach(module('searchlight-ui.dashboard.search.search'));
+    beforeEach(module('horizon.dashboard.project.search'));
     beforeEach(inject(function ($injector) {
       $scope = $injector.get('$rootScope').$new();
 

@@ -18,18 +18,18 @@
   'use strict';
 
   angular
-    .module('searchlight-ui.dashboard.search.search')
-    .factory('searchlight-ui.dashboard.search.search.settingsService', searchSettingsService);
+    .module('horizon.dashboard.project.search')
+    .factory('horizon.dashboard.project.search.settingsService', searchSettingsService);
 
   searchSettingsService.$inject = [
     '$modal',
-    'searchlight-ui.dashboard.search.search.basePath',
+    'horizon.dashboard.project.search.basePath',
     'horizon.app.core.openstack-service-api.searchlight'
   ];
 
   /**
    * @ngDoc factory
-   * @name searchlight-ui.dashboard.search.search.settingsService
+   * @name horizon.dashboard.project.search.settingsService
    *
    * @Description
    * Provides general search settings and a modal for updating the settings.
@@ -48,8 +48,8 @@
   {
     var service = {
       events: {
-        settingsUpdatedEvent: 'searchlight-ui.dashboard.search.search.settingsUpdated',
-        pluginsUpdatedEvent: 'searchlight-ui.dashboard.search.search.pluginsUpdated'
+        settingsUpdatedEvent: 'horizon.dashboard.project.search.settingsUpdated',
+        pluginsUpdatedEvent: 'horizon.dashboard.project.search.pluginsUpdated'
       },
       open: open,
       initScope: initScope,

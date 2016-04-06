@@ -18,11 +18,11 @@
   'use strict';
 
   angular
-    .module('searchlight-ui.dashboard.search.search')
+    .module('horizon.dashboard.project.search')
     .directive('hzArrayFieldTable', hzArrayFieldTable);
 
   hzArrayFieldTable.$inject = [
-    'searchlight-ui.dashboard.search.search.basePath'
+    'horizon.dashboard.project.search.basePath'
   ];
 
   /**
