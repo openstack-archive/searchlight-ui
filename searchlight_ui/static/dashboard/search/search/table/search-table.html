@@ -1,3 +1,15 @@
+<hz-page-header header="{$ 'Search' | translate $}">
+  <p translate>
+    Find your cloud resources by selecting specific facets or by specifying
+    full text search queries.
+    <a href=""
+       ng-controller="searchSyntaxController as syntaxCtrl"
+       ng-click="syntaxCtrl.show()">
+      <span class="fa fa-question-circle"></span>
+    </a>
+  </p>
+</hz-page-header>
+
 <table ng-controller="searchTableController as table"
        hz-table ng-cloak
        st-table="table.hits"
@@ -7,11 +19,15 @@
   <thead>
   <tr>
     <th colspan="100" class="search-header">
-      <hz-magic-search-bar
+      <div class="row">
+      <hz-magic-search-bar class="col-md-10"
         filter-facets="table.searchFacets"
         client-full-text-search="false"
         search-settings-callback="table.searchSettings.open">
       </hz-magic-search-bar>
+      <actions class="col-md-2" allowed="table.registry.getGlobalActions" type="row">
+      </actions>
+      </div>
     </th>
     <!-- th colspan="1" class="table_caption">
       <a href="" ng-click="table.refresh()"
@@ -80,7 +96,7 @@
     </td>
 
     <td ng-cloak class="rsp-p1">
-      <a ng-href="{$ hit | resourceUrl $}">
+      <a ng-href="{$ table.registry.getResourceType(hit._type).detailsPath(hit._source.id) $}">
         <hz-search-highlighter hit="hit"
                                field="'name'"
                                default-value="hit._source.name || hit._source.id | noValue">
@@ -132,39 +148,7 @@
       Ensure colspan is greater or equal to number of column-headers.
     -->
     <td class="detail" colspan="100">
-
-      <div class="row">
-        <dl class="dl-horizontal">
-          <div ng-repeat="(field, value) in hit._source">
-            <div ng-if="['_type'].indexOf(field) === -1"> <!-- &&table.isNested(value)"-->
-              <dt>
-                <span tooltip="{$ field $}" tooltip-placement="top"
-                    tooltip-popup-delay="500" tooltip-trigger="mouseenter">
-                {$ hit._type | resourceLabeler: field $}
-                </span>
-              </dt>
-              <dd>
-                <hz-search-highlighter hit="hit"
-                                       field="field"
-                                       default-value="value | noValue">
-                </hz-search-highlighter>
-              </dd>
-            </div>
-
-          </div>
-        </dl>
-
-        <!--div ng-repeat="(field, value) in ::hit._source">
-          <div ng-if="table.isNested(value)"
-               class="col-md-12 detail">
-            <h3> {$ hit._type | resourceLabeler: field $}</h3>
-            <hr>
-            <hz-array-field-table array="value">
-            </hz-array-field-table>
-          </div>
-        </div-->
-      </div>
-
+      <hz-drawer hit="hit" item="hit._source" template-url="table.registry.getResourceType(hit._type).drawerTemplateUrl || table.registry.getDefaultDrawerTemplateUrl()"></hz-drawer>
     </td>
   </tr>
 

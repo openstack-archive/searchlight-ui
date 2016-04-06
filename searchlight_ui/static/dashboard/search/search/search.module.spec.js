@@ -35,8 +35,8 @@
       expect(searchBasePath).toBeDefined();
     });
 
-    it('should equal to "/static/dashboard/project/search/"', function () {
-      expect(searchBasePath).toEqual(staticUrl + 'dashboard/project/search/');
+    it('should equal to "/static/dashboard/search/search/"', function () {
+      expect(searchBasePath).toEqual(staticUrl + 'dashboard/search/search/');
     });
   });
 

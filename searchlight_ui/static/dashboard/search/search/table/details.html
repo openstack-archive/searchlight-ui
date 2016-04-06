@@ -1,0 +1,17 @@
+      <div class="row" ng-controller="DefaultDetailsController as ctrl">
+        <dl class="dl-horizontal">
+          <div ng-repeat="(field, value) in ctrl.item">
+            <div ng-if="ctrl.resourceType.indexOf(field) === -1"> <!-- &&table.isNested(value)"-->
+              <dt>
+                <span tooltip="{$ field $}" tooltip-placement="top"
+                    tooltip-popup-delay="500" tooltip-trigger="mouseenter">
+                {$ ctrl.resourceType | resourceLabeler: field $}
+                </span>
+              </dt>
+              <dd>{$ value $}</dd>
+            </div>
+
+          </div>
+        </dl>
+      </div>
+

@@ -26,12 +26,14 @@
    * to support and display the project search panel.
    */
   angular
-    .module('horizon.dashboard.project.search', [])
-    .config(config);
+    .module('horizon.dashboard.project.search', ['horizon.framework.conf'])
+    .config(config)
+    .run(run);
 
   config.$inject = [
     '$provide',
-    '$windowProvider'
+    '$windowProvider',
+    '$routeProvider'
   ];
 
   /**
@@ -44,9 +46,24 @@
    *
    * @returns {undefined}
    */
-  function config($provide, $windowProvider) {
-    var path = $windowProvider.$get().STATIC_URL + 'dashboard/project/search/';
+  function config($provide, $windowProvider, $routeProvider) {
+    var path = $windowProvider.$get().STATIC_URL + 'dashboard/search/search/';
     $provide.constant('horizon.dashboard.project.search.basePath', path);
+
+    $routeProvider
+      .when('/search/', {
+        templateUrl: path + 'table/search-table.html'
+      });
+  }
+
+  run.$inject = [
+    'horizon.framework.conf.resource-type-registry.service',
+    'horizon.dashboard.project.search.basePath'
+  ];
+
+  function run(registry, basePath) {
+    registry.setDefaultDrawerTemplateUrl(basePath + 'table/drawer.html');
+    registry.setDefaultDetailsTemplateUrl(basePath + 'table/details.html');
   }
 
 })();

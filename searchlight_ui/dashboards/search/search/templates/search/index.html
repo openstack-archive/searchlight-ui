@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Search" %}{% endblock %}
+
+{% block page_header %}
+{% endblock page_header %}
+
+{% block ng_route_base %}
+  <base href="{{ WEBROOT }}">
+{% endblock %}
+
+{% block main %}
+  <div ng-view></div>
+{% endblock %}
