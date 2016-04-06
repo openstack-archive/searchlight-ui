@@ -13,12 +13,15 @@
 # under the License.
 
 # The slug of the dashboard the PANEL associated with. Required.
-PANEL_DASHBOARD = 'project'
+PANEL_DASHBOARD = 'search'
 
 # The slug of the panel group the PANEL is associated with.
 # If you want the panel to show up without a panel group,
 # use the panel group "default".
 PANEL_GROUP = 'default'
+
+# If set, it will update the default panel of the PANEL_DASHBOARD.
+DEFAULT_PANEL = 'search'
 
 # The slug of the panel to be added to HORIZON_CONFIG. Required.
 PANEL = 'search'
@@ -29,10 +32,10 @@ DISABLED = False
 ADD_INSTALLED_APPS = ['searchlight_ui']
 
 # Python panel class of the PANEL to be added.
-ADD_PANEL = 'searchlight_ui.dashboards.project.search.panel.Search'
+ADD_PANEL = 'searchlight_ui.dashboards.search.search.panel.Search'
 
 ADD_ANGULAR_MODULES = ['horizon.dashboard.project.search']
 
-ADD_SCSS_FILES = ['dashboard/project/search/search.scss']
+ADD_SCSS_FILES = ['dashboard/search/search/search.scss']
 
 AUTO_DISCOVER_STATIC_FILES = True

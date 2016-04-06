@@ -47,11 +47,11 @@
    * @returns {undefined}
    */
   function config($provide, $windowProvider, $routeProvider) {
-    var path = $windowProvider.$get().STATIC_URL + 'dashboard/project/search/';
+    var path = $windowProvider.$get().STATIC_URL + 'dashboard/search/search/';
     $provide.constant('horizon.dashboard.project.search.basePath', path);
 
     $routeProvider
-      .when('/project/search/', {
+      .when('/search/', {
         templateUrl: path + 'table/search-table.html'
       });
   }

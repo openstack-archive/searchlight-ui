@@ -16,4 +16,4 @@ from django.views import generic
 
 
 class IndexView(generic.TemplateView):
-    template_name = 'project/search/index.html'
+    template_name = 'search/search/index.html'
