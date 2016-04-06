@@ -96,7 +96,7 @@
     </td>
 
     <td ng-cloak class="rsp-p1">
-      <a ng-href="{$ table.registry.getResourceType(hit._type).detailsPath(hit._source.id) $}">
+      <a ng-href="{$ 'details/' + hit._type + '/' + table.registry.getResourceType(hit._type).pathGenerator(hit._source.id) $}">
         <hz-search-highlighter hit="hit"
                                field="'name'"
                                default-value="hit._source.name || hit._source.id | noValue">
