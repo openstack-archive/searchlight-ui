@@ -32,6 +32,7 @@
   SearchTableController.$inject = [
     '$scope',
     '$filter',
+    '$q',
     '$timeout',
     'searchPluginResourceTypesFilter',
     'horizon.framework.conf.resource-type-registry.service',
@@ -39,11 +40,13 @@
     'horizon.dashboard.project.search.searchlightFacetUtils',
     'horizon.dashboard.project.search.searchlightSearchHelper',
     'horizon.dashboard.project.search.resourceLocator',
-    'horizon.dashboard.project.search.settingsService'
+    'horizon.dashboard.project.search.settingsService',
+    'horizon.dashboard.search.search.util.cache.service'
   ];
 
   function SearchTableController($scope,
                                  $filter,
+                                 $q,
                                  $timeout,
                                  searchPluginResourceTypesFilter,
                                  registry,
@@ -51,7 +54,8 @@
                                  searchlightFacetUtils,
                                  searchlightSearchHelper,
                                  resourceLocator,
-                                 searchSettings)
+                                 searchSettings,
+                                 cache)
   {
     var ctrl = this;
     ctrl.filter = $filter;
@@ -68,6 +72,9 @@
     ctrl.refresh = searchlightSearchHelper.repeatLastSearchWithLatestSettings;
     ctrl.actionResultHandler = actionResultHandler;
     ctrl.userSession = {};
+
+    var adHocPollInterval = 500;
+    var adHocPollDuration = 5000;
 
     //ctrl.isNested;
 
@@ -194,20 +201,152 @@
       return searchlightSearchHelper.search(queryOptions);
     }
 
+    // DEBUG - 5 deep response queue to test cache
+    /*
+    var responseQueue = [
+      {hits: []},
+      {hits: []},
+      {hits: []},
+      {hits: []},
+      {hits: []},
+    ];
+    */
     function onSearchResult(response) {
-      ctrl.hitsSrc = response.hits;
+
+      cache.clean(adHocPollDuration * 3);
+      ctrl.hitsSrc = response.hits.map(syncWithCache).filter(removeDeletedItems);
+      // DEBUG - Add a 5 response delay to simulate slow notifcation to searchlight index
+      /*
+      ctrl.hitsSrc = responseQueue.shift().hits.map(annotateItemsInCache).filter(removeDeletedItems);
+      responseQueue.push(response);
+      */
       ctrl.queryResponse = response;
     }
 
-    function actionResultHandler(result) {
-      result.then(repeatUntilChangedResults);
+    function syncWithCache(searchlight_item) {
+      var timestamp;
+      if ( searchlight_item.updated_at ) {
+        timestamp = searchlight_item.updated_at;
+      } else {
+        timestamp = searchlight_item.created_at;
+      }
+      return cache.sync(searchlight_item, searchlight_item._id, timestamp);
+    }
 
-      function repeatUntilChangedResults() {
-        // For now, all we can do is poll for a period of time.
-        searchlightSearchHelper.startAdHocPolling(500, 5000);
+    function removeDeletedItems(searchlight_item) {
+      if ( searchlight_item.deleted ) {
+        return false;
+      } else {
+        return true;
       }
     }
 
+    function actionResultHandler(returnValue) {
+      return $q.when(returnValue, actionSuccessHandler, actionErrorHandler);
+    }
+
+    function repeatUntilChangedResults() {
+      // For now, all we can do is poll for a period of time.
+      searchlightSearchHelper.startAdHocPolling(adHocPollInterval, adHocPollDuration);
+    }
+
+    function actionSuccessHandler(result) {
+
+      // For now, always poll for 5 seconds after every action. This is not
+      // needed with default polling enabled.
+      //repeatUntilChangedResults();
+
+      // The action has completed (for whatever "complete" means to that
+      // action. Notice the view doesn't really need to know the semantics of the
+      // particular action because the actions return data in a standard form.
+      // That return includes the id and type of each created, updated, deleted
+      // and failed item.
+      //
+      // This handler is also careful to check the type of each item. This
+      // is important because actions which create non-images are launched from
+      // the images page (like create "volume" from image).
+      var deletedIds, updatedIds, createdIds, failedIds;
+
+      if ( result ) {
+        // Reduce the results to just image ids ignoring other types the action
+        // may have produced
+        deletedIds = getIdsOfType(result.deleted, undefined);
+        updatedIds = getIdsOfType(result.updated, undefined);
+        createdIds = getIdsOfType(result.created, undefined);
+        failedIds = getIdsOfType(result.failed, undefined);
+
+        addItemsToCache(deletedIds, true);
+        addItemsToCache(updatedIds);
+        addItemsToCache(createdIds);
+
+        // Handle deleted images
+        if (deletedIds.length) {
+          // Do nothing for now
+        }
+
+        // Handle updated and created images
+        if ( updatedIds.length || createdIds.length ) {
+        }
+
+        // Handle failed images
+        if ( failedIds ) {
+          // Do nothing for now
+        }
+
+      } else {
+        // promise resolved, but no result returned. Because the action didn't
+        // tell us what happened...reload the displayed items just in case.
+      }
+    }
+
+    function addItemsToCache(ids, deleted) {
+      var timestamp, searchlight_item;
+      ids.forEach(function addToCache(id) {
+        var index = ctrl.hitsSrc.findIndex(function findItemWithId(item) {
+          if (item._source.id === id) {
+            return item;
+          }
+        });
+        if ( index >= 0 ) {
+          var searchlight_item = ctrl.hitsSrc[index];
+          if ( deleted ) {
+            ctrl.hitsSrc.splice(index,1);
+          }
+          if ( searchlight_item ) {
+            if ( searchlight_item.updated_at ) {
+              timestamp = searchlight_item.updated_at;
+            } else {
+              timestamp = searchlight_item.created_at;
+            }
+            searchlight_item.dirty = true;
+            searchlight_item.deleted = deleted;
+            cache.add(searchlight_item, searchlight_item._id, timestamp);
+          }
+        }
+      });
+    }
+
+    function actionErrorHandler(reason) { // eslint-disable-line no-unused-vars
+      // Action has failed. Do nothing.
+    }
+
+    function getIdsOfType(items, type) {
+      var result;
+      function typeIdReduce(accumulator, item) {
+        if (type === undefined || item.type === type) {
+          accumulator.push(item.id);
+        }
+        return accumulator;
+      }
+
+      if ( items ) {
+        result = items.reduce(typeIdReduce, []);
+      } else {
+        result = [];
+      }
+
+      return result;
+    }
   }
 
 })();

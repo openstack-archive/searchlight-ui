@@ -80,7 +80,7 @@
           }
         },
         polling: {
-          enabled: false,
+          enabled: true,
           interval: 10, //seconds
           getIntervalInMs: getIntervalInMs,
           interval_min: 1,
