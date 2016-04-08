@@ -4,5 +4,8 @@ table[ng-controller="searchTableController as table"] {
     background: none;
     padding-left: 2em;
   }
+}
 
+tr.incache {
+  color: red;
 }

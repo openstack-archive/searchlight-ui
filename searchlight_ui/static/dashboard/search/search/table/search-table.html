@@ -72,8 +72,8 @@
   </tr>
 
   <tr ng-if='!table.queryError'
-      ng-repeat-start="hit in table.hits track by hit._id">
-
+      ng-repeat-start="hit in table.hits track by hit._id"
+      ng-class="{incache: hit.dirty}">
     <td class="expander">
       <i class="fa fa-chevron-right"
          hz-expand-detail

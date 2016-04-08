@@ -26,7 +26,9 @@
    * to support and display the project search panel.
    */
   angular
-    .module('horizon.dashboard.project.search', ['horizon.framework.conf'])
+    .module('horizon.dashboard.project.search', [
+      'horizon.framework.conf',
+      'horizon.dashboard.search.search.util'])
     .config(config)
     .run(run);
 
