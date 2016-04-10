@@ -4,11 +4,11 @@
       <span class="fa fa-search"></span>
     </span>
     <hack-st-magic-search class="form-control">
-      <hack-magic-search
-        template="/static/dashboard/search/search/util/ms-hack/magic-search.html"
+      <magic-search
+        template="/static/framework/widgets/magic-search/magic-search.html"
         strings="filterStrings"
         facets="{{ filterFacets }}">
-      </hack-magic-search>
+      </magic-search>
     </hack-st-magic-search>
     <span ng-if="showSettings" class="input-group-btn" ng-click="searchSettingsCallback()">
       <button class="btn btn-default" type="button">

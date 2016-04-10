@@ -128,8 +128,8 @@
        * attribute is not interpolated. Can't hardcode the
        * template location and need to use basePath.
        */
-      basePath = "/static/dashboard/search/search/util/";
-      var templateUrl = basePath + 'ms-hack/magic-search.html';
+      basePath = "/static/framework/widgets/magic-search/";
+      var templateUrl = basePath + 'magic-search.html';
       element.find('magic-search').attr('template', templateUrl);
       element.addClass('hz-magic-search-bar');
       return link;

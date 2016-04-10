@@ -22,10 +22,11 @@ hack-magic-search-bar {
   .input-group {
     width: 100%;
 
-    & > hack-st-magic-search.form-control {
-      padding: 0 $padding-xs-horizontal 0 0;
+    & > hack-st-magic-search {
+      padding: 20 $padding-xs-horizontal 0 0;
       min-height: $input-height-base + 2;
       height: 100%;
+      box-shadow: none;
     }
   }
 
