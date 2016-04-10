@@ -10,18 +10,7 @@
   </p>
 </hz-page-header>
 
-<hz-magic-search-context ng-controller="searchTableController as table">
-      <div class="row">
-      <hz-magic-search-bar class="col-md-10"
-        filter-facets="table.searchFacets"
-        client-full-text-search="false"
-        search-settings-callback="table.searchSettings.open">
-      </hz-magic-search-bar>
-      <actions class="col-md-2" allowed="table.registry.getGlobalActions" type="row">
-      </actions>
-      </div>
-<table hz-table ng-cloak
-       st-magic-search
+<table hz-table ng-cloak ng-controller="searchTableController as table"
        st-table="table.hits"
        st-safe-src="table.hitsSrc"
        class="table table-striped table-hover table-rsp table-detail">
@@ -29,6 +18,15 @@
   <thead>
   <tr>
     <th colspan="100" class="search-header">
+      <div class="row">
+      <hack-magic-search-bar class="col-md-10"
+        filter-facets="table.searchFacets"
+        client-full-text-search="false"
+        search-settings-callback="table.searchSettings.open">
+      </hack-magic-search-bar>
+      <actions class="col-md-2" allowed="table.registry.getGlobalActions" type="row">
+      </actions>
+      </div>
     </th>
     <!-- th colspan="1" class="table_caption">
       <a href="" ng-click="table.refresh()"
@@ -38,7 +36,6 @@
       </a>
     <th -->
   </tr>
-
   <tr>
     <!--
       Please note, search result sorting should not be done client side.
@@ -158,4 +155,3 @@
   <tfoot hz-table-footer items="table.hits"></tfoot>
 
 </table>
-</hz-magic-search-context>

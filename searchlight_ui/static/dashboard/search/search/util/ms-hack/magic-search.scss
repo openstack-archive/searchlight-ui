@@ -1,14 +1,4 @@
-table[ng-controller="searchTableController as table"] {
-
-  .detail-expanded .row {
-    background: none;
-    padding-left: 2em;
-  }
-}
-
-tr.incache {
-  color: red;
-}// Replaces magic_search.scss with styles for bootstrap/Horizon.
+// Replaces magic_search.scss with styles for bootstrap/Horizon.
 
 /*-----------------------------------------
    Magic Search bar
