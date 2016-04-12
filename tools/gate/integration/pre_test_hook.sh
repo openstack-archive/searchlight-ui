@@ -11,4 +11,4 @@ source $DIR/commons $@
 DEVSTACK_LOCAL_CONFIG+=$'\n'"enable_plugin enable_plugin searchlight http://git.openstack.org/openstack/searchlight"
 DEVSTACK_LOCAL_CONFIG+=$'\n'"enable_service searchlight-api"
 DEVSTACK_LOCAL_CONFIG+=$'\n'"enable_service searchlight-listener"
-DEVSTACK_LOCAL_CONFIG+=$'\n'"enable_plugin searchlight-ui https://git.openstack.org/openstack/searchlight-lbaas"
+DEVSTACK_LOCAL_CONFIG+=$'\n'"enable_plugin searchlight-ui https://git.openstack.org/openstack/searchlight-ui"
