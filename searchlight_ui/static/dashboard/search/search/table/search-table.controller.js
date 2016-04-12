@@ -39,7 +39,6 @@
     'horizon.app.core.openstack-service-api.userSession',
     'horizon.dashboard.project.search.searchlightFacetUtils',
     'horizon.dashboard.project.search.searchlightSearchHelper',
-    'horizon.dashboard.project.search.resourceLocator',
     'horizon.dashboard.project.search.settingsService',
     'horizon.dashboard.search.search.util.cache.service'
   ];
@@ -53,7 +52,6 @@
                                  userSession,
                                  searchlightFacetUtils,
                                  searchlightSearchHelper,
-                                 resourceLocator,
                                  searchSettings,
                                  cache)
   {
@@ -62,7 +60,6 @@
     ctrl.hits = [];
     ctrl.hitsSrc = [];
     ctrl.initialized = false;
-    ctrl.resourceLocator = resourceLocator;
     ctrl.searchFacets = [];
     ctrl.excludedTypes = ['OS::Glance::Metadef'];
     ctrl.searchSettings = searchSettings;
