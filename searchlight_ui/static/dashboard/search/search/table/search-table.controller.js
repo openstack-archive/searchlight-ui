@@ -71,6 +71,7 @@
     ctrl.registry = registry;
     ctrl.refresh = searchlightSearchHelper.repeatLastSearchWithLatestSettings;
     ctrl.actionResultHandler = actionResultHandler;
+    ctrl.getSearchlightKey = getSearchlightKey;
     ctrl.userSession = {};
 
     var adHocPollInterval = 500;
@@ -201,36 +202,15 @@
       return searchlightSearchHelper.search(queryOptions);
     }
 
-    // DEBUG - 5 deep response queue to test cache
-    /*
-    var responseQueue = [
-      {hits: []},
-      {hits: []},
-      {hits: []},
-      {hits: []},
-      {hits: []},
-    ];
-    */
     function onSearchResult(response) {
 
       cache.clean(adHocPollDuration * 3);
       ctrl.hitsSrc = response.hits.map(syncWithCache).filter(removeDeletedItems);
-      // DEBUG - Add a 5 response delay to simulate slow notifcation to searchlight index
-      /*
-      ctrl.hitsSrc = responseQueue.shift().hits.map(annotateItemsInCache).filter(removeDeletedItems);
-      responseQueue.push(response);
-      */
       ctrl.queryResponse = response;
     }
 
     function syncWithCache(searchlight_item) {
-      var timestamp;
-      if ( searchlight_item.updated_at ) {
-        timestamp = searchlight_item.updated_at;
-      } else {
-        timestamp = searchlight_item.created_at;
-      }
-      return cache.sync(searchlight_item, searchlight_item._id, timestamp);
+      return cache.sync(searchlight_item, searchlight_item._id, getSearchlightTimestamp(searchlight_item));
     }
 
     function removeDeletedItems(searchlight_item) {
@@ -300,7 +280,7 @@
     }
 
     function addItemsToCache(ids, deleted) {
-      var timestamp, searchlight_item;
+      var searchlight_item;
       ids.forEach(function addToCache(id) {
         var index = ctrl.hitsSrc.findIndex(function findItemWithId(item) {
           if (item._source.id === id) {
@@ -313,14 +293,9 @@
             ctrl.hitsSrc.splice(index,1);
           }
           if ( searchlight_item ) {
-            if ( searchlight_item.updated_at ) {
-              timestamp = searchlight_item.updated_at;
-            } else {
-              timestamp = searchlight_item.created_at;
-            }
             searchlight_item.dirty = true;
             searchlight_item.deleted = deleted;
-            cache.add(searchlight_item, searchlight_item._id, timestamp);
+            cache.add(searchlight_item, searchlight_item._id, getSearchlightTimestamp(searchlight_item));
           }
         }
       });
@@ -347,6 +322,23 @@
 
       return result;
     }
+
+    function getSearchlightTimestamp(searchlight_item) {
+      var timestamp = '';
+
+      if (searchlight_item._version) {
+        timestamp = searchlight_item._version;
+      } else if (searchlight_item._source.updated_at) {
+        timestamp = searchlight_item._source.updated_at;
+      } else if (searchlight_item._source.created_at) {
+        timestamp = searchlight_item._source.created_at;
+      }
+      return timestamp;
+    }
+
+    function getSearchlightKey(searchlight_item) {
+      return searchlight_item._id + getSearchlightTimestamp(searchlight_item);
+    };
   }
 
 })();
