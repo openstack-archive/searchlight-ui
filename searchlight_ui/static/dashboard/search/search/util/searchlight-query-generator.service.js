@@ -90,7 +90,12 @@
         addSelectedFacetsFromOptions(options);
         addRawMagicSearchQueryFromOptions(options);
         addDefaultQuery();
+        addVersionToQuery();
         searchlightQueryUtils.addHighlighting(searchlightQuery);
+      }
+
+      function addVersionToQuery() {
+        searchlightQuery.version = true;
       }
 
       function addDefaultQuery() {
