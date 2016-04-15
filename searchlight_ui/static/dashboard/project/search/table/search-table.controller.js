@@ -122,7 +122,8 @@
     }
 
     var fullTextSearchTimeout;
-    var searchUpdatedWatcher = $scope.$on('serverSearchUpdated', function (event, searchData) {
+    var evtName = 'serverSearchUpdated-ms-context';
+    var searchUpdatedWatcher = $scope.$on(evtName, function (event, searchData) {
 
       // Magic search always broadcasts this at startup, so
       // we have to not run until we are fully initialized.
