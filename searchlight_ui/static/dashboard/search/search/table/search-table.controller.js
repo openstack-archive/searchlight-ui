@@ -182,6 +182,7 @@
     );
 
     $scope.$on('$destroy', function cleanupListeners() {
+      searchlightSearchHelper.stopSearchPolling();
       checkFacetsWatcher();
       searchUpdatedWatcher();
       searchSettingsUpdatedWatcher();
@@ -222,10 +223,12 @@
       return $q.when(returnValue, actionSuccessHandler, actionErrorHandler);
     }
 
+    /*
     function repeatUntilChangedResults() {
       // For now, all we can do is poll for a period of time.
       searchlightSearchHelper.startAdHocPolling(adHocPollInterval, adHocPollDuration);
     }
+    */
 
     function actionSuccessHandler(result) {
 
