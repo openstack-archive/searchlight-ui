@@ -86,6 +86,14 @@
 
       if (searchlightSearchHelper.lastSearchQueryOptions) {
         ctrl.searchFacets = searchlightSearchHelper.lastSearchQueryOptions.searchFacets;
+        if (searchlightSearchHelper.lastSearchQueryOptions.queryString) {
+          $timeout(setInput(searchlightSearchHelper.lastSearchQueryOptions.queryString));
+          function setInput(text) {
+            return function() {
+              angular.element('.search-input').val(text);
+            };
+          }
+        }
       } else {
         ctrl.searchFacets = ctrl.defaultFacets;
       }
@@ -139,7 +147,6 @@
 
     var fullTextSearchTimeout;
     var searchUpdatedWatcher = $scope.$on('serverSearchUpdated', function (event, searchData) {
-
       // Magic search always broadcasts this at startup, so
       // we have to not run until we are fully initialized.
       if (!ctrl.initialized) {
