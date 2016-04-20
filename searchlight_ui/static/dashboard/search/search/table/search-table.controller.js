@@ -88,11 +88,6 @@
         ctrl.searchFacets = searchlightSearchHelper.lastSearchQueryOptions.searchFacets;
         if (searchlightSearchHelper.lastSearchQueryOptions.queryString) {
           $timeout(setInput(searchlightSearchHelper.lastSearchQueryOptions.queryString));
-          function setInput(text) {
-            return function() {
-              angular.element('.search-input').val(text);
-            };
-          }
         }
       } else {
         ctrl.searchFacets = ctrl.defaultFacets;
@@ -102,6 +97,12 @@
         .then(function onUserSessionGet(session) {
           ctrl.userSession = session;
         });
+    }
+
+    function setInput(text) {
+      return function() {
+        angular.element('.search-input').val(text);
+      };
     }
 
     /*function isNested (input) {
