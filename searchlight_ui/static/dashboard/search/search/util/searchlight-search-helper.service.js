@@ -62,7 +62,8 @@
       repeatLastSearchWithLatestSettings: repeatLastSearchWithLatestSettings,
       search: search,
       startAdHocPolling: startAdHocPolling,
-      stopAdHocPolling: stopAdHocPolling
+      stopAdHocPolling: stopAdHocPolling,
+      stopSearchPolling: stopSearchPolling
     };
 
     var adHocPollster = null;
@@ -87,13 +88,10 @@
         service.stopAdHocPolling();
       }
 
-      if (settingsPollster !== null) {
-        // We just always will reset the next poll interval to
-        // come after the latest search no matter what the
-        // cause of the current search was.
-        $timeout.cancel(settingsPollster);
-        settingsPollster = null;
-      }
+      // We just always will reset the next poll interval to
+      // come after the latest search no matter what the
+      // cause of the current search was.
+      stopSearchPolling();
 
       service.lastSearchQueryOptions = queryOptions;
 
@@ -153,6 +151,13 @@
       if (angular.isDefined(adHocPollster)) {
         $interval.cancel(adHocPollster);
         adHocPollster = null;
+      }
+    }
+
+    function stopSearchPolling() {
+      if (settingsPollster !== null) {
+        $timeout.cancel(settingsPollster);
+        settingsPollster = null;
       }
     }
 

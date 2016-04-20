@@ -1,0 +1,136 @@
+table[ng-controller="searchTableController as table"] {
+
+  .detail-expanded .row {
+    background: none;
+    padding-left: 2em;
+  }
+}
+
+tr.incache {
+  color: red;
+}// Replaces magic_search.scss with styles for bootstrap/Horizon.
+
+/*-----------------------------------------
+   Magic Search bar
+  ----------------------------------------- */
+
+// Helper variable
+$magic-search-padding: ceil($input-height-base - $font-size-small * $line-height-base - $padding-small-vertical * 2)/2;
+
+hack-magic-search-bar {
+
+  .input-group {
+    width: 100%;
+
+    & > hack-st-magic-search {
+      padding: 20 $padding-xs-horizontal 0 0;
+      min-height: $input-height-base + 2;
+      height: 100%;
+      box-shadow: none;
+    }
+  }
+
+  // Specificity Required
+  .form-group .input-group .input-group-addon {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .input-group-btn {
+    // Notes:
+    // * We may need a better solution than this if we
+    // ever want to support button groups that are
+    // small or large, or a state other than default.
+    // But, until then, this does the trick for our
+    // standard use case!
+    // * If this seems odds, its because Bootstrap button
+    // groups don't allow the trailing button to grow in
+    // height so we have to make the whole span look like
+    // the button instead.  This can be confusing: the
+    // click event needs to live on the span now, not the button.
+    border-radius: 0 $border-radius-base $border-radius-base 0;
+    border: 1px solid $btn-default-border;
+    border-left: none;
+    cursor: pointer;
+    outline: 0;
+    background-image: none;
+    &:active {
+      @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+    }
+
+    @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+    button {
+      &,
+      &:hover {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+      }
+      &:active {
+        @include box-shadow(none);
+      }
+    }
+  }
+
+  .search-bar {
+    display: table;
+    width: 100%;
+    height: $line-height-computed;
+
+    // Layout
+    .magic-search-clear,
+    .search-main-area {
+      display: table-cell;
+    }
+
+    .search-main-area {
+      padding-bottom: $magic-search-padding;
+    }
+
+    .fi-filter {
+      display: none;
+    }
+
+    // Input Text Box
+    .search-input {
+      border: none;
+      width: 250px;
+      margin: $magic-search-padding + 2 0 0 $magic-search-padding + 2;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    // Token
+    .item {
+      font-size: $font-size-small;
+      border-radius: $border-radius-base;
+      display: inline-block;
+      background-color: $gray-lighter;
+      padding: $padding-small-vertical 0 $padding-small-vertical $padding-small-horizontal;
+      margin: $magic-search-padding 0 0 $padding-xs-horizontal;
+
+      .remove {
+        padding: 0 $padding-small-vertical;
+        color: $brand-danger;
+      }
+    }
+
+    // Pre-Token Label
+    .search-selected {
+      color: $gray-light;
+      padding-left: $padding-small-vertical;
+    }
+
+    // Search Bar Clear Icon
+    .magic-search-clear {
+      font-size: $font-size-base;
+      color: $gray;
+      width: $font-size-base;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+}
+

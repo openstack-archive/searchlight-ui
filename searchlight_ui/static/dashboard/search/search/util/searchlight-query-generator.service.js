@@ -30,7 +30,7 @@
 
   /**
    * @ngdoc service
-   * @name horizon.dashboard.project.search.resourceLocator
+   * @name horizon.dashboard.project.search.searchlightQueryGenerator
    * @description Locates resources in openstack dashboard.
    *
    * @param {function} settingsService settingsService
@@ -90,7 +90,12 @@
         addSelectedFacetsFromOptions(options);
         addRawMagicSearchQueryFromOptions(options);
         addDefaultQuery();
+        addVersionToQuery();
         searchlightQueryUtils.addHighlighting(searchlightQuery);
+      }
+
+      function addVersionToQuery() {
+        searchlightQuery.version = true;
       }
 
       function addDefaultQuery() {
