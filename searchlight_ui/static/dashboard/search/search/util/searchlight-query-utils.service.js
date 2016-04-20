@@ -27,7 +27,7 @@
 
   /**
    * @ngdoc service
-   * @name horizon.dashboard.project.search.resourceLocator
+   * @name horizon.dashboard.project.search.searchlightQueryUtils
    * @description Locates resources in openstack dashboard.
    *
    * @param {function} settingsService settingsService
