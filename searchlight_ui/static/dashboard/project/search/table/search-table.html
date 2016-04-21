@@ -136,7 +136,7 @@
       <div class="row">
         <dl class="dl-horizontal">
           <div ng-repeat="(field, value) in hit._source">
-            <div ng-if="['_type'].indexOf(field) === -1"> <!-- &&table.isNested(value)"-->
+            <div ng-if="['_type'].indexOf(field) === -1">
               <dt>
                 <span tooltip="{$ field $}" tooltip-placement="top"
                     tooltip-popup-delay="500" tooltip-trigger="mouseenter">
@@ -154,15 +154,6 @@
           </div>
         </dl>
 
-        <!--div ng-repeat="(field, value) in ::hit._source">
-          <div ng-if="table.isNested(value)"
-               class="col-md-12 detail">
-            <h3> {$ hit._type | resourceLabeler: field $}</h3>
-            <hr>
-            <hz-array-field-table array="value">
-            </hz-array-field-table>
-          </div>
-        </div-->
       </div>
 
     </td>
