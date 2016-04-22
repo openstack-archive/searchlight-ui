@@ -1,172 +1,176 @@
 <div>
- <hz-magic-search-context ng-controller="searchTableController as table"
+  <hz-magic-search-context ng-controller="searchTableController as table"
+                           client-full-text-search="false"
+                           search-settings-callback="table.searchSettings.open"
+                           filter-facets="table.searchFacets">
+    <hz-magic-search-bar>
+    </hz-magic-search-bar>
+    <table
+            hz-table ng-cloak
+            st-magic-search
+            st-table="table.hits"
+            st-safe-src="table.hitsSrc"
+            class="table table-striped table-hover table-rsp table-detail">
 
-  client-full-text-search="false"
-  search-settings-callback="table.searchSettings.open"
-  filter-facets="table.searchFacets">
-  <hz-magic-search-bar>
-  </hz-magic-search-bar>
-<table
-       hz-table ng-cloak
-       st-magic-search
-       st-table="table.hits"
-       st-safe-src="table.hitsSrc"
-       class="table table-striped table-hover table-rsp table-detail">
+      <thead>
+      <tr>
+        <th colspan="100" class="search-header">
+        </th>
+        <!-- th colspan="1" class="table_caption">
+          <a href="" ng-click="table.refresh()"
+             tooltip="{$ 'Refresh results' | translate $}"
+             tooltip-placement="top" tooltip-trigger="mouseenter" class="btn btn-default">
+            <span class="fa fa-refresh"></span>
+          </a>
+        <th -->
+      </tr>
 
-  <thead>
-  <tr>
-    <th colspan="100" class="search-header">
-    </th>
-    <!-- th colspan="1" class="table_caption">
-      <a href="" ng-click="table.refresh()"
-         tooltip="{$ 'Refresh results' | translate $}"
-         tooltip-placement="top" tooltip-trigger="mouseenter" class="btn btn-default">
-        <span class="fa fa-refresh"></span>
-      </a>
-    <th -->
-  </tr>
-
-  <tr>
-    <!--
-      Please note, search result sorting should not be done client side.
-      Searchlight will provide the proper default sorting based on search
-      result scoring.
-    -->
-    <th class="expander"></th>
+      <tr>
+        <!--
+          Please note, search result sorting should not be done client side.
+          Searchlight will provide the proper default sorting based on search
+          result scoring.
+        -->
+        <th class="expander"></th>
 
 
-    <th class="rsp-p1" translate>Type</th>
-    <th ng-if="table.searchSettings.settings.general.all_projects"
-        class="rsp-p1"
-        translate>
-      Project
-    </th>
-    <th class="rsp-p1" translate>Name</th>
-    <th class="rsp-p2" translate>Status</th>
-    <th class="rsp-p2" translate>Visibility</th>
-    <th class="rsp-p2" translate>Updated</th>
-    <th class="rsp-p2" translate>Field Matches</th>
-    <!-- th class="rsp-p3" translate>Description</th -->
-    <th class="actions_column" translate>Actions</th>
-  </tr>
-  </thead>
+        <th class="rsp-p1" translate>Type</th>
+        <th ng-if="table.searchSettings.settings.general.all_projects"
+            class="rsp-p1"
+            translate>
+          Project
+        </th>
+        <th class="rsp-p1" translate>Name</th>
+        <th class="rsp-p2" translate>Status</th>
+        <th class="rsp-p2" translate>Visibility</th>
+        <th class="rsp-p2" translate>Updated</th>
+        <th class="rsp-p2" translate>Field Matches</th>
+        <!-- th class="rsp-p3" translate>Description</th -->
+        <th class="actions_column" translate>Actions</th>
+      </tr>
+      </thead>
 
-  <tbody>
+      <tbody>
 
-  <tr ng-if='table.queryResponse.error'>
-    <td colspan="8" translate>
-      {$ table.queryResponse.statusCode | queryStatus $}
-    </td>
-  </tr>
+      <tr ng-if='table.queryResponse.error'>
+        <td colspan="8" translate>
+          {$ table.queryResponse.statusCode | queryStatus $}
+        </td>
+      </tr>
 
-  <tr ng-if='!table.queryError'
-      ng-repeat-start="hit in table.hits track by hit._id">
+      <tr ng-if='!table.queryError'
+          ng-repeat-start="hit in table.hits track by hit._id">
 
-    <td class="expander">
-      <i class="fa fa-chevron-right"
-         hz-expand-detail
-         duration="200">
-      </i>
-    </td>
+        <td class="expander">
+          <i class="fa fa-chevron-right"
+             hz-expand-detail
+             duration="200">
+          </i>
+        </td>
 
-    <!-- TODO Truncate not working because not in fixed container -->
-    <!-- TODO ng-cloak not working -->
-    <!-- TODO consider adding spinner when search is happening... -->
-    <td class="rsp-p1 truncate">{$ hit._type | resourceLabeler $}</td>
-    <td ng-if="table.searchSettings.settings.general.all_projects"
-        class="rsp-p1">
-      <span tooltip="{$ hit._source.project_id $}"
-            tooltip-placement="top"
-            tooltip-popup-delay="500"
-            tooltip-trigger="mouseenter">
-        {$ hit._source.project_id | keystoneProjectName | noValue$}
-      </span>
-    </td>
+        <!-- TODO Truncate not working because not in fixed container -->
+        <!-- TODO ng-cloak not working -->
+        <!-- TODO consider adding spinner when search is happening... -->
+        <td class="rsp-p1 truncate">{$ hit._type | resourceLabeler $}</td>
+        <td ng-if="table.searchSettings.settings.general.all_projects"
+            class="rsp-p1">
+        <span tooltip="{$ hit._source.project_id $}"
+              tooltip-placement="top"
+              tooltip-popup-delay="500"
+              tooltip-trigger="mouseenter">
+          {$ hit._source.project_id | keystoneProjectName | noValue$}
+        </span>
+        </td>
 
-    <td ng-cloak class="rsp-p1">
-      <a ng-href="{$ hit | resourceUrl $}">
-        <hz-search-highlighter hit="hit"
-                               field="'name'"
-                               default-value="hit._source.name || hit._source.id | noValue">
-        </hz-search-highlighter>
-      </a>
-    </td>
+        <td ng-cloak class="rsp-p1">
+          <a ng-href="{$ hit | resourceUrl $}">
+            <hz-search-highlighter hit="hit"
+                                   field="'name'"
+                                   default-value="hit._source.name || hit._source.id | noValue">
+            </hz-search-highlighter>
+          </a>
+        </td>
 
-    <td class="rsp-p2">{$ hit._source.status | commonStatus | noValue $}</td>
+        <td class="rsp-p2">{$ hit._source.status | commonStatus | noValue $}
+        </td>
 
-    <td class="rsp-p2">
-      <span tooltip="{$ 'Visibility is based on derived data. If Owned by Me, please inspect the resource to determine sharing status.' | translate $}"
-            tooltip-placement="top"
-            tooltip-popup-delay="500"
-            tooltip-trigger="mouseenter">
-        {$ hit._type | commonVisibility: hit._source:table.userSession.project_id | noValue $}
-      </span>
-    </td>
+        <td class="rsp-p2">
+        <span tooltip="{$ 'Visibility is based on derived data. If Owned by Me, please inspect the resource to determine sharing status.' | translate $}"
+              tooltip-placement="top"
+              tooltip-popup-delay="500"
+              tooltip-trigger="mouseenter">
+          {$ hit._type | commonVisibility: hit._source:table.userSession.project_id | noValue $}
+        </span>
+        </td>
 
-    <td class="rsp-p2">{$ hit._source.updated_at | date:'short' | noValue $}</td>
-    <td class="rsp-p2">
-      <ul class="list-unstyled" ng-repeat="(field, value) in hit.highlight">
-        <li ng-if="!field.endsWith('.raw')">
-          {$ hit._type | resourceLabeler: field $}
-        </li>
-      </ul>
-    </td>
-    <!-- td class="rsp-p3 truncate">
-      <hz-search-highlighter hit="hit"
-                             field="'description'"
-                             default-value="hit._source.description | noValue">
-      </hz-search-highlighter>
-    </td -->
+        <td class="rsp-p2">{$ hit._source.updated_at | date:'short' | noValue
+          $}
+        </td>
+        <td class="rsp-p2">
+          <ul class="list-unstyled"
+              ng-repeat="(field, value) in hit.highlight">
+            <li ng-if="!field.endsWith('.raw')">
+              {$ hit._type | resourceLabeler: field $}
+            </li>
+          </ul>
+        </td>
+        <!-- td class="rsp-p3 truncate">
+          <hz-search-highlighter hit="hit"
+                                 field="'description'"
+                                 default-value="hit._source.description | noValue">
+          </hz-search-highlighter>
+        </td -->
 
-    <td class="actions_column">
-      <actions allowed="table.registry.getResourceType(hit._type).itemActions"
-               type="row"
-               item="hit._source"
-               result-handler="table.actionResultHandler">
-      </actions>
-    </td>
+        <td class="actions_column">
+          <actions
+                  allowed="table.registry.getResourceType(hit._type).itemActions"
+                  type="row"
+                  item="hit._source"
+                  result-handler="table.actionResultHandler">
+          </actions>
+        </td>
 
-  </tr>
+      </tr>
 
-  <tr ng-repeat-end class="detail-row">
-    <!--
-      Detail-row:
-      Contains detailed information on this item.
-      Can be toggled using the chevron button.
-      Ensure colspan is greater or equal to number of column-headers.
-    -->
-    <td class="detail" colspan="100">
+      <tr ng-repeat-end class="detail-row">
+        <!--
+          Detail-row:
+          Contains detailed information on this item.
+          Can be toggled using the chevron button.
+          Ensure colspan is greater or equal to number of column-headers.
+        -->
+        <td class="detail" colspan="100">
 
-      <div class="row">
-        <dl class="dl-horizontal">
-          <div ng-repeat="(field, value) in hit._source">
-            <div ng-if="['_type'].indexOf(field) === -1">
-              <dt>
+          <div class="row">
+            <dl class="dl-horizontal">
+              <div ng-repeat="(field, value) in hit._source">
+                <div ng-if="['_type'].indexOf(field) === -1">
+                  <dt>
                 <span tooltip="{$ field $}" tooltip-placement="top"
-                    tooltip-popup-delay="500" tooltip-trigger="mouseenter">
+                      tooltip-popup-delay="500" tooltip-trigger="mouseenter">
                 {$ hit._type | resourceLabeler: field $}
                 </span>
-              </dt>
-              <dd>
-                <hz-search-highlighter hit="hit"
-                                       field="field"
-                                       default-value="value | noValue">
-                </hz-search-highlighter>
-              </dd>
-            </div>
+                  </dt>
+                  <dd>
+                    <hz-search-highlighter hit="hit"
+                                           field="field"
+                                           default-value="value | noValue">
+                    </hz-search-highlighter>
+                  </dd>
+                </div>
+
+              </div>
+            </dl>
 
           </div>
-        </dl>
 
-      </div>
+        </td>
+      </tr>
 
-    </td>
-  </tr>
+      </tbody>
 
-  </tbody>
+      <tfoot hz-table-footer items="table.hits"></tfoot>
 
-  <tfoot hz-table-footer items="table.hits"></tfoot>
-
-</table>
-</hz-magic-search-context>
+    </table>
+  </hz-magic-search-context>
 </div>
