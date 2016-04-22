@@ -37,6 +37,9 @@ npm-shrinkwrap.json
 searchlight_ui/tests/.secret_key_store
 *.lock
 
+#Files created by releasenotes build
+releasenotes/build
+
 # Translations
 *.mo
 
