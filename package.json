@@ -17,8 +17,7 @@
     "karma-jasmine": "0.3.8",
     "karma-ng-html2js-preprocessor": "0.2.2",
     "karma-phantomjs-launcher": "0.2.0",
-    "karma-threshold-reporter": "0.1.15",
-    "phantomjs": "1.9.17"
+    "karma-threshold-reporter": "0.1.15"
   },
   "scripts": {
     "test": "tox -evenv --notest; karma start searchlight_ui/karma.conf.js --single-run",
