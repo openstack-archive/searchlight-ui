@@ -79,6 +79,9 @@
 
       if (searchlightSearchHelper.lastSearchQueryOptions) {
         ctrl.searchFacets = searchlightSearchHelper.lastSearchQueryOptions.searchFacets;
+        if (searchlightSearchHelper.lastSearchQueryOptions.queryString) {
+          $timeout(setInput(searchlightSearchHelper.lastSearchQueryOptions.queryString));
+        }
       } else {
         ctrl.searchFacets = ctrl.defaultFacets;
       }
@@ -87,6 +90,12 @@
         .then(function onUserSessionGet(session) {
           ctrl.userSession = session;
         });
+
+      function setInput(text) {
+        return function() {
+          angular.element('.search-input').val(text);
+        };
+      }
     }
 
     var pluginsUpdatedWatcher = $scope.$on(
