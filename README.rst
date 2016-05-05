@@ -22,6 +22,18 @@ Features
 
 * Please see the searchlight-ui repository
 
+Horizon Version Compatibility
+-----------------------------
+
+This project provides a Horizon plugin. The plugin relies on features developed in the Horizon
+framework, so the version of the plugin must be deployed with a compatible Horizon verion. The
+below table provides an overview of the Horizon version compatibility matrix.
+
+| Searchlight UI Version | Horizon Version(s) Compatibilty |
+| ---------------------: | -------------------------------:|
+| master (Newton)        | master 10.x (Newton)            |
+| 0.1.0 (Mitaka)         | 9.x (Mitaka)                    |
+
 Devstack Install
 ----------------
 
