@@ -31,6 +31,7 @@
 
   SearchTableController.$inject = [
     '$scope',
+    '$log',
     '$filter',
     '$timeout',
     'searchPluginResourceTypesFilter',
@@ -43,6 +44,7 @@
   ];
 
   function SearchTableController($scope,
+                                 $log,
                                  $filter,
                                  $timeout,
                                  searchPluginResourceTypesFilter,
@@ -111,7 +113,12 @@
       ctrl.defaultResourceTypes = searchPluginResourceTypesFilter(plugins, pluginToTypesOptions);
 
       ctrl.defaultResourceTypes.forEach(function(type) {
-        registry.initActions(type, $scope);
+        try {
+          registry.initActions(type, $scope);
+        } catch (err) {
+          var errorMsg = gettext('Error initializing actions for plugin %(type)s: ');
+          $log.error(interpolate(errorMsg, { type: type }, true) + err);
+        }
       });
 
       searchlightFacetUtils.setTypeFacetFromResourceTypes(
