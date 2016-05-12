@@ -31,8 +31,8 @@ ADD_INSTALLED_APPS = ['searchlight_ui']
 # Python panel class of the PANEL to be added.
 ADD_PANEL = 'searchlight_ui.dashboards.project.search.panel.Search'
 
-ADD_ANGULAR_MODULES = ['horizon.dashboard.project.search']
+ADD_ANGULAR_MODULES = ['searchlight-ui']
 
-ADD_SCSS_FILES = ['dashboard/project/search/search.scss']
+ADD_SCSS_FILES = ['searchlight-ui/searchlight-ui.scss']
 
 AUTO_DISCOVER_STATIC_FILES = True

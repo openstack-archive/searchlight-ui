@@ -8,7 +8,7 @@
     Find your cloud resources by selecting specific facets or by specifying
     full text search queries.
     <a href=""
-       ng-controller="searchSyntaxController as syntaxCtrl"
+       ng-controller="searchlight-ui.syntax.searchSyntaxController as syntaxCtrl"
        ng-click="syntaxCtrl.show()">
       <span class="fa fa-question-circle"></span>
     </a>
@@ -17,5 +17,5 @@
 {% endblock page_header %}
 
 {% block main %}
-<ng-include src="'{{ STATIC_URL }}dashboard/project/search/table/search-table.html'"></ng-include>
+<ng-include src="'{{ STATIC_URL }}searchlight-ui/table/search-table.html'"></ng-include>
 {% endblock %}
