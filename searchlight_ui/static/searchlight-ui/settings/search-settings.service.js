@@ -80,12 +80,15 @@
           }
         },
         polling: {
-          enabled: false,
+          enabled: true,
           interval: 10, //seconds
           getIntervalInMs: getIntervalInMs,
           interval_min: 1,
-          interval_max: 300,
-          policy: { rules: [["search", "search:user_polling:allow"]] }
+          interval_max: 300
+        },
+        cache: {
+          // big "enough" to hold items modified by user before actions complete notify SL
+          capacity: 100
         }
       }
     };

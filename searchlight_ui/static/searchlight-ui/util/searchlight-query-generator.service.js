@@ -89,6 +89,7 @@
         addQueryStringFromOptions(options);
         addSelectedFacetsFromOptions(options);
         addRawMagicSearchQueryFromOptions(options);
+        addVersionToQuery();
         addDefaultQuery();
         searchlightQueryUtils.addHighlighting(searchlightQuery);
       }
@@ -97,6 +98,10 @@
         if (angular.equals({}, searchlightQuery.query)) {
           searchlightQuery.query = {"match_all": {}};
         }
+      }
+
+      function addVersionToQuery() {
+        searchlightQuery.version = true;
       }
 
       function addSelectedFacetsFromOptions(options) {

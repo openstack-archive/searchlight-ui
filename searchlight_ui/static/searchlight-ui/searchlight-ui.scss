@@ -6,3 +6,11 @@ hz-magic-search-context {
   }
 
 }
+
+// TODO (tyr) - not sure best way to fix row height
+// this prevents search table rows from changing size when actions are present or not and
+// from shrinking when in-progress icon shown
+table.table-searchlight-search-results tr.summary-row {
+  height: 50px;
+}
+
