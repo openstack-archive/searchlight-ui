@@ -2,6 +2,13 @@
 {% load i18n %}
 {% block title %}{% trans "Search" %}{% endblock %}
 
+{% block breadcrumb_nav %}
+  <ol class="breadcrumb">
+    <li>{% trans "Project" %}</li>
+    <li class="active">{% trans "Search" %}</li>
+  </ol>
+{% endblock %}
+
 {% block page_header %}
 <hz-page-header header="{% trans 'Search' %}">
   <p translate>
