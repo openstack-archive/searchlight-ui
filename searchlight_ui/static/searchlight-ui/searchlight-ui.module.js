@@ -27,6 +27,7 @@
    */
   angular
     .module('searchlight-ui', [
+      'ngRoute',
       'searchlight-ui.filters',
       'searchlight-ui.settings',
       'searchlight-ui.syntax',
@@ -37,6 +38,7 @@
 
   config.$inject = [
     '$provide',
+    '$routeProvider',
     '$windowProvider'
   ];
 
@@ -46,13 +48,21 @@
    *
    * @param {function} $provide ng provide service
    *
+   * @param {function} $routeProvider ng route service
+   *
    * @param {function} $windowProvider NG window provider
    *
    * @returns {undefined}
    */
-  function config($provide, $windowProvider) {
+  function config($provide, $routeProvider, $windowProvider) {
     var path = $windowProvider.$get().STATIC_URL + 'searchlight-ui/';
     $provide.constant('searchlight-ui.basePath', path);
+
+    $routeProvider
+      .when('/project/search/', {
+        templateUrl: path + "table/search-table.html"
+      });
+
   }
 
 })();

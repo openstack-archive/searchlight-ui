@@ -1,3 +1,10 @@
+<hz-page-header header="{$ 'Search' | translate $}">
+  <p translate>
+    Find your cloud resources by selecting specific facets or by specifying
+    full text search queries.
+    <sl-search-syntax></sl-search-syntax>
+  </p>
+</hz-page-header>
 <div>
   <hz-magic-search-context ng-controller="searchlight-ui.table.searchTableController as table"
                            client-full-text-search="false"
