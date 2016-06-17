@@ -56,7 +56,7 @@
         } else if (angular.isUndefined(propertyName)) {
           output = resourceTypeRegistration.label(input);
         } else {
-          output = resourceTypeRegistration.format(propertyName, input);
+          output = input;
         }
       }
 

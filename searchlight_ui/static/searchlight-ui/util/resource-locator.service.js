@@ -56,7 +56,7 @@
     function getResourceUrl(hit) {
       var type = registry.getResourceType(hit._type);
       if (type.detailsViews.length > 0) {
-        return 'project/ngdetails/' + hit._type + '/' + type.pathGenerator(hit._source.id);
+        return 'project/ngdetails/' + hit._type + '/' + type.path(hit._source);
       }
 
       var basePath = ''; // use relative links

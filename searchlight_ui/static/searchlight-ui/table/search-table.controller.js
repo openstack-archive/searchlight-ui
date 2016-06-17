@@ -123,7 +123,7 @@
 
       ctrl.defaultResourceTypes.forEach(function(type) {
         try {
-          registry.initActions(type, $scope);
+          registry.getResourceType(type).initActions($scope);
         } catch (err) {
           var errorMsg = gettext('Error initializing actions for plugin %(type)s: ');
           $log.error(interpolate(errorMsg, { type: type }, true) + err);
