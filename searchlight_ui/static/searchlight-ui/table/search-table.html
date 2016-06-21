@@ -147,30 +147,11 @@
           Ensure colspan is greater or equal to number of column-headers.
         -->
         <td class="detail" colspan="100">
-
-          <div class="row">
-            <dl class="dl-horizontal">
-              <div ng-repeat="(field, value) in hit._source">
-                <div ng-if="['_type'].indexOf(field) === -1">
-                  <dt>
-                <span tooltip="{$ field $}" tooltip-placement="top"
-                      tooltip-popup-delay="500" tooltip-trigger="mouseenter">
-                {$ hit._type | slResourceLabeler: field $}
-                </span>
-                  </dt>
-                  <dd>
-                    <sl-search-highlighter hit="hit"
-                                           field="field"
-                                           default-value="value | noValue">
-                    </sl-search-highlighter>
-                  </dd>
-                </div>
-
-              </div>
-            </dl>
-
-          </div>
-
+          <sl-drawer
+             hit="hit"
+             item="hit._source"
+             template-url="table.getSummaryTemplateUrl(hit._type)">
+          </sl-drawer>
         </td>
       </tr>
 

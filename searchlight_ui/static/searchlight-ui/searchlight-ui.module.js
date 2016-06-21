@@ -32,9 +32,11 @@
       'searchlight-ui.settings',
       'searchlight-ui.syntax',
       'searchlight-ui.table',
+      'searchlight-ui.widgets',
       'searchlight-ui.util'
     ])
-    .config(config);
+    .config(config)
+    .run(run);
 
   config.$inject = [
     '$provide',
@@ -63,6 +65,15 @@
         templateUrl: path + "table/search-table.html"
       });
 
+  }
+
+  run.$inject = [
+    'horizon.framework.conf.resource-type-registry.service',
+    'searchlight-ui.basePath'
+  ];
+
+  function run(registry, basePath) {
+    registry.setDefaultSummaryTemplateUrl(basePath + 'table/default-drawer.html');
   }
 
 })();

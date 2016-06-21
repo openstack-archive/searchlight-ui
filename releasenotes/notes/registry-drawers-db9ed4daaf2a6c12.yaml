@@ -1,0 +1,10 @@
+---
+prelude: >
+    Search panel now uses the registry to produce
+    drawer views, and uses a new directive to do so.
+features:
+  - sl-drawer widget produces markup to use/display
+    a standard Horizon drawer
+  - The search panel shows a resource type's
+    registered drawer, or a searchlight-specific
+    default drawer if none.

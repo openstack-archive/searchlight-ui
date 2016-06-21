@@ -70,6 +70,7 @@
     ctrl.refresh = searchlightSearchHelper.repeatLastSearchWithLatestSettings;
     ctrl.actionResultHandler = actionResultHandler;
     ctrl.userSession = {};
+    ctrl.getSummaryTemplateUrl = getSummaryTemplateUrl;
 
     init();
 
@@ -212,6 +213,11 @@
         // For now, all we can do is poll for a period of time.
         searchlightSearchHelper.startAdHocPolling(500, 5000);
       }
+    }
+
+    function getSummaryTemplateUrl(type) {
+      return registry.getResourceType(type).summaryTemplateUrl ||
+        registry.getDefaultSummaryTemplateUrl();
     }
 
   }
