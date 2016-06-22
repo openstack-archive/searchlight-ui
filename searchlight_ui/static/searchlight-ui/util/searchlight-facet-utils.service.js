@@ -141,8 +141,8 @@
       }
 
       function updateAvailableFacetsForType(response) {
-        var searchlightFacets = response[resourceType] || [];
-        searchlightFacets = searchlightFacets.filter(facetNameFilter);
+        var searchlightFacets = response[resourceType] || {facets: []};
+        searchlightFacets = searchlightFacets.facets.filter(facetNameFilter);
 
         function facetNameFilter(searchlightFacet) {
           return angular.isUndefined(skipFacets[searchlightFacet.name]);
