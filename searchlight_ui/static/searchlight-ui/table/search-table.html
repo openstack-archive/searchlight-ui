@@ -10,8 +10,13 @@
                            client-full-text-search="false"
                            search-settings-callback="table.searchSettings.open"
                            filter-facets="table.searchFacets">
-    <hz-magic-search-bar>
-    </hz-magic-search-bar>
+    <div class="row">
+      <hz-magic-search-bar class="col-md-9"></hz-magic-search-bar>
+      <div class="col-md-3">
+        <actions class="pull-right" allowed="table.globalActions" type="row">
+        </actions>
+      </div>
+    </div>
     <table
             hz-table ng-cloak
             st-magic-search

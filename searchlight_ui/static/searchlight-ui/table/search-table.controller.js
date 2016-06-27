@@ -71,6 +71,7 @@
     ctrl.actionResultHandler = actionResultHandler;
     ctrl.userSession = {};
     ctrl.getSummaryTemplateUrl = getSummaryTemplateUrl;
+    ctrl.globalActions = registry.getGlobalActions();
 
     init();
 
