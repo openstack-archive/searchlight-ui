@@ -1,0 +1,9 @@
+---
+prelude: >
+    Registered details views now linked to in search
+    results.
+features:
+  - Registered details views now take precedence over
+    links hard-coded within the resource-locator service
+  - Links use relative paths to ensure proper use of the
+    established base tag, which includes webroot.

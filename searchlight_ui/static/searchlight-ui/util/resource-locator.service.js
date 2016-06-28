@@ -22,7 +22,7 @@
     .factory('searchlight-ui.util.resourceLocator', ResourceLocator);
 
   ResourceLocator.$inject = [
-    '$window'
+    'horizon.framework.conf.resource-type-registry.service'
   ];
 
   /**
@@ -34,7 +34,7 @@
    *
    * @returns {function} This service.
    */
-  function ResourceLocator($window) {
+  function ResourceLocator(registry) {
 
     var service = {
       getResourceUrl: getResourceUrl
@@ -54,7 +54,12 @@
      * @returns {function} This service.
     */
     function getResourceUrl(hit) {
-      var basePath = $window.WEBROOT;
+      var type = registry.getResourceType(hit._type);
+      if (type.detailsViews.length > 0) {
+        return 'project/ngdetails/' + hit._type + '/' + type.pathGenerator(hit._source.id);
+      }
+
+      var basePath = ''; // use relative links
       var idPattern = 'resourceId';
 
       // TODO pull this resource type registry

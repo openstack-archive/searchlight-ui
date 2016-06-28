@@ -21,8 +21,7 @@
     .directive('slDrawer', slDrawer);
 
   slDrawer.$inject = [
-    'searchlight-ui.basePath',
-    '$window'
+    'searchlight-ui.basePath'
   ];
 
   /**
@@ -38,7 +37,7 @@
    * ```
    *
    */
-  function slDrawer(basePath, $window) {
+  function slDrawer(basePath) {
     var directive = {
       restrict: 'E',
       scope: {

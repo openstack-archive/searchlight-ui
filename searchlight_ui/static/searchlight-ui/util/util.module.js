@@ -25,6 +25,9 @@
    * searchlight-ui utilities
    */
   angular
-    .module('searchlight-ui.util', []);
+    .module('searchlight-ui.util', [
+      'horizon.framework.conf',
+      'horizon.framework.util'
+    ]);
 
 })();
