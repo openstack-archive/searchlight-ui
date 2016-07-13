@@ -77,10 +77,16 @@
     ctrl.getSummaryTemplateUrl = getSummaryTemplateUrl;
     ctrl.globalActions = registry.getGlobalActions();
     ctrl.getSearchlightKey = getSearchlightKey;
-
+    ctrl.toggleLiveSearch = toggleLiveSearch;
+    ctrl.isLiveSearch = isLiveSearch;
+    ctrl.playPauseTooltip = playPauseTooltip;
     init();
 
     ////////////////////////////////
+
+    // Private data
+    var playTooltip = gettext("Resume updates to search results");
+    var pauseTooltip = gettext("Pause updates to search results");
 
     function init() {
       ctrl.searchSettings.initScope($scope);
@@ -361,6 +367,24 @@
 
     function actionErrorHandler(reason) { // eslint-disable-line no-unused-vars
       // Action has failed. Do nothing.
+    }
+
+    function toggleLiveSearch() {
+      var pollingEnabled = ctrl.searchSettings.settings.polling.enabled;
+      if ( pollingEnabled ) {
+        searchlightSearchHelper.cancelRepeatSearch();
+      } else {
+        searchlightSearchHelper.repeatLastSearchWithLatestSettings();
+      }
+      ctrl.searchSettings.settings.polling.enabled = !pollingEnabled;
+    }
+
+    function isLiveSearch() {
+      return ctrl.searchSettings.settings.polling.enabled;
+    }
+
+    function playPauseTooltip() {
+      return isLiveSearch() ? pauseTooltip : playTooltip;
     }
   }
 

@@ -61,6 +61,7 @@
     var service = {
       lastSearchQueryOptions: null,
       repeatLastSearchWithLatestSettings: repeatLastSearchWithLatestSettings,
+      cancelRepeatSearch: cancelRepeatSearch,
       search: search,
       startAdHocPolling: startAdHocPolling,
       stopAdHocPolling: stopAdHocPolling
@@ -78,6 +79,16 @@
       search(service.lastSearchQueryOptions);
     }
 
+    function cancelRepeatSearch() {
+      if (settingsPollster !== null) {
+        // We just always will reset the next poll interval to
+        // come after the latest search no matter what the
+        // cause of the current search was.
+        $timeout.cancel(settingsPollster);
+        settingsPollster = null;
+      }
+    }
+
     function search(queryOptions) {
       if (!queryOptions.is_repeat) {
         // This is a new search, stop any ad hoc polling
@@ -88,13 +99,7 @@
         service.stopAdHocPolling();
       }
 
-      if (settingsPollster !== null) {
-        // We just always will reset the next poll interval to
-        // come after the latest search no matter what the
-        // cause of the current search was.
-        $timeout.cancel(settingsPollster);
-        settingsPollster = null;
-      }
+      cancelRepeatSearch();
 
       service.lastSearchQueryOptions = queryOptions;
 

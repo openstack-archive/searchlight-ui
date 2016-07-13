@@ -11,9 +11,22 @@
                            search-settings-callback="table.searchSettings.open"
                            filter-facets="table.searchFacets">
     <div class="row">
-      <hz-magic-search-bar class="col-md-9"></hz-magic-search-bar>
-      <div class="col-md-3">
-        <actions class="pull-right" allowed="table.globalActions" type="row">
+      <div class="searchlight-table-preamble col-xs-12">
+        <hz-magic-search-bar class="hz-magic-search-bar"></hz-magic-search-bar>
+        <div class="searchlight-play-pause">
+          <button
+              class="btn btn-default"
+              ng-click="table.toggleLiveSearch()"
+              tooltip="{$ table.playPauseTooltip() $}"
+              tooltip-placement="top"
+              tooltip-popup-delay="500"
+              tooltip-trigger="mouseenter">
+            <span class="fa" ng-class="table.isLiveSearch() ? 'fa-pause' : 'fa-play'"></span>
+          </button>
+        </div>
+        <actions class="searchlight-table-actions"
+                 allowed="table.globalActions"
+                 type="row">
         </actions>
       </div>
     </div>
@@ -28,13 +41,6 @@
       <tr>
         <th colspan="100" class="search-header">
         </th>
-        <!-- th colspan="1" class="table_caption">
-          <a href="" ng-click="table.refresh()"
-             tooltip="{$ 'Refresh results' | translate $}"
-             tooltip-placement="top" tooltip-trigger="mouseenter" class="btn btn-default">
-            <span class="fa fa-refresh"></span>
-          </a>
-        <th -->
       </tr>
 
       <tr>
@@ -75,10 +81,10 @@
           ng-repeat-start="hit in table.hits track by table.getSearchlightKey(hit)">
 
         <td class="expander">
-          <i class="fa fa-chevron-right"
-             hz-expand-detail
-             duration="200">
-          </i>
+          <span class="fa fa-chevron-right"
+                hz-expand-detail
+                duration="200">
+          </span>
         </td>
 
         <!-- TODO Truncate not working because not in fixed container -->
@@ -144,7 +150,7 @@
           </actions>
           <span
             ng-show="hit.dirty"
-            class="fa fa-spinner fa-spin fa-lg">
+            class="fa fa-refresh fa-lg">
           </span>
         </td>
 
