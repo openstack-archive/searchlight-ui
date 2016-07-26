@@ -18,6 +18,7 @@ import functools
 import json
 import requests
 from requests.exceptions import HTTPError
+import six
 
 from horizon import exceptions
 from openstack_dashboard.api import base
@@ -104,39 +105,59 @@ class Facets(generic.View):
                       Typically not needed, using the type will
                       automatically map to the index unless deployer
                       has changes.
+        Note - the response is changing for the searchlight 1.0 release.
+        In Mitaka the value for each resource type was a list (the content
+        of the 'facets' key in the new format).
+
         At this time the response looks like:
            {
-              "OS::Glance::Image": [
-                {
-                  "name": "status",
-                  "type": "string"
-                },
-                {
-                  "name": "created_at",
-                  "type": "date"
-                }
-                ...
-              ],
-              "OS::Nova::Server": [
-                {
-                  "name": "status",
-                  "options": [
-                    {
-                      "doc_count": 1,
-                      "key": "ACTIVE"
-                    }
-                  ],
-                  "type": "string"
-                }
-                ...
-              ]
+              "OS::Glance::Image": {
+                "facets": [
+                  {
+                    "name": "status",
+                    "type": "string"
+                  },
+                  {
+                    "name": "created_at",
+                    "type": "date"
+                  }
+                  ...
+                ],
+                "doc_count": 2
+              },
+              "OS::Nova::Server": {
+                "facets": [
+                  {
+                    "name": "status",
+                    "options": [
+                      {
+                        "doc_count": 1,
+                        "key": "ACTIVE"
+                      }
+                    ],
+                    "type": "string"
+                  }
+                  ...
+                ],
+                "doc_count": 1
+              }
             }
         """
 
         # Set some defaults
-        return searchlight_get('/search/facets',
-                               request,
-                               params=request.GET).json()
+        facet_res = searchlight_get('/search/facets',
+                                    request,
+                                    params=request.GET).json()
+        if not facet_res:
+            return facet_res
+
+        # Check for old-format responses
+        first_value = six.itervalues(facet_res).next()
+        if isinstance(first_value, list):
+            # Old-style
+            return {rt: {'facets': val}
+                    for rt, val in six.iteritems(facet_res)}
+        return facet_res
 
 
 def _searchlight_request(request_method, url, request, data=None, params=None):
