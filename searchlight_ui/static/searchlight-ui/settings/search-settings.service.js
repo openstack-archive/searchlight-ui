@@ -55,6 +55,7 @@
       open: open,
       initScope: initScope,
       initPlugin: initPlugins,
+      lastUsedQuery: lastUsedQuery,
       settings: {
         availablePlugins: [],
         fullTextSearch: {
@@ -85,18 +86,22 @@
           interval: 10, //seconds
           getIntervalInMs: getIntervalInMs,
           interval_min: 1,
-          interval_max: 300
+          interval_max: 300,
+          dirtyItemInterval: 2 // seconds
         },
         cache: {
           // big "enough" to hold items modified by user before actions complete notify SL
           capacity: 100
+        },
+        queries: {
+          lastUsedQuery: null
         }
       }
     };
 
     //init();
 
-    var storedSettings = localStorage.getItem(service.localStorageSettingsKey);
+    var storedSettings = loadSettings();
     if (storedSettings) {
       angular.merge(service.settings, JSON.parse(storedSettings));
     }
@@ -118,7 +123,6 @@
     }
 
     //TODO add subscribe instead of this.
-
     var scope;
 
     function initScope(newScope) {
@@ -157,26 +161,51 @@
 
       function updateSettingsAndNotify() {
         service.settings = angular.copy(editableSettings);
-        localStorage.setItem(service.localStorageSettingsKey,
-          JSON.stringify(persistedSettings(service.settings)));
+        saveSettings();
         scope.$emit(service.events.settingsUpdatedEvent);
         return service.settings;
       }
+    }
 
-      function persistedSettings(fullSettings) {
-        return {
-          general: {
-            all_projects: fullSettings.general.all_projects,
-            limit: fullSettings.general.limit
-          },
-          highlighting: {
-            enabled: fullSettings.highlighting.enabled
-          },
-          polling: {
-            enabled: fullSettings.polling.enabled,
-            interval: fullSettings.polling.interval
-          }
-        };
+    function persistedSettings(fullSettings) {
+      return {
+        general: {
+          all_projects: fullSettings.general.all_projects,
+          limit: fullSettings.general.limit
+        },
+        highlighting: {
+          enabled: fullSettings.highlighting.enabled
+        },
+        polling: {
+          enabled: fullSettings.polling.enabled,
+          interval: fullSettings.polling.interval
+        },
+        queries: {
+          lastUsedQuery: fullSettings.queries.lastUsedQuery
+        }
+      };
+    }
+
+    function saveSettings() {
+      localStorage.setItem(service.localStorageSettingsKey,
+          JSON.stringify(persistedSettings(service.settings)));
+    }
+
+    function loadSettings() {
+      return localStorage.getItem(service.localStorageSettingsKey);
+    }
+
+    /**
+     * Get/Set the last used query
+     * @param query - if set, will update the last used query in the persisted settings
+     * If undefined, will return the current last used query from persisted settings
+     */
+    function lastUsedQuery(query) {
+      if (query) {
+        service.settings.queries.lastUsedQuery = query;
+        saveSettings();
+      } else {
+        return service.settings.queries.lastUsedQuery;
       }
     }
 

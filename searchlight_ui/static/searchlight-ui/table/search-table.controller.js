@@ -42,7 +42,8 @@
     'searchlight-ui.util.searchlightFacetUtils',
     'searchlight-ui.util.searchlightSearchHelper',
     'searchlight-ui.util.resourceLocator',
-    'searchlight-ui.settings.settingsService'
+    'searchlight-ui.settings.settingsService',
+    'horizon.app.core.openstack-service-api.searchlight'
   ];
 
   function SearchTableController($scope,
@@ -71,7 +72,6 @@
     ctrl.defaultResourceTypes = [];
     ctrl.defaultFacets = searchlightFacetUtils.defaultFacets();
     ctrl.registry = registry;
-    ctrl.refresh = searchlightSearchHelper.repeatLastSearchWithLatestSettings;
     ctrl.actionResultHandler = actionResultHandler;
     ctrl.userSession = {};
     ctrl.getSummaryTemplateUrl = getSummaryTemplateUrl;
@@ -80,22 +80,25 @@
     ctrl.toggleLiveSearch = toggleLiveSearch;
     ctrl.isLiveSearch = isLiveSearch;
     ctrl.playPauseTooltip = playPauseTooltip;
-    init();
 
     ////////////////////////////////
 
     // Private data
     var playTooltip = gettext("Resume updates to search results");
     var pauseTooltip = gettext("Pause updates to search results");
+    var currentSeachPollTimeout, dirtyHitsPollTimeout, fullTextSearchTimeout;
+
+    init();
 
     function init() {
       ctrl.searchSettings.initScope($scope);
       searchlightFacetUtils.initScope($scope);
 
-      if (searchlightSearchHelper.lastSearchQueryOptions) {
-        ctrl.searchFacets = searchlightSearchHelper.lastSearchQueryOptions.searchFacets;
-        if (searchlightSearchHelper.lastSearchQueryOptions.queryString) {
-          $timeout(setInput(searchlightSearchHelper.lastSearchQueryOptions.queryString));
+      var lastUsedQuery = ctrl.searchSettings.lastUsedQuery();
+      if (lastUsedQuery) {
+        ctrl.searchFacets = lastUsedQuery.searchFacets;
+        if (lastUsedQuery.queryString) {
+          $timeout(setInput(lastUsedQuery.queryString));
         }
       } else {
         ctrl.searchFacets = ctrl.defaultFacets;
@@ -123,6 +126,7 @@
         excludedTypes: ctrl.excludedTypes,
         flatten: true
       };
+      var lastUsedQuery = ctrl.searchSettings.lastUsedQuery();
       ctrl.defaultResourceTypes = slSearchPluginResourceTypesFilter(plugins, pluginToTypesOptions);
 
       ctrl.defaultResourceTypes.forEach(function(type) {
@@ -137,20 +141,17 @@
       searchlightFacetUtils.setTypeFacetFromResourceTypes(
         ctrl.defaultResourceTypes, ctrl.searchFacets);
 
-      searchlightFacetUtils.broadcastFacetsChanged(searchlightSearchHelper.lastSearchQueryOptions);
+      searchlightFacetUtils.broadcastFacetsChanged(lastUsedQuery);
 
       ctrl.initialized = true;
 
-      if (searchlightSearchHelper.lastSearchQueryOptions) {
-        searchlightSearchHelper.lastSearchQueryOptions.onSearchSuccess = onSearchResult;
-        searchlightSearchHelper.lastSearchQueryOptions.onSearchError = onSearchResult;
-        searchlightSearchHelper.repeatLastSearchWithLatestSettings();
+      if (lastUsedQuery) {
+        repeatCurrentSearch();
       } else {
         search();
       }
     }
 
-    var fullTextSearchTimeout;
     var evtName = 'serverSearchUpdated-ms-context';
     var searchUpdatedWatcher = $scope.$on(evtName, function (event, searchData) {
 
@@ -192,7 +193,7 @@
 
     var searchSettingsUpdatedWatcher = $scope.$on(
       ctrl.searchSettings.events.settingsUpdatedEvent,
-      searchlightSearchHelper.repeatLastSearchWithLatestSettings
+      repeatCurrentSearch
     );
 
     $scope.$on('$destroy', function cleanupListeners() {
@@ -200,18 +201,29 @@
       searchUpdatedWatcher();
       searchSettingsUpdatedWatcher();
       pluginsUpdatedWatcher();
-      searchlightSearchHelper.cancelRepeatSearch();
+      cancelCurrentSearchPoll();
+      cancelDirtyHitsPoll();
     });
 
     function search(queryOptions) {
+      cancelCurrentSearchPoll();
       queryOptions = queryOptions || {};
       queryOptions.allFacetDefinitions = ctrl.searchFacets;
       queryOptions.searchFacets = ctrl.searchFacets;
       queryOptions.defaultResourceTypes = ctrl.defaultResourceTypes;
-      queryOptions.onSearchSuccess = onSearchResult;
-      queryOptions.onSearchError = onSearchResult;
+      ctrl.searchSettings.lastUsedQuery(queryOptions);
+      searchlightSearchHelper.search(queryOptions)
+        .success(onSearchResult)
+        .error(onSearchResult);
+    }
 
-      return searchlightSearchHelper.search(queryOptions);
+    function repeatCurrentSearch() {
+      // We may be called either by timeout, or in response to an event. If the latter,
+      // cancel the current search poll timeout to avoid a double search
+      cancelCurrentSearchPoll();
+      searchlightSearchHelper.search(ctrl.searchSettings.lastUsedQuery())
+        .success(onSearchResult)
+        .error(onSearchResult);
     }
 
     function onSearchResult(response) {
@@ -223,6 +235,80 @@
         ctrl.hitsSrc = response.hits;
       }
       ctrl.queryResponse = response;
+
+      pollCurrentSearch();
+    }
+
+    /**
+     * If search polling is unpaused, set a timeout to repeat the current search.
+     */
+    function pollCurrentSearch() {
+      if (ctrl.isLiveSearch()) {
+        cancelCurrentSearchPoll();
+        currentSeachPollTimeout = $timeout(
+          repeatCurrentSearch, searchSettings.settings.polling.getIntervalInMs(), true);
+      }
+    }
+
+    function cancelCurrentSearchPoll() {
+      $timeout.cancel(currentSeachPollTimeout);
+      currentSeachPollTimeout = null;
+    }
+
+    function isDirty(item) {
+      return item.dirty;
+    }
+
+    function pollDirtyHits() {
+      // Note: deleted items have already been filtered out when they were added to the cache
+      var dirtyHits = ctrl.hitsSrc.filter(isDirty);
+      if (dirtyHits.length > 0) {
+        // There are dirty items cancel the overall search polling and
+        // poll on the dirty items until they are clean.
+        cancelCurrentSearchPoll();
+
+        // We may be called by a timeout, or by the user toggling the overall search play/pause.
+        // If the latter, cancel the current dirty poll to avoid a double search
+        cancelDirtyHitsPoll();
+
+        dirtyHitsPollTimeout = $timeout(
+          searchDirtyHits,
+          searchSettings.settings.polling.dirtyItemInterval * 1000,
+          true,
+          dirtyHits);
+      } else {
+        // There are no dirty items. Resume the current search poll if necessary
+        pollCurrentSearch();
+      }
+    }
+
+    function cancelDirtyHitsPoll() {
+      $timeout.cancel(dirtyHitsPollTimeout);
+      dirtyHitsPollTimeout = null;
+    }
+
+    function searchDirtyHits(items) {
+      searchlightSearchHelper.searchItems(items)
+        .success(onSearchDirtyHitsResult)
+        .error(onSearchDirtyHitsResult);
+    }
+
+    function onSearchDirtyHitsResult(response) {
+      // Merge the dirty items into the current search hits
+      var mergedHits = ctrl.hitsSrc.map(function(originalHit) {
+        var result = response.hits.find(function(dirtyQueryHit) {
+          return originalHit._id === dirtyQueryHit._id;
+        });
+        return result || originalHit;
+      });
+      // The item returned by the dirty query may STILL be dirty from the users
+      // point of view if the SL dirty items query returned the same dirty item
+      // we already knew about. Sync the merged list with the cache to get only
+      // items that have actually been updated since the user action.
+      ctrl.hitsSrc = mergedHits.map(syncWithCache).filter(isNotDeleted);
+
+      // Keep querying until no dirty items
+      pollDirtyHits();
     }
 
     /**
@@ -308,6 +394,8 @@
         // tell us what happened...do nothing and wait until the next search
         // results poll to refresh the displayed data.
       }
+
+      pollDirtyHits();
     }
 
     function getSummaryTemplateUrl(type) {
@@ -371,13 +459,25 @@
     }
 
     function toggleLiveSearch() {
-      var pollingEnabled = ctrl.searchSettings.settings.polling.enabled;
-      if ( pollingEnabled ) {
-        searchlightSearchHelper.cancelRepeatSearch();
+      // Check the current polling state
+      var pollingWasEnabled = ctrl.searchSettings.settings.polling.enabled;
+      // Toggle the current polling state
+      ctrl.searchSettings.settings.polling.enabled = !pollingWasEnabled;
+
+      // Now respond to the change in polling state. Since these functions
+      // may check the settings, we must be careful to toggle the polling
+      // state first.
+      if ( pollingWasEnabled ) {
+        // Polling was enabled but is now toggled OFF
+        cancelCurrentSearchPoll();
+        // Still want to poll any dirty items even if overall search results
+        // are no longer live
+        pollDirtyHits();
       } else {
-        searchlightSearchHelper.repeatLastSearchWithLatestSettings();
+        // Polling was NOT enabled but is now toggled ON
+        cancelDirtyHitsPoll(); // No need to dirty poll if entire search results are polling
+        repeatCurrentSearch();
       }
-      ctrl.searchSettings.settings.polling.enabled = !pollingEnabled;
     }
 
     function isLiveSearch() {
