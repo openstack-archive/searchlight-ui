@@ -50,7 +50,7 @@
      *
      * The return value will be an object with keys 'total', 'max_score',
      * 'hits'. 'hits' is a list containing objects which are results from
-     * elasticsearch. Each result is an object with keys '_id', 'index', 'type'
+     * elasticsearch. Each result is an object with keys '_id', 'index', '_type'
      * and '_source', the latter being the document source. See the searchlight
      * documentation for a full list of options.
      *
