@@ -80,6 +80,7 @@
     ctrl.toggleLiveSearch = toggleLiveSearch;
     ctrl.isLiveSearch = isLiveSearch;
     ctrl.playPauseTooltip = playPauseTooltip;
+    ctrl.itemInTransition = itemInTransition;
 
     ////////////////////////////////
 
@@ -486,6 +487,11 @@
 
     function playPauseTooltip() {
       return isLiveSearch() ? pauseTooltip : playTooltip;
+    }
+
+    function itemInTransition(item) {
+      var resourceType = registry.getResourceType(item._type);
+      return resourceType.itemInTransitionFunction(item._source);
     }
   }
 
