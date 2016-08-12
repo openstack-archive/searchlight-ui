@@ -64,3 +64,4 @@ ChangeLog
 .*.swp
 .*sw?
 .idea
+.DS_Store
