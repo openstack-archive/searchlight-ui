@@ -27,7 +27,8 @@
    */
   angular
     .module('resources.os-nova-servers', [
-      'ngRoute'
+      'ngRoute',
+      'resources.os-nova-servers.details'
     ])
     .constant('resources.os-nova-servers.resourceType', 'OS::Nova::Server')
     .config(config)
@@ -47,10 +48,11 @@
   run.$inject = [
     'horizon.framework.conf.resource-type-registry.service',
     'resources.os-nova-servers.basePath',
+    'resources.os-nova-servers.instance-status.service',
     'resources.os-nova-servers.resourceType'
   ];
 
-  function run(registry, basePath, instanceResourceType) {
+  function run(registry, basePath, statusService, instanceResourceType) {
     registry.getResourceType(instanceResourceType)
       .setNames(gettext('Instance'), gettext('Instances'))
       .setSummaryTemplateUrl(basePath + 'summary.html')
@@ -88,31 +90,7 @@
       })
       .setProperty('status', {
         label: gettext('Status'),
-        values: {
-          'DELETED': gettext('Deleted'),
-          'ACTIVE': gettext('Active'),
-          'SHUTOFF': gettext('Shutoff'),
-          'SUSPENDED': gettext('Suspended'),
-          'PAUSED':	gettext('Paused'),
-          'ERROR': gettext('Error'),
-          'RESIZE': gettext('Resize/Migrate'),
-          'VERIFY_RESIZE': gettext('Confirm or Revert Resize/Migrate'),
-          'REVERT_RESIZE': gettext('Revert Resize/Migrate'),
-          'REBOOT': gettext('Reboot'),
-          'HARD_REBOOT': gettext('Hard Reboot'),
-          'PASSWORD': gettext('Password'),
-          'REBUILD': gettext('Rebuild'),
-          'MIGRATING': gettext('Migrating'),
-          'BUILD': gettext('Build'),
-          'RESCUE':  gettext('Rescue'),
-          'SOFT-delete':  gettext('Soft Deleted'),
-          'SHELVED':  gettext('Rescue'),
-          'SHELVED_OFFLOADED':  gettext('Shelved Offloaded'),
-          'BUILDING':  gettext('Building'),
-          'STOPPED':  gettext('Stopped'),
-          'RESCUED':  gettext('Rescued'),
-          'RESIZED':  gettext('Resized')
-        }
+        values: statusService.statuses
       })
       .setProperty('OS-EXT-AZ:availability_zone', {
         label: gettext('Availability Zone')

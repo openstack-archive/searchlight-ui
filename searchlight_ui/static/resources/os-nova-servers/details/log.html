@@ -1,0 +1,15 @@
+<div ng-controller="ServerConsoleLogController as ctrl">
+  <div class="row">
+    <div class="col-md-6">
+      <h3 translate>Instance Console Log</h3>
+    </div>
+    <div class="col-md-6">
+      <div class="pull-right">
+        <span translate>Log Length</span>
+        <input type="text" ng-model="ctrl.logLength">
+        <button class="btn btn-primary" ng-click="ctrl.refresh()" translate>Refresh</button>
+      </div>
+    </div>
+  </div>
+  <pre>{$ ctrl.log $}</pre>
+</div>

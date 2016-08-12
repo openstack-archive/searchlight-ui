@@ -1,0 +1,22 @@
+<div ng-controller="ServerConsoleController as ctrl">
+  <div class="row">
+    <div class="col-md-6">
+      <h3 translate>Instance Console</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" ng-if="ctrl.consoleInfo.url">
+      <button class="btn btn-primary" ng-disabled="ctrl.toldToConnect" ng-click="ctrl.connect()" translate>Connect</button>
+      <a class="btn btn-primary" ng-href="{$ ctrl.safeUrl $}" target="_blank" translate>Connect in a new window</a>
+      <div ng-if="ctrl.toldToConnect">
+        <div ng-if="ctrl.consoleInfo.type !== 'SERIAL'">
+          <translate>If the console is not responding to keyboard input, click the status bar in the screen below.</translate>
+        </div>
+        <iframe id="console_embed" ng-src="{$ ctrl.safeUrl $}" style="width:100%;height:100%"></iframe>
+      </div>
+    </div>
+    <div class="col-md-12" ng-if="!ctrl.consoleInfo.url">
+      <p class="alert alert-danger" translate>Console is currently unavailable. Please try again later.</p>
+    </div>
+  </div>
+</div>

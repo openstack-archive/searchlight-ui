@@ -1,0 +1,92 @@
+<div ng-controller="ServerOverviewController as ctrl">
+  <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>Instance</h3>
+      <hr>
+      <hz-resource-property-list
+        resource-type-name="OS::Nova::Server"
+        cls="dl-horizontal"
+        item="ctrl.server"
+        property-groups="[[
+          'name', 'id', 'status', 'OS-EXT-AZ:availability_zone', 'created']]">
+      </hz-resource-property-list>
+      <dl class="dl-horizontal">
+        <div hz-if-policies="ctrl.policy">
+          <dt translate>Host</dt><dd>{$ ctrl.server.host $}</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="col-md-6 detail" ng-if="ctrl.server.fault">
+      <h3 translate>Fault</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <dt translate>Message</dt><dd>{$ ctrl.server.fault.message $}</dd>
+        <dt translate>Code</dt><dd>{$ ctrl.server.fault.code $}</dd>
+        <dt translate>Details</dt><dd>{$ ctrl.server.fault.details $}</dd>
+        <dt translate>Created</dt><dd>{$ ctrl.server.fault.created $}</dd>
+      </dl>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Specs</h3>
+      <hr>
+      <dl class="dl-horizontal" ng-if="ctrl.flavor">
+        <dt translate>Flavor Name</dt><dd>{$ ctrl.flavor.name $}</dd>
+        <dt translate>Flavor ID</dt><dd>{$ ctrl.flavor.id $}</dd>
+        <dt translate>RAM</dt><dd>{$ ctrl.flavor.ram | mb $}</dd>
+        <dt translate>VCPUs</dt><dd>{$ ctrl.flavor.vcpus $}</dd>
+        <dt translate>Disk</dt><dd>{$ ctrl.flavor.disk | gb $}</dd>
+      <dl class="dl-horizontal">
+      </dl>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>IP Addresses</h3>
+      <hr>
+      <dl class="dl-horizontal" ng-repeat="(network, ip_list) in ctrl.server.addresses">
+        <dt>{$ network $}</dt>
+        <dd>{$ ctrl.getAddresses(ip_list) $}</dd>
+      </dl>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Security Groups</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <div ng-repeat="group in ctrl.securityGroups">
+          <dt>{$ group.name $}</dt>
+          <dd>
+            <ul>
+              <li ng-repeat="rule in group.security_group_rules">{$ ctrl.ruleToString(rule) $}</li>
+              <li ng-if="group.rules.length === 0" translate>No rules defined</li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>Metadata</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <div ng-repeat="(prop, value) in ctrl.server.metadata">
+          <dt data-toggle="tooltip" title="{$ prop $}">{$ ctrl.resourceType.label(prop) $}</dt>
+          <dd>{$ value $}</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Volumes Attached</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <div ng-repeat="volume in ctrl.volumes">
+          <dt translate>Attached To</dt>
+          <dd>
+            <a href="project/volumes/{$ volume.id $}/">{$ volume.name || volume.id $}</a> / {$ volume.device $}
+          </dd>
+        </div>
+      </dl>
+      <div ng-if="ctrl.volumes.length === 0" translate>No Volumes Attached</div>
+    </div>
+  </div>
+</div>
