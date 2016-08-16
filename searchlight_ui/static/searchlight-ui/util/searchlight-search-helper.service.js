@@ -125,6 +125,15 @@
           hit._source.project_id = hit._source.project_id ||
             hit._source._tenant_id || hit._source.owner;
           hit._source.updated_at = hit._source.updated_at || hit._source.created_at;
+
+          // Add a unique search result identifier.
+          //
+          // NOTE: _id is only unique within a given _type. Two hits of different _type may
+          // have an identical _id. It is *similar* to the searchlight "_uid", but since that
+          // isn't exposed by the API, this ID is intentionally not the same to prevent its
+          // accidental use in calls back to the searchlight API. All uses of .id should
+          // treat it as an opaque, unique identifier of 1 item in the searchlight index.
+          hit.id = hit._type + hit._id;
         });
 
         queryOptions.onSearchSuccess(response);

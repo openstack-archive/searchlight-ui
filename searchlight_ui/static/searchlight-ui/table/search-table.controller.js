@@ -38,7 +38,6 @@
     'slSearchPluginResourceTypesFilter',
     'horizon.app.core.openstack-service-api.userSession',
     'horizon.framework.conf.resource-type-registry.service',
-    'horizon.framework.util.actions.action-result.service',
     'searchlight-ui.util.modifiedItemCache',
     'searchlight-ui.util.searchlightFacetUtils',
     'searchlight-ui.util.searchlightSearchHelper',
@@ -54,7 +53,6 @@
                                  slSearchPluginResourceTypesFilter,
                                  userSession,
                                  registry,
-                                 actionResultService,
                                  modifiedItemCache,
                                  searchlightFacetUtils,
                                  searchlightSearchHelper,
@@ -229,7 +227,7 @@
     function syncWithCache(searchlightItem) {
       return modifiedItemCache.sync(
         searchlightItem,
-        searchlightItem._id,
+        searchlightItem.id,
         getSearchlightTimestamp(searchlightItem));
     }
 
@@ -273,7 +271,8 @@
      * in the search table.
      */
     function getSearchlightKey(searchlightItem) {
-      return searchlightItem._id + getSearchlightTimestamp(searchlightItem);
+      return searchlightItem.id +
+        getSearchlightTimestamp(searchlightItem);
     }
 
     function actionResultHandler(returnValue) {
@@ -286,25 +285,16 @@
       // particular action because the actions return data in a standard form.
       // That return includes the id and type of each created, updated, deleted
       // and failed item.
-      var deletedIds, updatedIds, createdIds, failedIds;
 
       if ( result ) {
-        deletedIds = actionResultService.getIdsOfType(result.deleted, undefined);
-        updatedIds = actionResultService.getIdsOfType(result.updated, undefined);
-        createdIds = actionResultService.getIdsOfType(result.created, undefined);
-        failedIds = actionResultService.getIdsOfType(result.failed, undefined);
-
         // Handle deleted, updated and created items by adding them to the cache so that we
         // can show added, hide removed, and mark modified as 'dirty' until the searchlight
         // server-side cache is updated.
-        addItemsToCache(deletedIds, true);
-        addItemsToCache(updatedIds);
-        addItemsToCache(createdIds);
+        addItemsToCache(result.deleted, true);
+        addItemsToCache(result.updated);
+        addItemsToCache(result.created);
 
-        // Handle failed images
-        if ( failedIds ) {
-          // Do nothing for now
-        }
+        // Failed items in the ActionResult are current ignored
 
       } else {
         // promise resolved, but no result returned. Because the action didn't
@@ -323,15 +313,18 @@
      * until it's searchlight timestamp changes the next time it appears in search
      * results.
      *
-     * @param ids - id of an item that has been modified
+     * @param items - array of items in an ActionResult that has been modified
      * @param deleted - set to true if the item has been deleted
      */
-    function addItemsToCache(ids, deleted) {
+    function addItemsToCache(items, deleted) {
       var index, searchlightItem;
-      ids.forEach(function addToCache(id) {
+      items.forEach(function addToCache(item) {
         // Find the index of the item if it is currently displayed in the search results
-        index = ctrl.hitsSrc.findIndex(function findItemWithId(item) {
-          if (item._source.id === id) {
+        index = ctrl.hitsSrc.findIndex(function findItemWithTypeAndId(hit) {
+          // NOTE: Type must be included as part of this check because the id returned
+          // by the ActionResult is the _source.id, which is only unique within a given
+          // type of resource
+          if (hit._source.id === item.id && hit._type === item.type) {
             return item;
           }
         });
@@ -358,7 +351,7 @@
             searchlightItem.deleted = deleted;
             modifiedItemCache.put(
               searchlightItem,
-              searchlightItem._id,
+              searchlightItem.id,
               getSearchlightTimestamp(searchlightItem)
             );
           }
