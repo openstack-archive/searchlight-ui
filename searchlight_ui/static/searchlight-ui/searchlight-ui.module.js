@@ -33,7 +33,8 @@
       'searchlight-ui.syntax',
       'searchlight-ui.table',
       'searchlight-ui.widgets',
-      'searchlight-ui.util'
+      'searchlight-ui.util',
+      'resources'
     ])
     .config(config)
     .run(run);
