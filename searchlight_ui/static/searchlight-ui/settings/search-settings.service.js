@@ -51,6 +51,7 @@
         settingsUpdatedEvent: 'searchlight-ui.settingsUpdated',
         pluginsUpdatedEvent: 'searchlight-ui.pluginsUpdated'
       },
+      localStorageSettingsKey: 'searchlight-settings',
       open: open,
       initScope: initScope,
       initPlugin: initPlugins,
@@ -95,6 +96,10 @@
 
     //init();
 
+    var storedSettings = localStorage.getItem(service.localStorageSettingsKey);
+    if (storedSettings) {
+      angular.merge(service.settings, JSON.parse(storedSettings));
+    }
     return service;
 
     //////////////
@@ -152,8 +157,26 @@
 
       function updateSettingsAndNotify() {
         service.settings = angular.copy(editableSettings);
+        localStorage.setItem(service.localStorageSettingsKey,
+          JSON.stringify(persistedSettings(service.settings)));
         scope.$emit(service.events.settingsUpdatedEvent);
         return service.settings;
+      }
+
+      function persistedSettings(fullSettings) {
+        return {
+          general: {
+            all_projects: fullSettings.general.all_projects,
+            limit: fullSettings.general.limit
+          },
+          highlighting: {
+            enabled: fullSettings.highlighting.enabled
+          },
+          polling: {
+            enabled: fullSettings.polling.enabled,
+            interval: fullSettings.polling.interval
+          }
+        };
       }
     }
 
