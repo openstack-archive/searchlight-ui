@@ -41,7 +41,16 @@
       'resources.os-nova-servers',
       'resources.os-swift-container'
     ])
+    .config(configure)
     .run(performRegistrations);
+
+  configure.$inject = [
+    '$provide'
+  ];
+
+  function configure($provide) {
+    $provide.constant("resources.more-actions", gettext("More Actions"));
+  }
 
   performRegistrations.$inject = [
     'horizon.framework.conf.resource-type-registry.service'
