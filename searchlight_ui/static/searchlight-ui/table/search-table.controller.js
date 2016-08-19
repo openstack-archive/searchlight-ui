@@ -200,6 +200,7 @@
       searchUpdatedWatcher();
       searchSettingsUpdatedWatcher();
       pluginsUpdatedWatcher();
+      searchlightSearchHelper.cancelRepeatSearch();
     });
 
     function search(queryOptions) {
