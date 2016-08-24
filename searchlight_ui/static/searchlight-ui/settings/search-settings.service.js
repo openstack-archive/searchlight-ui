@@ -72,7 +72,7 @@
           limit_min: 5
         },
         highlighting: {
-          enabled: true,
+          enabled: false,
           config: {
             fields: {
               "*": {}

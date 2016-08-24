@@ -62,7 +62,10 @@
         <th class="rsp-p2" translate>Status</th>
         <th class="rsp-p2" translate>Visibility</th>
         <th class="rsp-p2" translate>Updated</th>
-        <th class="rsp-p2" translate>Field Matches</th>
+        <th ng-if="table.searchSettings.settings.highlighting.enabled"
+            class="rsp-p2" translate>
+          Field Matches
+        </th>
         <!-- th class="rsp-p3" translate>Description</th -->
         <th class="actions_column" translate>Actions</th>
       </tr>
@@ -131,13 +134,16 @@
         <td class="rsp-p2">{$ hit._source.updated_at | date:'short' | noValue
           $}
         </td>
-        <td class="rsp-p2">
-          <ul class="list-unstyled"
+        <td ng-if="table.searchSettings.settings.highlighting.enabled"
+            class="rsp-p2">
+          <ul ng-if="hit.highlight"
+              class="list-unstyled"
               ng-repeat="(field, value) in hit.highlight">
             <li ng-if="!field.endsWith('.raw')">
               {$ hit._type | slResourceLabeler: field $}
             </li>
           </ul>
+          <div ng-if="!hit.highlight" translate>-</div>
         </td>
         <!-- td class="rsp-p3 truncate">
           <sl-search-highlighter hit="hit"
