@@ -63,7 +63,7 @@
 
       searchlightQuery.all_projects = settingsService.settings.general.all_projects;
       searchlightQuery.limit = settingsService.settings.general.limit;
-      searchlightQuery.sort = options.sort;
+      searchlightQuery.sort = [settingsService.settings.sort.selected.query];
 
       var allFacetDefinitions = options.allFacetDefinitions || [];
 

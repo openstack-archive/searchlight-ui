@@ -10,6 +10,18 @@
     <div class="row">
       <div class="col-sm-6">
         <fieldset>
+
+          <div class="form-group">
+            <label for="sort" class="control-label" translate>
+              Sort
+            </label>
+            <select id="sort" name="sort" class="form-control"
+                    ng-required="true"
+                    ng-options="x as x.label for x in ctrl.settings.sort.options track by x.label"
+                    ng-model="ctrl.settings.sort.selected">
+            </select>
+          </div>
+
           <div class="form-group required"
                ng-class="{'has-error': searchSettingsForm.name.$invalid && searchSettingsForm.name.$dirty}">
             <div>
@@ -37,6 +49,7 @@
                 You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) allowed.
               </span>
           </div>
+
           <div class="form-group">
             <div>
               <label for="id_highlightingEnabled">

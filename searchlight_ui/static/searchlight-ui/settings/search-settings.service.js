@@ -89,6 +89,10 @@
           interval_max: 300,
           dirtyItemInterval: 2 // seconds
         },
+        sort: {
+          options: getSortOptions(),
+          selected: getSortOptions()[0]
+        },
         cache: {
           // big "enough" to hold items modified by user before actions complete notify SL
           capacity: 100
@@ -136,6 +140,16 @@
       return service.settings.polling.interval * 1000;
     }
 
+    function getSortOptions() {
+      return [
+        {label: gettext("Relevancy"), query: {"_score": {"order": "desc"}}},
+        {label: gettext("Newest"), query: {"updated_at": {"order": "desc"}}},
+        {label: gettext("Oldest"), query: {"updated_at": {"order": "asc"}}},
+        {label: gettext("Alphabetical Name"), query: {"name": {"order": "asc"}}},
+        {label: gettext("Reverse Alphabetical Name"), query: {"name": {"order": "desc"}}}
+      ];
+    }
+
     function open() {
       var editableSettings = angular.copy(service.settings);
 
@@ -179,6 +193,9 @@
         polling: {
           enabled: fullSettings.polling.enabled,
           interval: fullSettings.polling.interval
+        },
+        sort: {
+          selected: fullSettings.sort.selected
         },
         queries: {
           lastUsedQuery: fullSettings.queries.lastUsedQuery
