@@ -23,12 +23,10 @@
       SearchlightSearchHelper);
 
   SearchlightSearchHelper.$inject = [
-    '$interval',
-    '$timeout',
+    '$q',
     'horizon.app.core.openstack-service-api.searchlight',
     'searchlight-ui.util.searchlightFacetUtils',
-    'searchlight-ui.util.searchlightQueryGenerator',
-    'searchlight-ui.settings.settingsService'
+    'searchlight-ui.util.searchlightQueryGenerator'
   ];
 
   /**
@@ -36,72 +34,32 @@
    * @name searchlight-ui.searchlightSearchHelper
    * @description Search helper - one layer above the search API for no apparent reason.
    *
-   * @param {function} $interval $interval
+   * @param {function} $q - $q service
    *
-   * @param {function} $timeout $timeout
+   * @param {function} searchlight - searchlight API
    *
-   * @param {function} searchlightFacetUtils searchlightFacetUtils
+   * @param {function} searchlightFacetUtils - searchlightFacetUtils service
    *
-   * @param {function} searchlightQueryGenerator searchlightQueryGenerator
-   *
-   * @param {function} searchlight searchlight API
-   *
-   * @param {function} settingsService settings service
+   * @param {function} searchlightQueryGenerator - searchlightQueryGenerator service
    *
    * @returns {function} This service
    */
-  function SearchlightSearchHelper($interval,
-                                   $timeout,
+  function SearchlightSearchHelper($q,
                                    searchlight,
                                    searchlightFacetUtils,
-                                   searchlightQueryGenerator,
-                                   settingsService)
+                                   searchlightQueryGenerator)
   {
 
     var service = {
-      lastSearchQueryOptions: null,
-      repeatLastSearchWithLatestSettings: repeatLastSearchWithLatestSettings,
-      cancelRepeatSearch: cancelRepeatSearch,
       search: search,
-      startAdHocPolling: startAdHocPolling,
-      stopAdHocPolling: stopAdHocPolling
+      searchItems: searchItems
     };
-
-    var adHocPollster = null;
-    var settingsPollster = null;
 
     return service;
 
     //////////////////
 
-    function repeatLastSearchWithLatestSettings() {
-      service.lastSearchQueryOptions.is_repeat = true;
-      search(service.lastSearchQueryOptions);
-    }
-
-    function cancelRepeatSearch() {
-      if (settingsPollster !== null) {
-        // We just always will reset the next poll interval to
-        // come after the latest search no matter what the
-        // cause of the current search was.
-        $timeout.cancel(settingsPollster);
-        settingsPollster = null;
-      }
-    }
-
     function search(queryOptions) {
-      if (!queryOptions.is_repeat) {
-        // This is a new search, stop any ad hoc polling
-        // ad hoc polling is intended for attempting to
-        // refresh after an action has been performed
-        // and we don't have any other way to know how
-        // to update the data.
-        service.stopAdHocPolling();
-      }
-
-      cancelRepeatSearch();
-
-      service.lastSearchQueryOptions = queryOptions;
 
       var searchlightQuery = searchlightQueryGenerator.generate(queryOptions);
 
@@ -114,62 +72,51 @@
         searchlightQuery.type = queryOptions.defaultResourceTypes;
       }
 
-      searchlight
+      return searchlight
         .postSearch(searchlightQuery, true)
-        .success(decoratedSearchSuccess)
-        .error(decoratedSearchError);
-
-      function decoratedSearchSuccess(response) {
-        if (settingsService.settings.polling.enabled) {
-          settingsPollster = $timeout(
-            repeatLastSearchWithLatestSettings, settingsService.settings.polling.getIntervalInMs());
-        }
-
-        angular.forEach(response.hits, function (hit) {
-          //This sets up common fields that sometimes differ across projects.
-          hit._source.project_id = hit._source.project_id ||
-            hit._source._tenant_id || hit._source.owner;
-          hit._source.updated_at = hit._source.updated_at || hit._source.created_at;
-
-          // Add a unique search result identifier.
-          //
-          // NOTE: _id is only unique within a given _type. Two hits of different _type may
-          // have an identical _id. It is *similar* to the searchlight "_uid", but since that
-          // isn't exposed by the API, this ID is intentionally not the same to prevent its
-          // accidental use in calls back to the searchlight API. All uses of .id should
-          // treat it as an opaque, unique identifier of 1 item in the searchlight index.
-          hit.id = hit._type + hit._id;
-        });
-
-        queryOptions.onSearchSuccess(response);
-      }
-
-      function decoratedSearchError(data, statusCode) {
-        var result = {
-          hits: [],
-          error: true,
-          data: data,
-          statusCode: statusCode
-        };
-        queryOptions.onSearchError(result);
-      }
+        .success(onSearchSuccess)
+        .error(onSearchError);
     }
 
-    function startAdHocPolling(interval, maxTime) {
-      stopAdHocPolling();
-      interval = interval ? interval : settingsService.settings.polling.getIntervalInMs();
-      adHocPollster = $interval(repeatLastSearchWithLatestSettings, interval);
-      if (angular.isNumber(maxTime)) {
-        $timeout(stopAdHocPolling, maxTime);
-      }
+    /**
+     * Query Searchlight for the latest version of a list of specific search result items.
+     * @param items - an array of items from a prior searchlight search result
+     * @returns {$http promise} for the searchlight API call
+     */
+    function searchItems(items) {
+      return searchlight.postSearch(searchlightQueryGenerator.generateItems(items), true)
+        .success(onSearchSuccess)
+        .error(onSearchError);
     }
 
-    function stopAdHocPolling() {
-      if (angular.isDefined(adHocPollster)) {
-        $interval.cancel(adHocPollster);
-        adHocPollster = null;
-      }
+    function onSearchSuccess(response) {
+      angular.forEach(response.hits, function (hit) {
+        //This sets up common fields that sometimes differ across projects.
+        hit._source.project_id = hit._source.project_id ||
+          hit._source._tenant_id || hit._source.owner;
+        hit._source.updated_at = hit._source.updated_at || hit._source.created_at;
+
+        // Add a unique search result identifier.
+        //
+        // NOTE: _id is only unique within a given _type. Two hits of different _type may
+        // have an identical _id. It is *similar* to the searchlight "_uid", but since that
+        // isn't exposed by the API, this ID is intentionally not the same to prevent its
+        // accidental use in calls back to the searchlight API. All uses of .id should
+        // treat it as an opaque, unique identifier of 1 item in the searchlight index.
+        hit.id = hit._type + hit._id;
+      });
+
+      return response;
     }
 
+    function onSearchError(data, statusCode) {
+      var result = {
+        hits: [],
+        error: true,
+        data: data,
+        statusCode: statusCode
+      };
+      return result;
+    }
   }
 })();

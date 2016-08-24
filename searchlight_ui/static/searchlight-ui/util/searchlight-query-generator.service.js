@@ -46,25 +46,13 @@
                                      searchlightFacetUtils)
   {
     var service = {
-      generate: generate
+      generate: generate,
+      generateItems: generateItems
     };
 
     return service;
 
     //////////////////
-
-    /*service.defaultSort = {
-     _score: {order: "desc"},
-     _script: {
-     script: "if (doc.containsKey('updated')) { return doc['updated']; }" +
-     " else if (doc.containsKey('updated_at')) { return doc['updated_at']; }" +
-     " else if (doc.containsKey('created')) { return doc['created']; }" +
-     " else if (doc.containsKey('created_at')) { return doc['created_at']; } " +
-     " else { return 0; }",
-     type: "string",
-     order: "desc"
-     }
-     };*/
 
     function generate(options) {
       options = options || {};
@@ -151,6 +139,53 @@
           searchlightQueryUtils.addBestGuessBoolQueryParam(searchlightQuery.query, param, facet);
         }
       }
+    }
+
+    /**
+     * Generate a searchlight query to get the latest version of a list of specific items
+     * returned by a prior searchlight query. Use the "_uid" query. See:
+     * https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-uid-field.html
+     *
+     * @param items - an array of items from the results of prior searchlight search. They must
+     * have an "_id" and "_type" field set by the searchlight API.
+     *
+     * @returns {*} - an object that can be used as the searchlight query
+     */
+    function generateItems(items) {
+      var item, i, values;
+      var valuesByType = {};
+      for ( i = 0; i < items.length; i++ ) {
+        item = items[i];
+        values = valuesByType[item._type];
+        if (!values) {
+          values = [];
+          valuesByType[item._type] = values;
+        }
+        values.push(item._id);
+      }
+
+      var queryOptions = {
+        "query": {
+          "filtered": {
+            "filter": {
+              "or": typesToIdsQueries(valuesByType)
+            }
+          }
+        }
+      };
+
+      return service.generate(queryOptions);
+    }
+
+    function typesToIdsQueries(valuesByType) {
+      return Object.keys(valuesByType).map(function typeToIdsQuery(key) {
+        return {
+          "ids": {
+            "type": key,
+            "values": valuesByType[key]
+          }
+        };
+      });
     }
 
   }
