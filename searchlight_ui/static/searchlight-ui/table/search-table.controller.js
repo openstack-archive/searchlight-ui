@@ -81,6 +81,8 @@
     ctrl.isLiveSearch = isLiveSearch;
     ctrl.playPauseTooltip = playPauseTooltip;
     ctrl.itemInTransition = itemInTransition;
+    ctrl.displaying = displaying;
+    ctrl.resultsExceedLimit = false;
 
     ////////////////////////////////
 
@@ -205,6 +207,29 @@
       cancelCurrentSearchPoll();
       cancelDirtyHitsPoll();
     });
+
+    function displaying() {
+      ctrl.resultsExceedLimit = false;
+      var total = 0;
+      var numberDisplayed = 0;
+      if (ctrl.searchSettings.settings.general.limit && ctrl.queryResponse) {
+        total = ctrl.queryResponse.total;
+        numberDisplayed = ctrl.queryResponse.total < ctrl.searchSettings.settings.general.limit ?
+          ctrl.queryResponse.total : ctrl.searchSettings.settings.general.limit;
+      }
+      if (total === numberDisplayed) {
+        return interpolate(
+          gettext('%(total)s total results'),
+          {numberDisplayed: numberDisplayed, total: total},
+          true);
+      } else {
+        ctrl.resultsExceedLimit = true;
+        return interpolate(
+          gettext('Displaying %(numberDisplayed)s of %(total)s total results'),
+          {numberDisplayed: numberDisplayed, total: total},
+          true);
+      }
+    }
 
     function search(queryOptions) {
       cancelCurrentSearchPoll();

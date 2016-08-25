@@ -67,9 +67,10 @@
         general: {
           all_projects: false,
           all_projects_policy: { rules: [["search", "search:all_projects:allow"]] },
-          limit: 50,
-          limit_max: 500,
-          limit_min: 5
+          limit: 200,
+          limit_max: 2000,
+          limit_min: 5,
+          pageSize: 20
         },
         highlighting: {
           enabled: false,
