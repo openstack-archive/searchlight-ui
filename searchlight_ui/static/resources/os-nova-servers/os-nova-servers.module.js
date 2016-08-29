@@ -28,7 +28,8 @@
   angular
     .module('resources.os-nova-servers', [
       'ngRoute',
-      'resources.os-nova-servers.details'
+      'resources.os-nova-servers.details',
+      'resources.os-nova-servers.actions'
     ])
     .constant('resources.os-nova-servers.resourceType', 'OS::Nova::Server')
     .config(config)
