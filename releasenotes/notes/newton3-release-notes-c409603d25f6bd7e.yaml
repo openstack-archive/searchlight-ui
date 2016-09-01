@@ -1,0 +1,18 @@
+---
+prelude: >
+    Searchlight UI now provides several actions and summary
+    views for various types of resources. This enables
+    users to often complete their task within the context of
+    their current search without navigating to other parts
+    of the UI.
+features:
+  - Nova instance actions, summary, and detail views
+  - Nova flavor, hypervisor, and server group summary views
+  - Cinder volumes and snapshots summary view
+  - Glance images summary view
+  - Neutron network, ports, routers, security groups, subnets summary views
+  - Dynamic polling / progress based on resource status and last action
+  - Live search toggle (continuous query mode)
+  - Sort by relevancy, last updated, alphabetical
+  - Persistent search settings
+  - Translation build support
