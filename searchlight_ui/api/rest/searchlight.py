@@ -64,7 +64,7 @@ class Search(generic.View):
             '/search',
             request,
             search_parameters
-        ).json()['hits']
+        ).json()
 
 
 @urls.register

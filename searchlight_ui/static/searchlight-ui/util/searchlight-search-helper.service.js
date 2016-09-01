@@ -72,10 +72,7 @@
         searchlightQuery.type = queryOptions.defaultResourceTypes;
       }
 
-      return searchlight
-        .postSearch(searchlightQuery, true)
-        .success(onSearchSuccess)
-        .error(onSearchError);
+      return promisfySearch(searchlightQuery);
     }
 
     /**
@@ -84,34 +81,49 @@
      * @returns {$http promise} for the searchlight API call
      */
     function searchItems(items) {
-      return searchlight.postSearch(searchlightQueryGenerator.generateItems(items), true)
-        .success(onSearchSuccess)
-        .error(onSearchError);
+      return promisfySearch(searchlightQueryGenerator.generateItems(items));
+    }
+
+    function promisfySearch(searchlightQuery) {
+      var deferred = $q.defer();
+
+      searchlight
+        .postSearch(searchlightQuery, true)
+        .success(function (response) {
+          deferred.resolve(onSearchSuccess(response));
+        })
+        .error(function (response) {
+          deferred.resolve(onSearchError(response));
+        });
+
+      return deferred.promise;
     }
 
     function onSearchSuccess(response) {
-      angular.forEach(response.hits, function (hit) {
-        //This sets up common fields that sometimes differ across projects.
-        hit._source.project_id = hit._source.project_id ||
-          hit._source._tenant_id || hit._source.owner;
-        hit._source.updated_at = hit._source.updated_at || hit._source.created_at;
+      if (response.hits && response.hits.hits) {
+        angular.forEach(response.hits.hits, function (hit) {
+          //This sets up common fields that sometimes differ across projects.
+          hit._source.project_id = hit._source.project_id ||
+            hit._source._tenant_id || hit._source.owner;
+          hit._source.updated_at = hit._source.updated_at || hit._source.created_at;
 
-        // Add a unique search result identifier.
-        //
-        // NOTE: _id is only unique within a given _type. Two hits of different _type may
-        // have an identical _id. It is *similar* to the searchlight "_uid", but since that
-        // isn't exposed by the API, this ID is intentionally not the same to prevent its
-        // accidental use in calls back to the searchlight API. All uses of .id should
-        // treat it as an opaque, unique identifier of 1 item in the searchlight index.
-        hit.id = hit._type + hit._id;
-      });
+          // Add a unique search result identifier.
+          //
+          // NOTE: _id is only unique within a given _type. Two hits of different _type may
+          // have an identical _id. It is *similar* to the searchlight "_uid", but since that
+          // isn't exposed by the API, this ID is intentionally not the same to prevent its
+          // accidental use in calls back to the searchlight API. All uses of .id should
+          // treat it as an opaque, unique identifier of 1 item in the searchlight index.
+          hit.id = hit._type + hit._id;
+        });
+      }
 
       return response;
     }
 
     function onSearchError(data, statusCode) {
       var result = {
-        hits: [],
+        hits: {hits: [], total: 0},
         error: true,
         data: data,
         statusCode: statusCode

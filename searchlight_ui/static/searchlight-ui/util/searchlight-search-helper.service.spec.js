@@ -79,22 +79,24 @@
 
       it('adds an id to search results', function () {
         mockResults = {
-          hits: [
-            {
-              _source: {
-                project_id: "project_id",
-                updated_at: "updated_at"
-              },
-              _type: "type",
-              _id: "id"
-            }
-          ]
+          hits: {
+            hits: [
+              {
+                _source: {
+                  project_id: "project_id",
+                  updated_at: "updated_at"
+                },
+                _type: "type",
+                _id: "id"
+              }
+            ]
+          }
         };
         var mockQuery = {
           onSearchSuccess: angular.noop
         };
         searchHelper.search(mockQuery);
-        expect(mockResults.hits[0].id).toBe("typeid");
+        expect(mockResults.hits.hits[0].id).toBe("typeid");
       });
     });
   });

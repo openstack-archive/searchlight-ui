@@ -19,8 +19,9 @@ from searchlight_ui.api.rest import searchlight
 
 
 # A fake requests response from searchlight's search api
+mock_response = {'total': 0, 'hits': {'hits': []}}
 mock_es_search = mock.Mock()
-mock_es_search.json.return_value = {'total': 0, 'hits': {'hits': []}}
+mock_es_search.json.return_value = mock_response
 
 
 class SearchlightRestTestCase(test.TestCase):
@@ -31,7 +32,7 @@ class SearchlightRestTestCase(test.TestCase):
 
         response = searchlight.Search().post(request)
         self.assertStatusCode(response, 200)
-        self.assertEqual({'hits': []}, response.json)
+        self.assertEqual(mock_response, response.json)
 
         expected_search = {
             'limit': 20,
@@ -48,7 +49,7 @@ class SearchlightRestTestCase(test.TestCase):
 
         response = searchlight.Search().post(request)
         self.assertStatusCode(response, 200)
-        self.assertEqual({'hits': []}, response.json)
+        self.assertEqual(mock_response, response.json)
 
         expected_search = {
             'limit': 100,

@@ -155,8 +155,27 @@
       }
     }
 
+    var searchUpdatedWatcher = $scope.$on('searchUpdated-ms-context', onSearchUpdated);
+    ctrl.onSearchUpdatedOnce = false;
+    function onSearchUpdated(event, searchData) {
+      // Magic search emits this even though we don't want it.
+      // This is a hack, because I don't know what is going on
+      // And this seems to fix the case where you can't delete facets
+      // when returning to search results.
+      // Sorry... this will cause occassional console logs
+      // But it fixes the user experience.
+      if (!ctrl.initialized) {
+        return;
+      }
+
+      if (!ctrl.onSearchUpdatedOnce) {
+        ctrl.onSearchUpdatedOnce = true;
+        search(searchData);
+      }
+    }
+
     var evtName = 'serverSearchUpdated-ms-context';
-    var searchUpdatedWatcher = $scope.$on(evtName, function (event, searchData) {
+    var serverSearchUpdatedWatcher = $scope.$on(evtName, function (event, searchData) {
 
       // Magic search always broadcasts this at startup, so
       // we have to not run until we are fully initialized.
@@ -203,6 +222,7 @@
       checkFacetsWatcher();
       searchUpdatedWatcher();
       searchSettingsUpdatedWatcher();
+      serverSearchUpdatedWatcher();
       pluginsUpdatedWatcher();
       cancelCurrentSearchPoll();
       cancelDirtyHitsPoll();
@@ -212,10 +232,12 @@
       ctrl.resultsExceedLimit = false;
       var total = 0;
       var numberDisplayed = 0;
+
       if (ctrl.searchSettings.settings.general.limit && ctrl.queryResponse) {
-        total = ctrl.queryResponse.total;
-        numberDisplayed = ctrl.queryResponse.total < ctrl.searchSettings.settings.general.limit ?
-          ctrl.queryResponse.total : ctrl.searchSettings.settings.general.limit;
+        total = ctrl.queryResponse.hits.total;
+        numberDisplayed =
+          ctrl.queryResponse.hits.total < ctrl.searchSettings.settings.general.limit
+          ? ctrl.queryResponse.hits.total : ctrl.searchSettings.settings.general.limit;
       }
       if (total === numberDisplayed) {
         return interpolate(
@@ -239,8 +261,7 @@
       queryOptions.defaultResourceTypes = ctrl.defaultResourceTypes;
       ctrl.searchSettings.lastUsedQuery(queryOptions);
       searchlightSearchHelper.search(queryOptions)
-        .success(onSearchResult)
-        .error(onSearchResult);
+        .then(onSearchResult);
     }
 
     function repeatCurrentSearch() {
@@ -248,17 +269,17 @@
       // cancel the current search poll timeout to avoid a double search
       cancelCurrentSearchPoll();
       searchlightSearchHelper.search(ctrl.searchSettings.lastUsedQuery())
-        .success(onSearchResult)
-        .error(onSearchResult);
+        .then(onSearchResult);
     }
 
     function onSearchResult(response) {
+
       // Map the search results against the cache to make sure we show the user their most
       // recent changes while waiting for the services to notify the searchlight index
       if ( modifiedItemCache.getSize() > 0 ) {
-        ctrl.hitsSrc = response.hits.map(syncWithCache).filter(isNotDeleted);
+        ctrl.hitsSrc = response.hits.hits.map(syncWithCache).filter(isNotDeleted);
       } else {
-        ctrl.hitsSrc = response.hits;
+        ctrl.hitsSrc = response.hits.hits;
       }
       ctrl.queryResponse = response;
 
@@ -315,14 +336,13 @@
 
     function searchDirtyHits(items) {
       searchlightSearchHelper.searchItems(items)
-        .success(onSearchDirtyHitsResult)
-        .error(onSearchDirtyHitsResult);
+        .then(onSearchDirtyHitsResult);
     }
 
     function onSearchDirtyHitsResult(response) {
       // Merge the dirty items into the current search hits
       var mergedHits = ctrl.hitsSrc.map(function(originalHit) {
-        var result = response.hits.find(function(dirtyQueryHit) {
+        var result = response.hits.hits.find(function(dirtyQueryHit) {
           return originalHit._id === dirtyQueryHit._id;
         });
         return result || originalHit;
