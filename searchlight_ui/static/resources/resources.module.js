@@ -38,6 +38,7 @@
       'resources.os-neutron-securitygroups',
       'resources.os-neutron-subnets',
       'resources.os-nova-hypervisors',
+      'resources.os-nova-flavors',
       'resources.os-nova-servers',
       'resources.os-nova-servergroups',
       'resources.os-swift-container'
@@ -64,8 +65,6 @@
     // As a model, the Images registration happens in the images module.
     registry.getResourceType('OS::Glance::Metadef')
       .setNames(gettext('Metadata Definition'), gettext('Metadata Definitions'));
-    registry.getResourceType('OS::Nova::Flavor')
-      .setNames(gettext('Flavor'), gettext('Flavors'));
     registry.getResourceType('OS::Nova::Keypair')
       .setNames(gettext('Key Pair'), gettext('Key Pairs'));
     registry.getResourceType('OS::Designate::Zone')

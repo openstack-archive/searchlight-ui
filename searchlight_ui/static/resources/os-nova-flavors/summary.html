@@ -1,0 +1,19 @@
+<div ng-controller="resources.os-nova-flavors.DrawerController as drawerCtrl">
+  <hz-resource-property-list
+    resource-type-name="OS::Nova::Flavor"
+    item="item"
+    property-groups="[
+    ['name', 'id', 'updated_at'],
+    ['ram', 'vcpus'],
+    ['swap', 'disk', 'OS-FLV-EXT-DATA:ephemeral']]">
+  </hz-resource-property-list>
+
+  <div class="row" ng-if="drawerCtrl.metadataDefs">
+    <div class="col-sm-12">
+      <metadata-display
+        available="::drawerCtrl.metadataDefs"
+        existing="item.extra_specs">
+      </metadata-display>
+    </div>
+  </div>
+</div>
