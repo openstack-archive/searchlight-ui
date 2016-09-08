@@ -16,6 +16,19 @@ hz-magic-search-context {
         border-top-right-radius: 0;
       }
     }
+    .searchlight-filter {
+      flex-grow: 0;
+      flex-shrink: 0;
+      max-width: 10%;
+      padding-right: $padding-large-vertical;
+    }
+    .searchlight-favorite {
+      flex-grow: 0;
+      flex-shrink: 0;
+      max-width: 10%;
+      padding-left: 0;
+      padding-right: $padding-large-vertical;
+    }
     .searchlight-play-pause {
       flex-grow: 0;
       flex-shrink: 0;

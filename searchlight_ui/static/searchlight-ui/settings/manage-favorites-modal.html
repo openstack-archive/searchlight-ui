@@ -1,0 +1,46 @@
+<div ng-form="favoriteQueryForm">
+  <div class="modal-header ui-draggable-handle">
+    <button type="button" class="close" ng-click="$dismiss()" aria-hidden="true" aria-label="Close">
+      <span aria-hidden="true" class="fa fa-times"></span>
+    </button>
+    <div class="h3 modal-title" translate>Manage Favorite Queries</div>
+  </div>
+
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <td translate>Queries</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="(name, query) in ctrl.favorites track by name">
+              <td>{$ name $}</td>
+              <td>
+                <span tooltip="{$ 'Delete favorite' | translate $}" tooltip-placement="top"
+                    tooltip-trigger="mouseenter"
+                    class="fa fa-trash"
+                    ng-click="ctrl.removeFavoriteQuery(name); $event.stopPropagation()"></span>
+              </td>
+            </tr>
+            <tr ng-if='!ctrl.favorites || ctrl.favorites.length === 0'>
+              <td colspan="2" translate>
+                No favorites
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-primary"
+            ng-click="$dismiss()">
+      <translate>Done</translate>
+    </button>
+  </div>
+</div>

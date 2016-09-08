@@ -391,7 +391,7 @@
       options = options || {};
 
       var result = {
-        label: gettext('Type'),
+        label: gettext('Resource Type'),
         name: '_type',
         singleton: angular.isDefined(options.singleton) ? options.singleton : false,
         isServer: true,

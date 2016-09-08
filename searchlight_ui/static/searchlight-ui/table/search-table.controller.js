@@ -38,6 +38,7 @@
     'slSearchPluginResourceTypesFilter',
     'horizon.app.core.openstack-service-api.userSession',
     'horizon.framework.conf.resource-type-registry.service',
+    'horizon.framework.widgets.magic-search.events',
     'searchlight-ui.util.modifiedItemCache',
     'searchlight-ui.util.searchlightFacetUtils',
     'searchlight-ui.util.searchlightSearchHelper',
@@ -54,6 +55,7 @@
                                  slSearchPluginResourceTypesFilter,
                                  userSession,
                                  registry,
+                                 magicSearchEvents,
                                  modifiedItemCache,
                                  searchlightFacetUtils,
                                  searchlightSearchHelper,
@@ -61,6 +63,7 @@
                                  searchSettings)
   {
     var ctrl = this;
+    ctrl.applyFavoriteQuery = applyFavoriteQuery;
     ctrl.filter = $filter;
     ctrl.hits = [];
     ctrl.hitsSrc = [];
@@ -111,12 +114,12 @@
         .then(function onUserSessionGet(session) {
           ctrl.userSession = session;
         });
+    }
 
-      function setInput(text) {
-        return function() {
-          angular.element('.search-input').val(text);
-        };
-      }
+    function setInput(text) {
+      return function () {
+        angular.element('.search-input').val(text);
+      };
     }
 
     var pluginsUpdatedWatcher = $scope.$on(
@@ -227,6 +230,18 @@
       cancelCurrentSearchPoll();
       cancelDirtyHitsPoll();
     });
+
+    function applyFavoriteQuery(query) {
+      if (query) {
+        var urlQueryParams = query.magicSearchQuery || '';
+        var initSearchData = {
+          textSearch: query.queryString,
+          magicSearchQuery: urlQueryParams.split('&')
+        };
+        $scope.$broadcast(magicSearchEvents.INIT_SEARCH, initSearchData);
+        search(query);
+      }
+    }
 
     function displaying() {
       ctrl.resultsExceedLimit = false;

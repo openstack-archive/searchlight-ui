@@ -8,20 +8,62 @@
 <div>
   <hz-magic-search-context ng-controller="searchlight-ui.table.searchTableController as table"
                            client-full-text-search="false"
-                           search-settings-callback="table.searchSettings.open"
                            filter-facets="table.searchFacets">
     <div class="row">
       <div class="searchlight-table-preamble col-xs-12">
         <hz-magic-search-bar class="hz-magic-search-bar"></hz-magic-search-bar>
+        <div class="searchlight-favorite">
+          <div class="btn-group">
+            <button type="button"
+                    class="btn btn-default dropdown-toggle ng-binding"
+                    data-toggle="dropdown"
+                    aria-expanded="false">
+              <span class="fa fa-star-o" aria-hidden="true"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button class="btn btn-primary"
+                        href="#"
+                        ng-click="table.searchSettings.addLastQueryToFavorites()"
+                        translate>
+                  Add Favorite
+                </button>
+              </li>
+              <li>
+                <button class="btn btn-default"
+                        href="#"
+                        ng-click="table.searchSettings.manageFavoriteQueries()"
+                        translate>
+                  Manage Favorites
+                </button>
+              </li>
+              <li class="divider"></li>
+              <li ng-repeat="(name, query) in table.searchSettings.settings.queries.favorites track by name">
+                <a href="#"
+                   ng-click="table.applyFavoriteQuery(query)">
+                  {$ name $}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="searchlight-filter">
+          <button
+                  class="btn btn-default"
+                  ng-click="table.searchSettings.open()">
+            <span class="fa fa-filter" aria-hidden="true"></span>
+          </button>
+        </div>
         <div class="searchlight-play-pause">
           <button
-              class="btn btn-default"
-              ng-click="table.toggleLiveSearch()"
-              tooltip="{$ table.playPauseTooltip() $}"
-              tooltip-placement="top"
-              tooltip-popup-delay="500"
-              tooltip-trigger="mouseenter">
-            <span class="fa" ng-class="table.isLiveSearch() ? 'fa-pause' : 'fa-play'"></span>
+                  class="btn btn-default"
+                  ng-click="table.toggleLiveSearch()"
+                  tooltip="{$ table.playPauseTooltip() $}"
+                  tooltip-placement="top"
+                  tooltip-popup-delay="500"
+                  tooltip-trigger="mouseenter">
+            <span class="fa"
+                  ng-class="table.isLiveSearch() ? 'fa-pause' : 'fa-play'"></span>
           </button>
         </div>
         <actions class="searchlight-table-actions"

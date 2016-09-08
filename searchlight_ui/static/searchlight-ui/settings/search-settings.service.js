@@ -57,13 +57,17 @@
       loadCustomSettings: loadCustomSettings,
       events: {
         settingsUpdatedEvent: 'searchlight-ui.settingsUpdated',
-        pluginsUpdatedEvent: 'searchlight-ui.pluginsUpdated'
+        pluginsUpdatedEvent: 'searchlight-ui.pluginsUpdated',
+        favoritesUpdatedEvent: 'searchlight-ui.favoritesUpdated'
       },
       localStorageSettingsKey: 'searchlight-settings',
       open: open,
       initScope: initScope,
       initPlugin: initPlugins,
       lastUsedQuery: lastUsedQuery,
+      removeFavoriteQuery: removeFavoriteQuery,
+      addLastQueryToFavorites: addLastQueryToFavorites,
+      manageFavoriteQueries: manageFavoriteQueries,
       settings: {
         availablePlugins: [],
         fullTextSearch: {
@@ -107,7 +111,9 @@
           capacity: 100
         },
         queries: {
-          lastUsedQuery: null
+          lastUsedQuery: null,
+          // Should be name: query
+          favorites: {}
         }
       }
     };
@@ -214,9 +220,48 @@
           selected: fullSettings.sort.selected
         },
         queries: {
-          lastUsedQuery: fullSettings.queries.lastUsedQuery
+          lastUsedQuery: fullSettings.queries.lastUsedQuery,
+          favorites: fullSettings.queries.favorites
         }
       };
+    }
+
+    function addLastQueryToFavorites() {
+      var favoriteOptions = {
+        backdrop: 'static',
+        controller: 'searchlight-ui.settings.addFavoriteController as ctrl',
+        templateUrl: basePath + 'settings/add-favorite-modal.html'
+      };
+
+      return $modal.open(favoriteOptions).result.then(addFavorite);
+
+      function addFavorite(result) {
+        service.settings.queries.favorites[result.name] = service.settings.queries.lastUsedQuery;
+        saveSettings();
+        scope.$emit(service.events.favoritesUpdatedEvent);
+      }
+    }
+
+    function removeFavoriteQuery(name) {
+      delete service.settings.queries.favorites[name];
+      service.saveSettings();
+      scope.$emit(service.events.favoritesUpdatedEvent);
+    }
+
+    function manageFavoriteQueries() {
+      var manageFavoritesOption = {
+        backdrop: 'static',
+        controller: 'searchlight-ui.settings.manageFavoritesController as ctrl',
+        templateUrl: basePath + 'settings/manage-favorites-modal.html'
+      };
+
+      return $modal.open(manageFavoritesOption).result.then(favorites);
+
+      function favorites() {
+        saveSettings();
+        scope.$emit(service.events.favoritesUpdatedEvent);
+        return service.settings.queries.favorites;
+      }
     }
 
     function saveSettings() {
