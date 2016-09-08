@@ -192,7 +192,13 @@
         newMust.query_string = queryString;
       }
 
+      query.bool.must.push(newMust);
+
       //TODO handle nested better
+      //BUG: https://bugs.launchpad.net/searchlight/+bug/1621289
+      // For now we have no way of knowing if this is nested or an object
+      // So, going to just push and assume object.
+      /*
       if (~facet.name.indexOf('.')) {
         var nestedMust = {
           'nested': {
@@ -203,7 +209,7 @@
         query.bool.must.push(nestedMust);
       } else {
         query.bool.must.push(newMust);
-      }
+      }*/
     }
 
     function addHighlighting(searchlightQuery) {
