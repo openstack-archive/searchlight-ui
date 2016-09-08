@@ -163,7 +163,7 @@
       }
     }
 
-    function addBestGuessBoolQueryParam(query, param, facet) {
+    function addBestGuessBoolQueryParam(query, param, facet, facetDefinition) {
       initializeBoolQuery(query);
 
       query.bool.must = query.bool.must || [];
@@ -192,14 +192,9 @@
         newMust.query_string = queryString;
       }
 
-      query.bool.must.push(newMust);
-
-      //TODO handle nested better
-      //BUG: https://bugs.launchpad.net/searchlight/+bug/1621289
-      // For now we have no way of knowing if this is nested or an object
-      // So, going to just push and assume object.
-      /*
-      if (~facet.name.indexOf('.')) {
+      // Create a 'nested' query if the fieldname has a '.' in it and the
+      // facet definition indicates that it's nested versus an object field
+      if (~facet.name.indexOf('.') && facetDefinition && facetDefinition.nested) {
         var nestedMust = {
           'nested': {
             'path': facet.name.split('.')[0],
@@ -209,7 +204,7 @@
         query.bool.must.push(nestedMust);
       } else {
         query.bool.must.push(newMust);
-      }*/
+      }
     }
 
     function addHighlighting(searchlightQuery) {

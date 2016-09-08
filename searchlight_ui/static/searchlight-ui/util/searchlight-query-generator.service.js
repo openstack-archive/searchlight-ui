@@ -136,7 +136,10 @@
         } else if (searchlightQueryUtils.addDefinedQueryParam(searchlightQuery.query, facet)) {
           return;
         } else {
-          searchlightQueryUtils.addBestGuessBoolQueryParam(searchlightQuery.query, param, facet);
+          // Pass the facet definition through to the query builder
+          var definition = searchlightFacetUtils.getDefinition(facet.name, allFacetDefinitions);
+          searchlightQueryUtils.addBestGuessBoolQueryParam(searchlightQuery.query, param,
+                                                           facet, definition);
         }
       }
     }

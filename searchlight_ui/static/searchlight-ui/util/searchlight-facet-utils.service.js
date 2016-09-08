@@ -53,6 +53,7 @@
       broadcastFacetsChanged: broadcastFacetsChanged,
       defaultFacets: defaultFacets,
       facetListToKeyValuePairs: facetListToKeyValuePairs,
+      getDefinition: getDefinition,
       initScope: initScope,
       isServerFacet: isServerFacet,
       keyValueStringToKeyValueObject: keyValueStringToKeyValueObject,
@@ -174,7 +175,8 @@
               name: searchlightFacet.name,
               singleton: true,
               isServer: true,
-              type: searchlightFacet.type
+              type: searchlightFacet.type,
+              nested: searchlightFacet.nested
             };
 
             if (searchlightFacet.type === 'date') {
@@ -228,6 +230,13 @@
         return 1;
       }
       return 0;
+    }
+
+    function getDefinition(facetName, facetDefinitions) {
+      var matching = facetDefinitions.filter(function (facet) {
+        return facet.name === facetName;
+      });
+      return (matching.length > 0) ? matching[0] : null;
     }
 
     function isServerFacet(facetName, facetDefinitions) {
