@@ -91,7 +91,7 @@
     var pauseTooltip = gettext("Pause updates to search results");
     var currentSeachPollTimeout, dirtyHitsPollTimeout, fullTextSearchTimeout;
 
-    init();
+    ctrl.searchSettings.loadCustomSettings().then(init, init);
 
     function init() {
       ctrl.searchSettings.initScope($scope);
