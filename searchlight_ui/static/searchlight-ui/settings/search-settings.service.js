@@ -23,7 +23,9 @@
 
   searchSettingsService.$inject = [
     '$modal',
+    '$q',
     'searchlight-ui.basePath',
+    'horizon.app.core.openstack-service-api.userSession',
     'horizon.app.core.openstack-service-api.searchlight'
   ];
 
@@ -43,10 +45,16 @@
    * @returns {function} This settings service.
    */
   function searchSettingsService($modal,
+                                 $q,
                                  basePath,
+                                 userSession,
                                  searchlight)
   {
+    var customSettingsCall = $q.defer();
+    var persistenceUser, scope;
+
     var service = {
+      loadCustomSettings: loadCustomSettings,
       events: {
         settingsUpdatedEvent: 'searchlight-ui.settingsUpdated',
         pluginsUpdatedEvent: 'searchlight-ui.pluginsUpdated'
@@ -106,16 +114,26 @@
 
     //init();
 
-    var storedSettings = loadSettings();
-    if (storedSettings) {
-      angular.merge(service.settings, JSON.parse(storedSettings));
-    }
+    userSession.get().then(onUserLoad);
     return service;
 
     //////////////
 
     function init() {
       initPlugins();
+    }
+
+    function onUserLoad(response) {
+      persistenceUser = response.user_domain_name + '/' + response.username;
+      var storedSettings = loadSettings(persistenceUser);
+      if (storedSettings) {
+        angular.merge(service.settings, JSON.parse(storedSettings));
+      }
+      customSettingsCall.resolve({});
+    }
+
+    function loadCustomSettings() {
+      return customSettingsCall.promise;
     }
 
     function initPlugins() {
@@ -126,9 +144,6 @@
         scope.$emit(service.events.pluginsUpdatedEvent, response.plugins);
       }
     }
-
-    //TODO add subscribe instead of this.
-    var scope;
 
     function initScope(newScope) {
       if (scope !== newScope) {
@@ -205,12 +220,13 @@
     }
 
     function saveSettings() {
-      localStorage.setItem(service.localStorageSettingsKey,
-          JSON.stringify(persistedSettings(service.settings)));
+      var objectToPersist = persistedSettings(service.settings);
+      localStorage.setItem(service.localStorageSettingsKey + '/' + persistenceUser,
+          JSON.stringify(objectToPersist));
     }
 
-    function loadSettings() {
-      return localStorage.getItem(service.localStorageSettingsKey);
+    function loadSettings(user) {
+      return localStorage.getItem(service.localStorageSettingsKey + '/' + user);
     }
 
     /**

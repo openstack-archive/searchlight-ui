@@ -40,8 +40,10 @@
             return {};
           };
         });
+        $provide.factory('searchlight-ui.settings.settingsService', function() {
+          return {settings: {cache: {capacity: 200}}};
+        });
       }));
-    beforeEach(module('searchlight-ui.settings'));
     beforeEach(module('searchlight-ui.util'));
 
     describe('add', function () {
