@@ -27,6 +27,7 @@
    * This module provides OpenStack Neutron Ports functionality
    */
   angular.module('resources.os-nova-hypervisors', [
+    'resources.os-nova-hypervisors.actions'
   ])
   .constant('resources.os-nova-hypervisors.resourceType', 'OS::Nova::Hypervisor')
     .run(run)
