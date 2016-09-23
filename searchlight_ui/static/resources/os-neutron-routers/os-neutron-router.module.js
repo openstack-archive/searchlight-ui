@@ -27,6 +27,7 @@
    * This module provides OpenStack Neutron Ports functionality
    */
   angular.module('resources.os-neutron-routers', [
+    'resources.os-neutron-routers.actions'
   ])
   .constant('resources.os-neutron-routers.resourceType', 'OS::Neutron::Router')
     .run(run)

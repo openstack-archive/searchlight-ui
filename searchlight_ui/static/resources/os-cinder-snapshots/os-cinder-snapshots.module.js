@@ -27,7 +27,8 @@
    */
   angular
     .module('resources.os-cinder-snapshots', [
-      'ngRoute'
+      'ngRoute',
+      'resources.os-cinder-snapshots.actions'
     ])
     .constant('resources.os-cinder-snapshots.resourceType', 'OS::Cinder::Snapshot')
     .run(run)

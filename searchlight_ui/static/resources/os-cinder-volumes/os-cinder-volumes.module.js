@@ -27,7 +27,8 @@
    */
   angular
     .module('resources.os-cinder-volumes', [
-      'ngRoute'
+      'ngRoute',
+      'resources.os-cinder-volumes.actions'
     ])
     .constant('resources.os-cinder-volumes.resourceType', 'OS::Cinder::Volume')
     .run(run)
