@@ -30,6 +30,7 @@
       'horizon.framework.widgets',
       'horizon.dashboard.project.workflow.launch-instance',
       'ui.bootstrap',
+      'searchlight-ui.util',
       'resources.os-nova-servers'
     ])
     .run(run);
@@ -37,6 +38,7 @@
   run.$inject = [
     'horizon.framework.conf.resource-type-registry.service',
     'resources.os-nova-servers.actions.launch-instance.service',
+    'searchlight-ui.util.redirect-action.service',
     //'resources.os-nova-servers.actions.create-snapshot.service',
     'resources.os-nova-servers.actions.delete-instance.service',
     'resources.os-nova-servers.actions.pause.service',
@@ -53,6 +55,7 @@
   function run(
     registry,
     launchInstanceService,
+    redirectService,
     //createSnapshotService,
     deleteService,
     pauseService,
@@ -141,6 +144,13 @@
         }
       })
       .append({
+        id: 'legacyService',
+        service: redirectService(legacyPath),
+        template: {
+          text: gettext("More Actions...")
+        }
+      })
+      .append({
         id: 'deleteService',
         service: deleteService,
         template: {
@@ -157,6 +167,10 @@
         }
 */
       });
+
+    function legacyPath(item) {
+      return 'project/instances/' + item.id + '/';
+    }
   }
 
 })();
