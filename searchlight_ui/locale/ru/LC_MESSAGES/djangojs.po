@@ -1,19 +1,22 @@
+# Aleksey Alekseenko <9118250541@mail.ru>, 2016. #zanata
 # Alexander <ainikitenkov@gmail.com>, 2016. #zanata
 # Andrew <apapsujko@gmail.com>, 2016. #zanata
 # Irina Kochetova <ikochetova@hystax.com>, 2016. #zanata
+# Ivan Shashero <ishashero@hystax.com>, 2016. #zanata
 # Ivan Startsev <istartsev67@gmail.com>, 2016. #zanata
 # Maxim Bozhenko <mbozhenko@gmail.com>, 2016. #zanata
+# Valentin Chikunov <vchikunov@hystax.com>, 2016. #zanata
 # Yulia Ryndenkova <yryndenkova@hystax.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: searchlight-ui 1.0.0.0rc4.dev1\n"
+"Project-Id-Version: searchlight-ui 1.0.1.dev2\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-10-06 04:58+0000\n"
+"POT-Creation-Date: 2016-10-12 19:02+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-10-05 06:45+0000\n"
-"Last-Translator: Yulia Ryndenkova <yryndenkova@hystax.com>\n"
+"PO-Revision-Date: 2016-10-12 02:57+0000\n"
+"Last-Translator: Aleksey Alekseenko <9118250541@mail.ru>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -46,6 +49,10 @@ msgstr ""
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "ALLOW %(type)s %(direction)s %(target)s"
+
+#, python-format
+msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+msgstr "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
 
 msgid "ANY"
 msgstr "Любой"
@@ -132,6 +139,9 @@ msgstr "Заблокирован"
 msgid "Boolean Operators"
 msgstr "Булевы операторы"
 
+msgid "Boosting"
+msgstr "Приоритезация"
+
 msgid "Bootable"
 msgstr "Загрузочный"
 
@@ -156,7 +166,6 @@ msgstr ""
 "вольности - если некоторые слова во фразе будут стоять не на своих местах,\n"
 "фраза все равно будет найдена."
 
-#, fuzzy
 msgid ""
 "By default, each word you type will match full words\n"
 "            only. You may also use wildcards to match parts of words. "
@@ -172,6 +181,15 @@ msgstr ""
 "По умолчанию каждое слово, которое вы вводите будет искаться только "
 "полностью.\n"
 "Вы можете также использовать групповые символы для поиска по части слова. "
+"Поиск по\n"
+"групповым символам может быть запущен индивидуально, используйте ? для "
+"замены\n"
+"одиночного символа, и * для замены ни одного или нескольких символов.  "
+"'demo'\n"
+"будет соответствовать только 'demo'. Как бы то ни было, 'de*'\n"
+"будет соответствовать всему, что начинается с 'de', например 'demo_1'.\n"
+"'de*1' будет соответствовать\n"
+"всему, что начинается с  'de' и оканчивается на '1'"
 
 msgid "Cancel"
 msgstr "Отменить"
@@ -250,6 +268,17 @@ msgstr "Запись DNS"
 
 msgid "DNS Records"
 msgstr "DNS Записи"
+
+msgid ""
+"Date, numeric or string fields can use range queries.\n"
+"            Use square brackets [min TO max] for inclusive ranges and curly\n"
+"            brackets {min TO max} for exclusive ranges."
+msgstr ""
+"Для числовых, строковых или полей даты можно использовать запросы с "
+"диапазоном.\n"
+"            Используйте квадратные скобки [min TO max] для диапазонов с "
+"включением и фигурные\n"
+"            скобки {min TO max} для диапазонов без включения."
 
 msgid "Default Network"
 msgstr "Сеть по умолчанию"
@@ -344,6 +373,15 @@ msgstr "Ошибка"
 msgid "Field Matches"
 msgstr "Совпадение Полей"
 
+msgid ""
+"Find your cloud resources by selecting specific facets or by specifying\n"
+"    full text search queries.\n"
+"    <sl-search-syntax></sl-search-syntax>"
+msgstr ""
+"Найдите свои облачные ресурсы путём выбора спецефичных аспектов или указав \n"
+"полный текст поиского запроса\n"
+"    <sl-search-syntax></sl-search-syntax>"
+
 msgid "Fixed IPs"
 msgstr "Фиксированные IP адреса"
 
@@ -409,6 +447,13 @@ msgstr "Версия IP"
 
 msgid "IPv4 Address Scope"
 msgstr "Область адресов IPv4"
+
+msgid ""
+"IPv4 addresses may be searched based on ranges and with CIDR\n"
+"            notation."
+msgstr ""
+"IPv4 адреса могут найдены основываясь на рангах и CIDR\n"
+"нотацию "
 
 msgid "IPv6 Address Mode"
 msgstr "Режим ipv6 адресов"
@@ -731,6 +776,14 @@ msgstr "Изменён размер"
 msgid "Result Limit"
 msgstr "Число результатов"
 
+msgid ""
+"Results exceeds pagination limit. Please refine your search or\n"
+"                increase the limit setting."
+msgstr ""
+"Результаты превышает предел разбиения на страницы. Уточните результаты "
+"поиска \n"
+"или увеличьте настройки предела."
+
 msgid "Resume"
 msgstr "Возобновить"
 
@@ -969,6 +1022,13 @@ msgstr "VCPU"
 msgid "Visibility"
 msgstr "Видимость"
 
+msgid ""
+"Visibility is based on derived data. If Owned by Me, please inspect the "
+"resource to determine sharing status."
+msgstr ""
+"Видимость основанна на полученных данных. Если принадлежит мне, пожалуйста "
+"проверте ресурс для определения статуса общего доступа"
+
 msgid "Volume"
 msgstr "Диск"
 
@@ -1012,6 +1072,33 @@ msgstr "Вам не разрешено удалять инстансы: %s"
 
 msgid "You are not allowed to perform this request."
 msgstr "Вам не разрешено выполнять этот запрос."
+
+msgid ""
+"You can increase or decrease the relevance of a search\n"
+"            term by boosting different terms, phrases, or groups. Boost one "
+"of\n"
+"            these by adding ^n to the term, phrase, or group where n is a\n"
+"            number greater than 1 to increase relevance and between 0 and 1 "
+"to\n"
+"            decrease relevance. For example 'web^4 python^0.1' would find\n"
+"            anything with both web and python, but would increase the\n"
+"            relevance for anything with 'web' in the result and decrease "
+"the\n"
+"            relevance for anything with 'python' in the result."
+msgstr ""
+"Вы можете увеличить или уменьшить релевантность\n"
+"            поискового запроса, используя приоритеты для различных\n"
+"            терминов, фраз или групп. Повысьте приоритет одного из них, \n"
+"            добавив ^n к термину, фразе или группе, где n - это число "
+"больше\n"
+"            1 для увеличения релевантности или число от 0 до 1 для "
+"уменьшения.\n"
+"            Например, запрос 'web^4 python^0.1' вернет результаты, "
+"содержащие\n"
+"            и web, и python, но релевантность результатов, содержащих 'web', "
+"будет\n"
+"            увеличена, а релевантность результатов, содержащих 'python' - "
+"уменьшена."
 
 msgid ""
 "You can separate search terms and groups with\n"
@@ -1075,6 +1162,23 @@ msgstr[0] "Вы выбрали \"%s\". Восстановить удаленны
 msgstr[1] "Вы выбрали \"%s\". Восстановить удаленные инстансы невозможно."
 msgstr[2] "Вы выбрали \"%s\". Восстановить удаленные инстансыневозможно."
 
+msgid ""
+"You may decide to only look in a certain field for a\n"
+"            search term by setting a specific facet. This is accomplished "
+"by\n"
+"            either selecting a facet from the drop down or by typing the "
+"facet\n"
+"            manually. For example, if you are looking for an image, you\n"
+"            may choose to only look at the name field by adding 'name:foo'.\n"
+"            You may group facets and use logical operators."
+msgstr ""
+"Вы можете искать по определенному полю, задав конкретный\n"
+"            аспект. Это может быть осуществлено либо выбором аспекта из\n"
+"            выпадающего списка или введением аспекта вручную. Например,\n"
+"            если вы ищете образ, вы можете отобразить только имена, добавив\n"
+"            'name:foo'. Вы можете группировать аспекты и использовать\n"
+"            логические операторы."
+
 msgid "You must re-authenticate yourself."
 msgstr "Требуется переаутентификация."
 
@@ -1086,3 +1190,6 @@ msgstr "от"
 
 msgid "to"
 msgstr "к"
+
+msgid "{$ table.queryResponse.statusCode | slQueryStatus $}"
+msgstr "{$ table.queryResponse.statusCode | slQueryStatus $}"
