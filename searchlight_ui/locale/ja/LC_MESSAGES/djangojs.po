@@ -1,0 +1,927 @@
+# Yuko Katabami <yukokatabami@gmail.com>, 2015. #zanata
+# Shu Muto <shu-mutou@rf.jp.nec.com>, 2016. #zanata
+# Yoshiki Eguchi <yoshiki.eguchi@gmail.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: searchlight-ui 1.0.0.0rc2.dev9\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2016-10-14 18:24+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-09-30 10:17+0000\n"
+"Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#, python-format
+msgid "%(resourceType)s: %(searchFacet)s"
+msgstr "%(resourceType)s: %(searchFacet)s"
+
+#, python-format
+msgid "%(total)s total results"
+msgstr "合計 %(total)s 件"
+
+#, python-format
+msgid "(%(doc_count)s)"
+msgstr "(%(doc_count)s)"
+
+msgid "(Extension)"
+msgstr "（拡張）"
+
+msgid "-"
+msgstr "-"
+
+msgid ""
+"A snapshot is an image which preserves the disk state of a running instance."
+msgstr ""
+"スナップショットは、実行中のインスタンスのディスク状態を保存したイメージで"
+"す。"
+
+#, python-format
+msgid "ALLOW %(type)s %(direction)s %(target)s"
+msgstr "%(type)s %(direction)s %(target)s を許可します。"
+
+#, python-format
+msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+msgstr "%(type)s %(ports)s %(direction)s %(target)s を許可します。"
+
+msgid "ANY"
+msgstr "ANY"
+
+msgid "Action"
+msgstr "アクション"
+
+msgid "Action Log"
+msgstr "アクションログ"
+
+msgid "Actions"
+msgstr "アクション"
+
+msgid "Active"
+msgstr "稼働中"
+
+msgid "Addresses"
+msgstr "アドレス"
+
+msgid "Admin State"
+msgstr "管理状態"
+
+msgid "Alphabetical Name"
+msgstr "アルファベット順の名前"
+
+msgid "Attached Device"
+msgstr "接続中のデバイス"
+
+msgid "Attached Device ID"
+msgstr "接続中のデバイス ID"
+
+msgid "Attached To"
+msgstr "接続先"
+
+msgid "Availability Zone"
+msgstr "アベイラビリティーゾーン"
+
+msgid "Availability Zone Hints"
+msgstr "アベイラビリティーゾーン ヒント"
+
+msgid "Availability Zones"
+msgstr "アベイラビリティーゾーン"
+
+msgid "Available"
+msgstr "利用可能"
+
+msgid "Blocked"
+msgstr "実行待ち"
+
+msgid "Boolean Operators"
+msgstr "ブール値の演算子"
+
+msgid "Bootable"
+msgstr "起動可能"
+
+msgid "Build"
+msgstr "作成中"
+
+msgid "Building"
+msgstr "作成中"
+
+msgid "Cancel"
+msgstr "取り消し"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "Code"
+msgstr "コード"
+
+msgid "Confirm Delete Instance"
+msgid_plural "Confirm Delete Instances"
+msgstr[0] "インスタンスの削除の確認"
+
+msgid "Confirm Resize"
+msgstr "リサイズの確定"
+
+msgid "Confirm or Revert Resize/Migrate"
+msgstr "リサイズ/マイグレーションの確認待ち"
+
+msgid "Connect"
+msgstr "接続"
+
+msgid "Connect in a new window"
+msgstr "新しいウィンドウで接続"
+
+msgid "Consistency Group ID"
+msgstr "整合性グループ ID"
+
+msgid "Console"
+msgstr "コンソール"
+
+msgid "Console is currently unavailable. Please try again later."
+msgstr "コンソールが現在利用できません。後からもう一度お試しください。"
+
+msgid "Crashed"
+msgstr "クラッシュ"
+
+msgid "Create"
+msgstr "作成"
+
+msgid "Create Instance"
+msgstr "インスタンスの作成"
+
+msgid "Create Instance Snapshot"
+msgstr "インスタンスのスナップショットの作成"
+
+msgid "Create Snapshot"
+msgstr "スナップショットの作成"
+
+msgid "Created"
+msgstr "作成時刻"
+
+msgid "Created At"
+msgstr "作成時刻"
+
+msgid "Creating Snapshot"
+msgstr "スナップショットを作成しています"
+
+msgid "DNS Domain"
+msgstr "DNS ドメイン"
+
+msgid "DNS Domains"
+msgstr "DNS ドメイン"
+
+msgid "DNS Name"
+msgstr "DNS 名"
+
+msgid "DNS Nameservers"
+msgstr "DNS ネームサーバー"
+
+msgid "DNS Record"
+msgstr "DNS レコード"
+
+msgid "DNS Records"
+msgstr "DNS レコード"
+
+msgid "Default Network"
+msgstr "デフォルトネットワーク"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Delete Instance"
+msgid_plural "Delete Instances"
+msgstr[0] "インスタンスの削除"
+
+msgid "Deleted"
+msgstr "削除"
+
+#, python-format
+msgid "Deleted Instance: %s."
+msgid_plural "Deleted Instances: %s."
+msgstr[0] "インスタンス %s を削除しました。"
+
+msgid "Deleting Instance"
+msgid_plural "Deleting Instances"
+msgstr[0] "インスタンスを削除しています"
+
+msgid "Description"
+msgstr "説明"
+
+msgid "Description:"
+msgstr "説明:"
+
+msgid "Details"
+msgstr "詳細"
+
+msgid "Direction"
+msgstr "方向"
+
+msgid "Disk"
+msgstr "ディスク"
+
+#, python-format
+msgid "Displaying %(numberDisplayed)s of %(total)s total results"
+msgstr "合計 %(total)s 件中 %(numberDisplayed)s 件表示"
+
+msgid "Distributed"
+msgstr "分散ルーター"
+
+msgid "Down"
+msgstr "停止中"
+
+msgid "Enable DHCP"
+msgstr "DHCP 有効"
+
+msgid "Encrypted"
+msgstr "暗号化"
+
+msgid "Ephemeral"
+msgstr "エフェメラル"
+
+msgid "Error"
+msgstr "エラー"
+
+#, python-format
+msgid "Error initializing actions for plugin %(type)s: "
+msgstr "プラグイン %(type)s のアクションの初期化中にエラーが発生しました。"
+
+msgid "Ether Type"
+msgstr "Ethernet 種別"
+
+msgid "External"
+msgstr "外部"
+
+msgid "External Network"
+msgstr "外部ネットワーク"
+
+msgid "Facets"
+msgstr "ファセット"
+
+msgid "Failed"
+msgstr "失敗"
+
+msgid "Fault"
+msgstr "失敗"
+
+msgid "Fixed IPs"
+msgstr "固定 IP"
+
+msgid "Flavor"
+msgstr "フレーバー"
+
+msgid "Flavor ID"
+msgstr "フレーバー ID"
+
+msgid "Flavor Name"
+msgstr "フレーバー名"
+
+msgid "Flavors"
+msgstr "フレーバー"
+
+msgid "Floating IP"
+msgstr "Floating IP"
+
+msgid "Floating IP Address"
+msgstr "Floating IP アドレス"
+
+msgid "Floating IPs"
+msgstr "Floating IP"
+
+msgid "Floating Network ID"
+msgstr "Floating ネットワーク ID"
+
+msgid "Full Text Search Syntax"
+msgstr "フルテキスト検索構文"
+
+msgid "Gateway IP"
+msgstr "ゲートウェイ IP"
+
+msgid "Grouping"
+msgstr "グループ化"
+
+msgid "Hard Reboot"
+msgstr "ハードリブート"
+
+msgid "High Availability"
+msgstr "高可用性"
+
+msgid "Host"
+msgstr "ホスト"
+
+msgid "Hostname"
+msgstr "ホスト名"
+
+msgid "Hypervisor"
+msgstr "ハイパーバイザー"
+
+msgid "Hypervisors"
+msgstr "ハイパーバイザー"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IP Addresses"
+msgstr "IP アドレス"
+
+msgid "IP Version"
+msgstr "IP バージョン"
+
+msgid "IPv4 Address Scope"
+msgstr "IPv4 アドレススコープ"
+
+msgid "IPv6 Address Mode"
+msgstr "IPv6 アドレスモード"
+
+msgid "IPv6 Address Scope"
+msgstr "IPv6 アドレススコープ"
+
+msgid "IPv6 RA Mode"
+msgstr "IPv6  RA  モード"
+
+msgid ""
+"If the console is not responding to keyboard input, click the status bar in "
+"the screen below."
+msgstr ""
+"コンソールがキーボード入力に応答していない場合には、以下のステータスバーをク"
+"リックしてください。"
+
+msgid "Image"
+msgstr "イメージ"
+
+msgid "Image Reference"
+msgstr "イメージリファレンス"
+
+msgid "Instance"
+msgstr "インスタンス"
+
+msgid "Instance Action Log"
+msgstr "インスタンスのアクションログ"
+
+msgid "Instance Console"
+msgstr "インスタンスのコンソール"
+
+msgid "Instance Console Log"
+msgstr "インスタンスのコンソールログ"
+
+msgid "Instances"
+msgstr "インスタンス"
+
+msgid "Key Pair"
+msgstr "キーペア"
+
+msgid "Key Pair Name"
+msgstr "キーペア名"
+
+msgid "Key Pairs"
+msgstr "キーペア"
+
+msgid "Killed"
+msgstr "強制終了"
+
+msgid "Load Balancer Pool"
+msgstr "ロードバランサープール"
+
+msgid "Load Balancer Pool Member"
+msgstr "ロードバランサープールのメンバー"
+
+msgid "Load Balancer Pool Members"
+msgstr "ロードバランサープールのメンバー"
+
+msgid "Load Balancer Pools"
+msgstr "ロードバランサープール"
+
+msgid "Loading"
+msgstr "読み込み中"
+
+msgid "Local GB (total)"
+msgstr "ローカル GB  (総量)"
+
+msgid "Log"
+msgstr "ログ"
+
+msgid "Log Length"
+msgstr "ログの表示行数"
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Mapped Fixed IP Address"
+msgstr "対応する Fixed IP アドレス"
+
+msgid "Max Port"
+msgstr "上限ポート番号"
+
+msgid "Members"
+msgstr "メンバー"
+
+msgid "Message"
+msgstr "メッセージ"
+
+msgid "Metadata"
+msgstr "メタデータ"
+
+msgid "Metadata Definition"
+msgstr "メタデータ定義"
+
+msgid "Metadata Definitions"
+msgstr "メタデータ定義"
+
+msgid "Migrating"
+msgstr "マイグレーション中"
+
+msgid "Min Port"
+msgstr "下限ポート番号"
+
+msgid "More Actions"
+msgstr "その他のアクション"
+
+msgid "More Actions..."
+msgstr "その他のアクション..."
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Network"
+msgstr "ネットワーク"
+
+msgid "Network Address"
+msgstr "ネットワークアドレス"
+
+msgid "Network Health Monitor"
+msgstr "ネットワークのヘルスモニター"
+
+msgid "Network Health Monitors"
+msgstr "ネットワークのヘルスモニター"
+
+msgid "Network ID"
+msgstr "ネットワーク ID"
+
+msgid "Networks"
+msgstr "ネットワーク"
+
+msgid "Newest"
+msgstr "最新"
+
+msgid "No State"
+msgstr "状態なし"
+
+msgid "No Volumes Attached"
+msgstr "ボリュームが接続されていません"
+
+msgid "No rules defined"
+msgstr "ルールが定義されていません"
+
+msgid "Object"
+msgstr "オブジェクト"
+
+msgid "Object Account"
+msgstr "オブジェクトのアカウント"
+
+msgid "Object Accounts"
+msgstr "オブジェクトのアカウント"
+
+msgid "Object Container"
+msgstr "オブジェクトのコンテナー"
+
+msgid "Object Containers"
+msgstr "オブジェクトのコンテナー"
+
+msgid "Objects"
+msgstr "オブジェクト"
+
+msgid "Oldest"
+msgstr "最古"
+
+msgid "Overview"
+msgstr "概要"
+
+msgid "Owned by Me"
+msgstr "自分の所有"
+
+msgid "Password"
+msgstr "パスワード"
+
+msgid "Past 10 Minutes"
+msgstr "過去 10 分間"
+
+msgid "Past Day"
+msgstr "過去 1 日間"
+
+msgid "Past Half Hour"
+msgstr "過去 30 分間"
+
+msgid "Past Hour"
+msgstr "過去 1 時間"
+
+msgid "Past Month"
+msgstr "過去 1 ヶ月間"
+
+msgid "Past Week"
+msgstr "過去 1 週間"
+
+msgid "Past Year"
+msgstr "過去 1 年間"
+
+msgid "Pause"
+msgstr "一時停止"
+
+msgid "Pause updates to search results"
+msgstr "検索結果の更新の一時停止"
+
+msgid "Paused"
+msgstr "一時停止"
+
+msgid "Pending"
+msgstr "保留中"
+
+msgid "Pending Delete"
+msgstr "削除待ち"
+
+msgid "Phrases"
+msgstr "用語"
+
+msgid "Please Wait"
+msgstr "お待ち下さい"
+
+msgid "Policies"
+msgstr "ポリシー"
+
+msgid "Poll for Updates"
+msgstr "更新のポーリング"
+
+msgid "Pool"
+msgstr "プール"
+
+msgid "Port"
+msgstr "ポート"
+
+msgid "Port ID"
+msgstr "ポート ID"
+
+msgid "Port Security Enabled"
+msgstr "ポートセキュリティー有効"
+
+msgid "Ports"
+msgstr "ポート"
+
+msgid "Power State"
+msgstr "電源状態"
+
+msgid "Project"
+msgstr "プロジェクト"
+
+msgid "Project ID"
+msgstr "プロジェクト ID"
+
+msgid "Protocol"
+msgstr "プロトコル"
+
+msgid "Provider Network Type"
+msgstr "プロバイダーネットワーク種別"
+
+msgid "Provider Physical Network"
+msgstr "プロバイダー物理ネットワーク"
+
+msgid "Provider Segmentation ID"
+msgstr "プロバイダーセグメント ID"
+
+msgid "Public"
+msgstr "パブリック"
+
+msgid "Queued"
+msgstr "処理待ち"
+
+msgid "RAM"
+msgstr "メモリー"
+
+msgid "Range Queries"
+msgstr "範囲の問い合わせ"
+
+msgid "Reboot"
+msgstr "再起動"
+
+msgid "Rebuild"
+msgstr "再作成"
+
+msgid "Refresh"
+msgstr "最新表示"
+
+msgid "Relevancy"
+msgstr "関連性"
+
+msgid "Remote"
+msgstr "リモート"
+
+msgid "Request"
+msgstr "リクエスト"
+
+msgid "Rescue"
+msgstr "レスキュー中"
+
+msgid "Rescued"
+msgstr "レスキュー済み"
+
+msgid "Reserved Characters"
+msgstr "予約済みの文字"
+
+msgid "Resize"
+msgstr "リサイズ"
+
+msgid "Resize/Migrate"
+msgstr "リサイズ/マイグレーション中"
+
+msgid "Resized"
+msgstr "リサイズ済み"
+
+msgid "Result Limit"
+msgstr "結果上限"
+
+msgid "Resume"
+msgstr "再開"
+
+msgid "Resume updates to search results"
+msgstr "検索結果の更新の再開"
+
+msgid "Reverse Alphabetical Name"
+msgstr "アルファベット逆順の名前"
+
+msgid "Revert Resize/Migrate"
+msgstr "リサイズ/マイグレーションの取り消し中"
+
+msgid "Router"
+msgstr "ルーター"
+
+msgid "Router ID"
+msgstr "ルーター ID"
+
+msgid "Routers"
+msgstr "ルーター"
+
+msgid "Rules"
+msgstr "ルール"
+
+msgid "Running"
+msgstr "実行中"
+
+msgid "Saving"
+msgstr "保存中"
+
+msgid "Search"
+msgstr "検索"
+
+msgid "Search Settings"
+msgstr "検索設定"
+
+msgid "Search all projects"
+msgstr "すべてのプロジェクトを検索"
+
+msgid "Security Group"
+msgstr "セキュリティーグループ"
+
+msgid "Security Groups"
+msgstr "セキュリティグループ"
+
+msgid "Server Group"
+msgstr "サーバーグループ"
+
+msgid "Server Groups"
+msgstr "サーバーグループ"
+
+msgid "Shared"
+msgstr "共有"
+
+msgid "Shared by Me"
+msgstr "自分の共有"
+
+msgid "Shared with Me"
+msgstr "自分と共有"
+
+msgid "Shelved"
+msgstr "退避"
+
+msgid "Shelved Offloaded"
+msgstr "退避オフロード"
+
+msgid "Shutdown"
+msgstr "シャットダウン"
+
+msgid "Shutoff"
+msgstr "電源停止"
+
+msgid "Size"
+msgstr "サイズ"
+
+#, python-format
+msgid "Snapshot %s was successfully created."
+msgstr "スナップショット %s が正常に作成されました。"
+
+msgid "Snapshot ID"
+msgstr "スナップショット ID"
+
+msgid "Snapshot Name"
+msgstr "スナップショット名"
+
+msgid "Soft Deleted"
+msgstr "ソフト削除"
+
+msgid "Soft Reboot"
+msgstr "ソフトリブート"
+
+msgid "Sort"
+msgstr "ソート"
+
+msgid "Source Volume ID"
+msgstr "ソースボリューム ID"
+
+msgid "Specs"
+msgstr "スペック"
+
+msgid "Start"
+msgstr "開始"
+
+msgid "Start Time"
+msgstr "開始時刻"
+
+msgid "State"
+msgstr "状態"
+
+msgid "Status"
+msgstr "ステータス"
+
+msgid "Stop"
+msgstr "停止"
+
+msgid "Stopped"
+msgstr "停止"
+
+msgid "Subnet"
+msgstr "サブネット"
+
+msgid "Subnet Pool ID"
+msgstr "サブネットプール ID"
+
+msgid "Subnets"
+msgstr "サブネット"
+
+msgid "Subnets Associated"
+msgstr "割り当てサブネット"
+
+msgid "Suspend"
+msgstr "休止"
+
+msgid "Suspended"
+msgstr "休止"
+
+msgid "Swap"
+msgstr "スワップ"
+
+msgid "Task State"
+msgstr "タスク状態"
+
+msgid "Term Operators"
+msgstr "条件の演算子"
+
+msgid "The current query is not valid. Please check your syntax."
+msgstr "現在のクエリーは無効です。構文をチェックしてください。"
+
+msgid "The requested resource was not found."
+msgstr "要求されたリソースが見つかりません。"
+
+msgid "The search service had an error processing your request."
+msgstr "検索サービスで要求の処理中にエラーが発生しました。"
+
+msgid "There was an error processing your request."
+msgstr "要求の処理中にエラーが発生しました。"
+
+msgid "Transfer"
+msgstr "譲渡"
+
+msgid "Type"
+msgstr "種別"
+
+#, python-format
+msgid "Unable to delete Instance: %s."
+msgid_plural "Unable to delete Instances: %s."
+msgstr[0] "インスタンスを削除できません: %s"
+
+msgid "Unable to execute the search."
+msgstr "検索を実行できません。"
+
+msgid "Unable to retrieve Searchlight resources types."
+msgstr "Searchlight リソース種別を取得できません。"
+
+msgid "Unable to retrieve search facets."
+msgstr "検索のファセットを取得できません。"
+
+msgid "Unavailable"
+msgstr "利用不可"
+
+msgid "Unpause"
+msgstr "一時停止解除"
+
+msgid "Up"
+msgstr "動作中"
+
+msgid "Update Interval (seconds)"
+msgstr "更新間隔（秒）"
+
+msgid "Update Search"
+msgstr "検索の更新"
+
+msgid "Updated"
+msgstr "更新時刻"
+
+msgid "Updated At"
+msgstr "最終更新"
+
+msgid "User ID"
+msgstr "ユーザー ID"
+
+msgid "VCPUs"
+msgstr "仮想 CPU"
+
+msgid "Visibility"
+msgstr "公開範囲"
+
+msgid "Volume"
+msgstr "ボリューム"
+
+msgid "Volume Backup"
+msgstr "ボリュームバックアップ"
+
+msgid "Volume Backups"
+msgstr "ボリュームバックアップ"
+
+msgid "Volume ID"
+msgstr "ボリューム ID"
+
+msgid "Volume Image Metadata"
+msgstr "ボリュームイメージ メタデータ"
+
+msgid "Volume Snapshot"
+msgstr "ボリュームスナップショット"
+
+msgid "Volume Snapshots"
+msgstr "ボリュームスナップショット"
+
+msgid "Volumes"
+msgstr "ボリューム"
+
+msgid "Volumes Attached"
+msgstr "接続されているボリューム"
+
+msgid "Wildcards"
+msgstr "ワイルドカード"
+
+#, python-format
+msgid "You are not allowed to delete instances: %s"
+msgstr "インスタンスの削除は許可されていません: %s"
+
+msgid "You are not allowed to perform this request."
+msgstr "このリクエストの実行は許可されていません。"
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) "
+"allowed."
+msgstr ""
+"許可された上限 ({$ ctrl.settings.general.limit_max $}) を超過しています。"
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.polling.interval_max $}) "
+"allowed."
+msgstr ""
+"許可された上限 ({$ ctrl.settings.polling.interval_max $}) を超過しています。"
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.general.limit_min $}) "
+"allowed."
+msgstr ""
+"許可された下限 ({$ ctrl.settings.general.limit_min $}) を下回っています。"
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.polling.interval_min $}) "
+"allowed."
+msgstr ""
+"許可された下限 ({$ ctrl.settings.polling.interval_min $}) を下回っています。"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted instance is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
+msgstr[0] "\"%s\" を選択しました。削除されたインスタンスは元に戻せません。"
+
+msgid "You must re-authenticate yourself."
+msgstr "再度認証する必要があります。"
+
+msgid "default"
+msgstr "デフォルト"
+
+msgid "from"
+msgstr "開始"
+
+msgid "to"
+msgstr "終了"
+
+msgid "{$ table.queryResponse.statusCode | slQueryStatus $}"
+msgstr "{$ table.queryResponse.statusCode | slQueryStatus $}"

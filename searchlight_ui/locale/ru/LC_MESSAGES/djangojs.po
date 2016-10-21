@@ -1,0 +1,1195 @@
+# Aleksey Alekseenko <9118250541@mail.ru>, 2016. #zanata
+# Alexander <ainikitenkov@gmail.com>, 2016. #zanata
+# Andrew <apapsujko@gmail.com>, 2016. #zanata
+# Irina Kochetova <ikochetova@hystax.com>, 2016. #zanata
+# Ivan Shashero <ishashero@hystax.com>, 2016. #zanata
+# Ivan Startsev <istartsev67@gmail.com>, 2016. #zanata
+# Maxim Bozhenko <mbozhenko@gmail.com>, 2016. #zanata
+# Valentin Chikunov <vchikunov@hystax.com>, 2016. #zanata
+# Yulia Ryndenkova <yryndenkova@hystax.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: searchlight-ui 1.0.0.0rc2.dev9\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2016-10-14 18:24+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-10-12 02:57+0000\n"
+"Last-Translator: Aleksey Alekseenko <9118250541@mail.ru>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#, python-format
+msgid "%(resourceType)s: %(searchFacet)s"
+msgstr "%(resourceType)s: %(searchFacet)s"
+
+#, python-format
+msgid "%(total)s total results"
+msgstr "%(total)s результатов всего"
+
+#, python-format
+msgid "(%(doc_count)s)"
+msgstr "(%(doc_count)s)"
+
+msgid "(Extension)"
+msgstr "(Расширение)"
+
+msgid "-"
+msgstr "-"
+
+msgid ""
+"A snapshot is an image which preserves the disk state of a running instance."
+msgstr ""
+"Снимок это образ который сохраняет состояние диска запущенной инстансы."
+
+#, python-format
+msgid "ALLOW %(type)s %(direction)s %(target)s"
+msgstr "ALLOW %(type)s %(direction)s %(target)s"
+
+#, python-format
+msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+msgstr "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+
+msgid "ANY"
+msgstr "Любой"
+
+msgid "Action"
+msgstr "Действие"
+
+msgid "Action Log"
+msgstr "Лог действий"
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Active"
+msgstr "Активный"
+
+msgid ""
+"Add a '+' or a '-' to indicate terms that must or must\n"
+"            not appear. For example '+python -apache web' would find\n"
+"            everything that has 'python' does NOT have 'apache' and should "
+"have\n"
+"            'web'. This may also be used with grouping. For example,\n"
+"            'web -(apache AND python)' would find anything with 'web', but "
+"does\n"
+"            not have either 'apache' or 'python'."
+msgstr ""
+"Добавьте '+' или '-' для указания что параметр поиска должен\n"
+"или не должен присутствовать в результатах. Например, запрос\n"
+"'+python -apache web' найдет всё что содержит 'python', НЕ содержит "
+"'apache'\n"
+"и содержит 'web'. Это также может быть использовано на группах параметров.\n"
+"Например, запрос 'web -(apache AND python)' найдет все что содержит 'web' "
+"но\n"
+"не содержит ни 'apache' ни 'python'."
+
+msgid "Addresses"
+msgstr "Адреса"
+
+msgid "Admin State"
+msgstr "Административное состояние"
+
+msgid "Alphabetical Name"
+msgstr "Алфавит (Имя)"
+
+msgid "Attached Device"
+msgstr "Подключенное устройство"
+
+msgid "Attached Device ID"
+msgstr "ID подключенного устройства"
+
+msgid "Attached To"
+msgstr "Прикреплен К"
+
+msgid "Availability Zone"
+msgstr "Зона доступности"
+
+msgid "Availability Zone Hints"
+msgstr "Подсказки зоны доступности"
+
+msgid "Availability Zones"
+msgstr "Зоны доступности"
+
+msgid "Available"
+msgstr "Доступно"
+
+msgid "Binding Host ID"
+msgstr "Привязывание ID хоста"
+
+msgid "Binding Profile"
+msgstr "Привязывание профиля"
+
+msgid "Binding VIF Details"
+msgstr "Привязывание деталей VIF"
+
+msgid "Binding VIF Type"
+msgstr "Привязывание типа VIF"
+
+msgid "Binding VNIC Type"
+msgstr "Привязывание типа VNIC"
+
+msgid "Blocked"
+msgstr "Заблокирован"
+
+msgid "Boolean Operators"
+msgstr "Булевы операторы"
+
+msgid "Boosting"
+msgstr "Приоритезация"
+
+msgid "Bootable"
+msgstr "Загрузочный"
+
+msgid "Build"
+msgstr "Создание"
+
+msgid "Building"
+msgstr "Создание"
+
+msgid ""
+"By default, each word you type will be searched for\n"
+"            individually. You may also try to search an exact phrase by\n"
+"            using quotes (\"my phrase\") to surround a phrase. The search\n"
+"            service may allow a certain amount of phrase slop - meaning "
+"that\n"
+"            if you have some words out of order in the phrase it may still\n"
+"            match."
+msgstr ""
+"По умолчанию каждое слово которое вы вводите будет искаться\n"
+"индивидуально. Вы также можете искать по точной фразе используя\n"
+"кавычки (\"my phrase\"). Поисковый сервис может позволять вам некоторые \n"
+"вольности - если некоторые слова во фразе будут стоять не на своих местах,\n"
+"фраза все равно будет найдена."
+
+msgid ""
+"By default, each word you type will match full words\n"
+"            only. You may also use wildcards to match parts of words. "
+"Wildcard\n"
+"            searches can be run on individual terms, using ? to replace a\n"
+"            single character, and * to replace zero or more character. "
+"'demo'\n"
+"            will match the full word 'demo' only. However, 'de*'\n"
+"            will match anything that starts with 'de', such as 'demo_1'.\n"
+"            'de*1' will match\n"
+"            anything that starts with 'de' and ends with '1'."
+msgstr ""
+"По умолчанию каждое слово, которое вы вводите будет искаться только "
+"полностью.\n"
+"Вы можете также использовать групповые символы для поиска по части слова. "
+"Поиск по\n"
+"групповым символам может быть запущен индивидуально, используйте ? для "
+"замены\n"
+"одиночного символа, и * для замены ни одного или нескольких символов.  "
+"'demo'\n"
+"будет соответствовать только 'demo'. Как бы то ни было, 'de*'\n"
+"будет соответствовать всему, что начинается с 'de', например 'demo_1'.\n"
+"'de*1' будет соответствовать\n"
+"всему, что начинается с  'de' и оканчивается на '1'"
+
+msgid "Cancel"
+msgstr "Отменить"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Code"
+msgstr "Код"
+
+msgid "Confirm Delete Instance"
+msgid_plural "Confirm Delete Instances"
+msgstr[0] "Подтвердите удаление инстанса"
+msgstr[1] "Подтвердите удаление инстансов"
+msgstr[2] "Подтвердите удаление инстансов"
+
+msgid "Confirm Resize"
+msgstr "Подтвердить изменение размера"
+
+msgid "Confirm or Revert Resize/Migrate"
+msgstr "Подтвердить отмену изменения типа/миграции"
+
+msgid "Connect"
+msgstr "Подключиться"
+
+msgid "Connect in a new window"
+msgstr "Подключиться в новом окне"
+
+msgid "Consistency Group ID"
+msgstr "ID Группы согласования"
+
+msgid "Console"
+msgstr "Консоль"
+
+msgid "Console is currently unavailable. Please try again later."
+msgstr "Консоль недоступна. Пожалуйста попробуйте позднее."
+
+msgid "Crashed"
+msgstr "Разбитый"
+
+msgid "Create"
+msgstr "Создать"
+
+msgid "Create Instance"
+msgstr "Создать инстанс"
+
+msgid "Create Instance Snapshot"
+msgstr "Создать снимок инстанса"
+
+msgid "Create Snapshot"
+msgstr "Создать снимок"
+
+msgid "Created"
+msgstr "Создано"
+
+msgid "Created At"
+msgstr "Создано"
+
+msgid "Creating Snapshot"
+msgstr "Создается снимок"
+
+msgid "DNS Domain"
+msgstr "DNS Домен"
+
+msgid "DNS Domains"
+msgstr "DNS Домены"
+
+msgid "DNS Name"
+msgstr "Имя DNS"
+
+msgid "DNS Nameservers"
+msgstr "Сервера DNS"
+
+msgid "DNS Record"
+msgstr "Запись DNS"
+
+msgid "DNS Records"
+msgstr "DNS Записи"
+
+msgid ""
+"Date, numeric or string fields can use range queries.\n"
+"            Use square brackets [min TO max] for inclusive ranges and curly\n"
+"            brackets {min TO max} for exclusive ranges."
+msgstr ""
+"Для числовых, строковых или полей даты можно использовать запросы с "
+"диапазоном.\n"
+"            Используйте квадратные скобки [min TO max] для диапазонов с "
+"включением и фигурные\n"
+"            скобки {min TO max} для диапазонов без включения."
+
+msgid "Default Network"
+msgstr "Сеть по умолчанию"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete Instance"
+msgid_plural "Delete Instances"
+msgstr[0] "Удалить инстанс"
+msgstr[1] "Удалить инстансы"
+msgstr[2] "Удалить инстансы"
+
+msgid "Deleted"
+msgstr "Удалено"
+
+#, python-format
+msgid "Deleted Instance: %s."
+msgid_plural "Deleted Instances: %s."
+msgstr[0] "Удален инстанс: %s."
+msgstr[1] "Удалены инстансы: %s."
+msgstr[2] "Удалены инстансы: %s."
+
+msgid "Deleting Instance"
+msgid_plural "Deleting Instances"
+msgstr[0] "Удаление инстанса"
+msgstr[1] "Удаление инстансов"
+msgstr[2] "Удаление инстансов"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Description:"
+msgstr "Описание:"
+
+msgid "Details"
+msgstr "Детали"
+
+msgid "Direction"
+msgstr "Направление"
+
+msgid "Disk"
+msgstr "Диск"
+
+msgid "Display field matching"
+msgstr "Показывать совпадение полей"
+
+#, python-format
+msgid "Displaying %(numberDisplayed)s of %(total)s total results"
+msgstr "Отображаются %(numberDisplayed)s из %(total)s результатов"
+
+msgid "Distributed"
+msgstr "Распределенный"
+
+msgid "Down"
+msgstr "Выключен"
+
+msgid "Enable DHCP"
+msgstr "Разрешить DHCP"
+
+msgid "Encrypted"
+msgstr "Зашифрованные"
+
+msgid "Ephemeral"
+msgstr "Эфемерный"
+
+msgid "Error"
+msgstr "Ошибка"
+
+#, python-format
+msgid "Error initializing actions for plugin %(type)s: "
+msgstr "Ошибка инициализации действий для модуля %(type)s:"
+
+msgid "Ether Type"
+msgstr "Тип сети"
+
+msgid "External"
+msgstr "Внешний "
+
+msgid "External Network"
+msgstr "Внешняя сеть"
+
+msgid "Facets"
+msgstr "Аспекты"
+
+msgid "Failed"
+msgstr "Не удалось"
+
+msgid "Fault"
+msgstr "Ошибка"
+
+msgid "Field Matches"
+msgstr "Совпадение Полей"
+
+msgid ""
+"Find your cloud resources by selecting specific facets or by specifying\n"
+"    full text search queries.\n"
+"    <sl-search-syntax></sl-search-syntax>"
+msgstr ""
+"Найдите свои облачные ресурсы путём выбора спецефичных аспектов или указав \n"
+"полный текст поиского запроса\n"
+"    <sl-search-syntax></sl-search-syntax>"
+
+msgid "Fixed IPs"
+msgstr "Фиксированные IP адреса"
+
+msgid "Flavor"
+msgstr "Тип инстанса"
+
+msgid "Flavor ID"
+msgstr "ID типа инстансов"
+
+msgid "Flavor Name"
+msgstr "Имя типа инстансов"
+
+msgid "Flavors"
+msgstr "Типы инстансов"
+
+msgid "Floating IP"
+msgstr "Назначаемый IP"
+
+msgid "Floating IP Address"
+msgstr "Нефиксированный IP Адресс"
+
+msgid "Floating IPs"
+msgstr "Назначаемые IP"
+
+msgid "Floating Network ID"
+msgstr "ID нефиксированной сети"
+
+msgid "Full Text Search Syntax"
+msgstr "Синтаксис полнотекстового поиска"
+
+msgid "Gateway IP"
+msgstr "IP шлюза"
+
+msgid "Grouping"
+msgstr "Групирование"
+
+msgid "Hard Reboot"
+msgstr "Жесткая перезагрузка"
+
+msgid "High Availability"
+msgstr "Высокая доступность "
+
+msgid "Host"
+msgstr "Хост"
+
+msgid "Hostname"
+msgstr "Имя хоста"
+
+msgid "Hypervisor"
+msgstr "Гипервизор"
+
+msgid "Hypervisors"
+msgstr "Гипервизоры"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IP Addresses"
+msgstr "IP адрес"
+
+msgid "IP Version"
+msgstr "Версия IP"
+
+msgid "IPv4 Address Scope"
+msgstr "Область адресов IPv4"
+
+msgid ""
+"IPv4 addresses may be searched based on ranges and with CIDR\n"
+"            notation."
+msgstr ""
+"IPv4 адреса могут найдены основываясь на рангах и CIDR\n"
+"нотацию "
+
+msgid "IPv6 Address Mode"
+msgstr "Режим ipv6 адресов"
+
+msgid "IPv6 Address Scope"
+msgstr "Область адресов IPv6"
+
+msgid "IPv6 RA Mode"
+msgstr "Режим IPv6 RA"
+
+msgid ""
+"If the console is not responding to keyboard input, click the status bar in "
+"the screen below."
+msgstr ""
+"Если консоль не реагирует на нажатия клавиш нажмите на строку статуса в окне "
+"ниже."
+
+msgid "Image"
+msgstr "Образ"
+
+msgid "Image Reference"
+msgstr "Ссылка на образ"
+
+msgid "Instance"
+msgstr "Инстанс"
+
+msgid "Instance Action Log"
+msgstr "Лог действий инстанса"
+
+msgid "Instance Console"
+msgstr "Консоль инстанса"
+
+msgid "Instance Console Log"
+msgstr "Лог консоли инстанса"
+
+msgid "Instances"
+msgstr "Инстансы"
+
+msgid ""
+"It is typically better to filter results further than to increase\n"
+"          the number of returned results and page through them."
+msgstr ""
+"Как правило, фильтрация результатов лучше чем увеличение\n"
+"количества возвращаемых результатов и их просмотра по страницам."
+
+msgid "Key Pair"
+msgstr "Ключевая Пара"
+
+msgid "Key Pair Name"
+msgstr "Имя связки ключей"
+
+msgid "Key Pairs"
+msgstr "Ключевые Пары"
+
+msgid "Killed"
+msgstr "Убито"
+
+msgid "Load Balancer Pool"
+msgstr "Пул балансировщика нагрузки"
+
+msgid "Load Balancer Pool Member"
+msgstr "Участник пула балансировщика нагрузки"
+
+msgid "Load Balancer Pool Members"
+msgstr "Участники пула балансировщика нагрузки"
+
+msgid "Load Balancer Pools"
+msgstr "Пулы балансировщика нагрузки"
+
+msgid "Loading"
+msgstr "Загрузка"
+
+msgid "Local GB (total)"
+msgstr "Локальных ГБ (всего)"
+
+msgid "Log"
+msgstr "Лог"
+
+msgid "Log Length"
+msgstr "Длина лога"
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Mapped Fixed IP Address"
+msgstr "Сопоставлен фиксированный IP-адрес"
+
+msgid "Max Port"
+msgstr "По порт"
+
+msgid "Members"
+msgstr "Участники"
+
+msgid "Message"
+msgstr "Сообщение"
+
+msgid "Metadata"
+msgstr "Метаданные"
+
+msgid "Metadata Definition"
+msgstr "Определение Метаданных "
+
+msgid "Metadata Definitions"
+msgstr "Определение Метаданных "
+
+msgid "Migrating"
+msgstr "Миграция "
+
+msgid "Min Port"
+msgstr "От порта"
+
+msgid "More Actions"
+msgstr "Дополнительные Действия"
+
+msgid "More Actions..."
+msgstr "Дополнительные Действия..."
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Network"
+msgstr "Сеть"
+
+msgid "Network Address"
+msgstr "Сетевой Адрес"
+
+msgid "Network Health Monitor"
+msgstr "Монитор работоспособности сети"
+
+msgid "Network Health Monitors"
+msgstr "Мониторы работоспособности сети"
+
+msgid "Network ID"
+msgstr "ИД сети"
+
+msgid "Networks"
+msgstr "Сети"
+
+msgid "Newest"
+msgstr "Новые"
+
+msgid "No State"
+msgstr "Никакого состояния"
+
+msgid "No Volumes Attached"
+msgstr "Нет подключённых дисков"
+
+msgid "No rules defined"
+msgstr "Нет заданных правил"
+
+msgid "Object"
+msgstr "Объект"
+
+msgid "Object Account"
+msgstr "Объект Учетной Записи"
+
+msgid "Object Accounts"
+msgstr "Объект Учетных Записей"
+
+msgid "Object Container"
+msgstr "Объект Контейнера"
+
+msgid "Object Containers"
+msgstr "Объект Контейнеров"
+
+msgid "Objects"
+msgstr "Объекты"
+
+msgid "Oldest"
+msgstr "Старые"
+
+msgid "Overview"
+msgstr "Обзор"
+
+msgid "Owned by Me"
+msgstr "Принадлежащие мне"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Past 10 Minutes"
+msgstr "Последние 10 минут"
+
+msgid "Past Day"
+msgstr "Последний день"
+
+msgid "Past Half Hour"
+msgstr "Последние пол часа"
+
+msgid "Past Hour"
+msgstr "Последний час"
+
+msgid "Past Month"
+msgstr "Последний месяц"
+
+msgid "Past Week"
+msgstr "Последняя неделя"
+
+msgid "Past Year"
+msgstr "Последний год"
+
+msgid "Pause"
+msgstr "Пауза"
+
+msgid "Pause updates to search results"
+msgstr "Приостановить обновление результатов поиска"
+
+msgid "Paused"
+msgstr "На паузе"
+
+msgid "Pending"
+msgstr "Ожидание"
+
+msgid "Pending Delete"
+msgstr "Ожидает удаления"
+
+msgid "Phrases"
+msgstr "Фразы"
+
+msgid "Please Wait"
+msgstr "Пожалуйста подождите"
+
+msgid "Policies"
+msgstr "Политики"
+
+msgid "Poll for Updates"
+msgstr "Запрашивать обновления"
+
+msgid ""
+"Polling enables you to create a view of the data the updates\n"
+"          periodically."
+msgstr ""
+"Polling позволяет вам создавать представление о данных обновления\n"
+"          периодически."
+
+msgid "Pool"
+msgstr "Пул"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "Port ID"
+msgstr "ID порта"
+
+msgid "Port Security Enabled"
+msgstr "Защита портов включена"
+
+msgid "Ports"
+msgstr "Порты"
+
+msgid "Power State"
+msgstr "Состояние"
+
+msgid "Project"
+msgstr "Проект"
+
+msgid "Project ID"
+msgstr " ID проекта"
+
+msgid "Protocol"
+msgstr "Протокол"
+
+msgid "Provider Network Type"
+msgstr "Тип сети провайдера"
+
+msgid "Provider Physical Network"
+msgstr "Физическая сеть провайдера"
+
+msgid "Provider Segmentation ID"
+msgstr "ID сегмента провайдера"
+
+msgid "Public"
+msgstr "Публичный"
+
+msgid "Queued"
+msgstr "Запланировано"
+
+msgid "RAM"
+msgstr "ОЗУ"
+
+msgid "Range Queries"
+msgstr "Очереди диапазона"
+
+msgid "Reboot"
+msgstr "Перезагрузка"
+
+msgid "Rebuild"
+msgstr "Восстановить"
+
+msgid "Refresh"
+msgstr "Обновить"
+
+msgid "Relevancy"
+msgstr "Релевантность"
+
+msgid "Remote"
+msgstr "Удаленный адрес"
+
+msgid "Request"
+msgstr "Запрос"
+
+msgid "Rescue"
+msgstr "Безопасный режим"
+
+msgid "Rescued"
+msgstr "Восстановлено"
+
+msgid "Reserved Characters"
+msgstr "Зарезервированные символы"
+
+msgid "Resize"
+msgstr "Изменение размера"
+
+msgid "Resize/Migrate"
+msgstr "Изменение типа/Миграция"
+
+msgid "Resized"
+msgstr "Изменён размер"
+
+msgid "Result Limit"
+msgstr "Число результатов"
+
+msgid ""
+"Results exceeds pagination limit. Please refine your search or\n"
+"                increase the limit setting."
+msgstr ""
+"Результаты превышает предел разбиения на страницы. Уточните результаты "
+"поиска \n"
+"или увеличьте настройки предела."
+
+msgid "Resume"
+msgstr "Возобновить"
+
+msgid "Resume updates to search results"
+msgstr "Возобновить обновление результатов поиска"
+
+msgid "Reverse Alphabetical Name"
+msgstr "Алфавит обр. (Имя)"
+
+msgid "Revert Resize/Migrate"
+msgstr "Отменить  изменение типа/Миграцию"
+
+msgid "Router"
+msgstr "Маршрутизатор"
+
+msgid "Router ID"
+msgstr "ID Маршрутизатора"
+
+msgid "Routers"
+msgstr "Маршрутизаторы"
+
+msgid "Rules"
+msgstr "Правила"
+
+msgid "Running"
+msgstr "Запущенный"
+
+msgid "Saving"
+msgstr "Сохранение"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Search Settings"
+msgstr "Настройки поиска"
+
+msgid "Search all projects"
+msgstr "Искать во всех проектах"
+
+msgid "Security Group"
+msgstr "Группа безопасности"
+
+msgid "Security Groups"
+msgstr "Группы безопасности"
+
+msgid "Server Group"
+msgstr "Группа серверов"
+
+msgid "Server Groups"
+msgstr "Группы серверов"
+
+msgid "Shared"
+msgstr "Общая"
+
+msgid "Shared by Me"
+msgstr "В совместном доступе"
+
+msgid "Shared with Me"
+msgstr "Общие для меня"
+
+msgid "Shelved"
+msgstr "Отложен"
+
+msgid "Shelved Offloaded"
+msgstr "Отложен и выгружен"
+
+msgid "Shutdown"
+msgstr "Выключен"
+
+msgid "Shutoff"
+msgstr "Отключение"
+
+msgid "Size"
+msgstr "Размер"
+
+#, python-format
+msgid "Snapshot %s was successfully created."
+msgstr "Снимок %s создан успешно."
+
+msgid "Snapshot ID"
+msgstr "ID снимка"
+
+msgid "Snapshot Name"
+msgstr "Название снимка"
+
+msgid "Soft Deleted"
+msgstr "Софт удалён"
+
+msgid "Soft Reboot"
+msgstr "Горячая перезагрузка"
+
+msgid "Sort"
+msgstr "Отсортировать"
+
+msgid "Source Volume ID"
+msgstr "ID исходного тома"
+
+msgid "Specs"
+msgstr "Спецификации"
+
+msgid "Start"
+msgstr "Запустить"
+
+msgid "Start Time"
+msgstr "Время начала"
+
+msgid "State"
+msgstr "Состояние"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Stop"
+msgstr "Остановить"
+
+msgid "Stopped"
+msgstr "Остановлен"
+
+msgid "Subnet"
+msgstr "Подсеть"
+
+msgid "Subnet Pool ID"
+msgstr "ID пула подсети"
+
+msgid "Subnets"
+msgstr "Подсети"
+
+msgid "Subnets Associated"
+msgstr "Связанные подсети"
+
+msgid "Suspend"
+msgstr "Приостановить"
+
+msgid "Suspended"
+msgstr "Приостановлено"
+
+msgid "Swap"
+msgstr "Подкачка"
+
+msgid "Task State"
+msgstr "Состояние задачи"
+
+msgid "Term Operators"
+msgstr "Операторы параметра запроса"
+
+msgid "The current query is not valid. Please check your syntax."
+msgstr "Текущий запрос не верен. Проверьте синтаксис."
+
+msgid ""
+"The following characters are reserved and must be\n"
+"            escaped with a leading \\ (backslash):\n"
+"            <code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+msgstr ""
+"Следующие символы зарезервированы и должны быть\n"
+"            экранированы с помощью \\ (обратный слэш):\n"
+"            <code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+
+msgid "The requested resource was not found."
+msgstr "Запрошенный ресурс не найден."
+
+msgid "The search service had an error processing your request."
+msgstr "В службе поиска возникла ошибка во время обработки вашего запроса."
+
+msgid "There was an error processing your request."
+msgstr "Во время обработки вашего запроса возникла ошибка."
+
+msgid ""
+"These settings impact the processing of results returned\n"
+"          from the search service. Changing these settings may\n"
+"          impact search performance and results."
+msgstr ""
+"Эти настройки влияют на обработку результатов поиска.\n"
+"Изменение этих настроек может повлиять на производительность\n"
+"и результаты поиска."
+
+msgid "Transfer"
+msgstr "Передача"
+
+msgid "Type"
+msgstr "Тип"
+
+#, python-format
+msgid "Unable to delete Instance: %s."
+msgid_plural "Unable to delete Instances: %s."
+msgstr[0] "Не удалось удалить инстанс: %s."
+msgstr[1] "Не удалось удалить инстансы: %s."
+msgstr[2] "Не удалось удалить инстансы: %s."
+
+msgid "Unable to execute the search."
+msgstr "Не удается выполнить поиск."
+
+msgid "Unable to retrieve Searchlight resources types."
+msgstr "Не удается получить типы ресурсов Searchlight"
+
+msgid "Unable to retrieve search facets."
+msgstr "Не удается получить аспекты поиска."
+
+msgid "Unavailable"
+msgstr "Недоступно"
+
+msgid "Unpause"
+msgstr "Снять с паузы"
+
+msgid "Up"
+msgstr "Включен"
+
+msgid "Update Interval (seconds)"
+msgstr "Интервал обновления (сек)"
+
+msgid "Update Search"
+msgstr "Обновить поиск"
+
+msgid "Updated"
+msgstr "Обновлено"
+
+msgid "Updated At"
+msgstr "Обновлено в"
+
+msgid ""
+"Use parenthesis to group different aspects of your\n"
+"            query to form sub-queries. For example, 'web OR (python AND\n"
+"            apache)' will return anything that either has 'web' OR has both\n"
+"            'python' AND 'apache'."
+msgstr ""
+"Используйте круглые скобки чтобы сгруппировать разные части вашего\n"
+"            запроса в подзапросы. Например,  'web OR (python AND\n"
+"            apache), вернет все, где есть либо 'web', или же\n"
+"            'python' и 'apache'."
+
+msgid "User ID"
+msgstr "ID пользователя"
+
+msgid "VCPUs"
+msgstr "VCPU"
+
+msgid "Visibility"
+msgstr "Видимость"
+
+msgid ""
+"Visibility is based on derived data. If Owned by Me, please inspect the "
+"resource to determine sharing status."
+msgstr ""
+"Видимость основанна на полученных данных. Если принадлежит мне, пожалуйста "
+"проверте ресурс для определения статуса общего доступа"
+
+msgid "Volume"
+msgstr "Диск"
+
+msgid "Volume Backup"
+msgstr "Бэкап Диска"
+
+msgid "Volume Backups"
+msgstr "Бэкапы Диска"
+
+msgid "Volume ID"
+msgstr "ID диска"
+
+msgid "Volume Image Metadata"
+msgstr "Метаданные образа диска"
+
+msgid "Volume Snapshot"
+msgstr "Снимок диска"
+
+msgid "Volume Snapshots"
+msgstr "Снимки дисков"
+
+msgid "Volumes"
+msgstr "Диски"
+
+msgid "Volumes Attached"
+msgstr "Подключенные диски"
+
+msgid ""
+"Warning: Wildcard queries place\n"
+"            a heavy burden on the search service and may perform poorly."
+msgstr ""
+"Предупреждение: Поиск с использованием символов подстановки\n"
+"сильно нагружает сервис поиска и может выполняться долго."
+
+msgid "Wildcards"
+msgstr "Символы подстановки"
+
+#, python-format
+msgid "You are not allowed to delete instances: %s"
+msgstr "Вам не разрешено удалять инстансы: %s"
+
+msgid "You are not allowed to perform this request."
+msgstr "Вам не разрешено выполнять этот запрос."
+
+msgid ""
+"You can increase or decrease the relevance of a search\n"
+"            term by boosting different terms, phrases, or groups. Boost one "
+"of\n"
+"            these by adding ^n to the term, phrase, or group where n is a\n"
+"            number greater than 1 to increase relevance and between 0 and 1 "
+"to\n"
+"            decrease relevance. For example 'web^4 python^0.1' would find\n"
+"            anything with both web and python, but would increase the\n"
+"            relevance for anything with 'web' in the result and decrease "
+"the\n"
+"            relevance for anything with 'python' in the result."
+msgstr ""
+"Вы можете увеличить или уменьшить релевантность\n"
+"            поискового запроса, используя приоритеты для различных\n"
+"            терминов, фраз или групп. Повысьте приоритет одного из них, \n"
+"            добавив ^n к термину, фразе или группе, где n - это число "
+"больше\n"
+"            1 для увеличения релевантности или число от 0 до 1 для "
+"уменьшения.\n"
+"            Например, запрос 'web^4 python^0.1' вернет результаты, "
+"содержащие\n"
+"            и web, и python, но релевантность результатов, содержащих 'web', "
+"будет\n"
+"            увеличена, а релевантность результатов, содержащих 'python' - "
+"уменьшена."
+
+msgid ""
+"You can separate search terms and groups with\n"
+"            AND, OR and NOT (also written &&, || and !). For example,\n"
+"            'python OR javascript' will find anything with either term\n"
+"            (OR is used by default, so does not need to be specified).\n"
+"            However, 'python AND javascript' will find things that only "
+"have\n"
+"            both terms. You can do this with as many terms as you'd like (e."
+"g.\n"
+"            'django AND javascript AND !unholy'). It is important to use "
+"all\n"
+"            caps or the alternate syntax (&&, ||), because 'and' will be\n"
+"            treated as another search term, but 'AND' will be treated as a\n"
+"            logical operator."
+msgstr ""
+"Вы можете разделять параметры поиска и их группы операторами\n"
+"AND, OR и NOT (также можно использовать &&, || и !). Например запрос\n"
+"'python OR javascript' найдет все что содержит любой из параметров\n"
+"(в целом, оператор OR используется по умолчанию, так что его можно не\n"
+"указывать). В то же время запрос 'python AND javascript' найдет то что "
+"содержит\n"
+"оба слова. Вы можете применять операторы к любому количеству параметров\n"
+"(например, 'django AND javascript AND !unholy'). Обратите внимание, что "
+"операторы\n"
+"должны быть записаны в верхнем регистре или использовать альтернативную\n"
+"запись (&&, ||) потому что 'and' будет воспринято как просто параметр "
+"поиска, тогда\n"
+"как 'AND' будет логическим оператором."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) "
+"allowed."
+msgstr ""
+"Вы превысили допустимый максимум ({$ ctrl.settings.general.limit_max $})."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.polling.interval_max $}) "
+"allowed."
+msgstr ""
+"Вы превысили допустимый максимум ({$ ctrl.settings.polling.interval_max $})."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.general.limit_min $}) "
+"allowed."
+msgstr ""
+"Вы опустились ниже допустимого минимума ({$ ctrl.settings.general.limit_min "
+"$})."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.polling.interval_min $}) "
+"allowed."
+msgstr ""
+"Вы опустились ниже допустимого минимума ({$ ctrl.settings.polling."
+"interval_min $})."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted instance is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
+msgstr[0] "Вы выбрали \"%s\". Восстановить удаленный инстанс невозможно."
+msgstr[1] "Вы выбрали \"%s\". Восстановить удаленные инстансы невозможно."
+msgstr[2] "Вы выбрали \"%s\". Восстановить удаленные инстансыневозможно."
+
+msgid ""
+"You may decide to only look in a certain field for a\n"
+"            search term by setting a specific facet. This is accomplished "
+"by\n"
+"            either selecting a facet from the drop down or by typing the "
+"facet\n"
+"            manually. For example, if you are looking for an image, you\n"
+"            may choose to only look at the name field by adding 'name:foo'.\n"
+"            You may group facets and use logical operators."
+msgstr ""
+"Вы можете искать по определенному полю, задав конкретный\n"
+"            аспект. Это может быть осуществлено либо выбором аспекта из\n"
+"            выпадающего списка или введением аспекта вручную. Например,\n"
+"            если вы ищете образ, вы можете отобразить только имена, добавив\n"
+"            'name:foo'. Вы можете группировать аспекты и использовать\n"
+"            логические операторы."
+
+msgid "You must re-authenticate yourself."
+msgstr "Требуется переаутентификация."
+
+msgid "default"
+msgstr "по умолчанию"
+
+msgid "from"
+msgstr "от"
+
+msgid "to"
+msgstr "к"
+
+msgid "{$ table.queryResponse.statusCode | slQueryStatus $}"
+msgstr "{$ table.queryResponse.statusCode | slQueryStatus $}"
