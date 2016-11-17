@@ -17,7 +17,7 @@ from django.views import generic
 import functools
 import json
 import requests
-from requests.exceptions import HTTPError
+from requests import exceptions as r_exceptions
 import six
 
 from horizon import exceptions
@@ -180,7 +180,7 @@ def _searchlight_request(request_method, url, request, data=None, params=None):
 
     try:
         response.raise_for_status()
-    except HTTPError as e:
+    except r_exceptions.HTTPError as e:
         for error in rest_utils.http_errors:
             if (e.response.status_code == getattr(error, 'status_code', 0) and
                     exceptions.HorizonException in error.__bases__):
