@@ -1,0 +1,804 @@
+# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
+# Zbyněk Schwarz <zbynek.schwarz@gmail.com>, 2015. #zanata
+# Alex Eng <loones1595@gmail.com>, 2016. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Lenka Husáková <lenka.husakova@ultimum.io>, 2016. #zanata
+# Stanislav Ulrych <stanislav.ulrych@ultimum.io>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: searchlight-ui 2.0.0.0b2.dev3\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2016-11-21 19:24+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-11-24 09:32+0000\n"
+"Last-Translator: Alex Eng <loones1595@gmail.com>\n"
+"Language-Team: Czech\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+
+#, python-format
+msgid "%(resourceType)s: %(searchFacet)s"
+msgstr "%(resourceType)s: %(searchFacet)s"
+
+#, python-format
+msgid "%(total)s total results"
+msgstr "%(total)s výsledků celkem"
+
+#, python-format
+msgid "(%(doc_count)s)"
+msgstr "(%(doc_count)s)"
+
+msgid "-"
+msgstr "-"
+
+msgid ""
+"A snapshot is an image which preserves the disk state of a running instance."
+msgstr "Snapshot je obraz zachovávající stav disku běžící instance"
+
+#, python-format
+msgid "ALLOW %(type)s %(direction)s %(target)s"
+msgstr "ALLOW %(type)s %(direction)s %(target)s"
+
+#, python-format
+msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+msgstr "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+
+msgid "ANY"
+msgstr "JAKÝKOLI"
+
+msgid "Action"
+msgstr "Činnost"
+
+msgid "Action Log"
+msgstr "Log činností"
+
+msgid "Actions"
+msgstr "Činnosti"
+
+msgid "Active"
+msgstr "Aktivní"
+
+msgid "Addresses"
+msgstr "Adresy"
+
+msgid "Admin State"
+msgstr "Stav správce"
+
+msgid "Alphabetical Name"
+msgstr "Abecední pořadí"
+
+msgid "Attached Device"
+msgstr "Připojené zařízení"
+
+msgid "Attached Device ID"
+msgstr "ID připojeného zařízení"
+
+msgid "Attached To"
+msgstr "Připojeno k"
+
+msgid "Availability Zone"
+msgstr "Zóna dostupnosti"
+
+msgid "Availability Zones"
+msgstr "Zóny dostupnosti"
+
+msgid "Available"
+msgstr "Dostupné"
+
+msgid "Blocked"
+msgstr "Blokováno"
+
+msgid "Boolean Operators"
+msgstr "Boolovské operátory"
+
+msgid "Bootable"
+msgstr "Zaveditelné"
+
+msgid "Build"
+msgstr "Sestavit"
+
+msgid "Building"
+msgstr "Sestavování"
+
+msgid "Cancel"
+msgstr "Zrušit"
+
+msgid "Close"
+msgstr "Zavřít"
+
+msgid "Code"
+msgstr "Kód"
+
+msgid "Confirm Resize"
+msgstr "Potvrdit změnu velikosti"
+
+msgid "Confirm or Revert Resize/Migrate"
+msgstr "Potvrdit nebo Vrátit zpět Změnu velikosti/Přesun"
+
+msgid "Connect"
+msgstr "Připojit"
+
+msgid "Connect in a new window"
+msgstr "Připojit v novém okně"
+
+msgid "Console"
+msgstr "Konzole"
+
+msgid "Console is currently unavailable. Please try again later."
+msgstr "Konzole je nyní nedostupná. Zkuste to prosím později."
+
+msgid "Crashed"
+msgstr "Spadlo"
+
+msgid "Create"
+msgstr "Vytvořit"
+
+msgid "Create Instance"
+msgstr "Vytvořit instanci"
+
+msgid "Create Instance Snapshot"
+msgstr "Vytvořit snapshot instance"
+
+msgid "Create Snapshot"
+msgstr "Vytvořit snapshot"
+
+msgid "Created"
+msgstr "Vytvořeno"
+
+msgid "Created At"
+msgstr "Vytvořeno"
+
+msgid "Creating Snapshot"
+msgstr "Vytváření snímku"
+
+msgid "DNS Domain"
+msgstr "DNS doména"
+
+msgid "DNS Domains"
+msgstr "DNS domény"
+
+msgid "DNS Name"
+msgstr "Název DNS"
+
+msgid "DNS Nameservers"
+msgstr "Servery DNS"
+
+msgid "DNS Record"
+msgstr "DNS záznam"
+
+msgid "DNS Records"
+msgstr "DNS záznamy"
+
+msgid "Default Network"
+msgstr "Výchozí síť"
+
+msgid "Delete"
+msgstr "Smazat"
+
+msgid "Delete Instance"
+msgid_plural "Delete Instances"
+msgstr[0] "Smazat instanci"
+msgstr[1] "Smazat instance"
+msgstr[2] "Smazat instance"
+
+msgid "Deleted"
+msgstr "Smazáno"
+
+#, python-format
+msgid "Deleted Instance: %s."
+msgid_plural "Deleted Instances: %s."
+msgstr[0] "Smazána instance: %s."
+msgstr[1] "Smazany instance: %s."
+msgstr[2] "Smazano instancí: %s."
+
+msgid "Description"
+msgstr "Popis"
+
+msgid "Description:"
+msgstr "Popis:"
+
+msgid "Details"
+msgstr "Detaily"
+
+msgid "Direction"
+msgstr "Směr"
+
+msgid "Disk"
+msgstr "Disk"
+
+#, python-format
+msgid "Displaying %(numberDisplayed)s of %(total)s total results"
+msgstr "Zobrazeno %(numberDisplayed)s z %(total)s výsledků celkem"
+
+msgid "Distributed"
+msgstr "Distribuované"
+
+msgid "Down"
+msgstr "Zavřen"
+
+msgid "Enable DHCP"
+msgstr "Povolit DHCP"
+
+msgid "Encrypted"
+msgstr "Zašifrováno"
+
+msgid "Error"
+msgstr "Chyba"
+
+#, python-format
+msgid "Error initializing actions for plugin %(type)s: "
+msgstr "Chyba při inicializaci akcí pro plugin %(type)s: "
+
+msgid "Ether Type"
+msgstr "Typ ethernetu"
+
+msgid "External"
+msgstr "Externí"
+
+msgid "External Network"
+msgstr "Externí síť"
+
+msgid "Failed"
+msgstr "Selhalo"
+
+msgid "Fault"
+msgstr "Chyba"
+
+msgid "Fixed IPs"
+msgstr "Statické IP"
+
+msgid "Flavor"
+msgstr "Typ"
+
+msgid "Flavor ID"
+msgstr "ID Typu"
+
+msgid "Flavor Name"
+msgstr "Název typu"
+
+msgid "Flavors"
+msgstr "Typy"
+
+msgid "Floating IP"
+msgstr "Plovoucí IP"
+
+msgid "Floating IP Address"
+msgstr "Floating IP adresa"
+
+msgid "Floating IPs"
+msgstr "Plovoucí IP adresy"
+
+msgid "Gateway IP"
+msgstr "IP gateway"
+
+msgid "Hard Reboot"
+msgstr "Studený restart"
+
+msgid "High Availability"
+msgstr "Vysoká dostupnost"
+
+msgid "Host"
+msgstr "Hostitel"
+
+msgid "Hostname"
+msgstr "Název hostitele"
+
+msgid "Hypervisor"
+msgstr "Hypervizor"
+
+msgid "Hypervisors"
+msgstr "Hypervizory"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IP Addresses"
+msgstr "IP adresy"
+
+msgid "IP Version"
+msgstr "Verze IP"
+
+msgid ""
+"If the console is not responding to keyboard input, click the status bar in "
+"the screen below."
+msgstr ""
+"Pokud konzole nereaguje na vstup z klávesnice: klikněte na stavovou lištu "
+"níže."
+
+msgid "Image"
+msgstr "Obraz"
+
+msgid "Instance"
+msgstr "Instance"
+
+msgid "Instance Action Log"
+msgstr "Log činností instance"
+
+msgid "Instance Console"
+msgstr "Konzole instance"
+
+msgid "Instance Console Log"
+msgstr "Log konzole instance"
+
+msgid "Instances"
+msgstr "Instance"
+
+msgid "Key Pair"
+msgstr "Klíč"
+
+msgid "Key Pair Name"
+msgstr "Název klíče"
+
+msgid "Key Pairs"
+msgstr "Klíče"
+
+msgid "Killed"
+msgstr "Killed"
+
+msgid "Load Balancer Pool"
+msgstr "Zásobník load balancer"
+
+msgid "Load Balancer Pool Member"
+msgstr "Člen load balancer zásobníku"
+
+msgid "Load Balancer Pool Members"
+msgstr "Členové load balancer zásobníku"
+
+msgid "Load Balancer Pools"
+msgstr "Zásobníky load balancer"
+
+msgid "Loading"
+msgstr "Načítání"
+
+msgid "Log"
+msgstr "Log"
+
+msgid "Log Length"
+msgstr "Délka logu"
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Mapped Fixed IP Address"
+msgstr "Mapovaná pevní IP adresa"
+
+msgid "Max Port"
+msgstr "Nejvyšší port"
+
+msgid "Members"
+msgstr "Členové"
+
+msgid "Message"
+msgstr "Zpráva"
+
+msgid "Metadata"
+msgstr "Metadata"
+
+msgid "Metadata Definition"
+msgstr "Definice metadat"
+
+msgid "Metadata Definitions"
+msgstr "Definice metadat"
+
+msgid "Migrating"
+msgstr "Přesunování"
+
+msgid "Min Port"
+msgstr "Nejnižší port"
+
+msgid "More Actions"
+msgstr "Další činnosti"
+
+msgid "More Actions..."
+msgstr "Další činnosti..."
+
+msgid "Name"
+msgstr "Název"
+
+msgid "Network"
+msgstr "Síť"
+
+msgid "Network Address"
+msgstr "Síťová adresa"
+
+msgid "Network Health Monitor"
+msgstr "Síťový monitor zdraví"
+
+msgid "Network Health Monitors"
+msgstr "Síťové monitory zdraví"
+
+msgid "Network ID"
+msgstr "ID sítě"
+
+msgid "Networks"
+msgstr "Sítě"
+
+msgid "Newest"
+msgstr "Nejnovější"
+
+msgid "No State"
+msgstr "Žádný stav"
+
+msgid "No Volumes Attached"
+msgstr "Žádné připojené svazky"
+
+msgid "No rules defined"
+msgstr "Žádná pravidla nezadána."
+
+msgid "Object"
+msgstr "Objekt"
+
+msgid "Object Account"
+msgstr "Účet objektu"
+
+msgid "Object Accounts"
+msgstr "Účty objektů"
+
+msgid "Object Container"
+msgstr "Kontejner"
+
+msgid "Object Containers"
+msgstr "Kontejnery"
+
+msgid "Objects"
+msgstr "Objekty"
+
+msgid "Oldest"
+msgstr "Nejstarší"
+
+msgid "Overview"
+msgstr "Přehled"
+
+msgid "Password"
+msgstr "Heslo"
+
+msgid "Past 10 Minutes"
+msgstr "Posledních 10 minut"
+
+msgid "Past Day"
+msgstr "Včera"
+
+msgid "Past Half Hour"
+msgstr "Poslední půlhodina"
+
+msgid "Past Hour"
+msgstr "Poslední hodina"
+
+msgid "Past Month"
+msgstr "Měsíc"
+
+msgid "Past Week"
+msgstr "Týden"
+
+msgid "Past Year"
+msgstr "Rok"
+
+msgid "Pause"
+msgstr "Pozastavit"
+
+msgid "Paused"
+msgstr "Pozastaveno"
+
+msgid "Pending Delete"
+msgstr "Čeká na smazání"
+
+msgid "Phrases"
+msgstr "Fráze"
+
+msgid "Please Wait"
+msgstr "Čekejte prosím"
+
+msgid "Policies"
+msgstr "Politiky"
+
+msgid "Pool"
+msgstr "Zásoba"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Port ID"
+msgstr "ID portu"
+
+msgid "Port Security Enabled"
+msgstr "Bezpečnostní port povolen"
+
+msgid "Ports"
+msgstr "Porty"
+
+msgid "Power State"
+msgstr "Stav napájení"
+
+msgid "Project"
+msgstr "Projekt"
+
+msgid "Project ID"
+msgstr "ID projektu"
+
+msgid "Protocol"
+msgstr "Protokol"
+
+msgid "Provider Network Type"
+msgstr "Typ sítě poskytovatele"
+
+msgid "Public"
+msgstr "Veřejné"
+
+msgid "Queued"
+msgstr "Ve frontě"
+
+msgid "RAM"
+msgstr "RAM"
+
+msgid "Reboot"
+msgstr "Restartovat"
+
+msgid "Rebuild"
+msgstr "Znovu sestavit"
+
+msgid "Refresh"
+msgstr "Obnovit"
+
+msgid "Remote"
+msgstr "Vzdálený"
+
+msgid "Request"
+msgstr "Požadavek"
+
+msgid "Rescue"
+msgstr "Zachránit"
+
+msgid "Rescued"
+msgstr "Zachráněno"
+
+msgid "Resize"
+msgstr "Změnit velikost"
+
+msgid "Resize/Migrate"
+msgstr "Změnit velikost/Přesunout"
+
+msgid "Resized"
+msgstr "Velikost změněna"
+
+msgid ""
+"Results exceeds pagination limit. Please refine your search or\n"
+"                increase the limit setting."
+msgstr ""
+"Počet výsledků překračuje limit stránkování. Prosím upravte vaše vyhledávání "
+"nebo \n"
+"                zvětšete nastavení limitu."
+
+msgid "Resume"
+msgstr "Obnovit"
+
+msgid "Revert Resize/Migrate"
+msgstr "Vrátit zpět Změnu velikosti/Migraci"
+
+msgid "Router"
+msgstr "Router"
+
+msgid "Router ID"
+msgstr "ID routeru"
+
+msgid "Routers"
+msgstr "Routery"
+
+msgid "Rules"
+msgstr "Pravidla"
+
+msgid "Running"
+msgstr "Běží"
+
+msgid "Saving"
+msgstr "Ukládání"
+
+msgid "Search"
+msgstr "Hledat"
+
+msgid "Search Settings"
+msgstr "Nastavení vyhledávání"
+
+msgid "Search all projects"
+msgstr "Hledat ve všech projektech"
+
+msgid "Security Group"
+msgstr "Bezpečnostní skupina"
+
+msgid "Security Groups"
+msgstr "Bezpečnostní skupiny"
+
+msgid "Server Group"
+msgstr "Skupina serveru"
+
+msgid "Server Groups"
+msgstr "Skupiny serveru"
+
+msgid "Shared"
+msgstr "Sdíleno"
+
+msgid "Shared by Me"
+msgstr "Sdíleno se mnou"
+
+msgid "Shared with Me"
+msgstr "Sdíleno se mnou"
+
+msgid "Shelved"
+msgstr "Uskladněno"
+
+msgid "Shelved Offloaded"
+msgstr "Uskladněno Zátěž převedena"
+
+msgid "Shutdown"
+msgstr "Vypnout"
+
+msgid "Shutoff"
+msgstr "Vypnout"
+
+msgid "Size"
+msgstr "Velikost"
+
+#, python-format
+msgid "Snapshot %s was successfully created."
+msgstr "Snapshot %s byl úspěšně vytvořen."
+
+msgid "Snapshot ID"
+msgstr "ID Snapshotu"
+
+msgid "Snapshot Name"
+msgstr "Název snapshotu"
+
+msgid "Soft Deleted"
+msgstr "Měkce smazáno"
+
+msgid "Soft Reboot"
+msgstr "Měkký restart"
+
+msgid "Sort"
+msgstr "Seřadit"
+
+msgid "Source Volume ID"
+msgstr "ID zdrojového svazku"
+
+msgid "Specs"
+msgstr "Specifikace"
+
+msgid "Start"
+msgstr "Začátek"
+
+msgid "Start Time"
+msgstr "Čas spuštění"
+
+msgid "State"
+msgstr "Stav"
+
+msgid "Status"
+msgstr "Stav"
+
+msgid "Stop"
+msgstr "Zastavit"
+
+msgid "Stopped"
+msgstr "Zastaveno"
+
+msgid "Subnet"
+msgstr "Podsíť"
+
+msgid "Subnets"
+msgstr "Podsítě"
+
+msgid "Subnets Associated"
+msgstr "Připojené podsítě"
+
+msgid "Suspend"
+msgstr "Uspat"
+
+msgid "Suspended"
+msgstr "Uspáno"
+
+msgid "Swap"
+msgstr "Swap"
+
+msgid "Task State"
+msgstr "Stav úlohy"
+
+msgid "The requested resource was not found."
+msgstr "Požadovaný prostředek nebyl nalezen."
+
+msgid "Transfer"
+msgstr "Přenos"
+
+msgid "Type"
+msgstr "Typ"
+
+#, python-format
+msgid "Unable to delete Instance: %s."
+msgid_plural "Unable to delete Instances: %s."
+msgstr[0] "Nelze smazat instanci: %s."
+msgstr[1] "Nelze smazat instance: %s."
+msgstr[2] "Nelze smazat instance: %s."
+
+msgid "Unable to execute the search."
+msgstr "Nelze provést vyhledávání."
+
+msgid "Unable to retrieve Searchlight resources types."
+msgstr "Nelze získat typy prostředků Searchlight."
+
+msgid "Unavailable"
+msgstr "Nedostupné"
+
+msgid "Unpause"
+msgstr "Zrušit pozastavení"
+
+msgid "Up"
+msgstr "Otevřen"
+
+msgid "Update Interval (seconds)"
+msgstr "Interval aktualizace (sekund)"
+
+msgid "Updated"
+msgstr "Aktualizováno"
+
+msgid "Updated At"
+msgstr "Aktualizováno"
+
+msgid "User ID"
+msgstr "ID uživatele"
+
+msgid "VCPUs"
+msgstr "VCPU"
+
+msgid "Visibility"
+msgstr "Viditelnost"
+
+msgid "Volume"
+msgstr "Svazek"
+
+msgid "Volume Backup"
+msgstr "Záloha svazku"
+
+msgid "Volume Backups"
+msgstr "Zálohy svazku"
+
+msgid "Volume ID"
+msgstr "ID svazku"
+
+msgid "Volume Snapshot"
+msgstr "Snapshot svazku"
+
+msgid "Volume Snapshots"
+msgstr "Snapshoty svazku"
+
+msgid "Volumes"
+msgstr "Svazky"
+
+msgid "Volumes Attached"
+msgstr "Připojené svazky"
+
+#, python-format
+msgid "You are not allowed to delete instances: %s"
+msgstr "Nemáte oprávnění smazat instance: %s"
+
+msgid "You are not allowed to perform this request."
+msgstr "Nemáte oprávnění provést tuto operaci"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted instance is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
+msgstr[0] "Vybrali jste \"%s\". Smazanou instanci  nelze obnovit."
+msgstr[1] "Vybrali jste \"%s\". Smazané instance nelze obnovit."
+msgstr[2] "Vybrali jste \"%s\". Smazané instance nelze obnovit."
+
+msgid "default"
+msgstr "výchozí"
+
+msgid "from"
+msgstr "od"
+
+msgid "to"
+msgstr "do"
+
+msgid "{$ table.queryResponse.statusCode | slQueryStatus $}"
+msgstr "{$ table.queryResponse.statusCode | slQueryStatus $}"
