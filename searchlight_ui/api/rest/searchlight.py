@@ -19,6 +19,7 @@ import json
 import requests
 from requests import exceptions as r_exceptions
 import six
+from urlparse import urljoin
 
 from horizon import exceptions
 from openstack_dashboard.api import base
@@ -204,4 +205,4 @@ def _get_searchlight_url(request):
         pass
     # Currently the keystone endpoint is http://host:port/
     # without the version.
-    return searchlight_url + 'v1'
+    return urljoin(searchlight_url, 'v1')
