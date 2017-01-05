@@ -23,7 +23,7 @@
     .factory('resources.os-nova-servers.actions.create-snapshot.service', createSnapshotService);
 
   createSnapshotService.$inject = [
-    '$modal',
+    '$uibModal',
     '$q',
     'resources.os-nova-servers.basePath',
     'horizon.app.core.images.resourceType',
@@ -43,7 +43,7 @@
    * Brings up the Create Instance snapshot modal.
    */
   function createSnapshotService(
-    $modal,
+    $uibModal,
     $q,
     basePath,
     imageResourceType,
@@ -98,7 +98,7 @@
         }
       };
 
-      return $modal.open(modalParams).result.then(onSubmit, onCancel);
+      return $uibModal.open(modalParams).result.then(onSubmit, onCancel);
     }
 
     function onSubmit(context) {

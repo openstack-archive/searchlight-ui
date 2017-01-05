@@ -34,22 +34,22 @@
   // converting search settings into a directive that can accept attributes it
   // can data bind.
   SettingsController.$inject = [
-    '$modalInstance',
+    '$uibModalInstance',
     'searchSettings'
   ];
 
-  function SettingsController($modalInstance, searchSettings) {
+  function SettingsController($uibModalInstance, searchSettings) {
     var ctrl = this;
     ctrl.settings = searchSettings;
     ctrl.dismiss = dismiss;
     ctrl.apply = apply;
 
     function apply() {
-      $modalInstance.close();
+      $uibModalInstance.close();
     }
 
     function dismiss() {
-      $modalInstance.dismiss('cancel');
+      $uibModalInstance.dismiss('cancel');
     }
 
   } // end of function

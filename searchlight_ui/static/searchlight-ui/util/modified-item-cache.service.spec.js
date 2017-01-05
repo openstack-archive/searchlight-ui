@@ -35,7 +35,7 @@
           return {};
         });
         $provide.constant('searchlight-ui.basePath', 'mock path');
-        $provide.provider('$modal', function() {
+        $provide.provider('$uibModal', function() {
           this.$get = function() {
             return {};
           };

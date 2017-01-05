@@ -22,7 +22,7 @@
     .factory('searchlight-ui.settings.settingsService', searchSettingsService);
 
   searchSettingsService.$inject = [
-    '$modal',
+    '$uibModal',
     '$q',
     'searchlight-ui.basePath',
     'horizon.app.core.openstack-service-api.userSession',
@@ -36,7 +36,7 @@
    * @Description
    * Provides general search settings and a modal for updating the settings.
    *
-   * @param {function} $modal ng $modal service
+   * @param {function} $uibModal ng $uibModal service
    *
    * @param {function} basePath the base url path
    *
@@ -44,7 +44,7 @@
    *
    * @returns {function} This settings service.
    */
-  function searchSettingsService($modal,
+  function searchSettingsService($uibModal,
                                  $q,
                                  basePath,
                                  userSession,
@@ -185,7 +185,7 @@
         resolve: resolve
       };
 
-      return $modal.open(options)
+      return $uibModal.open(options)
         .result
         .then(updateSettingsAndNotify);
 

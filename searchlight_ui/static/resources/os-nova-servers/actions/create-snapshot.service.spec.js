@@ -19,7 +19,7 @@
   'use strict';
 
   describe('resources.os-nova-servers.actions.create-snapshot.service', function() {
-    var service, $modal, $q, $timeout, spinner, nova;
+    var service, $uibModal, $q, $timeout, spinner, nova;
 
     beforeEach(module('resources.os-nova-servers.actions'));
     beforeEach(module('horizon.app.core.images'));
@@ -27,7 +27,7 @@
 
     beforeEach(inject(function($injector, _$q_, _$timeout_) {
       service = $injector.get('resources.os-nova-servers.actions.create-snapshot.service');
-      $modal = $injector.get('$modal');
+      $uibModal = $injector.get('$uibModal');
       spinner = $injector.get('horizon.framework.widgets.modal-wait-spinner.service');
       $q = _$q_;
       $timeout = _$timeout_;
@@ -106,16 +106,16 @@
       var deferred;
       beforeEach(function() {
         deferred = $q.defer();
-        spyOn($modal, 'open').and.returnValue({result: deferred.promise});
+        spyOn($uibModal, 'open').and.returnValue({result: deferred.promise});
       });
       it('opens a modal', function() {
         service.perform({id: 123});
-        expect($modal.open).toHaveBeenCalled();
+        expect($uibModal.open).toHaveBeenCalled();
       });
 
       it('the modal is given the right context', function() {
         service.perform({id: 123});
-        var params = $modal.open.calls.argsFor(0)[0];
+        var params = $uibModal.open.calls.argsFor(0)[0];
         expect(params.resolve.context()).toEqual({name: undefined, instance_id: 123});
       });
 

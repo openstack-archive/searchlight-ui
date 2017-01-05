@@ -23,7 +23,7 @@
       context = {some: 'thing'};
       modalInstance = {close: angular.noop, dismiss: angular.noop};
       $provide.value('context', context);
-      $provide.value('$modalInstance', modalInstance);
+      $provide.value('$uibModalInstance', modalInstance);
     }));
     beforeEach(module('resources.os-nova-servers.actions'));
 

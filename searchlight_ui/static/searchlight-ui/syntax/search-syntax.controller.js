@@ -29,11 +29,11 @@
     .controller('searchlight-ui.syntax.searchSyntaxController', SearchSyntaxController);
 
   SearchSyntaxController.$inject = [
-    '$modal',
+    '$uibModal',
     'searchlight-ui.basePath'
   ];
 
-  function SearchSyntaxController($modal, basePath)
+  function SearchSyntaxController($uibModal, basePath)
   {
     var ctrl = this;
     ctrl.show = show;
@@ -46,7 +46,7 @@
         templateUrl: basePath + 'syntax/search-syntax-modal.html'
       };
 
-      $modal.open(localSpec);
+      $uibModal.open(localSpec);
     }
   }
 

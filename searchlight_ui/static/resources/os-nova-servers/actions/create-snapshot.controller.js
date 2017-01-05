@@ -36,11 +36,11 @@
     .controller('CreateSnapshotController', CreateSnapshotController);
 
   CreateSnapshotController.$inject = [
-    '$modalInstance',
+    '$uibModalInstance',
     'context'
   ];
 
-  function CreateSnapshotController($modalInstance, context) {
+  function CreateSnapshotController($uibModalInstance, context) {
     var ctrl = this;
     ctrl.submit = submit;
     ctrl.cancel = cancel;
@@ -52,12 +52,12 @@
     function submit() {
       ctrl.form.$setSubmitted();
       if (ctrl.form.$valid ) {
-        $modalInstance.close(context);
+        $uibModalInstance.close(context);
       }
     }
 
     function cancel() {
-      $modalInstance.dismiss(context);
+      $uibModalInstance.dismiss(context);
     }
 
     return ctrl;
