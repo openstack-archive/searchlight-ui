@@ -1,0 +1,129 @@
+# suhartono <cloudsuhartono@gmail.com>, 2016. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Searchlight UI Release Notes 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-10 19:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-01-16 03:18+0000\n"
+"Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "0.1.0"
+msgstr "0.1.0"
+
+msgid "1.0.0"
+msgstr "1.0.0"
+
+msgid "1.0.0.0b2"
+msgstr "1.0.0.0b2"
+
+msgid "1.0.0.0b3"
+msgstr "1.0.0.0b3"
+
+msgid "A unified cross resource search panel for the Mitaka release"
+msgstr "Sebuah panel pencari sumber daya lintas terpadu untuk rilis Mitaka"
+
+msgid "Cinder volumes and snapshots summary view"
+msgstr "Volume Cinder dan tampilan ringkasan snapshot"
+
+msgid "Current Series Release Notes"
+msgstr "Catatan Rilis Seri Current"
+
+msgid "Dynamic polling / progress based on resource status and last action"
+msgstr ""
+"Jajak pendapat/kemajuan (polling/progress) dinamis berdasarkan status sumber "
+"daya dan tindakan terakhir"
+
+msgid "Glance images summary view"
+msgstr "Tampilan ringkasan image Glance"
+
+msgid ""
+"Links use relative paths to ensure proper use of the established base tag, "
+"which includes webroot."
+msgstr ""
+"Link menggunakan path relatif untuk memastikan penggunaan yang tepat dari "
+"tag dasar yang didirikan (established base tag), yang meliputi webroot."
+
+msgid "Live search toggle (continuous query mode)"
+msgstr "Peralihan pencarian langsung (mode permintaan kontinue)"
+
+msgid "Mitaka Series Release Notes"
+msgstr "Catatan Rilis Seri Mitaka"
+
+msgid "Neutron network, ports, routers, security groups, subnets summary views"
+msgstr ""
+"Penampilan ringkasan jaringan neutron, port, router, security group, dan "
+"subnet"
+
+msgid "New Features"
+msgstr "Fitur baru"
+
+msgid "Newton Series Release Notes"
+msgstr "Catatan rilis seri Newton"
+
+msgid "Nova flavor, hypervisor, and server group summary views"
+msgstr "Penampilan ringkasan Nova flavor, hypervisor, dan server group"
+
+msgid "Nova instance actions, summary, and detail views"
+msgstr "Tindakan instance Nova, ringkasan, dan tampilan rinci"
+
+msgid "Persistent search settings"
+msgstr "Pengaturan pencarian tetap"
+
+msgid "Registered details views now linked to in search results."
+msgstr ""
+"Tampilan rincian yang terdaftar sekarang terhubung ke dalam hasil pencarian."
+
+msgid ""
+"Registered details views now take precedence over links hard-coded within "
+"the resource-locator service"
+msgstr ""
+"Tampilan rincian yang terdaftar sekarang lebih diutamakan daripada link hard-"
+"coded dalam layanan resource-locator."
+
+msgid ""
+"Search panel now uses the registry to produce drawer views, and uses a new "
+"directive to do so."
+msgstr ""
+"Panel pencari sekarang menggunakan registry untuk menghasilkan tampilan laci "
+"(drawer), dan menggunakan instruksi baru untuk melakukannya."
+
+msgid "Searchlight Release Notes"
+msgstr "Catatan rilis Searchlight "
+
+msgid ""
+"Searchlight UI now provides several actions and summary views for various "
+"types of resources. This enables users to often complete their task within "
+"the context of their current search without navigating to other parts of the "
+"UI."
+msgstr ""
+"Searchlight UI sekarang menyediakan beberapa tindakan dan tampilan ringkasan "
+"untuk berbagai jenis sumber daya. Hal ini mengaktifkan pengguna untuk sering "
+"menyelesaikan tugasnya dalam konteks pencariannya pada saat ini tanpa "
+"navigasi ke bagian lain dari UI."
+
+msgid "Sort by relevancy, last updated, alphabetical"
+msgstr "Urutkan berdasarkan relevansi, update terakhir, abjad"
+
+msgid ""
+"The search panel shows a resource type's registered drawer, or a searchlight-"
+"specific default drawer if none."
+msgstr ""
+"Panel pencarian menunjukkan laci yang diregistasi pada tipe sumber daya, "
+"atau laci default searchlight-specific jika tidak ada."
+
+msgid "Translation build support"
+msgstr "Dukungan pembangunan terjemahan"
+
+msgid ""
+"sl-drawer widget produces markup to use/display a standard Horizon drawer"
+msgstr ""
+"sl-drawer widget menghasilkan markup untuk menggunakan/menampilkan drawer "
+"Horizon standar"

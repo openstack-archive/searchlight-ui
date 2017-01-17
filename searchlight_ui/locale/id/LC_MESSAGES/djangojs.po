@@ -1,0 +1,1211 @@
+# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2016. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: searchlight-ui 2.0.0.0b3.dev1\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-01-10 19:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-01-17 03:44+0000\n"
+"Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#, python-format
+msgid "%(resourceType)s: %(searchFacet)s"
+msgstr "%(resourceType)s: %(searchFacet)s"
+
+#, python-format
+msgid "%(total)s total results"
+msgstr "%(total)s hasil total"
+
+#, python-format
+msgid "(%(doc_count)s)"
+msgstr "(%(doc_count)s)"
+
+msgid "(Extension)"
+msgstr "(Extension)"
+
+msgid "-"
+msgstr "-"
+
+msgid ""
+"A snapshot is an image which preserves the disk state of a running instance."
+msgstr ""
+"Sebuah snapshot adalah image yang mempertahankan disk state dari instance "
+"berjalan."
+
+#, python-format
+msgid "ALLOW %(type)s %(direction)s %(target)s"
+msgstr "ALLOW %(type)s %(direction)s %(target)s"
+
+#, python-format
+msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+msgstr "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+
+msgid "ANY"
+msgstr "ANY"
+
+msgid "Action"
+msgstr "Action (aksi)"
+
+msgid "Action Log"
+msgstr "Action Log"
+
+msgid "Actions"
+msgstr "Actions (tindakan)"
+
+msgid "Active"
+msgstr "Active (aktif)"
+
+msgid ""
+"Add a '+' or a '-' to indicate terms that must or must\n"
+"            not appear. For example '+python -apache web' would find\n"
+"            everything that has 'python' does NOT have 'apache' and should "
+"have\n"
+"            'web'. This may also be used with grouping. For example,\n"
+"            'web -(apache AND python)' would find anything with 'web', but "
+"does\n"
+"            not have either 'apache' or 'python'."
+msgstr ""
+"Menambahkan tanda '+' atau '-' untuk menunjukkan istilah yang harus atau "
+"harus\n"
+"             tidak muncul. Misalnya '+ python -apache web' akan menemukan\n"
+"             segala sesuatu yang memiliki 'python' dan TIDAK memiliki "
+"'apache' dan harus memiliki 'web'. Ini juga dapat digunakan dengan "
+"pengelompokan. Sebagai contoh, 'web - (apache AND python)' akan menemukan "
+"apa-apa dengan 'web', tetapi tidak memiliki 'apache' ataupun 'python'."
+
+msgid "Addresses"
+msgstr "Addresses (alamat)"
+
+msgid "Admin State"
+msgstr "Admin State"
+
+msgid "Alphabetical Name"
+msgstr "Alphabetical Name (nama abjad)"
+
+msgid "Attached Device"
+msgstr "Attached Device (perangkat terhubung)"
+
+msgid "Attached Device ID"
+msgstr "Attached Device ID (ID perangkat terpasang)"
+
+msgid "Attached To"
+msgstr "Attached To"
+
+msgid "Availability Zone"
+msgstr "Availability Zone (zona tersedia)"
+
+msgid "Availability Zone Hints"
+msgstr "Availability Zone Hints (petunjuk zona ketersediaan)"
+
+msgid "Availability Zones"
+msgstr "Zona yang Tersedia"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Available"
+msgstr "Available (tersedia)"
+
+msgid "Binding Host ID"
+msgstr "Binding Host ID (ID host mengikat)"
+
+msgid "Binding Profile"
+msgstr "Binding Profile (Profil VIF mengikat)"
+
+msgid "Binding VIF Details"
+msgstr "Binding VIF Details (Rincian VIF mengikat)"
+
+msgid "Binding VIF Type"
+msgstr "Binding VIF Type (Tipe VIF mengikat)"
+
+msgid "Binding VNIC Type"
+msgstr "Binding VNIC Type (Tipe VNIC mengikat)"
+
+msgid "Blocked"
+msgstr "Blocked (diblokir)"
+
+msgid "Boolean Operators"
+msgstr "Boolean Operators (operasi boolean)"
+
+msgid "Boosting"
+msgstr "Boosting (penambahan)"
+
+msgid "Bootable"
+msgstr "Bootable"
+
+msgid "Build"
+msgstr "Build"
+
+msgid "Building"
+msgstr "Building (pembangunan)"
+
+msgid ""
+"By default, each word you type will be searched for\n"
+"            individually. You may also try to search an exact phrase by\n"
+"            using quotes (\"my phrase\") to surround a phrase. The search\n"
+"            service may allow a certain amount of phrase slop - meaning "
+"that\n"
+"            if you have some words out of order in the phrase it may still\n"
+"            match."
+msgstr ""
+"Secara default, setiap kata yang Anda ketik akan dicari secara\n"
+"             individual. Anda juga dapat mencoba untuk mencari frasa yang "
+"tepat dengan\n"
+"             menggunakan tanda kutip  (\"my phrase\") untuk mengelilingi "
+"frase. Layanan pencarian\n"
+"             mengizinkan sejumlah tertentu phrase slop - yang berarti bahwa\n"
+"             jika Anda memiliki beberapa kata yang keluar dari urutan "
+"kalimat, hal itu mungkin masih\n"
+"            cocok."
+
+msgid ""
+"By default, each word you type will match full words\n"
+"            only. You may also use wildcards to match parts of words. "
+"Wildcard\n"
+"            searches can be run on individual terms, using ? to replace a\n"
+"            single character, and * to replace zero or more character. "
+"'demo'\n"
+"            will match the full word 'demo' only. However, 'de*'\n"
+"            will match anything that starts with 'de', such as 'demo_1'.\n"
+"            'de*1' will match\n"
+"            anything that starts with 'de' and ends with '1'."
+msgstr ""
+"Secara default, setiap kata yang Anda ketik akan hanya cocok dengan kata "
+"penuh\n"
+"            . Anda juga dapat menggunakan wildcard untuk mencocokkan bagian "
+"dari kata. Pencarian wildcard\n"
+"             dapat dijalankan pada individu term, menggunakan karakter ? "
+"untuk mengganti\n"
+"             karakter tunggal, dan karakter* untuk menggantikan karakter nol "
+"atau lebih. 'demo'\n"
+"             akan cocok dengan kata penuh 'demo' saja. Namun, 'de *'\n"
+"             akan cocok apa pun yang dimulai dengan 'de', seperti 'demo_1'.\n"
+"             'de * 1' akan cocok dengan\n"
+"             sesuatu yang dimulai dengan 'de' dan diakhiri dengan '1'."
+
+msgid "Cancel"
+msgstr "Cancel (batal)"
+
+msgid "Close"
+msgstr "Close (tutup)"
+
+msgid "Code"
+msgstr "Kode"
+
+msgid "Confirm Delete Instance"
+msgid_plural "Confirm Delete Instances"
+msgstr[0] "Confirm Delete Instance"
+
+msgid "Confirm Resize"
+msgstr "Confirm Resize (mengkonfirmasi mengubah ukuran)"
+
+msgid "Confirm or Revert Resize/Migrate"
+msgstr ""
+"Confirm or Revert Resize/Migrate (mengkonfirmasi atau mengembalikan resize/"
+"bermigrasi)"
+
+msgid "Connect"
+msgstr "Connect"
+
+msgid "Connect in a new window"
+msgstr "Hubungkan di jendela baru"
+
+msgid "Consistency Group ID"
+msgstr "Consistency Group ID (ID group konsistensi)"
+
+msgid "Console"
+msgstr "Console (konsol)"
+
+msgid "Console is currently unavailable. Please try again later."
+msgstr "Konsol saat ini tidak tersedia. Silakan coba lagi nanti."
+
+msgid "Crashed"
+msgstr "Crashed"
+
+msgid "Create"
+msgstr "Create (buat)"
+
+msgid "Create Instance"
+msgstr "Create Instance (buat instance)"
+
+msgid "Create Instance Snapshot"
+msgstr "Create Instance Snapshot (buat instance snapshot)"
+
+msgid "Create Snapshot"
+msgstr "Membuat snapshot"
+
+msgid "Created"
+msgstr "Created (dibuat)"
+
+msgid "Created At"
+msgstr "Created At (dibuat pada)"
+
+msgid "Creating Snapshot"
+msgstr "Pembuatan Snapshot"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "DNS Domain"
+msgstr "Domain DNS"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "DNS Domains"
+msgstr "Domains DNS"
+
+msgid "DNS Name"
+msgstr "DNS Name"
+
+msgid "DNS Nameservers"
+msgstr "DNS Nameservers"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "DNS Record"
+msgstr "Record DNS"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "DNS Records"
+msgstr "Record DNS (plural)"
+
+msgid ""
+"Date, numeric or string fields can use range queries.\n"
+"            Use square brackets [min TO max] for inclusive ranges and curly\n"
+"            brackets {min TO max} for exclusive ranges."
+msgstr ""
+"Tanggal, numerik atau string field dapat menggunakan range query (permintaan "
+"rentang).  Gunakan tanda kurung siku [min TO max] untuk rentang inklusif "
+"dan\n"
+"kurung keriting {min TO max} untuk rentang eksklusif."
+
+msgid "Default Network"
+msgstr "Default Network (jaringan default)"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Delete Instance"
+msgid_plural "Delete Instances"
+msgstr[0] "Delete Instance"
+
+msgid "Deleted"
+msgstr "Deleted"
+
+#, python-format
+msgid "Deleted Instance: %s."
+msgid_plural "Deleted Instances: %s."
+msgstr[0] "Deleted Instance: %s."
+
+msgid "Deleting Instance"
+msgid_plural "Deleting Instances"
+msgstr[0] "Deleting Instance"
+
+msgid "Description"
+msgstr "Description (deskripsi)"
+
+msgid "Description:"
+msgstr "Deskripsi"
+
+msgid "Details"
+msgstr "Details (rincian)"
+
+msgid "Direction"
+msgstr "Direction (arah)"
+
+msgid "Disk"
+msgstr "Disk"
+
+msgid "Display field matching"
+msgstr "pencocokan field tampilan"
+
+#, python-format
+msgid "Displaying %(numberDisplayed)s of %(total)s total results"
+msgstr "Penampilan %(numberDisplayed)s dari %(total)s hasil total"
+
+msgid "Distributed"
+msgstr "Distributed (tersebar)"
+
+msgid "Down"
+msgstr "Down (turun)"
+
+msgid "Enable DHCP"
+msgstr "Mengaktifkan DHCP"
+
+msgid "Encrypted"
+msgstr "Encrypted"
+
+msgid "Ephemeral"
+msgstr "Ephemeral (tidak kekal)"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Error"
+msgstr "Error (kesalahan)"
+
+#, python-format
+msgid "Error initializing actions for plugin %(type)s: "
+msgstr "Tindakan inisialisasi kesalahan untuk plugin %(type)s: "
+
+msgid "Ether Type"
+msgstr "Ether Type"
+
+msgid "External"
+msgstr "External (luar)"
+
+msgid "External Network"
+msgstr "External Network (jaringan eksternal)"
+
+msgid "Facets"
+msgstr "Facets (aspek)"
+
+msgid "Failed"
+msgstr "Failed (gagal)"
+
+msgid "Fault"
+msgstr "Fault (kesalahan)"
+
+msgid "Field Matches"
+msgstr "Field Matches (kecocokan field)"
+
+msgid ""
+"Find your cloud resources by selecting specific facets or by specifying\n"
+"    full text search queries.\n"
+"    <sl-search-syntax></sl-search-syntax>"
+msgstr ""
+"Cari sumber cloud Anda dengan memilih aspek tertentu atau dengan menentukan "
+"permintaan pencarian teks lengkap.  <sl-search-syntax></sl-search-syntax>"
+
+msgid "Fixed IPs"
+msgstr "Fixed IP (IP tetap)"
+
+msgid "Flavor"
+msgstr "Flavor"
+
+msgid "Flavor ID"
+msgstr "Flavor ID (ID flavor)"
+
+msgid "Flavor Name"
+msgstr "Nama flavor"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Flavors"
+msgstr "Flavors"
+
+msgid "Floating IP"
+msgstr "Floating IP (IP mengambang)"
+
+msgid "Floating IP Address"
+msgstr "Floating IP Address (alamat IP mengambang)"
+
+msgid "Floating IPs"
+msgstr "Floating IP (IP mengambang)"
+
+msgid "Floating Network ID"
+msgstr "Floating Network ID (ID jaringan mengambang)"
+
+msgid "Full Text Search Syntax"
+msgstr "Full Text Search Syntax (sintaks pencarian teks lengkap)"
+
+msgid "Gateway IP"
+msgstr "IP Gateway"
+
+msgid "Grouping"
+msgstr "Grouping (pengelompokan)"
+
+msgid "Hard Reboot"
+msgstr "Hard Reboot"
+
+msgid "High Availability"
+msgstr "High Availability (ketersediaan tinggi)"
+
+msgid "Host"
+msgstr "Host (inang)"
+
+msgid "Hostname"
+msgstr "Hostname"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Hypervisor"
+msgstr "Hypervisor"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Hypervisors"
+msgstr "Hypervisors"
+
+msgid "ID"
+msgstr "ID (id)"
+
+msgid "IP Addresses"
+msgstr "IP Addresses (alamat IP)"
+
+msgid "IP Version"
+msgstr "Versi IP"
+
+msgid "IPv4 Address Scope"
+msgstr "IPv4 Address Scope (lingkup alamat IPv4)"
+
+msgid ""
+"IPv4 addresses may be searched based on ranges and with CIDR\n"
+"            notation."
+msgstr "Alamat IPv4 dapat dicari berdasarkan rentang dan dengan notasi CIDR."
+
+msgid "IPv6 Address Mode"
+msgstr "IPv6 Address Mode (modus alamat IPv6)"
+
+msgid "IPv6 Address Scope"
+msgstr "IPv6 Address Scope lingkup alamat IPv6)"
+
+msgid "IPv6 RA Mode"
+msgstr "IPv6 RA Mode "
+
+msgid ""
+"If the console is not responding to keyboard input, click the status bar in "
+"the screen below."
+msgstr ""
+"Jika konsol tidak merespon input keyboard, klik status bar di layar bawah."
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Image Reference"
+msgstr "Image Reference (referensi image)"
+
+msgid "Instance"
+msgstr "Instance"
+
+msgid "Instance Action Log"
+msgstr "Instance Action Log (catatan tindakan instance)"
+
+msgid "Instance Console"
+msgstr "Instance Console (konsol instance)"
+
+msgid "Instance Console Log"
+msgstr "Instance Console Log (log konsol instance)"
+
+msgid "Instances"
+msgstr "Instances (instance)"
+
+msgid ""
+"It is typically better to filter results further than to increase\n"
+"          the number of returned results and page through them."
+msgstr ""
+"Hal ini biasanya lebih baik untuk menyaring hasil lebih lanjut dari pada  "
+"meningkatkan\n"
+"           jumlah hasil dan halaman yang dikembalikan melalui hasil mereka."
+
+msgid "Key Pair"
+msgstr "Key Pair"
+
+msgid "Key Pair Name"
+msgstr "Nama Key Pair (nama pasangan kunci)"
+
+msgid "Key Pairs"
+msgstr "Key Pair (pasangan kunci)"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Killed"
+msgstr "Killed"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Load Balancer Pool"
+msgstr "Pool load balancer"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Load Balancer Pool Member"
+msgstr "Anggota pool load balancer"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Load Balancer Pool Members"
+msgstr "Anggota pool load balancer (plural)"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Load Balancer Pools"
+msgstr "Pool load balancer (plural)"
+
+msgid "Loading"
+msgstr "Loading (pemuatan)"
+
+msgid "Local GB (total)"
+msgstr "Local GB (total)"
+
+msgid "Log"
+msgstr "Log (catatan)"
+
+msgid "Log Length"
+msgstr "Log Length (panjang catatan)"
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Mapped Fixed IP Address"
+msgstr "Mapped Fixed IP Address (alamat IP tetap terpetakan)"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Max Port"
+msgstr "Max Port"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Members"
+msgstr "Anggota"
+
+msgid "Message"
+msgstr "Message (pesan)"
+
+msgid "Metadata"
+msgstr "Metadata"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Metadata Definition"
+msgstr "Metadata Definition"
+
+msgid "Metadata Definitions"
+msgstr "Metadata Definitions"
+
+msgid "Migrating"
+msgstr "Migrating"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Min Port"
+msgstr "Min Port"
+
+msgid "More Actions"
+msgstr "Aksi Lebih"
+
+msgid "More Actions..."
+msgstr "More Actions..."
+
+msgid "Name"
+msgstr "Name (nama)"
+
+msgid "Network"
+msgstr "Network (jaringan)"
+
+msgid "Network Address"
+msgstr "Alamat jaringan"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Network Health Monitor"
+msgstr "Monitor kesehatan jaringan"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Network Health Monitors"
+msgstr "Monitor kesehatan jaringan (plural)"
+
+msgid "Network ID"
+msgstr "Network ID (ID Jaringan)"
+
+msgid "Networks"
+msgstr "Jaringan"
+
+msgid "Newest"
+msgstr "Newest (terbaru)"
+
+msgid "No State"
+msgstr "No State"
+
+msgid "No Volumes Attached"
+msgstr "No Volumes Attached (tidak ada volume terhubung)"
+
+msgid "No rules defined"
+msgstr "Tidak ada aturan yang ditetapkan"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Object"
+msgstr "Objek"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Object Account"
+msgstr "Akun objek"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Object Accounts"
+msgstr "Akun objek (plural)"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Object Container"
+msgstr "Kontainer objek"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Object Containers"
+msgstr "Kontainer objek (plural)"
+
+msgid "Objects"
+msgstr "Object"
+
+msgid "Oldest"
+msgstr "Oldest (tertua)"
+
+msgid "Overview"
+msgstr "Overview (ikhtisar)"
+
+msgid "Owned by Me"
+msgstr "Owned by Me (dimiliki oleh saya)"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Past 10 Minutes"
+msgstr "Past 10 Minutes (melampaui 10 menit)"
+
+msgid "Past Day"
+msgstr "Past Day (melampaui hari)"
+
+msgid "Past Half Hour"
+msgstr "Past Half Hour (melampaui setengah jam)"
+
+msgid "Past Hour"
+msgstr "Past Hour (melampaui satu jam)"
+
+msgid "Past Month"
+msgstr "Past Month (melampaui bulan)"
+
+msgid "Past Week"
+msgstr "Past Week (melampaui minggu)"
+
+msgid "Past Year"
+msgstr "Past Year (melampaui tahun)"
+
+msgid "Pause"
+msgstr "Pause (berhenti sebentar)"
+
+msgid "Pause updates to search results"
+msgstr "Jeda update ke hasil pencarian"
+
+msgid "Paused"
+msgstr "Paused (berhenti sebentar)"
+
+msgid "Pending"
+msgstr "Pending (tertunda)"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Pending Delete"
+msgstr "Pending Delete"
+
+msgid "Phrases"
+msgstr "Phrases (frase)"
+
+msgid "Please Wait"
+msgstr "Mohon tunggu"
+
+msgid "Policies"
+msgstr "Policies"
+
+msgid "Poll for Updates"
+msgstr "Poll for Updates (jajak pendapat untuk pembaruan)"
+
+msgid ""
+"Polling enables you to create a view of the data the updates\n"
+"          periodically."
+msgstr ""
+"Jajak pendapat mengaktifkan Anda untuk membuat tampilan dari data update\n"
+"           secara berkala."
+
+msgid "Pool"
+msgstr "Pool (kolam)"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Port ID"
+msgstr "Port ID"
+
+msgid "Port Security Enabled"
+msgstr "Port Security Enabled"
+
+msgid "Ports"
+msgstr "Ports"
+
+msgid "Power State"
+msgstr "Power State"
+
+msgid "Project"
+msgstr "Project (proyek)"
+
+msgid "Project ID"
+msgstr "Project ID (ID proyek)"
+
+msgid "Protocol"
+msgstr "Protocol (protokol)"
+
+msgid "Provider Network Type"
+msgstr "Tipe jaringan penyedia"
+
+msgid "Provider Physical Network"
+msgstr "Provider Physical Network (jaringan fisik provider)"
+
+msgid "Provider Segmentation ID"
+msgstr "Provider Segmentation ID (ID segmentasi provider)"
+
+msgid "Public"
+msgstr "Public (publik)"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Queued"
+msgstr "Queued"
+
+msgid "RAM"
+msgstr "RAM"
+
+msgid "Range Queries"
+msgstr "Range Queries (permintaan rentang)"
+
+msgid "Reboot"
+msgstr "Reboot (booting ulang)"
+
+msgid "Rebuild"
+msgstr "Rebuild (membangun kembali)"
+
+msgid "Refresh"
+msgstr "Refresh (penyegaran)"
+
+msgid "Relevancy"
+msgstr "Relevancy (relevansi)"
+
+msgid "Remote"
+msgstr "Remote (jauh)"
+
+msgid "Request"
+msgstr "Request (permintaan)"
+
+msgid "Rescue"
+msgstr "Rescue (menyelamatkan)"
+
+msgid "Rescued"
+msgstr "Rescued"
+
+msgid "Reserved Characters"
+msgstr "Reserved Characters (karakter sudah dicadangkan)"
+
+msgid "Resize"
+msgstr "Resize (merubah ukuran)"
+
+msgid "Resize/Migrate"
+msgstr "Resize/Migrate (mengubah ukuran/bermigrasi)"
+
+msgid "Resized"
+msgstr "Resized"
+
+msgid "Result Limit"
+msgstr "Result Limit (batas hasil)"
+
+msgid ""
+"Results exceeds pagination limit. Please refine your search or\n"
+"                increase the limit setting."
+msgstr ""
+"Hasil melebihi batas pagination. Silahkan mempersempit pencarian Anda atau\n"
+"                 meningkatkan pengaturan batas."
+
+msgid "Resume"
+msgstr "Resume (lanjut)"
+
+msgid "Resume updates to search results"
+msgstr "Melanjutkan update ke hasil pencarian"
+
+msgid "Reverse Alphabetical Name"
+msgstr "Reverse Alphabetical Name (nama abjad terbalik)"
+
+msgid "Revert Resize/Migrate"
+msgstr "Revert Resize/Migrate"
+
+msgid "Router"
+msgstr "Router"
+
+msgid "Router ID"
+msgstr "ID router"
+
+# #-#-#-#-#  intro_networking_components.pot (Networking Guide 0.9)  #-#-#-#-#
+# #-#-#-#-#  intro_os_networking_overview.pot (Networking Guide 0.9)
+# #-#-#-#-#
+# #-#-#-#-#  scenario_legacy_lb.pot (Networking Guide 0.9)  #-#-#-#-#
+# #-#-#-#-#  scenario_legacy_ovs.pot (Networking Guide 0.9)  #-#-#-#-#
+msgid "Routers"
+msgstr "Routers"
+
+msgid "Rules"
+msgstr "Rules"
+
+msgid "Running"
+msgstr "Menjalankan"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Saving"
+msgstr "Saving"
+
+msgid "Search"
+msgstr "Search (pencarian)"
+
+msgid "Search Settings"
+msgstr "Search Settings (pengaturan pencarian)"
+
+msgid "Search all projects"
+msgstr "Cari semua proyek"
+
+msgid "Security Group"
+msgstr "Security Group (kelompok keamanan)"
+
+msgid "Security Groups"
+msgstr "Security Groups (kelompok keamanan)"
+
+msgid "Server Group"
+msgstr "Server Group"
+
+msgid "Server Groups"
+msgstr "Server Groups"
+
+msgid "Shared"
+msgstr "Shared (bersama)"
+
+msgid "Shared by Me"
+msgstr "Shared by Me (bersama dengan saya)"
+
+msgid "Shared with Me"
+msgstr "Berbagi dengan saya"
+
+msgid "Shelved"
+msgstr "Shelved"
+
+msgid "Shelved Offloaded"
+msgstr "Shelved Offloaded"
+
+msgid "Shutdown"
+msgstr "Shutdown (matikan)"
+
+msgid "Shutoff"
+msgstr "Shutoff (menutup)"
+
+msgid "Size"
+msgstr "Size (ukuran)"
+
+#, python-format
+msgid "Snapshot %s was successfully created."
+msgstr "Snapshot %s berhasil dibuat."
+
+msgid "Snapshot ID"
+msgstr "Snapshot ID"
+
+msgid "Snapshot Name"
+msgstr "Nama Snapshot"
+
+msgid "Soft Deleted"
+msgstr "Soft Deleted"
+
+msgid "Soft Reboot"
+msgstr "Soft Reboot (reboot lembut)"
+
+msgid "Sort"
+msgstr "Sort (menyortir)"
+
+msgid "Source Volume ID"
+msgstr "Source Volume ID"
+
+msgid "Specs"
+msgstr "Specs (spesifikasi)"
+
+msgid "Start"
+msgstr "Mulai"
+
+msgid "Start Time"
+msgstr "Start Time"
+
+msgid "State"
+msgstr "State (keadaan)"
+
+msgid "Status"
+msgstr "Status (status)"
+
+msgid "Stop"
+msgstr "Stop (berhenti)"
+
+msgid "Stopped"
+msgstr "Stopped"
+
+msgid "Subnet"
+msgstr "Subnet"
+
+msgid "Subnet Pool ID"
+msgstr "Subnet Pool ID (ID kolam subnet)"
+
+msgid "Subnets"
+msgstr "Subnets"
+
+msgid "Subnets Associated"
+msgstr "Subnets Associated (subnet terkait)"
+
+msgid "Suspend"
+msgstr "Suspend (menangguhkan)"
+
+msgid "Suspended"
+msgstr "Suspended (ditangguhkan)"
+
+msgid "Swap"
+msgstr "Swap (menukar)"
+
+msgid "Task State"
+msgstr "Task State (keadaan tugas)"
+
+msgid "Term Operators"
+msgstr "Term Operators (operator tanda)"
+
+msgid "The current query is not valid. Please check your syntax."
+msgstr "Permintaan ini tidak valid. Silakan periksa sintaks Anda."
+
+msgid ""
+"The following characters are reserved and must be\n"
+"            escaped with a leading \\ (backslash):\n"
+"            <code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+msgstr ""
+"Karakter berikut dicadangkan dan harus\n"
+"             keluar pertama  \\ (backslash):\n"
+"             <Code> + - = && || > <! () {} [] ^ \"~ *:? \\ </ Code>"
+
+msgid "The requested resource was not found."
+msgstr "Sumber yang diminta tidak ditemukan."
+
+msgid "The search service had an error processing your request."
+msgstr "Layanan pencarian memiliki masalah saat memproses permintaan Anda."
+
+msgid "There was an error processing your request."
+msgstr "Terdapat kesalahan dalam memproses permintaan anda."
+
+msgid ""
+"These settings impact the processing of results returned\n"
+"          from the search service. Changing these settings may\n"
+"          impact search performance and results."
+msgstr ""
+"Pengaturan ini berdampak pada pengolahan hasil yang dikembalikan\n"
+"           dari layanan pencarian. Mengubah pengaturan ini dapat\n"
+"berdampak pada kinerja pencarian dan hasil."
+
+msgid "Transfer"
+msgstr "Transfer (perpindahan)"
+
+msgid "Type"
+msgstr "Type (tipe)"
+
+#, python-format
+msgid "Unable to delete Instance: %s."
+msgid_plural "Unable to delete Instances: %s."
+msgstr[0] "Unable to delete Instance: %s."
+
+msgid "Unable to execute the search."
+msgstr "Tidak bisa menjalankan pencarian."
+
+msgid "Unable to retrieve Searchlight resources types."
+msgstr "Tidak dapat mengambil tipe sumber Searchlight."
+
+msgid "Unable to retrieve search facets."
+msgstr "Tidak dapat mengambil search facet."
+
+msgid "Unavailable"
+msgstr "Unavailable (tidak tersedia)"
+
+msgid "Unpause"
+msgstr "Unpause (batalkan jeda)"
+
+msgid "Up"
+msgstr "Up (naik)"
+
+msgid "Update Interval (seconds)"
+msgstr "Update Interval (seconds) (memperbarui selang (detik))"
+
+msgid "Update Search"
+msgstr "Update Search (perbarui pencarian)"
+
+msgid "Updated"
+msgstr "Updated (sudah di perbaharui)"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Updated At"
+msgstr "Updated At"
+
+msgid ""
+"Use parenthesis to group different aspects of your\n"
+"            query to form sub-queries. For example, 'web OR (python AND\n"
+"            apache)' will return anything that either has 'web' OR has both\n"
+"            'python' AND 'apache'."
+msgstr ""
+"Gunakan tanda kurung untuk kelompok aspek yang berbeda dari\n"
+"             query Anda untuk membentuk sub-query. Misalnya, 'web OR (python "
+"AND apache)' akan mengembalikan apa-apa yang memiliki 'web' OR memiliki \n"
+"'python' AND 'apache'."
+
+msgid "User ID"
+msgstr "User ID"
+
+msgid "VCPUs"
+msgstr "VCPUs"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Visibility"
+msgstr "Visibility (keterlihatan)"
+
+msgid ""
+"Visibility is based on derived data. If Owned by Me, please inspect the "
+"resource to determine sharing status."
+msgstr ""
+"Visibilitas didasarkan pada data yang diperoleh. Jika Owned by Me (dimiliki "
+"oleh kita), silakan memeriksa sumber daya untuk menentukan status sharing. "
+
+msgid "Volume"
+msgstr "Volume (volume)"
+
+# auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
+msgid "Volume Backup"
+msgstr "Backup volume"
+
+msgid "Volume Backups"
+msgstr "Volume Backups (cadangan volume)"
+
+msgid "Volume ID"
+msgstr "ID Volume"
+
+msgid "Volume Image Metadata"
+msgstr "Volume Image Metadata (metadata image volume)"
+
+msgid "Volume Snapshot"
+msgstr "Volume Snapshot"
+
+msgid "Volume Snapshots"
+msgstr "Volume Snapshot"
+
+msgid "Volumes"
+msgstr "Volume"
+
+msgid "Volumes Attached"
+msgstr "Volumes Attached"
+
+msgid ""
+"Warning: Wildcard queries place\n"
+"            a heavy burden on the search service and may perform poorly."
+msgstr ""
+"Peringatan: Wildcard query menjadi\n"
+"             beban berat pada layanan pencarian dan mungkin berakibat "
+"kinerja buruk."
+
+msgid "Wildcards"
+msgstr "Wildcards"
+
+#, python-format
+msgid "You are not allowed to delete instances: %s"
+msgstr "Anda tidak diizinkan untuk menghapus instances: %s"
+
+msgid "You are not allowed to perform this request."
+msgstr "Anda tidak diizinkan untuk melakukan permintaan ini."
+
+msgid ""
+"You can increase or decrease the relevance of a search\n"
+"            term by boosting different terms, phrases, or groups. Boost one "
+"of\n"
+"            these by adding ^n to the term, phrase, or group where n is a\n"
+"            number greater than 1 to increase relevance and between 0 and 1 "
+"to\n"
+"            decrease relevance. For example 'web^4 python^0.1' would find\n"
+"            anything with both web and python, but would increase the\n"
+"            relevance for anything with 'web' in the result and decrease "
+"the\n"
+"            relevance for anything with 'python' in the result."
+msgstr ""
+"Anda dapat menambah atau mengurangi relevansi pencarian\n"
+"             istilah dengan penambahan istilah, frasa, atau kelompok yang "
+"berbeda. Tambahan salah satu ini dengan menambahkan ^n untuk istilah, frase, "
+"atau kelompok dimana n adalah jumlah yang lebih besar dari 1 untuk "
+"meningkatkan relevansi dan antara 0 dan 1 untuk menurunkan relevansi. "
+"Misalnya 'web^4 python^0,1' akan menemukan apa-apa dengan kedua web dan "
+"python, tetapi akan meningkatkan relevansi untuk apa-apa dengan 'web' dalam "
+"hasil dan menurunkan relevansi untuk apa-apa dengan 'python' dalam hasil."
+
+msgid ""
+"You can separate search terms and groups with\n"
+"            AND, OR and NOT (also written &&, || and !). For example,\n"
+"            'python OR javascript' will find anything with either term\n"
+"            (OR is used by default, so does not need to be specified).\n"
+"            However, 'python AND javascript' will find things that only "
+"have\n"
+"            both terms. You can do this with as many terms as you'd like (e."
+"g.\n"
+"            'django AND javascript AND !unholy'). It is important to use "
+"all\n"
+"            caps or the alternate syntax (&&, ||), because 'and' will be\n"
+"            treated as another search term, but 'AND' will be treated as a\n"
+"            logical operator."
+msgstr ""
+"Anda dapat memisahkan istilah pencarian dan kelompok dengan\n"
+"             AND, OR dan NOT (juga ditulis &&, || dan !). Sebagai contoh,\n"
+"             'python OR javascript' akan menemukan apa-apa dengan istilah\n"
+"             (OR digunakan secara default, sehingga tidak perlu "
+"ditentukan).\n"
+"             Namun, 'python AND javascript' akan menemukan hal yang hanya "
+"memiliki kedua istilah. Anda dapat melakukan ini dengan banyak hal yang Anda "
+"inginkan (misalnya 'django AND javascript AND !unholy'). Hal ini penting "
+"untuk menggunakan semua huruf kapital atau sintaks alternatif (&&, ||), "
+"karena 'and' akan diperlakukan sebagai istilah pencarian lain, tetapi 'AND' "
+"akan diperlakukan sebagai operator logika."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) "
+"allowed."
+msgstr ""
+"Anda telah melebihi maksimal ({$ ctrl.settings.general.limit_max $}) yang "
+"diizinkan.."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.polling.interval_max $}) "
+"allowed."
+msgstr ""
+"Anda telah melebihi maksimal ({$ ctrl.settings.polling.interval_max $}) yang "
+"diizinkan."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.general.limit_min $}) "
+"allowed."
+msgstr ""
+"Anda telah berada di bawah minimum ({$ ctrl.settings.general.limit_min $}) "
+"yang diizinkan."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.polling.interval_min $}) "
+"allowed."
+msgstr ""
+"Anda telah berada di bawah minimum ({$ ctrl.settings.polling.interval_min "
+"$}) yang diizinkan."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted instance is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
+msgstr[0] "You have selected \"%s\". Deleted instance is not recoverable."
+
+msgid ""
+"You may decide to only look in a certain field for a\n"
+"            search term by setting a specific facet. This is accomplished "
+"by\n"
+"            either selecting a facet from the drop down or by typing the "
+"facet\n"
+"            manually. For example, if you are looking for an image, you\n"
+"            may choose to only look at the name field by adding 'name:foo'.\n"
+"            You may group facets and use logical operators."
+msgstr ""
+"Anda dapat memutuskan untuk hanya terlihat dalam field tertentu untuk\n"
+"             istilah pencarian dengan menetapkan facet tertentu. Hal ini "
+"dilakukan dengan memilih facet dari drop down atau dengan mengetikkan facet "
+"secara \n"
+"manual. Misalnya, jika Anda mencari sebuah image, Anda dapat memilih hanya "
+"dengan melihat nama field dengan menambahkan 'name:foo'.   Anda mungkin "
+"mengelompokan facet dan menggunakan operator logika."
+
+msgid "You must re-authenticate yourself."
+msgstr "Anda harus re-authenticate sendiri."
+
+msgid "default"
+msgstr "default"
+
+msgid "from"
+msgstr "from (dari)"
+
+msgid "to"
+msgstr "to (ke)"
+
+msgid "{$ table.queryResponse.statusCode | slQueryStatus $}"
+msgstr "{$ table.queryResponse.statusCode | slQueryStatus $}"
