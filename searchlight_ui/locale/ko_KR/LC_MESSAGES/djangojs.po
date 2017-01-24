@@ -1,0 +1,832 @@
+# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
+# Sungjin Kang <gang.sungjin@gmail.com>, 2015. #zanata
+# Andrea Young Oak Li <youli@redhat.com>, 2016. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# HYUNGBAI PARK <openstack.make@gmail.com>, 2016. #zanata
+# Ian Y. Choi <ianyrchoi@gmail.com>, 2016. #zanata
+# Sungjin Kang <gang.sungjin@gmail.com>, 2016. #zanata
+# Taekho Nam <career.thnam@gmail.com>, 2016. #zanata
+# skywalker54 <shpark@rockplace.co.kr>, 2016. #zanata
+# SeongSoo Cho <nexusz99@gmail.com>, 2017. #zanata
+# Taehee Jang <jang0913@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: searchlight-ui 2.0.0.0b3.dev3\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-01-19 17:41+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-01-23 03:28+0000\n"
+"Last-Translator: SeongSoo Cho <nexusz99@gmail.com>\n"
+"Language-Team: Korean (South Korea)\n"
+"Language: ko-KR\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "(Extension)"
+msgstr "(확장)"
+
+msgid "-"
+msgstr "-"
+
+msgid ""
+"A snapshot is an image which preserves the disk state of a running instance."
+msgstr ""
+"스냅샷은 실행 중인 인스턴스에 대한 디스크 상태를 보존하는 이미지입니다."
+
+#, fuzzy, python-format
+msgid "ALLOW %(type)s %(direction)s %(target)s"
+msgstr "%(type)s %(direction)s %(target)s 허용"
+
+#, python-format
+msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+msgstr "%(type)s %(ports)s %(direction)s %(target)s 를 허용합니다."
+
+msgid "ANY"
+msgstr "ANY"
+
+msgid "Action"
+msgstr "동작"
+
+msgid "Action Log"
+msgstr "액션 로그"
+
+msgid "Actions"
+msgstr "작업"
+
+msgid "Active"
+msgstr "Active"
+
+msgid "Addresses"
+msgstr "주소"
+
+msgid "Admin State"
+msgstr "관리자 상태"
+
+msgid "Attached Device"
+msgstr "장치 연결됨"
+
+#, fuzzy
+msgid "Attached Device ID"
+msgstr "연결된 디바이스 ID"
+
+msgid "Attached To"
+msgstr "연결된 곳"
+
+msgid "Availability Zone"
+msgstr "가용 구역"
+
+msgid "Availability Zone Hints"
+msgstr "가용 구역 힌트"
+
+msgid "Availability Zones"
+msgstr "가용성 존"
+
+msgid "Available"
+msgstr "사용 가능"
+
+#, fuzzy
+msgid "Binding Host ID"
+msgstr "바인딩 호스트 ID"
+
+#, fuzzy
+msgid "Binding Profile"
+msgstr "바인딩 프로필"
+
+#, fuzzy
+msgid "Binding VIF Details"
+msgstr "바인딩 VIF 세부 사항"
+
+#, fuzzy
+msgid "Binding VIF Type"
+msgstr "바인딩 VIF 유형"
+
+#, fuzzy
+msgid "Binding VNIC Type"
+msgstr "바인딩 VNIC 유형"
+
+msgid "Blocked"
+msgstr "Blocked"
+
+msgid "Bootable"
+msgstr "부팅가능"
+
+msgid "Build"
+msgstr "Build"
+
+msgid "Building"
+msgstr "Building"
+
+msgid "Cancel"
+msgstr "취소"
+
+msgid "Close"
+msgstr "닫기"
+
+msgid "Code"
+msgstr "코드"
+
+msgid "Confirm Delete Instance"
+msgid_plural "Confirm Delete Instances"
+msgstr[0] "인스턴스 삭제 확인"
+
+msgid "Confirm Resize"
+msgstr "Confirm Resize"
+
+msgid "Confirm or Revert Resize/Migrate"
+msgstr "Confirm or Revert Resize/Migrate"
+
+msgid "Connect"
+msgstr "연결"
+
+msgid "Connect in a new window"
+msgstr "새 창에서 연결하기"
+
+#, fuzzy
+msgid "Consistency Group ID"
+msgstr "정합성 그룹 ID"
+
+msgid "Console"
+msgstr "콘솔"
+
+msgid "Console is currently unavailable. Please try again later."
+msgstr "콘솔을 사용할 수 없습니다. 나중에 다시 시도해주세요."
+
+msgid "Crashed"
+msgstr "Crashed"
+
+msgid "Create"
+msgstr "생성"
+
+msgid "Create Instance"
+msgstr "인스턴스 생성"
+
+msgid "Create Instance Snapshot"
+msgstr "인스턴스 스냅샷 생성"
+
+msgid "Create Snapshot"
+msgstr "스냅샷 생성"
+
+msgid "Created"
+msgstr "생성됨"
+
+msgid "Created At"
+msgstr "생성 시점"
+
+msgid "Creating Snapshot"
+msgstr "스냅샷 생성중"
+
+msgid "DNS Domain"
+msgstr "DNS 도메인"
+
+msgid "DNS Domains"
+msgstr "DNS 도메인"
+
+msgid "DNS Name"
+msgstr "DNS 이름"
+
+msgid "DNS Nameservers"
+msgstr "DNS 네임서버들"
+
+msgid "DNS Record"
+msgstr "DNS 레코드"
+
+msgid "DNS Records"
+msgstr "DNS 레코드"
+
+#, fuzzy
+msgid "Default Network"
+msgstr "기본 네트워크"
+
+msgid "Delete"
+msgstr "삭제"
+
+msgid "Delete Instance"
+msgid_plural "Delete Instances"
+msgstr[0] "인스턴스 삭제"
+
+msgid "Deleted"
+msgstr "삭제됨"
+
+#, python-format
+msgid "Deleted Instance: %s."
+msgid_plural "Deleted Instances: %s."
+msgstr[0] "삭제된 인스턴스: %s "
+
+msgid "Deleting Instance"
+msgid_plural "Deleting Instances"
+msgstr[0] "인스턴스 삭제"
+
+msgid "Description"
+msgstr "설명"
+
+msgid "Description:"
+msgstr "설명:"
+
+msgid "Details"
+msgstr "상세 정보"
+
+msgid "Direction"
+msgstr "Direction"
+
+msgid "Disk"
+msgstr "디스크"
+
+msgid "Distributed"
+msgstr "분산"
+
+msgid "Down"
+msgstr "Down"
+
+msgid "Enable DHCP"
+msgstr "DHCP 사용"
+
+msgid "Encrypted"
+msgstr "암호화"
+
+msgid "Error"
+msgstr "에러"
+
+msgid "Ether Type"
+msgstr "Ether 타입"
+
+msgid "External"
+msgstr "외부"
+
+msgid "External Network"
+msgstr "외부 네트워크"
+
+msgid "Failed"
+msgstr "실패함"
+
+msgid "Fault"
+msgstr "Fault"
+
+msgid "Fixed IPs"
+msgstr "Fixed IP"
+
+msgid "Flavor"
+msgstr "Flavor"
+
+msgid "Flavor ID"
+msgstr "Flavor ID"
+
+msgid "Flavor Name"
+msgstr "Flavor 이름"
+
+msgid "Flavors"
+msgstr "Flavor"
+
+msgid "Floating IP"
+msgstr "Floating IP"
+
+#, fuzzy
+msgid "Floating IP Address"
+msgstr "유동 IP 주소"
+
+msgid "Floating IPs"
+msgstr "Floating IP"
+
+#, fuzzy
+msgid "Floating Network ID"
+msgstr "유동 네트워크 ID"
+
+msgid "Gateway IP"
+msgstr "게이트웨이 IP"
+
+msgid "Hard Reboot"
+msgstr "Hard Reboot"
+
+#, fuzzy
+msgid "High Availability"
+msgstr "고 가용성"
+
+msgid "Host"
+msgstr "호스트"
+
+msgid "Hostname"
+msgstr "호스트 이름"
+
+msgid "Hypervisor"
+msgstr "하이퍼바이저"
+
+msgid "Hypervisors"
+msgstr "하이퍼바이저"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IP Addresses"
+msgstr "IP 주소"
+
+msgid "IP Version"
+msgstr "IP 버전"
+
+#, fuzzy
+msgid "IPv4 Address Scope"
+msgstr "IPv4 주소 Scope"
+
+msgid "IPv6 Address Mode"
+msgstr "IPv6 주소 모드"
+
+#, fuzzy
+msgid "IPv6 Address Scope"
+msgstr "IPv6 주소 Scope"
+
+msgid ""
+"If the console is not responding to keyboard input, click the status bar in "
+"the screen below."
+msgstr ""
+"만야갸 콘솔이 키보드 입력에 반응하지 않으면, 화면 아래의 상태바를 클릭해주세"
+"요."
+
+msgid "Image"
+msgstr "이미지"
+
+msgid "Image Reference"
+msgstr "이미지 레퍼런스"
+
+msgid "Instance"
+msgstr "인스턴스"
+
+msgid "Instance Action Log"
+msgstr "인스턴스 액션 로그"
+
+msgid "Instance Console"
+msgstr "인스턴스 콘솔"
+
+msgid "Instance Console Log"
+msgstr "인스턴스 콘솔 로그"
+
+msgid "Instances"
+msgstr "인스턴스"
+
+msgid "Key Pair"
+msgstr "키 페어"
+
+msgid "Key Pair Name"
+msgstr "키 페어 이름"
+
+msgid "Key Pairs"
+msgstr "키 페어"
+
+msgid "Killed"
+msgstr "Killed"
+
+msgid "Load Balancer Pool"
+msgstr "로드 밸런서 풀"
+
+msgid "Load Balancer Pool Member"
+msgstr "로드 밸런서 풀 구성원"
+
+msgid "Load Balancer Pool Members"
+msgstr "로드 밸런서 풀 구성원"
+
+msgid "Load Balancer Pools"
+msgstr "로드 밸런서 풀"
+
+msgid "Loading"
+msgstr "불러오는 중"
+
+msgid "Local GB (total)"
+msgstr "로컬 용량 GB(전체)"
+
+msgid "Log"
+msgstr "로그"
+
+msgid "Log Length"
+msgstr "로그 길이"
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Mapped Fixed IP Address"
+msgstr "Fixed IP 주소 맵핑함"
+
+msgid "Max Port"
+msgstr "최대 포트번호"
+
+msgid "Members"
+msgstr "멤버"
+
+msgid "Message"
+msgstr "메시지"
+
+msgid "Metadata"
+msgstr "메타데이터"
+
+msgid "Metadata Definition"
+msgstr "메타데이터 정의"
+
+msgid "Metadata Definitions"
+msgstr "메타데이터 정의"
+
+msgid "Migrating"
+msgstr "이전중"
+
+msgid "Min Port"
+msgstr "최소 포트번호"
+
+msgid "More Actions"
+msgstr "기타 작업"
+
+#, fuzzy
+msgid "More Actions..."
+msgstr "기타 작업..."
+
+msgid "Name"
+msgstr "이름"
+
+msgid "Network"
+msgstr "네트워크"
+
+msgid "Network Address"
+msgstr "네트워크 주소"
+
+msgid "Network Health Monitor"
+msgstr "네트워크 상태 모니터"
+
+msgid "Network Health Monitors"
+msgstr "네트워크 상태 모니터"
+
+msgid "Network ID"
+msgstr "Network ID"
+
+msgid "Networks"
+msgstr "네트워크"
+
+msgid "No State"
+msgstr "No State"
+
+msgid "No Volumes Attached"
+msgstr "연결된 볼륨이 없습니다."
+
+msgid "No rules defined"
+msgstr "정의된 규칙이 없습니다."
+
+msgid "Object"
+msgstr "오브젝트"
+
+msgid "Object Account"
+msgstr "오브젝트 Account"
+
+msgid "Object Accounts"
+msgstr "오브젝트 Accounts"
+
+msgid "Object Container"
+msgstr "오브젝트 컨테이너"
+
+msgid "Object Containers"
+msgstr "오브젝트 컨테이너들"
+
+msgid "Objects"
+msgstr "오브젝트"
+
+msgid "Overview"
+msgstr "개요"
+
+msgid "Owned by Me"
+msgstr "내가 소유함"
+
+msgid "Password"
+msgstr "암호"
+
+msgid "Pause"
+msgstr "정지"
+
+msgid "Paused"
+msgstr "정지함"
+
+msgid "Pending"
+msgstr "대기중"
+
+msgid "Pending Delete"
+msgstr "Pending Delete"
+
+msgid "Please Wait"
+msgstr "기다려 주십시오"
+
+msgid "Policies"
+msgstr "정책"
+
+msgid "Poll for Updates"
+msgstr "업데이트 받아오기"
+
+msgid "Pool"
+msgstr "Pool"
+
+msgid "Port"
+msgstr "포트"
+
+msgid "Port ID"
+msgstr "포트 ID"
+
+msgid "Port Security Enabled"
+msgstr "포트 보안 활성화됨"
+
+msgid "Ports"
+msgstr "포트들"
+
+msgid "Power State"
+msgstr "전원 상태"
+
+msgid "Project"
+msgstr "프로젝트"
+
+msgid "Project ID"
+msgstr "프로젝트 ID"
+
+msgid "Protocol"
+msgstr "프로토콜"
+
+msgid "Provider Network Type"
+msgstr "공급자 네트워크 유형"
+
+#, fuzzy
+msgid "Provider Physical Network"
+msgstr "물리 네트워크 제공자"
+
+#, fuzzy
+msgid "Provider Segmentation ID"
+msgstr "제공자 구분 ID"
+
+msgid "Public"
+msgstr "공용"
+
+msgid "Queued"
+msgstr "Queued"
+
+msgid "RAM"
+msgstr "RAM"
+
+msgid "Reboot"
+msgstr "재시작"
+
+msgid "Rebuild"
+msgstr "새로 빌드"
+
+msgid "Refresh"
+msgstr "갱신"
+
+msgid "Remote"
+msgstr "원격"
+
+msgid "Request"
+msgstr "요청"
+
+msgid "Rescue"
+msgstr "복구"
+
+msgid "Rescued"
+msgstr "Rescued"
+
+msgid "Resize"
+msgstr "크기 변경"
+
+msgid "Resize/Migrate"
+msgstr "Resize/Migrate"
+
+msgid "Resized"
+msgstr "Resized"
+
+msgid "Resume"
+msgstr "Resume"
+
+msgid "Revert Resize/Migrate"
+msgstr "크기 변경 / 이전을 되돌리기"
+
+msgid "Router"
+msgstr "라우터"
+
+msgid "Router ID"
+msgstr "라우터 ID"
+
+msgid "Routers"
+msgstr "라우터"
+
+msgid "Rules"
+msgstr "규칙"
+
+msgid "Running"
+msgstr "실행중"
+
+msgid "Saving"
+msgstr "Saving"
+
+msgid "Search"
+msgstr "검색"
+
+msgid "Search Settings"
+msgstr "검색 설정"
+
+msgid "Search all projects"
+msgstr "모든 프로젝트 검색"
+
+msgid "Security Group"
+msgstr "보안 그룹"
+
+msgid "Security Groups"
+msgstr "보안 그룹"
+
+msgid "Server Group"
+msgstr "서버 그룹"
+
+msgid "Server Groups"
+msgstr "서버 그룹"
+
+msgid "Shared"
+msgstr "공유"
+
+msgid "Shared by Me"
+msgstr "나에 의해 공유됨"
+
+msgid "Shared with Me"
+msgstr "나에게 공유됨"
+
+msgid "Shelved"
+msgstr "Shelved"
+
+msgid "Shelved Offloaded"
+msgstr "Shelved Offloaded"
+
+msgid "Shutdown"
+msgstr "Shutdown"
+
+msgid "Shutoff"
+msgstr "Shutoff"
+
+msgid "Size"
+msgstr "크기"
+
+#, python-format
+msgid "Snapshot %s was successfully created."
+msgstr "스냅샷 %s 가 성공적으로 생성되었습니다."
+
+#, fuzzy
+msgid "Snapshot ID"
+msgstr "스냅샷 ID"
+
+msgid "Snapshot Name"
+msgstr "스냅샷 이름"
+
+msgid "Soft Deleted"
+msgstr "Soft Deleted"
+
+msgid "Soft Reboot"
+msgstr "소프트 재시작"
+
+msgid "Sort"
+msgstr "정렬"
+
+#, fuzzy
+msgid "Source Volume ID"
+msgstr "소스 볼륨 ID"
+
+msgid "Specs"
+msgstr "사양"
+
+msgid "Start"
+msgstr "시작"
+
+msgid "Start Time"
+msgstr "시작 시간"
+
+msgid "State"
+msgstr "상태"
+
+msgid "Status"
+msgstr "상태"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Stopped"
+msgstr "중지됨"
+
+msgid "Subnet"
+msgstr "서브넷"
+
+msgid "Subnet Pool ID"
+msgstr "서브넷 풀 ID"
+
+msgid "Subnets"
+msgstr "서브넷"
+
+msgid "Subnets Associated"
+msgstr "관련 서브넷"
+
+msgid "Suspend"
+msgstr "잠자기"
+
+msgid "Suspended"
+msgstr "Suspended"
+
+msgid "Swap"
+msgstr "스왑"
+
+msgid "Task State"
+msgstr "작업 상태"
+
+msgid "The current query is not valid. Please check your syntax."
+msgstr "현재 쿼리는 유효하지 않습니다. 문법을 확인해주세요."
+
+msgid "The requested resource was not found."
+msgstr "요청하신 자원을 찾을 수 없습니다."
+
+msgid "The search service had an error processing your request."
+msgstr "검색 서비스에 요청을 처리 중 에러가 발생했습니다."
+
+msgid "There was an error processing your request."
+msgstr "요청을 처리중에 에러가 발생했습니다."
+
+msgid "Type"
+msgstr "유형"
+
+#, python-format
+msgid "Unable to delete Instance: %s."
+msgid_plural "Unable to delete Instances: %s."
+msgstr[0] "삭제할 수 없는 인스턴스: %s"
+
+#, fuzzy
+msgid "Unable to execute the search."
+msgstr "검색을 실행할 수 없습니다."
+
+msgid "Unable to retrieve Searchlight resources types."
+msgstr "Searchlight 자원 종류를 가져올 수 없습니다."
+
+msgid "Unable to retrieve search facets."
+msgstr "검색 결과를 가져올 수 없습니다."
+
+msgid "Unavailable"
+msgstr "사용할 수 없음"
+
+msgid "Unpause"
+msgstr "Unpause"
+
+msgid "Up"
+msgstr "Up"
+
+msgid "Update Interval (seconds)"
+msgstr "업데이트 주기 (초)"
+
+msgid "Updated"
+msgstr "업데이트됨"
+
+msgid "Updated At"
+msgstr "업데이트 시점"
+
+msgid "User ID"
+msgstr "사용자 ID"
+
+msgid "VCPUs"
+msgstr "VCPUs"
+
+msgid "Visibility"
+msgstr "가시성"
+
+msgid "Volume"
+msgstr "볼륨"
+
+msgid "Volume Backup"
+msgstr "볼륨 백업"
+
+msgid "Volume Backups"
+msgstr "볼륩 백업"
+
+msgid "Volume ID"
+msgstr "볼륨 ID"
+
+#, fuzzy
+msgid "Volume Image Metadata"
+msgstr "볼륨 이미지 메타데이터"
+
+msgid "Volume Snapshot"
+msgstr "볼륨 스냅샷"
+
+msgid "Volume Snapshots"
+msgstr "볼륨 스냅샷"
+
+msgid "Volumes"
+msgstr "볼륨"
+
+msgid "Volumes Attached"
+msgstr "볼륨 연결"
+
+#, python-format
+msgid "You are not allowed to delete instances: %s"
+msgstr "%s 인스턴스 삭제할 수 있는 권한이 없습니다."
+
+msgid "You are not allowed to perform this request."
+msgstr "해당 요청에 대한 권한이 없습니다."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted instance is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
+msgstr[0] "\"%s\" 를 선택하셨습니다. 인스턴스를 삭제하면 복구하실 수 없습니다."
+
+msgid "You must re-authenticate yourself."
+msgstr "재 인증을 받으시기 바랍니다."
+
+msgid "default"
+msgstr "기본"
