@@ -65,6 +65,10 @@ Assumptions:
 1. Install environment.::
 
     #Locally cloned Horizon environment
+    # - environment that has migrated horizon to using tox (Ocata release)
+    .tox/runserver/bin/pip install -e ../searchlight-ui
+
+    # -environment that has not migrated to tox (pre-Ocata release)
     ./tools/with_venv.sh pip install -e ../searchlight-ui
 
     #Devstack environment
@@ -100,7 +104,11 @@ Assumptions:
 5. Restart your horizon services.::
 
     #Locally cloned Horizon environment (not under apache)
-    ./run_tests.sh --runserver 0.0.0.0:8005 (use desired IP and port)
+    # - environment that has migrated horizon to using tox (Ocata release)
+    tox -e runserver 0.0.0.0:8005 (desired IP and port are optional)
+
+    # -environment that has not migrated to tox (pre-Ocata release)
+    ./run_tests.sh --runserver 0.0.0.0:8005 (optionally set desired IP and port)
 
     #Devstack
     sudo service apache2 restart
