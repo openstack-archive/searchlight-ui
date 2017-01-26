@@ -7,18 +7,19 @@
 # Sungjin Kang <gang.sungjin@gmail.com>, 2016. #zanata
 # Taekho Nam <career.thnam@gmail.com>, 2016. #zanata
 # skywalker54 <shpark@rockplace.co.kr>, 2016. #zanata
+# Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
 # SeongSoo Cho <nexusz99@gmail.com>, 2017. #zanata
 # Taehee Jang <jang0913@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: searchlight-ui 2.0.0.0b3.dev3\n"
+"Project-Id-Version: searchlight-ui 2.0.0.0b3.dev6\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-01-19 17:41+0000\n"
+"POT-Creation-Date: 2017-01-25 09:49+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-01-23 03:28+0000\n"
-"Last-Translator: SeongSoo Cho <nexusz99@gmail.com>\n"
+"PO-Revision-Date: 2017-01-24 11:08+0000\n"
+"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -195,7 +196,6 @@ msgstr "DNS 레코드"
 msgid "DNS Records"
 msgstr "DNS 레코드"
 
-#, fuzzy
 msgid "Default Network"
 msgstr "기본 네트워크"
 
@@ -281,16 +281,14 @@ msgstr "Flavor"
 msgid "Floating IP"
 msgstr "Floating IP"
 
-#, fuzzy
 msgid "Floating IP Address"
-msgstr "유동 IP 주소"
+msgstr "플로팅 IP 주소"
 
 msgid "Floating IPs"
 msgstr "Floating IP"
 
-#, fuzzy
 msgid "Floating Network ID"
-msgstr "유동 네트워크 ID"
+msgstr "플로팅 네트워크 ID"
 
 msgid "Gateway IP"
 msgstr "게이트웨이 IP"
@@ -323,14 +321,12 @@ msgstr "IP 주소"
 msgid "IP Version"
 msgstr "IP 버전"
 
-#, fuzzy
 msgid "IPv4 Address Scope"
 msgstr "IPv4 주소 Scope"
 
 msgid "IPv6 Address Mode"
 msgstr "IPv6 주소 모드"
 
-#, fuzzy
 msgid "IPv6 Address Scope"
 msgstr "IPv6 주소 Scope"
 
@@ -431,7 +427,6 @@ msgstr "최소 포트번호"
 msgid "More Actions"
 msgstr "기타 작업"
 
-#, fuzzy
 msgid "More Actions..."
 msgstr "기타 작업..."
 
@@ -663,7 +658,6 @@ msgstr "크기"
 msgid "Snapshot %s was successfully created."
 msgstr "스냅샷 %s 가 성공적으로 생성되었습니다."
 
-#, fuzzy
 msgid "Snapshot ID"
 msgstr "스냅샷 ID"
 
@@ -679,7 +673,6 @@ msgstr "소프트 재시작"
 msgid "Sort"
 msgstr "정렬"
 
-#, fuzzy
 msgid "Source Volume ID"
 msgstr "소스 볼륨 ID"
 
@@ -740,6 +733,9 @@ msgstr "검색 서비스에 요청을 처리 중 에러가 발생했습니다."
 msgid "There was an error processing your request."
 msgstr "요청을 처리중에 에러가 발생했습니다."
 
+msgid "Transfer"
+msgstr " "
+
 msgid "Type"
 msgstr "유형"
 
@@ -748,7 +744,6 @@ msgid "Unable to delete Instance: %s."
 msgid_plural "Unable to delete Instances: %s."
 msgstr[0] "삭제할 수 없는 인스턴스: %s"
 
-#, fuzzy
 msgid "Unable to execute the search."
 msgstr "검색을 실행할 수 없습니다."
 
@@ -797,7 +792,6 @@ msgstr "볼륩 백업"
 msgid "Volume ID"
 msgstr "볼륨 ID"
 
-#, fuzzy
 msgid "Volume Image Metadata"
 msgstr "볼륨 이미지 메타데이터"
 
