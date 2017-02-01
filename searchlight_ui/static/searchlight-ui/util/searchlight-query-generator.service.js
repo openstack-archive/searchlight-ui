@@ -169,9 +169,11 @@
 
       var queryOptions = {
         "query": {
-          "filtered": {
+          "bool": {
             "filter": {
-              "or": typesToIdsQueries(valuesByType)
+              "bool": {
+                "should": typesToIdsQueries(valuesByType)
+              }
             }
           }
         }

@@ -83,18 +83,20 @@
         var query = queryGenerator.generateItems(mockItems);
         expect(query).toEqual({
           "query": {
-            "filtered": {
+            "bool": {
               "filter": {
-                "or": [
-                  {
-                    "ids": {
-                      "type": "type",
-                      "values": [
-                        "id"
-                      ]
+                "bool": {
+                  "should": [
+                    {
+                      "ids": {
+                        "type": "type",
+                        "values": [
+                          "id"
+                        ]
+                      }
                     }
-                  }
-                ]
+                  ]
+                }
               }
             }
           }
@@ -115,18 +117,20 @@
         var query = queryGenerator.generateItems(mockItems);
         expect(query).toEqual({
           "query": {
-            "filtered": {
+            "bool": {
               "filter": {
-                "or": [
-                  {
-                    "ids": {
-                      "type": "type",
-                      "values": [
-                        "1", "2"
-                      ]
+                "bool": {
+                  "should": [
+                    {
+                      "ids": {
+                        "type": "type",
+                        "values": [
+                          "1", "2"
+                        ]
+                      }
                     }
-                  }
-                ]
+                  ]
+                }
               }
             }
           }
@@ -155,26 +159,28 @@
         var query = queryGenerator.generateItems(mockItems);
         expect(query).toEqual({
           "query": {
-            "filtered": {
+            "bool": {
               "filter": {
-                "or": [
-                  {
-                    "ids": {
-                      "type": "A",
-                      "values": [
-                        "1", "2"
-                      ]
+                "bool": {
+                  "should": [
+                    {
+                      "ids": {
+                        "type": "A",
+                        "values": [
+                          "1", "2"
+                        ]
+                      }
+                    },
+                    {
+                      "ids": {
+                        "type": "B",
+                        "values": [
+                          "3", "4"
+                        ]
+                      }
                     }
-                  },
-                  {
-                    "ids": {
-                      "type": "B",
-                      "values": [
-                        "3", "4"
-                      ]
-                    }
-                  }
-                ]
+                  ]
+                }
               }
             }
           }
