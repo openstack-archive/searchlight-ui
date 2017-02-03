@@ -31,6 +31,9 @@
     .module('resources', [
       'resources.os-cinder-volumes',
       'resources.os-cinder-snapshots',
+      'resources.os-ironic-chassis',
+      'resources.os-ironic-nodes',
+      'resources.os-ironic-ports',
       'resources.os-neutron-floatingip',
       'resources.os-neutron-nets',
       'resources.os-neutron-ports',
