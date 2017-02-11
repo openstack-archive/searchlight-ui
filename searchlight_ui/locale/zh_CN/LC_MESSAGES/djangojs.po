@@ -1,0 +1,1222 @@
+# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# BillXiang <1138647106@qq.com>, 2016. #zanata
+# BillXiang <m13250816269@163.com>, 2016. #zanata
+# Jeremy Liu <liujiong@gohighsec.com>, 2016. #zanata
+# Linda <duleish@cn.ibm.com>, 2016. #zanata
+# Tony <tfu@redhat.com>, 2016. #zanata
+# Wu Han <wu.han@h3c.com>, 2016. #zanata
+# Yu Long <yulongxn@163.com>, 2016. #zanata
+# hanchao <han.chaoB@h3c.com>, 2016. #zanata
+# liuyanfu <lyf219@163.com>, 2016. #zanata
+# maoshuai <fwsakura@163.com>, 2016. #zanata
+# sunanchen <KF.sunanchen@h3c.com>, 2016. #zanata
+# zzxwill <zzxwill@gmail.com>, 2016. #zanata
+# BillXiang <m13250816269@163.com>, 2017. #zanata
+# liujunpeng <liujunpeng@inspur.com>, 2017. #zanata
+# vuuv <froms2008@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: searchlight-ui 2.0.0.0rc2.dev2\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-02-09 17:41+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-02-11 05:27+0000\n"
+"Last-Translator: vuuv <froms2008@gmail.com>\n"
+"Language-Team: Chinese (China)\n"
+"Language: zh-CN\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#, python-format
+msgid "%(resourceType)s: %(searchFacet)s"
+msgstr "%(resourceType)s: %(searchFacet)s"
+
+#, python-format
+msgid "%(total)s total results"
+msgstr "%(total)s 总记录"
+
+#, python-format
+msgid "(%(doc_count)s)"
+msgstr "(%(doc_count)s)"
+
+msgid "(Extension)"
+msgstr "（扩展）"
+
+msgid "-"
+msgstr "-"
+
+msgid ""
+"A snapshot is an image which preserves the disk state of a running instance."
+msgstr "快照是保存了运行中实例的磁盘状态的映像。"
+
+#, python-format
+msgid "ALLOW %(type)s %(direction)s %(target)s"
+msgstr "允许%(type)s %(direction)s %(target)s"
+
+#, python-format
+msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+msgstr "允许 %(type)s %(ports)s %(direction)s %(target)s"
+
+msgid "ANY"
+msgstr "任意选项"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "Action Log"
+msgstr "操作日志"
+
+msgid "Actions"
+msgstr "行为。"
+
+msgid "Active"
+msgstr "运行中"
+
+msgid ""
+"Add a '+' or a '-' to indicate terms that must or must\n"
+"            not appear. For example '+python -apache web' would find\n"
+"            everything that has 'python' does NOT have 'apache' and should "
+"have\n"
+"            'web'. This may also be used with grouping. For example,\n"
+"            'web -(apache AND python)' would find anything with 'web', but "
+"does\n"
+"            not have either 'apache' or 'python'."
+msgstr ""
+"添加 '+' 或者 '-' 来指示词语必须或者禁止出现。\n"
+"例如 '+python -apache web' 将会找出所有包含\n"
+"             'python' 且不含 'apache' 的内容，并尽可能包含 'web'。\n"
+"     这也可以对分组使用，例如\n"
+"            'web -(apache AND python)' 将会找到所有包含 'web' 的内容，但是会"
+"排除含有 'apache' 和 'python' 两者之一的内容。"
+
+msgid "Address"
+msgstr "地址"
+
+msgid "Addresses"
+msgstr "地址"
+
+msgid "Admin State"
+msgstr "管理员状态"
+
+msgid "Alphabetical Name"
+msgstr "按字母顺序排序的名称"
+
+msgid "Attached Device"
+msgstr "已连接设备"
+
+msgid "Attached Device ID"
+msgstr "附加设备ID"
+
+msgid "Attached To"
+msgstr "连接到"
+
+msgid "Availability Zone"
+msgstr "可用区"
+
+msgid "Availability Zone Hints"
+msgstr "可用区域"
+
+msgid "Availability Zones"
+msgstr "可用域"
+
+msgid "Available"
+msgstr "可用配额"
+
+msgid "Binding Host ID"
+msgstr "绑定主机ID"
+
+msgid "Binding Profile"
+msgstr "绑定配置"
+
+msgid "Binding VIF Details"
+msgstr "绑定VIF详情"
+
+msgid "Binding VIF Type"
+msgstr "绑定VIF类型"
+
+msgid "Binding VNIC Type"
+msgstr "绑定VNIC类型"
+
+msgid "Blocked"
+msgstr "阻塞"
+
+msgid "Boolean Operators"
+msgstr "布尔操作符"
+
+msgid "Boosting"
+msgstr "增强"
+
+msgid "Bootable"
+msgstr "可启动"
+
+msgid "Build"
+msgstr "创建"
+
+msgid "Building"
+msgstr "构建中"
+
+msgid ""
+"By default, each word you type will be searched for\n"
+"            individually. You may also try to search an exact phrase by\n"
+"            using quotes (\"my phrase\") to surround a phrase. The search\n"
+"            service may allow a certain amount of phrase slop - meaning "
+"that\n"
+"            if you have some words out of order in the phrase it may still\n"
+"            match."
+msgstr ""
+"默认情况下，你输入的每个单词都会独立搜索。你也可以尝试用引号（\"my phrase\"）"
+"将一个词组引起来来搜索一个精确的词组。搜索服务可以允许多个词组移除——也就是"
+"说，如果你输入的词组查过的最大长度，它依然可以匹配。"
+
+msgid ""
+"By default, each word you type will match full words\n"
+"            only. You may also use wildcards to match parts of words. "
+"Wildcard\n"
+"            searches can be run on individual terms, using ? to replace a\n"
+"            single character, and * to replace zero or more character. "
+"'demo'\n"
+"            will match the full word 'demo' only. However, 'de*'\n"
+"            will match anything that starts with 'de', such as 'demo_1'.\n"
+"            'de*1' will match\n"
+"            anything that starts with 'de' and ends with '1'."
+msgstr ""
+"默认情况下，你输入的每个字只能完全破匹配所有单词。你也可以使用通配符匹配部分"
+"单词。通配符搜索可以使用？代替单个字符，使用*代替零个或多个字符。'demo'只能匹"
+"配单词'demo'。然而，'de*'将匹配所有以'de'开头的词，如'demo_1'。'de*1'将匹配所"
+"有以'de'开头和'1'结尾的单词。"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Chassis UUID"
+msgstr "机架UUID"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Code"
+msgstr "编码"
+
+msgid "Confirm Delete Instance"
+msgid_plural "Confirm Delete Instances"
+msgstr[0] "确认删除实例"
+
+msgid "Confirm Resize"
+msgstr "确认调整大小"
+
+msgid "Confirm or Revert Resize/Migrate"
+msgstr "确认或放弃调整大小/迁移"
+
+msgid "Connect"
+msgstr "连接"
+
+msgid "Connect in a new window"
+msgstr "在新窗口连接"
+
+msgid "Consistency Group ID"
+msgstr "一致性组ID"
+
+msgid "Console"
+msgstr "控制台"
+
+msgid "Console Enabled?"
+msgstr "是否使能控制台？"
+
+msgid "Console is currently unavailable. Please try again later."
+msgstr "当前控制台不可用，请稍后重试。"
+
+msgid "Crashed"
+msgstr "崩溃"
+
+msgid "Create"
+msgstr "创建"
+
+msgid "Create Instance"
+msgstr "创建实例"
+
+msgid "Create Instance Snapshot"
+msgstr "创建实例快照"
+
+msgid "Create Snapshot"
+msgstr "创建快照"
+
+msgid "Created"
+msgstr "创建时间"
+
+msgid "Created At"
+msgstr "创建于"
+
+msgid "Creating Snapshot"
+msgstr "创建快照"
+
+msgid "DNS Domain"
+msgstr "DNS 域"
+
+msgid "DNS Domains"
+msgstr "DNS 域"
+
+msgid "DNS Name"
+msgstr "DNS名称"
+
+msgid "DNS Nameservers"
+msgstr "DNS域名服务器"
+
+msgid "DNS Record"
+msgstr "DNS记录"
+
+msgid "DNS Records"
+msgstr "DNS记录"
+
+msgid ""
+"Date, numeric or string fields can use range queries.\n"
+"            Use square brackets [min TO max] for inclusive ranges and curly\n"
+"            brackets {min TO max} for exclusive ranges."
+msgstr ""
+"时间、数字 或者 字符串 字段可以使用范围查询。\n"
+"            使用方括号 [min TO max] 表示包含边界值的范围， \n"
+"            使用花括号 {min TO max} 表示不含边界值的范围。"
+
+msgid "Default Network"
+msgstr "默认网络"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Delete Instance"
+msgid_plural "Delete Instances"
+msgstr[0] "删除实例"
+
+msgid "Deleted"
+msgstr "删除"
+
+#, python-format
+msgid "Deleted Instance: %s."
+msgid_plural "Deleted Instances: %s."
+msgstr[0] "删除实例：%s。"
+
+msgid "Deleting Instance"
+msgid_plural "Deleting Instances"
+msgstr[0] "删除实例"
+
+msgid "Description"
+msgstr "描述"
+
+msgid "Description:"
+msgstr "描述："
+
+msgid "Details"
+msgstr "详情"
+
+msgid "Direction"
+msgstr "方向"
+
+msgid "Disk"
+msgstr "磁盘"
+
+msgid "Display field matching"
+msgstr "显示字段匹配"
+
+#, python-format
+msgid "Displaying %(numberDisplayed)s of %(total)s total results"
+msgstr "显示总记录 %(total)s 中的%(numberDisplayed)s"
+
+msgid "Distributed"
+msgstr "分布式"
+
+msgid "Down"
+msgstr "关闭"
+
+msgid "Down for Maintenance?"
+msgstr "是否保持关闭状态？"
+
+msgid "Enable DHCP"
+msgstr "开启DHCP"
+
+msgid "Encrypted"
+msgstr "加密"
+
+msgid "Ephemeral"
+msgstr "临时的"
+
+msgid "Error"
+msgstr "错误"
+
+#, python-format
+msgid "Error initializing actions for plugin %(type)s: "
+msgstr "错误初始化动作，插件 %(type)s: "
+
+msgid "Ether Type"
+msgstr "以太网类型"
+
+msgid "External"
+msgstr "外部的"
+
+msgid "External Network"
+msgstr "外部网络"
+
+msgid "Facets"
+msgstr "分面"
+
+msgid "Failed"
+msgstr "失败"
+
+msgid "Fault"
+msgstr "故障"
+
+msgid "Field Matches"
+msgstr "字段匹配"
+
+msgid ""
+"Find your cloud resources by selecting specific facets or by specifying\n"
+"    full text search queries.\n"
+"    <sl-search-syntax></sl-search-syntax>"
+msgstr ""
+"通过指定剖面或指定全文搜索条件\n"
+"查找你的云资源。\n"
+"    <sl-search-syntax></sl-search-syntax>"
+
+msgid "Fixed IPs"
+msgstr "固定 IP"
+
+msgid "Flavor"
+msgstr "规格"
+
+msgid "Flavor ID"
+msgstr "规格ID"
+
+msgid "Flavor Name"
+msgstr "规格名称"
+
+msgid "Flavors"
+msgstr "规格"
+
+msgid "Floating IP"
+msgstr "浮动 IP"
+
+msgid "Floating IP Address"
+msgstr "浮动IP地址"
+
+msgid "Floating IPs"
+msgstr "浮动 IP"
+
+msgid "Floating Network ID"
+msgstr "浮动网络ID"
+
+msgid "Full Text Search Syntax"
+msgstr "全文搜索语法"
+
+msgid "Gateway IP"
+msgstr "网关IP"
+
+msgid "Grouping"
+msgstr "分组"
+
+msgid "Hard Reboot"
+msgstr "硬重启"
+
+msgid "High Availability"
+msgstr "高可用性"
+
+msgid "Host"
+msgstr "主机"
+
+msgid "Hostname"
+msgstr "主机名"
+
+msgid "Hypervisor"
+msgstr "管理程序"
+
+msgid "Hypervisors"
+msgstr "管理程序"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IP Addresses"
+msgstr "IP地址"
+
+msgid "IP Version"
+msgstr "IP版本"
+
+msgid "IPv4 Address Scope"
+msgstr "IPv4地址范围"
+
+msgid ""
+"IPv4 addresses may be searched based on ranges and with CIDR\n"
+"            notation."
+msgstr ""
+"IPv4 地址能够基于范围或者使用 CIDR记号\n"
+" 搜索。"
+
+msgid "IPv6 Address Mode"
+msgstr "IPv6地址模式"
+
+msgid "IPv6 Address Scope"
+msgstr "IPv6地址范围"
+
+msgid "IPv6 RA Mode"
+msgstr "IPv6 RA模式"
+
+msgid ""
+"If the console is not responding to keyboard input, click the status bar in "
+"the screen below."
+msgstr "如果控制台未响应键盘输入，请单击屏幕下方的状态栏。"
+
+msgid "Image"
+msgstr "镜像"
+
+msgid "Image Reference"
+msgstr "镜像参考手册"
+
+msgid "Instance"
+msgstr "实例"
+
+msgid "Instance Action Log"
+msgstr "实例操作日志"
+
+msgid "Instance Console"
+msgstr "实例控制台"
+
+msgid "Instance Console Log"
+msgstr "云主机控制台日志"
+
+msgid "Instance UUID"
+msgstr "实例UUID"
+
+msgid "Instances"
+msgstr "实例"
+
+msgid "Ironic Chassis"
+msgstr "Ironic物理机架"
+
+msgid "Ironic Node"
+msgstr "Ironic节点"
+
+msgid "Ironic Nodes"
+msgstr "Ironic节点"
+
+msgid "Ironic Port"
+msgstr "Ironic端口"
+
+msgid "Ironic Ports"
+msgstr "Ironic端口"
+
+msgid ""
+"It is typically better to filter results further than to increase\n"
+"          the number of returned results and page through them."
+msgstr "筛选结果通常远比通过他们增加返回结果和页的数量要好。"
+
+msgid "Key Pair"
+msgstr "密钥对"
+
+msgid "Key Pair Name"
+msgstr "密钥对名称"
+
+msgid "Key Pairs"
+msgstr "密钥对"
+
+msgid "Killed"
+msgstr "终止"
+
+msgid "Last Error"
+msgstr "最近的错误"
+
+msgid "Load Balancer Pool"
+msgstr "负载均衡池"
+
+msgid "Load Balancer Pool Member"
+msgstr "负载均衡池成员"
+
+msgid "Load Balancer Pool Members"
+msgstr "负载均衡池成员"
+
+msgid "Load Balancer Pools"
+msgstr "负载均衡池"
+
+msgid "Loading"
+msgstr "加载中"
+
+msgid "Local GB (total)"
+msgstr "本地盘GB（总计）"
+
+msgid "Log"
+msgstr "日志"
+
+msgid "Log Length"
+msgstr "日志长度"
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Maintenance Reason"
+msgstr "保持原因"
+
+msgid "Mapped Fixed IP Address"
+msgstr "已映射固定 IP 地址"
+
+msgid "Max Port"
+msgstr "最大端口"
+
+msgid "Members"
+msgstr "成员"
+
+msgid "Message"
+msgstr "消息"
+
+msgid "Metadata"
+msgstr "元数据"
+
+msgid "Metadata Definition"
+msgstr "元数据定义"
+
+msgid "Metadata Definitions"
+msgstr "元数据定义"
+
+msgid "Migrating"
+msgstr "正在迁移"
+
+msgid "Min Port"
+msgstr "最小端口"
+
+msgid "More Actions"
+msgstr "更多操作"
+
+msgid "More Actions..."
+msgstr "更多操作"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Network"
+msgstr "网络"
+
+msgid "Network Address"
+msgstr "网络地址"
+
+msgid "Network Health Monitor"
+msgstr "网络健康监控"
+
+msgid "Network Health Monitors"
+msgstr "网络健康监控"
+
+msgid "Network ID"
+msgstr "网络标识"
+
+msgid "Network Interface"
+msgstr "网络接口"
+
+msgid "Networks"
+msgstr "网络"
+
+msgid "Newest"
+msgstr "最新的"
+
+msgid "No"
+msgstr "否"
+
+msgid "No State"
+msgstr "无状态"
+
+msgid "No Volumes Attached"
+msgstr "未连接卷"
+
+msgid "No rules defined"
+msgstr "未定义规则"
+
+msgid "Node UUID"
+msgstr "节点UUID"
+
+msgid "Object"
+msgstr "对象"
+
+msgid "Object Account"
+msgstr "对象存储账户"
+
+msgid "Object Accounts"
+msgstr "对象存储账户"
+
+msgid "Object Container"
+msgstr "对象存储容器"
+
+msgid "Object Containers"
+msgstr "对象存储容器"
+
+msgid "Objects"
+msgstr "对象"
+
+msgid "Off"
+msgstr "关闭"
+
+msgid "Oldest"
+msgstr "最旧的"
+
+msgid "On"
+msgstr "打开"
+
+msgid "Overview"
+msgstr "概述"
+
+msgid "Owned by Me"
+msgstr "我所有的"
+
+msgid "PXE Enabled?"
+msgstr "是否使能PXE？"
+
+msgid "Password"
+msgstr "密码"
+
+msgid "Past 10 Minutes"
+msgstr "过去十分钟"
+
+msgid "Past Day"
+msgstr "过去一天"
+
+msgid "Past Half Hour"
+msgstr "过去半小时"
+
+msgid "Past Hour"
+msgstr "过去一小时"
+
+msgid "Past Month"
+msgstr "过去一个月"
+
+msgid "Past Week"
+msgstr "过去一周"
+
+msgid "Past Year"
+msgstr "过去一年"
+
+msgid "Pause"
+msgstr "暂停"
+
+msgid "Pause updates to search results"
+msgstr "暂停更新查询结果"
+
+msgid "Paused"
+msgstr "已暂停"
+
+msgid "Pending"
+msgstr "挂起"
+
+msgid "Pending Delete"
+msgstr "暂挂删除"
+
+msgid "Phrases"
+msgstr "词汇"
+
+msgid "Please Wait"
+msgstr "请等待"
+
+msgid "Policies"
+msgstr "策略"
+
+msgid "Poll for Updates"
+msgstr "更新poll"
+
+msgid ""
+"Polling enables you to create a view of the data the updates\n"
+"          periodically."
+msgstr "轮询使你可以创建一个可以定时更新的数据视图。"
+
+msgid "Pool"
+msgstr "资源池"
+
+msgid "Port"
+msgstr "端口"
+
+msgid "Port ID"
+msgstr "端口标识"
+
+msgid "Port Security Enabled"
+msgstr "已启用端口安全性"
+
+msgid "Ports"
+msgstr "端口"
+
+msgid "Power State"
+msgstr "电源状态"
+
+msgid "Project"
+msgstr "项目"
+
+msgid "Project ID"
+msgstr "项目标识"
+
+msgid "Protocol"
+msgstr "协议"
+
+msgid "Provider Network Type"
+msgstr "供应商网络类型"
+
+msgid "Provider Physical Network"
+msgstr "供应商物理网络"
+
+msgid "Provider Segmentation ID"
+msgstr "供应商分段标识"
+
+msgid "Provisioning State"
+msgstr "配置状态"
+
+msgid "Public"
+msgstr "公有"
+
+msgid "Queued"
+msgstr "已排队"
+
+msgid "RAM"
+msgstr "内存"
+
+msgid "Range Queries"
+msgstr "范围查询"
+
+msgid "Reboot"
+msgstr "重启"
+
+msgid "Rebooting"
+msgstr "正在重启"
+
+msgid "Rebuild"
+msgstr "重建"
+
+msgid "Refresh"
+msgstr "刷新"
+
+msgid "Relevancy"
+msgstr "关联"
+
+msgid "Remote"
+msgstr "远程"
+
+msgid "Request"
+msgstr "请求"
+
+msgid "Rescue"
+msgstr "恢复"
+
+msgid "Rescued"
+msgstr "已恢复"
+
+msgid "Reserved Characters"
+msgstr "保留字符"
+
+msgid "Resize"
+msgstr "调整大小"
+
+msgid "Resize/Migrate"
+msgstr "调整大小/迁移"
+
+msgid "Resized"
+msgstr "已调整大小"
+
+msgid "Result Limit"
+msgstr "结果限制"
+
+msgid ""
+"Results exceeds pagination limit. Please refine your search or\n"
+"                increase the limit setting."
+msgstr ""
+"如果结果超过分页限制。\n"
+"请重新搜索或增大limit配置。"
+
+msgid "Resume"
+msgstr "恢复"
+
+msgid "Resume updates to search results"
+msgstr "重新更新查询结果"
+
+msgid "Reverse Alphabetical Name"
+msgstr "按字母反序排序的名称"
+
+msgid "Revert Resize/Migrate"
+msgstr "放弃调整大小/迁移"
+
+msgid "Router"
+msgstr "路由器"
+
+msgid "Router ID"
+msgstr "路由器标识"
+
+msgid "Routers"
+msgstr "路由器"
+
+msgid "Rules"
+msgstr "规则"
+
+msgid "Running"
+msgstr "运行中"
+
+msgid "Saving"
+msgstr "保存中"
+
+msgid "Search"
+msgstr "搜索"
+
+msgid "Search Settings"
+msgstr "搜索设置"
+
+msgid "Search all projects"
+msgstr "搜索所有项目"
+
+msgid "Security Group"
+msgstr "安全组"
+
+msgid "Security Groups"
+msgstr "安全组"
+
+msgid "Server Group"
+msgstr "主机组"
+
+msgid "Server Groups"
+msgstr "服务器组"
+
+msgid "Shared"
+msgstr "共享"
+
+msgid "Shared by Me"
+msgstr "我共享的"
+
+msgid "Shared with Me"
+msgstr "与我共享"
+
+msgid "Shelved"
+msgstr "已搁置"
+
+msgid "Shelved Offloaded"
+msgstr "已搁置卸载"
+
+msgid "Shutdown"
+msgstr "关闭"
+
+msgid "Shutoff"
+msgstr "关机"
+
+msgid "Size"
+msgstr "大小"
+
+#, python-format
+msgid "Snapshot %s was successfully created."
+msgstr "快照%s创建成功。"
+
+msgid "Snapshot ID"
+msgstr "快照ID"
+
+msgid "Snapshot Name"
+msgstr "快照名称"
+
+msgid "Soft Deleted"
+msgstr "已执行软删除"
+
+msgid "Soft Reboot"
+msgstr "软重启"
+
+msgid "Sort"
+msgstr "排序"
+
+msgid "Source Volume ID"
+msgstr "源卷ID"
+
+msgid "Specs"
+msgstr "规范"
+
+msgid "Start"
+msgstr "启动"
+
+msgid "Start Time"
+msgstr "开始时间"
+
+msgid "State"
+msgstr "状态"
+
+msgid "Status"
+msgstr "状态"
+
+msgid "Stop"
+msgstr "关机"
+
+msgid "Stopped"
+msgstr "已停止"
+
+msgid "Subnet"
+msgstr "子网"
+
+msgid "Subnet Pool ID"
+msgstr "子网池ID"
+
+msgid "Subnets"
+msgstr "子网"
+
+msgid "Subnets Associated"
+msgstr "已关联子网"
+
+msgid "Suspend"
+msgstr "挂起"
+
+msgid "Suspended"
+msgstr "挂起"
+
+msgid "Swap"
+msgstr "交换"
+
+msgid "Target Power State"
+msgstr "标记电源状态"
+
+msgid "Target Provisioning State"
+msgstr "标记配置状态"
+
+msgid "Task State"
+msgstr "任务状态"
+
+msgid "Term Operators"
+msgstr "条件术语"
+
+msgid "The current query is not valid. Please check your syntax."
+msgstr "当前查询不合法。请检查你的语法。"
+
+msgid ""
+"The following characters are reserved and must be\n"
+"            escaped with a leading \\ (backslash):\n"
+"            <code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+msgstr ""
+"如下保留字符串需要使用 \\ (倒斜杠)\n"
+"转义后使用：\n"
+"            <code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+
+msgid "The requested resource was not found."
+msgstr "请求的资源找不到。"
+
+msgid "The search service had an error processing your request."
+msgstr "搜索服务处理请求发生了一个错误。"
+
+msgid "There was an error processing your request."
+msgstr "这有一个错误的处理请求。"
+
+msgid ""
+"These settings impact the processing of results returned\n"
+"          from the search service. Changing these settings may\n"
+"          impact search performance and results."
+msgstr ""
+"这些设置会影响从搜索服务中返回结果的过程。改变这些设置可能会影响搜索操作和结"
+"果。"
+
+msgid "Transfer"
+msgstr "传输"
+
+msgid "Type"
+msgstr "类型"
+
+msgid "UUID"
+msgstr "UUID"
+
+#, python-format
+msgid "Unable to delete Instance: %s."
+msgid_plural "Unable to delete Instances: %s."
+msgstr[0] "不能删除实例：%s。"
+
+msgid "Unable to execute the search."
+msgstr "无法执行搜索。"
+
+msgid "Unable to retrieve Searchlight resources types."
+msgstr "无法检索Searchlight资源类型。"
+
+msgid "Unable to retrieve search facets."
+msgstr "无法检索查找方向。"
+
+msgid "Unavailable"
+msgstr "不可用"
+
+msgid "Unpause"
+msgstr "继续运行"
+
+msgid "Up"
+msgstr "启动"
+
+msgid "Update Interval (seconds)"
+msgstr "更新间隔（秒）"
+
+msgid "Update Search"
+msgstr "更新搜索"
+
+msgid "Updated"
+msgstr "已更新"
+
+msgid "Updated At"
+msgstr "更新时间"
+
+msgid ""
+"Use parenthesis to group different aspects of your\n"
+"            query to form sub-queries. For example, 'web OR (python AND\n"
+"            apache)' will return anything that either has 'web' OR has both\n"
+"            'python' AND 'apache'."
+msgstr ""
+"使用圆括号对不同方面的查询进行分组以生成子查询。\n"
+"例如, 'web OR (python AND\n"
+"            apache)' 将会返回包含 'web' 或者（OR） 同时包含\n"
+"            'python' 及（AND） 'apache' 的所有内容。"
+
+msgid "User ID"
+msgstr "用户标识"
+
+msgid "VCPUs"
+msgstr "CPU核数"
+
+msgid "Visibility"
+msgstr "可见性"
+
+msgid ""
+"Visibility is based on derived data. If Owned by Me, please inspect the "
+"resource to determine sharing status."
+msgstr "可见的是基于派生的数据。如果是我所有的，请检查资源确认共享状态。"
+
+msgid "Volume"
+msgstr "卷"
+
+msgid "Volume Backup"
+msgstr "卷备份"
+
+msgid "Volume Backups"
+msgstr "卷备份"
+
+msgid "Volume ID"
+msgstr "卷 ID"
+
+msgid "Volume Image Metadata"
+msgstr "卷镜像元数据"
+
+msgid "Volume Snapshot"
+msgstr "卷快照"
+
+msgid "Volume Snapshots"
+msgstr "卷快照"
+
+msgid "Volumes"
+msgstr "卷"
+
+msgid "Volumes Attached"
+msgstr "已连接卷"
+
+msgid ""
+"Warning: Wildcard queries place\n"
+"            a heavy burden on the search service and may perform poorly."
+msgstr "警告：通配符查询在搜索服务中有很大的消耗，可能表现不佳。"
+
+msgid "Wildcards"
+msgstr "通配符"
+
+msgid "Yes"
+msgstr "是"
+
+#, python-format
+msgid "You are not allowed to delete instances: %s"
+msgstr "你不能删除这些实例：%s。"
+
+msgid "You are not allowed to perform this request."
+msgstr "你不允许执行这个请求。"
+
+msgid ""
+"You can increase or decrease the relevance of a search\n"
+"            term by boosting different terms, phrases, or groups. Boost one "
+"of\n"
+"            these by adding ^n to the term, phrase, or group where n is a\n"
+"            number greater than 1 to increase relevance and between 0 and 1 "
+"to\n"
+"            decrease relevance. For example 'web^4 python^0.1' would find\n"
+"            anything with both web and python, but would increase the\n"
+"            relevance for anything with 'web' in the result and decrease "
+"the\n"
+"            relevance for anything with 'python' in the result."
+msgstr ""
+"您可以通过 增强（boost） 功能来提升或者降低\n"
+"不同词语、短句及分组的相关性。\n"
+"在它们后面添加 ^n 即可。\n"
+"当 n 大于1时提高关联性；\n"
+"当 n 介于 0 和 1 时则降低关联性。\n"
+"例如 'web^4 python^0.1' 会找出含有 web 和 python 的内容，\n"
+"但是会提升含有 web 的结果的相关性并\n"
+"降低含有 python 的结果的相关性。"
+
+msgid ""
+"You can separate search terms and groups with\n"
+"            AND, OR and NOT (also written &&, || and !). For example,\n"
+"            'python OR javascript' will find anything with either term\n"
+"            (OR is used by default, so does not need to be specified).\n"
+"            However, 'python AND javascript' will find things that only "
+"have\n"
+"            both terms. You can do this with as many terms as you'd like (e."
+"g.\n"
+"            'django AND javascript AND !unholy'). It is important to use "
+"all\n"
+"            caps or the alternate syntax (&&, ||), because 'and' will be\n"
+"            treated as another search term, but 'AND' will be treated as a\n"
+"            logical operator."
+msgstr ""
+"你可以使用 AND 、 OR 及 NOT (也写作 && 、 || 及 !)\n"
+"隔开搜索词语或者分组。\n"
+"            例如， 'python OR javascript' 可以找到含有任一词语的内容\n"
+"            (OR 是默认的规则，故可不必指明)。\n"
+"            然而，'python AND javascript' 将会找到同时包含两词的内容。\n"
+"            您可以根据需要来串联更多的词语(例如：\n"
+"            'django AND javascript AND !unholy')。\n"
+"            注意一定要使用全大写或者使用对应的搜索语法 (&&, ||)。\n"
+"            因为 'and' 会被当成一个普通的搜索词语， \n"
+"只有全大写的 'AND' 才会用作逻辑操作符。"
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) "
+"allowed."
+msgstr "你输入的值超过允许的最大值（{$ ctrl.settings.general.limit_max $}）。"
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.polling.interval_max $}) "
+"allowed."
+msgstr "你超过了允许的最大值 ({$ ctrl.settings.polling.interval_max $})"
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.general.limit_min $}) "
+"allowed."
+msgstr "你输入的值小于允许的最小值（{$ ctrl.settings.general.limit_min $}）。"
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.polling.interval_min $}) "
+"allowed."
+msgstr "你低于允许的最小值 ({$ ctrl.settings.polling.interval_min $})"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted instance is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
+msgstr[0] "你选择了\"%s\"。删除实例不可恢复。"
+
+msgid ""
+"You may decide to only look in a certain field for a\n"
+"            search term by setting a specific facet. This is accomplished "
+"by\n"
+"            either selecting a facet from the drop down or by typing the "
+"facet\n"
+"            manually. For example, if you are looking for an image, you\n"
+"            may choose to only look at the name field by adding 'name:foo'.\n"
+"            You may group facets and use logical operators."
+msgstr ""
+"您可能希望通过设定一个 分面（facet） \n"
+"只在某一个字段里搜索词语。\n"
+"这可以通过在下拉框里选择分面或者\n"
+"手动输入分面实现。\n"
+"例如，你正在找一张图片，可以添加 'name:某某' 选择只在名称（name）字段中查找 "
+"'某某'。\n"
+"            您可以对分面分组和使用逻辑操作符。"
+
+msgid "You must re-authenticate yourself."
+msgstr "你必须重新验证。"
+
+msgid "default"
+msgstr "默认值"
+
+msgid "from"
+msgstr "从"
+
+msgid "to"
+msgstr "至"
+
+msgid "{$ table.queryResponse.statusCode | slQueryStatus $}"
+msgstr "{$ table.queryResponse.statusCode | slQueryStatus $}"
