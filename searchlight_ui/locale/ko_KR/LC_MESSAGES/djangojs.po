@@ -9,21 +9,33 @@
 # skywalker54 <shpark@rockplace.co.kr>, 2016. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
 # SeongSoo Cho <nexusz99@gmail.com>, 2017. #zanata
-# Taehee Jang <jang0913@gmail.com>, 2017. #zanata
+# Sungjin Kang <gang.sungjin@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: searchlight-ui 2.0.0.0b3.dev6\n"
+"Project-Id-Version: searchlight-ui 2.0.0.0rc2.dev3\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-01-25 09:49+0000\n"
+"POT-Creation-Date: 2017-03-09 12:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-01-24 11:08+0000\n"
-"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
+"PO-Revision-Date: 2017-03-23 08:10+0000\n"
+"Last-Translator: Sungjin Kang <gang.sungjin@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
-"X-Generator: Zanata 3.7.3\n"
+"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=1; plural=0\n"
+
+#, python-format
+msgid "%(resourceType)s: %(searchFacet)s"
+msgstr "%(resourceType)s: %(searchFacet)s"
+
+#, python-format
+msgid "%(total)s total results"
+msgstr "%(total)s 전체 결과"
+
+#, python-format
+msgid "(%(doc_count)s)"
+msgstr "(%(doc_count)s)"
 
 msgid "(Extension)"
 msgstr "(확장)"
@@ -36,7 +48,7 @@ msgid ""
 msgstr ""
 "스냅샷은 실행 중인 인스턴스에 대한 디스크 상태를 보존하는 이미지입니다."
 
-#, fuzzy, python-format
+#, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "%(type)s %(direction)s %(target)s 허용"
 
@@ -65,10 +77,12 @@ msgstr "주소"
 msgid "Admin State"
 msgstr "관리자 상태"
 
+msgid "Alphabetical Name"
+msgstr "이름 알파벳순"
+
 msgid "Attached Device"
 msgstr "장치 연결됨"
 
-#, fuzzy
 msgid "Attached Device ID"
 msgstr "연결된 디바이스 ID"
 
@@ -87,28 +101,29 @@ msgstr "가용성 존"
 msgid "Available"
 msgstr "사용 가능"
 
-#, fuzzy
 msgid "Binding Host ID"
 msgstr "바인딩 호스트 ID"
 
-#, fuzzy
 msgid "Binding Profile"
 msgstr "바인딩 프로필"
 
-#, fuzzy
 msgid "Binding VIF Details"
 msgstr "바인딩 VIF 세부 사항"
 
-#, fuzzy
 msgid "Binding VIF Type"
 msgstr "바인딩 VIF 유형"
 
-#, fuzzy
 msgid "Binding VNIC Type"
 msgstr "바인딩 VNIC 유형"
 
 msgid "Blocked"
 msgstr "Blocked"
+
+msgid "Boolean Operators"
+msgstr "부울 연산자 "
+
+msgid "Boosting"
+msgstr "Boosting"
 
 msgid "Bootable"
 msgstr "부팅가능"
@@ -121,6 +136,9 @@ msgstr "Building"
 
 msgid "Cancel"
 msgstr "취소"
+
+msgid "Chassis UUID"
+msgstr "Chassis UUID"
 
 msgid "Close"
 msgstr "닫기"
@@ -144,12 +162,14 @@ msgstr "연결"
 msgid "Connect in a new window"
 msgstr "새 창에서 연결하기"
 
-#, fuzzy
 msgid "Consistency Group ID"
 msgstr "정합성 그룹 ID"
 
 msgid "Console"
 msgstr "콘솔"
+
+msgid "Console Enabled?"
+msgstr "콘솔 활성화 하시겠습니까?"
 
 msgid "Console is currently unavailable. Please try again later."
 msgstr "콘솔을 사용할 수 없습니다. 나중에 다시 시도해주세요."
@@ -233,6 +253,9 @@ msgstr "Direction"
 msgid "Disk"
 msgstr "디스크"
 
+msgid "Display field matching"
+msgstr "항목 매칭 확인"
+
 msgid "Distributed"
 msgstr "분산"
 
@@ -244,6 +267,9 @@ msgstr "DHCP 사용"
 
 msgid "Encrypted"
 msgstr "암호화"
+
+msgid "Ephemeral"
+msgstr "Ephemeral"
 
 msgid "Error"
 msgstr "에러"
@@ -262,6 +288,9 @@ msgstr "실패함"
 
 msgid "Fault"
 msgstr "Fault"
+
+msgid "Field Matches"
+msgstr "필드 일치"
 
 msgid "Fixed IPs"
 msgstr "Fixed IP"
@@ -290,13 +319,15 @@ msgstr "Floating IP"
 msgid "Floating Network ID"
 msgstr "플로팅 네트워크 ID"
 
+msgid "Full Text Search Syntax"
+msgstr "모든 텍스트 검색 문법"
+
 msgid "Gateway IP"
 msgstr "게이트웨이 IP"
 
 msgid "Hard Reboot"
 msgstr "Hard Reboot"
 
-#, fuzzy
 msgid "High Availability"
 msgstr "고 가용성"
 
@@ -355,8 +386,26 @@ msgstr "인스턴스 콘솔"
 msgid "Instance Console Log"
 msgstr "인스턴스 콘솔 로그"
 
+msgid "Instance UUID"
+msgstr "인스턴스 UUID"
+
 msgid "Instances"
 msgstr "인스턴스"
+
+msgid "Ironic Chassis"
+msgstr "Ironic Chassis"
+
+msgid "Ironic Node"
+msgstr "Ironic 노드"
+
+msgid "Ironic Nodes"
+msgstr "Ironic 노드"
+
+msgid "Ironic Port"
+msgstr "Ironic 포트"
+
+msgid "Ironic Ports"
+msgstr "Ironic 포트"
 
 msgid "Key Pair"
 msgstr "키 페어"
@@ -369,6 +418,9 @@ msgstr "키 페어"
 
 msgid "Killed"
 msgstr "Killed"
+
+msgid "Last Error"
+msgstr "마지막 에러"
 
 msgid "Load Balancer Pool"
 msgstr "로드 밸런서 풀"
@@ -396,6 +448,9 @@ msgstr "로그 길이"
 
 msgid "MTU"
 msgstr "MTU"
+
+msgid "Maintenance Reason"
+msgstr "유지보수 사유"
 
 msgid "Mapped Fixed IP Address"
 msgstr "Fixed IP 주소 맵핑함"
@@ -448,8 +503,17 @@ msgstr "네트워크 상태 모니터"
 msgid "Network ID"
 msgstr "Network ID"
 
+msgid "Network Interface"
+msgstr "네트워크 인터페이스"
+
 msgid "Networks"
 msgstr "네트워크"
+
+msgid "Newest"
+msgstr "새로운"
+
+msgid "No"
+msgstr "아니오"
 
 msgid "No State"
 msgstr "No State"
@@ -478,6 +542,15 @@ msgstr "오브젝트 컨테이너들"
 msgid "Objects"
 msgstr "오브젝트"
 
+msgid "Off"
+msgstr "꺼짐"
+
+msgid "Oldest"
+msgstr "오래된"
+
+msgid "On"
+msgstr "켜짐"
+
 msgid "Overview"
 msgstr "개요"
 
@@ -486,6 +559,27 @@ msgstr "내가 소유함"
 
 msgid "Password"
 msgstr "암호"
+
+msgid "Past 10 Minutes"
+msgstr "지난 10 분"
+
+msgid "Past Day"
+msgstr "어제"
+
+msgid "Past Half Hour"
+msgstr "지난 30 분"
+
+msgid "Past Hour"
+msgstr "지난 한시간"
+
+msgid "Past Month"
+msgstr "지난 달"
+
+msgid "Past Week"
+msgstr "지난 주"
+
+msgid "Past Year"
+msgstr "작년"
 
 msgid "Pause"
 msgstr "정지"
@@ -498,6 +592,9 @@ msgstr "대기중"
 
 msgid "Pending Delete"
 msgstr "Pending Delete"
+
+msgid "Phrases"
+msgstr "구"
 
 msgid "Please Wait"
 msgstr "기다려 주십시오"
@@ -538,13 +635,14 @@ msgstr "프로토콜"
 msgid "Provider Network Type"
 msgstr "공급자 네트워크 유형"
 
-#, fuzzy
 msgid "Provider Physical Network"
 msgstr "물리 네트워크 제공자"
 
-#, fuzzy
 msgid "Provider Segmentation ID"
 msgstr "제공자 구분 ID"
+
+msgid "Provisioning State"
+msgstr "권한설정 상태"
 
 msgid "Public"
 msgstr "공용"
@@ -558,11 +656,17 @@ msgstr "RAM"
 msgid "Reboot"
 msgstr "재시작"
 
+msgid "Rebooting"
+msgstr "Rebooting"
+
 msgid "Rebuild"
 msgstr "새로 빌드"
 
 msgid "Refresh"
 msgstr "갱신"
+
+msgid "Relevancy"
+msgstr "적합성"
 
 msgid "Remote"
 msgstr "원격"
@@ -585,8 +689,14 @@ msgstr "Resize/Migrate"
 msgid "Resized"
 msgstr "Resized"
 
+msgid "Result Limit"
+msgstr "결과 제한"
+
 msgid "Resume"
 msgstr "Resume"
+
+msgid "Reverse Alphabetical Name"
+msgstr "이름 알파벳 역순"
 
 msgid "Revert Resize/Migrate"
 msgstr "크기 변경 / 이전을 되돌리기"
@@ -718,8 +828,17 @@ msgstr "Suspended"
 msgid "Swap"
 msgstr "스왑"
 
+msgid "Target Power State"
+msgstr "대상 전원 상태"
+
+msgid "Target Provisioning State"
+msgstr "대상 권한설정 상태"
+
 msgid "Task State"
 msgstr "작업 상태"
+
+msgid "Term Operators"
+msgstr "기간 연산자"
 
 msgid "The current query is not valid. Please check your syntax."
 msgstr "현재 쿼리는 유효하지 않습니다. 문법을 확인해주세요."
@@ -738,6 +857,9 @@ msgstr " "
 
 msgid "Type"
 msgstr "유형"
+
+msgid "UUID"
+msgstr "UUID"
 
 #, python-format
 msgid "Unable to delete Instance: %s."
@@ -764,6 +886,9 @@ msgstr "Up"
 
 msgid "Update Interval (seconds)"
 msgstr "업데이트 주기 (초)"
+
+msgid "Update Search"
+msgstr "업데이트 검색"
 
 msgid "Updated"
 msgstr "업데이트됨"
@@ -807,6 +932,12 @@ msgstr "볼륨"
 msgid "Volumes Attached"
 msgstr "볼륨 연결"
 
+msgid "Wildcards"
+msgstr "와일드카드"
+
+msgid "Yes"
+msgstr "예"
+
 #, python-format
 msgid "You are not allowed to delete instances: %s"
 msgstr "%s 인스턴스 삭제할 수 있는 권한이 없습니다."
@@ -824,3 +955,6 @@ msgstr "재 인증을 받으시기 바랍니다."
 
 msgid "default"
 msgstr "기본"
+
+msgid "{$ table.queryResponse.statusCode | slQueryStatus $}"
+msgstr "{$ table.queryResponse.statusCode | slQueryStatus $}"
