@@ -42,7 +42,6 @@
       'resources.os-neutron-subnets',
       'resources.os-nova-hypervisors',
       'resources.os-nova-flavors',
-      'resources.os-nova-servers',
       'resources.os-nova-servergroups',
       'resources.os-swift-container'
     ])
