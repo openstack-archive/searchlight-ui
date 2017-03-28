@@ -97,7 +97,9 @@
       });
 
     function getNetworkId(item) {
-      return item.network_id;
+      if (item) {
+        return item.network_id;
+      }
     }
   }
 
