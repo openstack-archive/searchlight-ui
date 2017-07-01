@@ -9,9 +9,9 @@
 # Yulia Ryndenkova <yryndenkova@hystax.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: searchlight-ui 1.0.0.0rc2.dev9\n"
+"Project-Id-Version: searchlight-ui 3.0.0.0b3.dev1\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-10-14 18:24+0000\n"
+"POT-Creation-Date: 2017-06-30 16:36+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Last-Translator: Aleksey Alekseenko <9118250541@mail.ru>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
-"X-Generator: Zanata 3.7.3\n"
+"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
@@ -522,9 +522,6 @@ msgstr "Участники пула балансировщика нагрузк�
 
 msgid "Load Balancer Pools"
 msgstr "Пулы балансировщика нагрузки"
-
-msgid "Loading"
-msgstr "Загрузка"
 
 msgid "Local GB (total)"
 msgstr "Локальных ГБ (всего)"

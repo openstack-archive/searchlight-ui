@@ -1,0 +1,1243 @@
+# Mücahit Büyükyılmaz <mucahit@deltanoc.com>, 2015. #zanata
+# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Mücahit Büyükyılmaz <mucahit@deltanoc.com>, 2016. #zanata
+# evgin <evgind@gmail.com>, 2016. #zanata
+# işbaran akçayır <isbaran@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: searchlight-ui 3.0.0.0b3.dev1\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-06-30 16:36+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-05-24 12:08+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Turkish (Turkey)\n"
+"Language: tr-TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Zanata 3.9.6\n"
+"X-POOTLE-MTIME: 1495627642.000000\n"
+
+#, python-format
+msgid "%(resourceType)s: %(searchFacet)s"
+msgstr "%(resourceType)s: %(searchFacet)s"
+
+#, python-format
+msgid "%(total)s total results"
+msgstr "%(total)s toplam sonuç"
+
+#, python-format
+msgid "(%(doc_count)s)"
+msgstr "(%(doc_count)s)"
+
+msgid "(Extension)"
+msgstr "(Uzantı)"
+
+msgid "-"
+msgstr "-"
+
+msgid ""
+"A snapshot is an image which preserves the disk state of a running instance."
+msgstr ""
+"Bir anlık görüntü çalışan bir sunucunun disk durumunu koruyan bir imajdır."
+
+#, python-format
+msgid "ALLOW %(type)s %(direction)s %(target)s"
+msgstr "İZİN VER %(type)s %(direction)s %(target)s"
+
+#, python-format
+msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+msgstr "İZİN VER %(type)s %(ports)s %(direction)s %(target)s"
+
+msgid "ANY"
+msgstr "ANY"
+
+msgid "Action"
+msgstr "Eylem"
+
+msgid "Action Log"
+msgstr "Eylem Günlüğü"
+
+msgid "Actions"
+msgstr "Aksiyonlar"
+
+msgid "Active"
+msgstr "Etkin"
+
+msgid ""
+"Add a '+' or a '-' to indicate terms that must or must\n"
+"            not appear. For example '+python -apache web' would find\n"
+"            everything that has 'python' does NOT have 'apache' and should "
+"have\n"
+"            'web'. This may also be used with grouping. For example,\n"
+"            'web -(apache AND python)' would find anything with 'web', but "
+"does\n"
+"            not have either 'apache' or 'python'."
+msgstr ""
+"Bulunması ve bulunmaması gereken terimler için\n"
+"'+' veya '-' ekleyin. Örneğin '+python -apache web' içinde\n"
+"'python' olan 'apache' olmayan ve 'web olması gereken içerikleri bulur.\n"
+"Bu, gruplandırmayla da kullanılabilir. Örneğin,\n"
+"'web -(apache AND python)' 'web' olan herşeyi, ama 'apache' veya 'python'\n"
+"olmayanları bulur."
+
+msgid "Address"
+msgstr "Adres"
+
+msgid "Addresses"
+msgstr "Adresler"
+
+msgid "Admin State"
+msgstr "Yönetici Durumu"
+
+msgid "Alphabetical Name"
+msgstr "Alfabetik İsim"
+
+msgid "Attached Device"
+msgstr "Ekli Aygıt"
+
+msgid "Attached Device ID"
+msgstr "Ekli Aygıt Kimliği"
+
+msgid "Attached To"
+msgstr "Bağlı"
+
+msgid "Availability Zone"
+msgstr "Kullanılabilirlik Bölgesi"
+
+msgid "Availability Zone Hints"
+msgstr "Kullanılırlık Bölgesi İpuçları"
+
+msgid "Availability Zones"
+msgstr "Kullanılabilir Bölgeler"
+
+msgid "Available"
+msgstr "Uygun"
+
+msgid "Binding Host ID"
+msgstr "Bağlayıcı Sunucu Kimliği"
+
+msgid "Binding Profile"
+msgstr "Bağlayıcı Profili"
+
+msgid "Binding VIF Details"
+msgstr "Bağlayıcı VIF Ayrıntıları"
+
+msgid "Binding VIF Type"
+msgstr "Bağlayıcı VIF Türü"
+
+msgid "Binding VNIC Type"
+msgstr "Bağlayıcı VNIC Türü"
+
+msgid "Blocked"
+msgstr "Bloklanmış"
+
+msgid "Boolean Operators"
+msgstr "Bool İşleçleri"
+
+msgid "Boosting"
+msgstr "Destekleme"
+
+msgid "Bootable"
+msgstr "Başlatılabilir"
+
+msgid "Build"
+msgstr "İnşa Et"
+
+msgid "Building"
+msgstr "İnşa Ediliyor"
+
+msgid ""
+"By default, each word you type will be searched for\n"
+"            individually. You may also try to search an exact phrase by\n"
+"            using quotes (\"my phrase\") to surround a phrase. The search\n"
+"            service may allow a certain amount of phrase slop - meaning "
+"that\n"
+"            if you have some words out of order in the phrase it may still\n"
+"            match."
+msgstr ""
+"Öntanımlı olarak, girdiğiniz her kelime tek tek aranır.\n"
+"Ayrıca bir tümceyi tam olarak tırnak işaretleri kullanarak\n"
+"(\"arama tümcesi\") arayabilirsiniz. Arama servisi belirli miktar\n"
+"tümce taşmasına izin verebilir - yani tümcede sırası bozuk\n"
+"kelimeler varsa yine de eşleşebilir."
+
+msgid ""
+"By default, each word you type will match full words\n"
+"            only. You may also use wildcards to match parts of words. "
+"Wildcard\n"
+"            searches can be run on individual terms, using ? to replace a\n"
+"            single character, and * to replace zero or more character. "
+"'demo'\n"
+"            will match the full word 'demo' only. However, 'de*'\n"
+"            will match anything that starts with 'de', such as 'demo_1'.\n"
+"            'de*1' will match\n"
+"            anything that starts with 'de' and ends with '1'."
+msgstr ""
+"Öntanımlı olarak, girdiğiniz her kelime yalnızca tam olarak\n"
+"kelimelerle eşleşir. Kelimelerin bazı kısımlarıyla eşleştirmek\n"
+"için joker karakterleri kullanabilirsiniz. Joker karakterli aramalar\n"
+"tek tek arama terimleri üzerinde, tek bir karakter için ?, sıfır veya daha\n"
+"fazla karakter için * ile çalıştırılabilir. 'demo' yalnızca 'demo' "
+"kelimesiyle\n"
+"eşleşir. Ancak 'de*' 'de' ile başlayan herşeyle eşleşir, örneğin 'demo_1'.\n"
+"'de*1' 'de' ile başlayan ve '1' ile biten herşeyle eşleşecektir."
+
+msgid "Cancel"
+msgstr "İptal"
+
+msgid "Chassis UUID"
+msgstr "Şasi UUID'si"
+
+msgid "Close"
+msgstr "Kapat"
+
+msgid "Code"
+msgstr "Kod"
+
+msgid "Confirm Delete Instance"
+msgid_plural "Confirm Delete Instances"
+msgstr[0] "Sunucu Silmeyi Onayla"
+msgstr[1] "Sunucuları Silmeyi Onayla"
+
+msgid "Confirm Resize"
+msgstr "Yeniden Boyutlandırmayı Doğrula"
+
+msgid "Confirm or Revert Resize/Migrate"
+msgstr "Yeniden Boyutlama/Göç'ü Doğrula ya da Geri Al"
+
+msgid "Connect"
+msgstr "Baglantı"
+
+msgid "Connect in a new window"
+msgstr "Yeni bir pencerede bağlan"
+
+msgid "Consistency Group ID"
+msgstr "Tutarlılık Grubu Kimliği"
+
+msgid "Console"
+msgstr "Uçbirim"
+
+msgid "Console Enabled?"
+msgstr "Konsol Etkin mi?"
+
+msgid "Console is currently unavailable. Please try again later."
+msgstr "Konsol şu an kullanılabilir değil. Lütfen daha sonra tekrar deneyin."
+
+msgid "Crashed"
+msgstr "Çöktü"
+
+msgid "Create"
+msgstr "Oluştur"
+
+msgid "Create Instance"
+msgstr "Sunucu Oluştur"
+
+msgid "Create Instance Snapshot"
+msgstr "Sunucu Anlık Görüntüsü Oluştur"
+
+msgid "Create Snapshot"
+msgstr "Anlık Görüntü Oluştur"
+
+msgid "Created"
+msgstr "Oluşturuldu"
+
+msgid "Created At"
+msgstr "Oluşturulduğu zaman"
+
+msgid "Creating Snapshot"
+msgstr "Anlık Görüntü Oluşturuluyor"
+
+msgid "DNS Domain"
+msgstr "DNS Domaini"
+
+msgid "DNS Domains"
+msgstr "DNS Domainleri"
+
+msgid "DNS Name"
+msgstr "DNS İsmi"
+
+msgid "DNS Nameservers"
+msgstr "DNS İsim sunucuları"
+
+msgid "DNS Record"
+msgstr "DNS Kaydı"
+
+msgid "DNS Records"
+msgstr "DNS Kayıtları"
+
+msgid ""
+"Date, numeric or string fields can use range queries.\n"
+"            Use square brackets [min TO max] for inclusive ranges and curly\n"
+"            brackets {min TO max} for exclusive ranges."
+msgstr ""
+"Tarih, sayısal veya karakter dizisi alanları aralık sorgularını\n"
+"kullanabilirler. Aralığın dahil edildiği aramalar için kare parantez\n"
+"[min TO max], aralık hariç aramalar için süslü parantez {min TO max}\n"
+"kullanabilirsiniz."
+
+msgid "Default Network"
+msgstr "Öntanımlı Ağ"
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Delete Instance"
+msgid_plural "Delete Instances"
+msgstr[0] "Instance Sil"
+msgstr[1] "Instanceları Sil"
+
+msgid "Deleted"
+msgstr "Silindi"
+
+#, python-format
+msgid "Deleted Instance: %s."
+msgid_plural "Deleted Instances: %s."
+msgstr[0] "Sunucu Silindi: %s."
+msgstr[1] "Sunucular Silindi: %s."
+
+msgid "Deleting Instance"
+msgid_plural "Deleting Instances"
+msgstr[0] "Sunucu Siliniyor"
+msgstr[1] "Sunucular Siliniyor"
+
+msgid "Description"
+msgstr "Açıklama"
+
+msgid "Description:"
+msgstr "Açıklama:"
+
+msgid "Details"
+msgstr "Detaylar"
+
+msgid "Direction"
+msgstr "Yön"
+
+msgid "Disk"
+msgstr "Disk"
+
+msgid "Display field matching"
+msgstr "Alan eşleştirmeyi görüntüle"
+
+#, python-format
+msgid "Displaying %(numberDisplayed)s of %(total)s total results"
+msgstr "%(total)s toplam sonuçtan %(numberDisplayed)s kadarı görüntüleniyor"
+
+msgid "Distributed"
+msgstr "Dağıtık"
+
+msgid "Down"
+msgstr "Kapalı"
+
+msgid "Down for Maintenance?"
+msgstr "Bakım için Kapalı?"
+
+msgid "Enable DHCP"
+msgstr "DHCP Etkin"
+
+msgid "Encrypted"
+msgstr "Şifreli"
+
+msgid "Ephemeral"
+msgstr "Geçici"
+
+msgid "Error"
+msgstr "Hata"
+
+#, python-format
+msgid "Error initializing actions for plugin %(type)s: "
+msgstr "Eklenti %(type)s için eylemlerin başlatılmasında hata: "
+
+msgid "Ether Type"
+msgstr "Ethernet Türü"
+
+msgid "External"
+msgstr "Dış"
+
+msgid "External Network"
+msgstr "Dış Ağ"
+
+msgid "Facets"
+msgstr "Taraflar"
+
+msgid "Failed"
+msgstr "Başarısız"
+
+msgid "Fault"
+msgstr "Arıza"
+
+msgid "Field Matches"
+msgstr "Alan Eşleşmeleri"
+
+msgid ""
+"Find your cloud resources by selecting specific facets or by specifying\n"
+"    full text search queries.\n"
+"    <sl-search-syntax></sl-search-syntax>"
+msgstr ""
+"Bulut kaynaklarınızı belirli taraflar seçerek veya tam metin arama "
+"sorguları\n"
+"girerek bulun.\n"
+"<sl-search-syntax></sl-search-syntax>"
+
+msgid "Fixed IPs"
+msgstr "Sabit IP'ler"
+
+msgid "Flavor"
+msgstr "Şablon"
+
+msgid "Flavor ID"
+msgstr "Nitelik ID'si"
+
+msgid "Flavor Name"
+msgstr "Şablon Adı"
+
+msgid "Flavors"
+msgstr "Şablonlar"
+
+msgid "Floating IP"
+msgstr "Değişken IP"
+
+msgid "Floating IP Address"
+msgstr "Değişken IP Adresi"
+
+msgid "Floating IPs"
+msgstr "Değişken IPler"
+
+msgid "Floating Network ID"
+msgstr "Değişken Ağ Kimliği"
+
+msgid "Full Text Search Syntax"
+msgstr "Tam Metin Arama Sözdizimi"
+
+msgid "Gateway IP"
+msgstr "Ağ Geçidi IP'si"
+
+msgid "Grouping"
+msgstr "Gruplandırma"
+
+msgid "Hard Reboot"
+msgstr "Katı Yeniden Başlat"
+
+msgid "High Availability"
+msgstr "Yüksek Kullanılırlık"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Hostname"
+msgstr "Host adı"
+
+msgid "Hypervisor"
+msgstr "Hypervisor"
+
+msgid "Hypervisors"
+msgstr "Hypervisorler"
+
+msgid "ID"
+msgstr "KİMLİK"
+
+msgid "IP Addresses"
+msgstr "IP Adresleri"
+
+msgid "IP Version"
+msgstr "IP Versiyonu"
+
+msgid "IPv4 Address Scope"
+msgstr "IPv4 Adres Kapsamı"
+
+msgid ""
+"IPv4 addresses may be searched based on ranges and with CIDR\n"
+"            notation."
+msgstr "IPv4 adresleri aralık ve CIDR yazımı ile aranabilirler."
+
+msgid "IPv6 Address Mode"
+msgstr "IPv6 Adres Kipi"
+
+msgid "IPv6 Address Scope"
+msgstr "IPv6 Adres Kapsamı"
+
+msgid "IPv6 RA Mode"
+msgstr "IPv6 RA Kipi"
+
+msgid ""
+"If the console is not responding to keyboard input, click the status bar in "
+"the screen below."
+msgstr ""
+"Konsol klavye girdisine cevap vermiyorsa, aşağıdaki ekrandaki durum çubuğuna "
+"tıklayın."
+
+msgid "Image"
+msgstr "İmaj"
+
+msgid "Image Reference"
+msgstr "İmaj Referansı"
+
+msgid "Instance"
+msgstr "Instance"
+
+msgid "Instance Action Log"
+msgstr "Sunucu Eylem Kaydı"
+
+msgid "Instance Console"
+msgstr "Sunucu Konsolu"
+
+msgid "Instance Console Log"
+msgstr "Sunucu Konsol Günlüğü"
+
+msgid "Instance UUID"
+msgstr "Sunucu UUID'si"
+
+msgid "Instances"
+msgstr "Instancelar"
+
+msgid "Ironic Chassis"
+msgstr "Ironic Şasi"
+
+msgid "Ironic Node"
+msgstr "Ironic Düğümü"
+
+msgid "Ironic Nodes"
+msgstr "Ironic Düğümleri"
+
+msgid "Ironic Port"
+msgstr "Ironic Bağlantı Noktası"
+
+msgid "Ironic Ports"
+msgstr "Ironic Bağlantı Noktaları"
+
+msgid ""
+"It is typically better to filter results further than to increase\n"
+"          the number of returned results and page through them."
+msgstr ""
+"Genelde daha iyi sonuçlar alacak şekilde süzmek, sonuç sayısını\n"
+"artırıp sayfalarca sonuç görüntülemekten iyidir."
+
+msgid "Key Pair"
+msgstr "Anahtar Çifti"
+
+msgid "Key Pair Name"
+msgstr "Anahtar Çifti Adı"
+
+msgid "Key Pairs"
+msgstr "Anahtar Çiftleri"
+
+msgid "Killed"
+msgstr "Öldürüldü"
+
+msgid "Last Error"
+msgstr "Son Hata"
+
+msgid "Load Balancer Pool"
+msgstr "Yük Dengeleyici Havuzu"
+
+msgid "Load Balancer Pool Member"
+msgstr "Yük Dengeleyici Havuz Üyesi"
+
+msgid "Load Balancer Pool Members"
+msgstr "Yük Dengeleyici Havuz Üyeleri"
+
+msgid "Load Balancer Pools"
+msgstr "Yük Dengeleyici Havuzları"
+
+msgid "Local GB (total)"
+msgstr "Yerel GB (toplam)"
+
+msgid "Log"
+msgstr "Günlük"
+
+msgid "Log Length"
+msgstr "Günlük Uzunluğu"
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Maintenance Reason"
+msgstr "Bakım Sebebi"
+
+msgid "Mapped Fixed IP Address"
+msgstr "Sabit IP Adresi Haritalandı"
+
+msgid "Max Port"
+msgstr "Maksimum Port"
+
+msgid "Members"
+msgstr "Üyeler"
+
+msgid "Message"
+msgstr "İleti"
+
+msgid "Metadata"
+msgstr "Üstveri"
+
+msgid "Metadata Definition"
+msgstr "Üstveri Tanımlaması"
+
+msgid "Metadata Definitions"
+msgstr "Üstveri Tanımlamaları"
+
+msgid "Migrating"
+msgstr "Göç ediliyor"
+
+msgid "Min Port"
+msgstr "Minimum Port"
+
+msgid "More Actions"
+msgstr "Diğer İşlemler"
+
+msgid "More Actions..."
+msgstr "Daha Fazla Eylem..."
+
+msgid "Name"
+msgstr "İsim"
+
+msgid "Network"
+msgstr "Ağ"
+
+msgid "Network Address"
+msgstr "Ağ Adresi"
+
+msgid "Network Health Monitor"
+msgstr "Ağ Sağlık İzleyicisi"
+
+msgid "Network Health Monitors"
+msgstr "Ağ Sağlık İzleyicileri"
+
+msgid "Network ID"
+msgstr "Ağ ID'si"
+
+msgid "Network Interface"
+msgstr "Ağ Arayüzü"
+
+msgid "Networks"
+msgstr "Ağlar"
+
+msgid "Newest"
+msgstr "En Yeni"
+
+msgid "No"
+msgstr "Hayır"
+
+msgid "No State"
+msgstr "Durum Yok"
+
+msgid "No Volumes Attached"
+msgstr "Ekli Birim Yok"
+
+msgid "No rules defined"
+msgstr "Kural tanımlanmamış"
+
+msgid "Node UUID"
+msgstr "Düğüm UUID'si"
+
+msgid "Object"
+msgstr "Nesne"
+
+msgid "Object Account"
+msgstr "Nesne Hesabı"
+
+msgid "Object Accounts"
+msgstr "Nesne Hesapları"
+
+msgid "Object Container"
+msgstr "Nesne Konteynerı"
+
+msgid "Object Containers"
+msgstr "Nesne Konteynerları"
+
+msgid "Objects"
+msgstr "Nesneler"
+
+msgid "Off"
+msgstr "Kapalı"
+
+msgid "Oldest"
+msgstr "En Eski"
+
+msgid "On"
+msgstr "Açık"
+
+msgid "Overview"
+msgstr "Önizleme"
+
+msgid "Owned by Me"
+msgstr "Bana Ait"
+
+msgid "PXE Enabled?"
+msgstr "PXE Etkin mi?"
+
+msgid "Password"
+msgstr "Şifre"
+
+msgid "Past 10 Minutes"
+msgstr "Geçen 10 Dakika"
+
+msgid "Past Day"
+msgstr "Geçen Gün"
+
+msgid "Past Half Hour"
+msgstr "Geçen Yarım Saat"
+
+msgid "Past Hour"
+msgstr "Geçen Saat"
+
+msgid "Past Month"
+msgstr "Geçen Ay"
+
+msgid "Past Week"
+msgstr "Geçen Hafta"
+
+msgid "Past Year"
+msgstr "Geçen Yıl"
+
+msgid "Pause"
+msgstr "Durdur"
+
+msgid "Pause updates to search results"
+msgstr "Arama sonuçlarını güncellemeyi durdur"
+
+msgid "Paused"
+msgstr "Durduruldu"
+
+msgid "Pending"
+msgstr "Bekliyor"
+
+msgid "Pending Delete"
+msgstr "Silme Beklemede"
+
+msgid "Phrases"
+msgstr "Tümceler"
+
+msgid "Please Wait"
+msgstr "Lütfen Bekleyiniz"
+
+msgid "Policies"
+msgstr "İlkeler"
+
+msgid "Poll for Updates"
+msgstr "Güncellemeleri Yokla"
+
+msgid ""
+"Polling enables you to create a view of the data the updates\n"
+"          periodically."
+msgstr ""
+"Yoklama aralıklarla güncellenecek şekilde verinin bir görünümünü\n"
+"oluşturmayı sağlar."
+
+msgid "Pool"
+msgstr "Havuz"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Port ID"
+msgstr "Bağlantı Noktası ID'si"
+
+msgid "Port Security Enabled"
+msgstr "Bağlantı Noktası Güvenliği Etkin"
+
+msgid "Ports"
+msgstr "Portlar"
+
+msgid "Power State"
+msgstr "Güç Durumu"
+
+msgid "Project"
+msgstr "Proje"
+
+msgid "Project ID"
+msgstr "Proje ID"
+
+msgid "Protocol"
+msgstr "Protokol"
+
+msgid "Provider Network Type"
+msgstr "Sağlayıcı Ağ Türü"
+
+msgid "Provider Physical Network"
+msgstr "Sağlayıcı Fiziksel Ağı"
+
+msgid "Provider Segmentation ID"
+msgstr "Sağlayıcı Dilimlendirme Kimlği"
+
+msgid "Provisioning State"
+msgstr "Hazırlık Durumu"
+
+msgid "Public"
+msgstr "Genel"
+
+msgid "Queued"
+msgstr "Kuyrukta"
+
+msgid "RAM"
+msgstr "RAM"
+
+msgid "Range Queries"
+msgstr "Aralık Sorguları"
+
+msgid "Reboot"
+msgstr "Yeniden Başlat"
+
+msgid "Rebooting"
+msgstr "Yeniden başlatılıyor"
+
+msgid "Rebuild"
+msgstr "Yeniden inşa et"
+
+msgid "Refresh"
+msgstr "Tazele"
+
+msgid "Relevancy"
+msgstr "Alaka"
+
+msgid "Remote"
+msgstr "Uzak"
+
+msgid "Request"
+msgstr "İstek"
+
+msgid "Rescue"
+msgstr "Kurtar"
+
+msgid "Rescued"
+msgstr "Kurtarıldı"
+
+msgid "Reserved Characters"
+msgstr "Ayrılmış Karakterler"
+
+msgid "Resize"
+msgstr "Yeniden boyutlandır"
+
+msgid "Resize/Migrate"
+msgstr "Yeniden boyutlandır/Göç ettir"
+
+msgid "Resized"
+msgstr "Boyutlandırıldı"
+
+msgid "Result Limit"
+msgstr "Sonuç Sınırı"
+
+msgid ""
+"Results exceeds pagination limit. Please refine your search or\n"
+"                increase the limit setting."
+msgstr ""
+"Sonuçlar sayfalandırma sınırlarını aşıyor. Lütfen aramanızı daha ince\n"
+"hale getirin veya sınır ayarını artırın."
+
+msgid "Resume"
+msgstr "Sürdü"
+
+msgid "Resume updates to search results"
+msgstr "Arama sonuçlarını güncellemeyi devam ettir"
+
+msgid "Reverse Alphabetical Name"
+msgstr "Ters Alfabetik İsim"
+
+msgid "Revert Resize/Migrate"
+msgstr "Yeniden Boyutlama/Geçirmeyi Geri Al"
+
+msgid "Router"
+msgstr "Router"
+
+msgid "Router ID"
+msgstr "Router ID'si"
+
+# #-#-#-#-#  intro_networking_components.pot (Networking Guide 0.9)  #-#-#-#-#
+# #-#-#-#-#  intro_os_networking_overview.pot (Networking Guide 0.9)
+# #-#-#-#-#
+# #-#-#-#-#  scenario_legacy_lb.pot (Networking Guide 0.9)  #-#-#-#-#
+# #-#-#-#-#  scenario_legacy_ovs.pot (Networking Guide 0.9)  #-#-#-#-#
+msgid "Routers"
+msgstr "Routers"
+
+msgid "Rules"
+msgstr "Kurallar"
+
+msgid "Running"
+msgstr "Çalışıyor"
+
+msgid "Saving"
+msgstr "Kaydediliyor"
+
+msgid "Search"
+msgstr "Arama"
+
+msgid "Search Settings"
+msgstr "Arama Ayarları"
+
+msgid "Search all projects"
+msgstr "Tüm projeleri ara"
+
+msgid "Security Group"
+msgstr "Güvenlik Grubu"
+
+msgid "Security Groups"
+msgstr "Güvenlik Grupları"
+
+msgid "Server Group"
+msgstr "Sunucu Grubu"
+
+msgid "Server Groups"
+msgstr "Sunucu Grupları"
+
+msgid "Shared"
+msgstr "Paylaşılan"
+
+msgid "Shared by Me"
+msgstr "Benimle Paylaşılmış"
+
+msgid "Shared with Me"
+msgstr "Benimle Paylaşılan"
+
+msgid "Shelved"
+msgstr "Askıda"
+
+msgid "Shelved Offloaded"
+msgstr "Askıda Yük Dışa Aktarıldı"
+
+msgid "Shutdown"
+msgstr "Kapat"
+
+msgid "Shutoff"
+msgstr "Kapalı"
+
+msgid "Size"
+msgstr "Boyut"
+
+#, python-format
+msgid "Snapshot %s was successfully created."
+msgstr "Anlık görüntü %s başarıyla oluşturuldu."
+
+msgid "Snapshot ID"
+msgstr "Anlık Görüntü Kimliği"
+
+msgid "Snapshot Name"
+msgstr "Anlık Görüntü İsmi"
+
+msgid "Soft Deleted"
+msgstr "Yumuşak Silindi"
+
+msgid "Soft Reboot"
+msgstr "Yumuşak Yeniden Başlatma"
+
+msgid "Sort"
+msgstr "Sırala"
+
+msgid "Source Volume ID"
+msgstr "Kaynak Birim Kimliği"
+
+msgid "Specs"
+msgstr "Özellikler"
+
+msgid "Start"
+msgstr "Başlat"
+
+msgid "Start Time"
+msgstr "Başlangıç Zamanı"
+
+msgid "State"
+msgstr "Durum"
+
+msgid "Status"
+msgstr "Statü"
+
+msgid "Stop"
+msgstr "Durdur"
+
+msgid "Stopped"
+msgstr "Durduruldu"
+
+msgid "Subnet"
+msgstr "Subnet"
+
+msgid "Subnet Pool ID"
+msgstr "Alt Ağ Havuz Kimliği"
+
+msgid "Subnets"
+msgstr "Subnetler"
+
+msgid "Subnets Associated"
+msgstr "Subnetler İlişkilendirildi"
+
+msgid "Suspend"
+msgstr "Askıya Al"
+
+msgid "Suspended"
+msgstr "Askıda"
+
+msgid "Swap"
+msgstr "Takas alanı"
+
+msgid "Target Power State"
+msgstr "Hedef Güç Durumu"
+
+msgid "Target Provisioning State"
+msgstr "Hedef Hazırlık Durumu"
+
+msgid "Task State"
+msgstr "Görev Durumu"
+
+msgid "Term Operators"
+msgstr "Terim İşleçleri"
+
+msgid "The current query is not valid. Please check your syntax."
+msgstr "Mevcut sorgu geçerli değil. Lütfen sözdiziminizi kontrol edin."
+
+msgid ""
+"The following characters are reserved and must be\n"
+"            escaped with a leading \\ (backslash):\n"
+"            <code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+msgstr ""
+"Şu karakterler ayrılmıştır ve çift ters bölü karakteri \\ (backslash)\n"
+"ile kullanılmalıdırlar:\n"
+"<code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+
+msgid "The requested resource was not found."
+msgstr "İstenen kaynak bulunamadı."
+
+msgid "The search service had an error processing your request."
+msgstr "Arama servisi isteğinizi işlerken hata verdi."
+
+msgid "There was an error processing your request."
+msgstr "İsteğinizi işlerken bir hata oluştu."
+
+msgid ""
+"These settings impact the processing of results returned\n"
+"          from the search service. Changing these settings may\n"
+"          impact search performance and results."
+msgstr ""
+"Bu ayarlar arama servisinden dönen snuçların işlenmesini etkiler.\n"
+"Bu ayarları değiştirmek arama başarımını ve sonuçları etkileyebilir."
+
+msgid "Transfer"
+msgstr "Aktarım"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "UUID"
+msgstr "UUID"
+
+#, python-format
+msgid "Unable to delete Instance: %s."
+msgid_plural "Unable to delete Instances: %s."
+msgstr[0] "Sunucu silinemiyor: %s."
+msgstr[1] "Sunucular silinemiyor: %s."
+
+msgid "Unable to execute the search."
+msgstr "Arama çalıştırılamıyor."
+
+msgid "Unable to retrieve Searchlight resources types."
+msgstr "Searchlight kaynak türleri alınamadı."
+
+msgid "Unable to retrieve search facets."
+msgstr "Arama tarafları alınamadı."
+
+msgid "Unavailable"
+msgstr "Kullanılamaz"
+
+msgid "Unpause"
+msgstr "Sürdür"
+
+msgid "Up"
+msgstr "Açık"
+
+msgid "Update Interval (seconds)"
+msgstr "Güncelleme Aralığı (saniye)"
+
+msgid "Update Search"
+msgstr "Aramayı Güncelle"
+
+msgid "Updated"
+msgstr "Güncellendi"
+
+msgid "Updated At"
+msgstr "Güncellendi"
+
+msgid ""
+"Use parenthesis to group different aspects of your\n"
+"            query to form sub-queries. For example, 'web OR (python AND\n"
+"            apache)' will return anything that either has 'web' OR has both\n"
+"            'python' AND 'apache'."
+msgstr ""
+"Sorgunuzdan alt sorgular oluşturmak için parantezler kullanın.\n"
+"Örneğin, 'web OR (python AND apache)' içinde 'web' VEYA hem\n"
+"'python' hem 'apache' olan şeyleri döndürür."
+
+msgid "User ID"
+msgstr "Kullanıcı ID"
+
+msgid "VCPUs"
+msgstr "VCPUlar"
+
+msgid "Visibility"
+msgstr "Görünürlük"
+
+msgid ""
+"Visibility is based on derived data. If Owned by Me, please inspect the "
+"resource to determine sharing status."
+msgstr ""
+"Görünürlük türetilmiş veriye dayanır. Eğer Bana Aitse, paylaşım durumuna "
+"karar vermek için kaynağı gözden geçirin."
+
+msgid "Volume"
+msgstr "Mantıksal Sürücü"
+
+msgid "Volume Backup"
+msgstr "Mantıksal Sürücü Yedeği"
+
+msgid "Volume Backups"
+msgstr "Mantıksal Sürücü Yedekleri"
+
+msgid "Volume ID"
+msgstr "Birim Kimliği"
+
+msgid "Volume Image Metadata"
+msgstr "Birim İmaj Metaverisi"
+
+msgid "Volume Snapshot"
+msgstr "Birim Anlık Görüntüsü"
+
+msgid "Volume Snapshots"
+msgstr "Mantıksal Sürücü Anlık Görüntüleri"
+
+msgid "Volumes"
+msgstr "Mantıksal Sürücüler"
+
+msgid "Volumes Attached"
+msgstr "Bağlı Mantıksal Sürücüler"
+
+msgid ""
+"Warning: Wildcard queries place\n"
+"            a heavy burden on the search service and may perform poorly."
+msgstr ""
+"Uyarı: Joker karakter sorguları arama servisi üzerine büyük yük bindirir, "
+"başarım zayıf olabilir."
+
+msgid "Wildcards"
+msgstr "Joker karakterler"
+
+msgid "Yes"
+msgstr "Evet"
+
+#, python-format
+msgid "You are not allowed to delete instances: %s"
+msgstr "Sunucu silme yetkiniz yok: %s"
+
+msgid "You are not allowed to perform this request."
+msgstr "Bu isteği gerçekleştirme izniniz yok."
+
+msgid ""
+"You can increase or decrease the relevance of a search\n"
+"            term by boosting different terms, phrases, or groups. Boost one "
+"of\n"
+"            these by adding ^n to the term, phrase, or group where n is a\n"
+"            number greater than 1 to increase relevance and between 0 and 1 "
+"to\n"
+"            decrease relevance. For example 'web^4 python^0.1' would find\n"
+"            anything with both web and python, but would increase the\n"
+"            relevance for anything with 'web' in the result and decrease "
+"the\n"
+"            relevance for anything with 'python' in the result."
+msgstr ""
+"Bir arama teriminin alakasını değişik terimler, tümceler, veya gruplar\n"
+"kullanarak destekleyebilirsiniz. Bunlardan birini arama terimine, tümcesine\n"
+"veya grubuna n 1'den büyük bir sayı olmak üzere ^n koyarak artırın, veya 0 "
+"ve 1\n"
+"arasında bir sayı koyarak azaltın. Örneğin 'web^4 python^0.1' hem web hem\n"
+"python olan herşeyi arar ama sonuçta içinde 'web' olanların alakasını "
+"artırırken 'python'\n"
+"olanların azaltır."
+
+msgid ""
+"You can separate search terms and groups with\n"
+"            AND, OR and NOT (also written &&, || and !). For example,\n"
+"            'python OR javascript' will find anything with either term\n"
+"            (OR is used by default, so does not need to be specified).\n"
+"            However, 'python AND javascript' will find things that only "
+"have\n"
+"            both terms. You can do this with as many terms as you'd like (e."
+"g.\n"
+"            'django AND javascript AND !unholy'). It is important to use "
+"all\n"
+"            caps or the alternate syntax (&&, ||), because 'and' will be\n"
+"            treated as another search term, but 'AND' will be treated as a\n"
+"            logical operator."
+msgstr ""
+"Arama terimlerini ve grupları AND, OR ve NOT ile\n"
+"(aynı zamanda &&, || ve ! olarak da yazılabilir) ayırabilirsiniz.\n"
+"Örneğin, 'python OR javascript' her iki terimi de içeren şeyleri bulur.\n"
+"(OR öntanımlı olarak açıktır, ayrıca belirtilmesin gerek yoktur).\n"
+"Ancak, 'python AND javascript' yalnızca her iki terimi de içeren şeyleri "
+"bulur.\n"
+"Bunu istediğiniz kadar terimle birleştirerek yapabilirsiniz\n"
+"(örn 'django AND javascript AND !unholy'). Tüm karakterleri büyük yazmak\n"
+"veya alternatif sözdizimini kullanmak (&&, ||) önemlidir, çünkü 'and'\n"
+"başka bir arama terimi olarak görülürken 'AND' mantıksal işleç olarak ele "
+"alınır."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) "
+"allowed."
+msgstr ""
+"İzin verilen azami ({$ ctrl.settings.general.limit_max $}) değeri aştınız."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.polling.interval_max $}) "
+"allowed."
+msgstr ""
+"İzin verilen azami ({$ ctrl.settings.polling.interval_max $}) değeri aştınız."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.general.limit_min $}) "
+"allowed."
+msgstr ""
+"İzin verilen asgari değerin altına ({$ ctrl.settings.general.limit_min $}) "
+"indiniz."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.polling.interval_min $}) "
+"allowed."
+msgstr ""
+"izin verilen asgari ({$ ctrl.settings.polling.interval_min $}) değerin "
+"altına indiniz."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted instance is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
+msgstr[0] "\"%s\" seçtiniz. Silinen sunucu geri getirilemez."
+msgstr[1] "\"%s\" seçtiniz. Silinen sunucular geri getirilemez."
+
+msgid ""
+"You may decide to only look in a certain field for a\n"
+"            search term by setting a specific facet. This is accomplished "
+"by\n"
+"            either selecting a facet from the drop down or by typing the "
+"facet\n"
+"            manually. For example, if you are looking for an image, you\n"
+"            may choose to only look at the name field by adding 'name:foo'.\n"
+"            You may group facets and use logical operators."
+msgstr ""
+"Özel bir taraf ayarlayarak arama teriminde yalnızca belli bir alana\n"
+"bakmaya karar verebilirsiniz. Bu, tarafın aşağı açılır pencereden "
+"seçilmesiyle\n"
+"veya elle girilmesiyle elde edilir. Örneğin, yalnızca isim alanına bakarak "
+"bir\n"
+"imaj bulmak istiyorsanız, 'name:imaj_ismi' ekleyebilirsiniz.\n"
+"Tarafları gruplandırabilir, mantıksal işleçlerle kullanabilirsiniz."
+
+msgid "You must re-authenticate yourself."
+msgstr "Kimliğinizi tekrar-doğrulamalısınız."
+
+msgid "default"
+msgstr "öntanımlı"
+
+msgid "from"
+msgstr "kimden"
+
+msgid "to"
+msgstr "kime"
+
+msgid "{$ table.queryResponse.statusCode | slQueryStatus $}"
+msgstr "{$ table.queryResponse.statusCode | slQueryStatus $}"
