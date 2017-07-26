@@ -12,13 +12,12 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-from django.conf.urls import patterns
 from django.conf.urls import url
 
 from searchlight_ui.dashboards.project.search import views
 
 
-urlpatterns = patterns(
+urlpatterns = [
     'searchlight_ui.dashboards.project.search.views',
     url(r'^$', views.IndexView.as_view(), name='index'),
-)
+]
