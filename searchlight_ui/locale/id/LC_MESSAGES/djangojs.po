@@ -1,0 +1,1188 @@
+# Andreas Jaeger <jaegerandi@gmail.com>, 2017. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: searchlight-ui 1.0.2.dev2\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-03-21 15:37+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-07-30 02:10+0000\n"
+"Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#, python-format
+msgid "%(resourceType)s: %(searchFacet)s"
+msgstr "%(resourceType)s: %(searchFacet)s"
+
+#, python-format
+msgid "%(total)s total results"
+msgstr "%(total)s hasil total"
+
+#, python-format
+msgid "(%(doc_count)s)"
+msgstr "(%(doc_count)s)"
+
+msgid "(Extension)"
+msgstr "(Extension)"
+
+msgid "-"
+msgstr "-"
+
+msgid ""
+"A snapshot is an image which preserves the disk state of a running instance."
+msgstr ""
+"Sebuah snapshot adalah image yang menjaga keadaan disk dari instance yang "
+"sedang berjalan."
+
+#, python-format
+msgid "ALLOW %(type)s %(direction)s %(target)s"
+msgstr "ALLOW %(type)s %(direction)s %(target)s"
+
+#, python-format
+msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+msgstr "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+
+msgid "ANY"
+msgstr "ANY"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "Action Log"
+msgstr "Action Log"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Active"
+msgstr "Active"
+
+msgid ""
+"Add a '+' or a '-' to indicate terms that must or must\n"
+"            not appear. For example '+python -apache web' would find\n"
+"            everything that has 'python' does NOT have 'apache' and should "
+"have\n"
+"            'web'. This may also be used with grouping. For example,\n"
+"            'web -(apache AND python)' would find anything with 'web', but "
+"does\n"
+"            not have either 'apache' or 'python'."
+msgstr ""
+"Tambahkan '+' atau '-' untuk menunjukkan persyaratan yang harus atau harus\n"
+"             tidak muncul. Misalnya '+ python -apache web' akan ditemukan\n"
+"             semua yang memiliki 'python' TIDAK memiliki 'apache' dan "
+"seharusnya ada\n"
+"             'Web'. Ini juga bisa digunakan dengan pengelompokan. Sebagai "
+"contoh,\n"
+"             'web - (apache AND python)' akan menemukan sesuatu dengan "
+"'web', tapi memang begitu\n"
+"             tidak memiliki 'apache' ataupun 'python'."
+
+msgid "Addresses"
+msgstr "Addresses"
+
+msgid "Admin State"
+msgstr "Admin State"
+
+msgid "Alphabetical Name"
+msgstr "Alphabetical Name"
+
+msgid "Attached Device"
+msgstr "Attached Device"
+
+msgid "Attached Device ID"
+msgstr "Attached Device ID"
+
+msgid "Attached To"
+msgstr "Attached To"
+
+msgid "Availability Zone"
+msgstr "Availability Zone"
+
+msgid "Availability Zone Hints"
+msgstr "Availability Zone Hints"
+
+msgid "Availability Zones"
+msgstr "Availability Zones"
+
+msgid "Available"
+msgstr "Available"
+
+msgid "Binding Host ID"
+msgstr "Binding Host ID"
+
+msgid "Binding Profile"
+msgstr "Binding Profile"
+
+msgid "Binding VIF Details"
+msgstr "Binding VIF Details"
+
+msgid "Binding VIF Type"
+msgstr "Binding VIF Type"
+
+msgid "Binding VNIC Type"
+msgstr "Binding VNIC Type"
+
+msgid "Blocked"
+msgstr "Blocked"
+
+msgid "Boolean Operators"
+msgstr "Boolean Operators"
+
+msgid "Boosting"
+msgstr "Boosting"
+
+msgid "Bootable"
+msgstr "Bootable"
+
+msgid "Build"
+msgstr "Build"
+
+msgid "Building"
+msgstr "Building"
+
+msgid ""
+"By default, each word you type will be searched for\n"
+"            individually. You may also try to search an exact phrase by\n"
+"            using quotes (\"my phrase\") to surround a phrase. The search\n"
+"            service may allow a certain amount of phrase slop - meaning "
+"that\n"
+"            if you have some words out of order in the phrase it may still\n"
+"            match."
+msgstr ""
+"Secara default, setiap kata yang Anda ketik akan dicari\n"
+"             secara individu. Anda mungkin juga mencoba mencari frasa yang "
+"tepat\n"
+"             menggunakan tanda kutip (\"frase saya\") untuk mengelilingi "
+"sebuah ungkapan. Pencarian\n"
+"             Layanan memungkinkan sejumlah slop frase - yang berarti bahwa\n"
+"             jika Anda memiliki beberapa kata yang tidak sesuai dengan "
+"ungkapan itu mungkin masih mencocokan."
+
+msgid ""
+"By default, each word you type will match full words\n"
+"            only. You may also use wildcards to match parts of words. "
+"Wildcard\n"
+"            searches can be run on individual terms, using ? to replace a\n"
+"            single character, and * to replace zero or more character. "
+"'demo'\n"
+"            will match the full word 'demo' only. However, 'de*'\n"
+"            will match anything that starts with 'de', such as 'demo_1'.\n"
+"            'de*1' will match\n"
+"            anything that starts with 'de' and ends with '1'."
+msgstr ""
+"Secara default, setiap kata yang Anda ketikkan akan cocok hanya dengan kata-"
+"kata yang lengkap. Anda juga bisa menggunakan wildcard untuk mencocokkan "
+"bagian kata. Penelusuran wildcard dapat dilakukan berdasarkan persyaratan "
+"individual? Untuk mengganti karakter tunggal, dan * untuk mengganti karakter "
+"nol atau lebih. 'demo'\n"
+"             akan cocok dengan kata 'demo' penuh saja. Namun, 'de *'\n"
+"             akan cocok dengan apapun yang dimulai dengan 'de', seperti "
+"'demo_1'.\n"
+"             'de * 1' akan cocok\n"
+"             apapun yang dimulai dengan 'de' dan diakhiri dengan '1'."
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "Code"
+msgstr "Code"
+
+msgid "Confirm Delete Instance"
+msgid_plural "Confirm Delete Instances"
+msgstr[0] "Confirm Delete Instance"
+
+msgid "Confirm Resize"
+msgstr "Confirm Resize"
+
+msgid "Confirm or Revert Resize/Migrate"
+msgstr "Confirm atau Revert Resize/Migrate"
+
+msgid "Connect"
+msgstr "Connect"
+
+msgid "Connect in a new window"
+msgstr "Sambungkan di jendela baru"
+
+msgid "Consistency Group ID"
+msgstr "Consistency Group ID"
+
+msgid "Console"
+msgstr "Console"
+
+msgid "Console is currently unavailable. Please try again later."
+msgstr "Konsol saat ini tidak tersedia Silakan coba lagi nanti."
+
+msgid "Crashed"
+msgstr "Crashed"
+
+msgid "Create"
+msgstr "Create"
+
+msgid "Create Instance"
+msgstr "Create Instance"
+
+msgid "Create Instance Snapshot"
+msgstr "Create Instance Snapshot"
+
+msgid "Create Snapshot"
+msgstr "Create Snapshot"
+
+msgid "Created"
+msgstr "Created"
+
+msgid "Created At"
+msgstr "Created At"
+
+msgid "Creating Snapshot"
+msgstr "Menciptakan Snapshot"
+
+msgid "DNS Domain"
+msgstr "DNS Domain"
+
+msgid "DNS Domains"
+msgstr "DNS Domains"
+
+msgid "DNS Name"
+msgstr "DNS Name"
+
+msgid "DNS Nameservers"
+msgstr "DNS Nameservers"
+
+msgid "DNS Record"
+msgstr "DNS Record"
+
+msgid "DNS Records"
+msgstr "DNS Records"
+
+msgid ""
+"Date, numeric or string fields can use range queries.\n"
+"            Use square brackets [min TO max] for inclusive ranges and curly\n"
+"            brackets {min TO max} for exclusive ranges."
+msgstr ""
+"Field tanggal, numerik atau string dapat menggunakan kueri jangkauan.\n"
+"             Gunakan tanda kurung siku [min TO max] untuk rentang inklusif "
+"dan curly\n"
+"            brackets {min TO max} untuk rentang eksklusif."
+
+msgid "Default Network"
+msgstr "Default Network"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Delete Instance"
+msgid_plural "Delete Instances"
+msgstr[0] "Delete Instance"
+
+msgid "Deleted"
+msgstr "Deleted"
+
+#, python-format
+msgid "Deleted Instance: %s."
+msgid_plural "Deleted Instances: %s."
+msgstr[0] "Deleted Instance: %s."
+
+msgid "Deleting Instance"
+msgid_plural "Deleting Instances"
+msgstr[0] "Deleting Instance"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Description:"
+msgstr "Description:"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Direction"
+msgstr "Direction"
+
+msgid "Disk"
+msgstr "Disk"
+
+msgid "Display field matching"
+msgstr "Tampilkan pencocokan lapangan"
+
+#, python-format
+msgid "Displaying %(numberDisplayed)s of %(total)s total results"
+msgstr "Menampilkan %(numberDisplayed)s dari total hasil %(total)s"
+
+msgid "Distributed"
+msgstr "Distributed"
+
+msgid "Down"
+msgstr "Down"
+
+msgid "Enable DHCP"
+msgstr "Enable DHCP"
+
+msgid "Encrypted"
+msgstr "Encrypted"
+
+msgid "Ephemeral"
+msgstr "Ephemeral"
+
+msgid "Error"
+msgstr "Error"
+
+#, python-format
+msgid "Error initializing actions for plugin %(type)s: "
+msgstr "Kesalahan menginisialisasi tindakan untuk plugin %(type)s: "
+
+msgid "Ether Type"
+msgstr "Ether Type"
+
+msgid "External"
+msgstr "External"
+
+msgid "External Network"
+msgstr "External Network"
+
+msgid "Facets"
+msgstr "Facets"
+
+msgid "Failed"
+msgstr "Failed"
+
+msgid "Fault"
+msgstr "Fault"
+
+msgid "Field Matches"
+msgstr "Field Matches"
+
+msgid ""
+"Find your cloud resources by selecting specific facets or by specifying\n"
+"    full text search queries.\n"
+"    <sl-search-syntax></sl-search-syntax>"
+msgstr ""
+"Temukan cloud resource Anda dengan memilih aspek tertentu atau dengan "
+"menentukan\n"
+"     query pencarian teks lengkap\n"
+"    <sl-search-syntax></sl-search-syntax>"
+
+msgid "Fixed IPs"
+msgstr "Fixed IPs"
+
+msgid "Flavor"
+msgstr "Flavor"
+
+msgid "Flavor ID"
+msgstr "Flavor ID"
+
+msgid "Flavor Name"
+msgstr "Flavor Name"
+
+msgid "Flavors"
+msgstr "Flavors"
+
+msgid "Floating IP"
+msgstr "Floating IP"
+
+msgid "Floating IP Address"
+msgstr "Floating IP Address"
+
+msgid "Floating IPs"
+msgstr "Floating IPs"
+
+msgid "Floating Network ID"
+msgstr "Floating Network ID"
+
+msgid "Full Text Search Syntax"
+msgstr "Full Text Search Syntax"
+
+msgid "Gateway IP"
+msgstr "Gateway IP"
+
+msgid "Grouping"
+msgstr "Grouping"
+
+msgid "Hard Reboot"
+msgstr "Hard Reboot"
+
+msgid "High Availability"
+msgstr "High Availability"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Hostname"
+msgstr "Hostname"
+
+msgid "Hypervisor"
+msgstr "Hypervisor"
+
+msgid "Hypervisors"
+msgstr "Hypervisors"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IP Addresses"
+msgstr "IP Addresses"
+
+msgid "IP Version"
+msgstr "IP Version"
+
+msgid "IPv4 Address Scope"
+msgstr "IPv4 Address Scope"
+
+msgid ""
+"IPv4 addresses may be searched based on ranges and with CIDR\n"
+"            notation."
+msgstr ""
+"Alamat IPv4 dapat dicari berdasarkan rentang dan dengan CIDR\n"
+"             notasi"
+
+msgid "IPv6 Address Mode"
+msgstr "IPv6 Address Mode"
+
+msgid "IPv6 Address Scope"
+msgstr "IPv6 Address Scope"
+
+msgid "IPv6 RA Mode"
+msgstr "IPv6 RA Mode"
+
+msgid ""
+"If the console is not responding to keyboard input, click the status bar in "
+"the screen below."
+msgstr ""
+"Jika konsol tidak merespons masukan keyboard, klik bar status di layar di "
+"bawah ini."
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Image Reference"
+msgstr "Image Reference"
+
+msgid "Instance"
+msgstr "Instance"
+
+msgid "Instance Action Log"
+msgstr "Instance Action Log"
+
+msgid "Instance Console"
+msgstr "Instance Console"
+
+msgid "Instance Console Log"
+msgstr "Instance Console Log"
+
+msgid "Instances"
+msgstr "Instances"
+
+msgid ""
+"It is typically better to filter results further than to increase\n"
+"          the number of returned results and page through them."
+msgstr ""
+"Hal ini biasanya lebih baik untuk menyaring hasil lebih jauh daripada "
+"meningkatkan\n"
+"           jumlah hasil dan halaman yang dikembalikan melalui mereka."
+
+msgid "Key Pair"
+msgstr "Key Pair"
+
+msgid "Key Pair Name"
+msgstr "Key Pair Name"
+
+msgid "Key Pairs"
+msgstr "Key Pairs"
+
+msgid "Killed"
+msgstr "Killed"
+
+msgid "Load Balancer Pool"
+msgstr "Load Balancer Pool"
+
+msgid "Load Balancer Pool Member"
+msgstr "Load Balancer Pool Member"
+
+msgid "Load Balancer Pool Members"
+msgstr "Load Balancer Pool Members"
+
+msgid "Load Balancer Pools"
+msgstr "Load Balancer Pools"
+
+msgid "Loading"
+msgstr "Loading"
+
+msgid "Local GB (total)"
+msgstr "Local GB (total)"
+
+msgid "Log"
+msgstr "Log"
+
+msgid "Log Length"
+msgstr "Log Length"
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Mapped Fixed IP Address"
+msgstr "Mapped Fixed IP Address"
+
+msgid "Max Port"
+msgstr "Max Port"
+
+msgid "Members"
+msgstr "Members"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Metadata"
+msgstr "Metadata"
+
+msgid "Metadata Definition"
+msgstr "Metadata Definition"
+
+msgid "Metadata Definitions"
+msgstr "Metadata Definitions"
+
+msgid "Migrating"
+msgstr "Migrating"
+
+msgid "Min Port"
+msgstr "Min Port"
+
+msgid "More Actions"
+msgstr "More Actions"
+
+msgid "More Actions..."
+msgstr "More Actions..."
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Network"
+msgstr "Network"
+
+msgid "Network Address"
+msgstr "Network Address"
+
+msgid "Network Health Monitor"
+msgstr "Network Health Monitor"
+
+msgid "Network Health Monitors"
+msgstr "Network Health Monitors"
+
+msgid "Network ID"
+msgstr "Network ID"
+
+msgid "Networks"
+msgstr "Networks"
+
+msgid "Newest"
+msgstr "Newest"
+
+msgid "No State"
+msgstr "No State"
+
+msgid "No Volumes Attached"
+msgstr "No Volumes Attached"
+
+msgid "No rules defined"
+msgstr "Tidak ada aturan yang ditentukan"
+
+msgid "Object"
+msgstr "Object"
+
+msgid "Object Account"
+msgstr "Object Account"
+
+msgid "Object Accounts"
+msgstr "Object Accounts"
+
+msgid "Object Container"
+msgstr "Object Container"
+
+msgid "Object Containers"
+msgstr "Object Containers"
+
+msgid "Objects"
+msgstr "Objects"
+
+msgid "Oldest"
+msgstr "Oldest"
+
+msgid "Overview"
+msgstr "Overview"
+
+msgid "Owned by Me"
+msgstr "Owned by Me"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Past 10 Minutes"
+msgstr "Past 10 Minutes"
+
+msgid "Past Day"
+msgstr "Past Day"
+
+msgid "Past Half Hour"
+msgstr "Past Half Hour"
+
+msgid "Past Hour"
+msgstr "Past Hour"
+
+msgid "Past Month"
+msgstr "Past Month"
+
+msgid "Past Week"
+msgstr "Past Week"
+
+msgid "Past Year"
+msgstr "Past Year"
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Pause updates to search results"
+msgstr "Jeda pembaruan untuk hasil pencarian"
+
+msgid "Paused"
+msgstr "Paused"
+
+msgid "Pending"
+msgstr "Pending"
+
+msgid "Pending Delete"
+msgstr "Pending Delete"
+
+msgid "Phrases"
+msgstr "Phrases"
+
+msgid "Please Wait"
+msgstr "Please Wait"
+
+msgid "Policies"
+msgstr "Policies"
+
+msgid "Poll for Updates"
+msgstr "Poll untuk Pembaruan"
+
+msgid ""
+"Polling enables you to create a view of the data the updates\n"
+"          periodically."
+msgstr ""
+"Polling memungkinkan Anda membuat tampilan data pembaruan\n"
+"           secara berkala."
+
+msgid "Pool"
+msgstr "Pool"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Port ID"
+msgstr "Port ID"
+
+msgid "Port Security Enabled"
+msgstr "Port Security Enabled"
+
+msgid "Ports"
+msgstr "Ports"
+
+msgid "Power State"
+msgstr "Power State"
+
+msgid "Project"
+msgstr "Project"
+
+msgid "Project ID"
+msgstr "Project ID"
+
+msgid "Protocol"
+msgstr "Protocol"
+
+msgid "Provider Network Type"
+msgstr "Provider Network Type"
+
+msgid "Provider Physical Network"
+msgstr "Provider Physical Network"
+
+msgid "Provider Segmentation ID"
+msgstr "Provider Segmentation ID"
+
+msgid "Public"
+msgstr "Public"
+
+msgid "Queued"
+msgstr "Queued"
+
+msgid "RAM"
+msgstr "RAM"
+
+msgid "Range Queries"
+msgstr "Range Queries"
+
+msgid "Reboot"
+msgstr "Reboot"
+
+msgid "Rebuild"
+msgstr "Rebuild"
+
+msgid "Refresh"
+msgstr "Refresh"
+
+msgid "Relevancy"
+msgstr "Relevancy"
+
+msgid "Remote"
+msgstr "Remote"
+
+msgid "Request"
+msgstr "Request"
+
+msgid "Rescue"
+msgstr "Rescue"
+
+msgid "Rescued"
+msgstr "Rescued"
+
+msgid "Reserved Characters"
+msgstr "Reserved Characters"
+
+msgid "Resize"
+msgstr "Resize"
+
+msgid "Resize/Migrate"
+msgstr "Resize/Migrate"
+
+msgid "Resized"
+msgstr "Resized"
+
+msgid "Result Limit"
+msgstr "Result Limit"
+
+msgid ""
+"Results exceeds pagination limit. Please refine your search or\n"
+"                increase the limit setting."
+msgstr ""
+"Hasil melebihi batas pagination. Perbaiki pencarian Anda atau\n"
+"                 meningkatkan batas pengaturan"
+
+msgid "Resume"
+msgstr "Resume"
+
+msgid "Resume updates to search results"
+msgstr "Lanjutkan update ke hasil pencarian"
+
+msgid "Reverse Alphabetical Name"
+msgstr "Reverse Alphabetical Name"
+
+msgid "Revert Resize/Migrate"
+msgstr "Revert Resize/Migrate"
+
+msgid "Router"
+msgstr "Router"
+
+msgid "Router ID"
+msgstr "Router ID"
+
+msgid "Routers"
+msgstr "Routers"
+
+msgid "Rules"
+msgstr "Rules"
+
+msgid "Running"
+msgstr "Running"
+
+msgid "Saving"
+msgstr "Saving"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "Search Settings"
+msgstr "Search Settings"
+
+msgid "Search all projects"
+msgstr "Cari semua proyek"
+
+msgid "Security Group"
+msgstr "Security Group"
+
+msgid "Security Groups"
+msgstr "Security Groups"
+
+msgid "Server Group"
+msgstr "Server Group"
+
+msgid "Server Groups"
+msgstr "Server Groups"
+
+msgid "Shared"
+msgstr "Shared"
+
+msgid "Shared by Me"
+msgstr "Shared by Me"
+
+msgid "Shared with Me"
+msgstr "Shared with Me"
+
+msgid "Shelved"
+msgstr "Shelved"
+
+msgid "Shelved Offloaded"
+msgstr "Shelved Offloaded"
+
+msgid "Shutdown"
+msgstr "Shutdown"
+
+msgid "Shutoff"
+msgstr "Shutoff"
+
+msgid "Size"
+msgstr "Size"
+
+#, python-format
+msgid "Snapshot %s was successfully created."
+msgstr "Snapshot %s berhasil dibuat."
+
+msgid "Snapshot ID"
+msgstr "Snapshot ID"
+
+msgid "Snapshot Name"
+msgstr "Snapshot Name"
+
+msgid "Soft Deleted"
+msgstr "Soft Deleted"
+
+msgid "Soft Reboot"
+msgstr "Soft Reboot"
+
+msgid "Sort"
+msgstr "Sort"
+
+msgid "Source Volume ID"
+msgstr "Source Volume ID"
+
+msgid "Specs"
+msgstr "Specs"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Start Time"
+msgstr "Start Time"
+
+msgid "State"
+msgstr "State"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Stopped"
+msgstr "Stopped"
+
+msgid "Subnet"
+msgstr "Subnet"
+
+msgid "Subnet Pool ID"
+msgstr "Subnet Pool ID"
+
+msgid "Subnets"
+msgstr "Subnets"
+
+msgid "Subnets Associated"
+msgstr "Subnets Associated"
+
+msgid "Suspend"
+msgstr "Suspend"
+
+msgid "Suspended"
+msgstr "Suspended"
+
+msgid "Swap"
+msgstr "Swap"
+
+msgid "Task State"
+msgstr "Task State"
+
+msgid "Term Operators"
+msgstr "Term Operators"
+
+msgid "The current query is not valid. Please check your syntax."
+msgstr "Query saat ini tidak valid Silakan periksa sintaks anda"
+
+msgid ""
+"The following characters are reserved and must be\n"
+"            escaped with a leading \\ (backslash):\n"
+"            <code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+msgstr ""
+"Karakter berikut dicadangkan dan harus\n"
+"             diloloskan dengan yang terdepan \\ (backslash):\n"
+"            <code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+
+msgid "The requested resource was not found."
+msgstr "Sumber daya yang diminta tidak ditemukan."
+
+msgid "The search service had an error processing your request."
+msgstr ""
+"Layanan penelusuran mengalami kesalahan saat memproses permintaan Anda."
+
+msgid "There was an error processing your request."
+msgstr "Terdapat kesalahan dalam memproses permintaan anda."
+
+msgid ""
+"These settings impact the processing of results returned\n"
+"          from the search service. Changing these settings may\n"
+"          impact search performance and results."
+msgstr ""
+"Pengaturan ini berdampak pada pengolahan hasil yang dikembalikan\n"
+"           dari layanan pencarian. Mengubah pengaturan ini mungkin\n"
+"           berdampak kinerja dan hasil pencarian."
+
+msgid "Transfer"
+msgstr "Transfer"
+
+msgid "Type"
+msgstr "Type"
+
+#, python-format
+msgid "Unable to delete Instance: %s."
+msgid_plural "Unable to delete Instances: %s."
+msgstr[0] "Unable to delete Instance: %s."
+
+msgid "Unable to execute the search."
+msgstr "Tidak dapat menjalankan pencarian."
+
+msgid "Unable to retrieve Searchlight resources types."
+msgstr "Tidak dapat mengambil jenis sumber Searchlight."
+
+msgid "Unable to retrieve search facets."
+msgstr "Tidak dapat mengambil sisi pencarian."
+
+msgid "Unavailable"
+msgstr "Unavailable"
+
+msgid "Unpause"
+msgstr "Unpause"
+
+msgid "Up"
+msgstr "Up"
+
+msgid "Update Interval (seconds)"
+msgstr "Perbarui Interval (detik)"
+
+msgid "Update Search"
+msgstr "Update Search"
+
+msgid "Updated"
+msgstr "Updated"
+
+msgid "Updated At"
+msgstr "Updated At"
+
+msgid ""
+"Use parenthesis to group different aspects of your\n"
+"            query to form sub-queries. For example, 'web OR (python AND\n"
+"            apache)' will return anything that either has 'web' OR has both\n"
+"            'python' AND 'apache'."
+msgstr ""
+"Gunakan kurung untuk mengelompokkan berbagai aspek \n"
+"             query Anda untuk membentuk sub-query. Misalnya, 'web OR (python "
+"AND\n"
+"             Apache)' akan mengembalikan apapun yang dimiliki 'web' atau "
+"memiliki keduanya\n"
+"             'Python' AND 'apache'."
+
+msgid "User ID"
+msgstr "User ID"
+
+msgid "VCPUs"
+msgstr "VCPUs"
+
+msgid "Visibility"
+msgstr "Visibility"
+
+msgid ""
+"Visibility is based on derived data. If Owned by Me, please inspect the "
+"resource to determine sharing status."
+msgstr ""
+"Visibilitas didasarkan pada data turunan. Jika Owned by Me, mohon periksa "
+"sumber daya untuk menentukan status berbagi (sharing)."
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "Volume Backup"
+msgstr "Volume Backup"
+
+msgid "Volume Backups"
+msgstr "Volume Backups"
+
+msgid "Volume ID"
+msgstr "Volume ID"
+
+msgid "Volume Image Metadata"
+msgstr "Volume Image Metadata"
+
+msgid "Volume Snapshot"
+msgstr "Volume Snapshot"
+
+msgid "Volume Snapshots"
+msgstr "Volume Snapshots"
+
+msgid "Volumes"
+msgstr "Volumes"
+
+msgid "Volumes Attached"
+msgstr "Volumes Attached"
+
+msgid ""
+"Warning: Wildcard queries place\n"
+"            a heavy burden on the search service and may perform poorly."
+msgstr ""
+"Peringatan: Permintaan wildcard menempatkan \n"
+"             beban berat pada layanan pencarian dan mungkin berkinerja buruk."
+
+msgid "Wildcards"
+msgstr "Wildcards"
+
+#, python-format
+msgid "You are not allowed to delete instances: %s"
+msgstr "Anda tidak diizinkan untuk menghapus instances: %s"
+
+msgid "You are not allowed to perform this request."
+msgstr "Anda tidak diizinkan melakukan permintaan ini."
+
+msgid ""
+"You can increase or decrease the relevance of a search\n"
+"            term by boosting different terms, phrases, or groups. Boost one "
+"of\n"
+"            these by adding ^n to the term, phrase, or group where n is a\n"
+"            number greater than 1 to increase relevance and between 0 and 1 "
+"to\n"
+"            decrease relevance. For example 'web^4 python^0.1' would find\n"
+"            anything with both web and python, but would increase the\n"
+"            relevance for anything with 'web' in the result and decrease "
+"the\n"
+"            relevance for anything with 'python' in the result."
+msgstr ""
+"Anda dapat meningkatkan atau mengurangi relevansi pencarian\n"
+"             istilah dengan meningkatkan istilah, frase, atau kelompok yang "
+"berbeda. Tingkatkan satu\n"
+"             ini dengan menambahkan ke istilah, frasa, atau kelompok dimana "
+"n adalah\n"
+"             angka lebih besar dari 1 untuk meningkatkan relevansi dan "
+"antara 0 dan 1 sampai\n"
+"             Menurunkan relevansi. Misalnya 'web^4 python^0,1' akan "
+"ditemukan\n"
+"             apapun dengan web dan python, tapi akan meningkatkan\n"
+"             relevansi untuk apapun dengan 'web' dalam hasil dan penurunan\n"
+"             relevansi untuk apa pun dengan 'python' dalam hasilnya."
+
+msgid ""
+"You can separate search terms and groups with\n"
+"            AND, OR and NOT (also written &&, || and !). For example,\n"
+"            'python OR javascript' will find anything with either term\n"
+"            (OR is used by default, so does not need to be specified).\n"
+"            However, 'python AND javascript' will find things that only "
+"have\n"
+"            both terms. You can do this with as many terms as you'd like (e."
+"g.\n"
+"            'django AND javascript AND !unholy'). It is important to use "
+"all\n"
+"            caps or the alternate syntax (&&, ||), because 'and' will be\n"
+"            treated as another search term, but 'AND' will be treated as a\n"
+"            logical operator."
+msgstr ""
+"Anda dapat memisahkan istilah penelusuran dan grup dengan\n"
+"             AND, OR dan NOT (juga ditulis &&, || and !). Sebagai contoh,\n"
+"             'Python OR javascript' akan menemukan apapun dengan salah satu "
+"istilah\n"
+"             (OR digunakan secara default, jadi tidak perlu ditentukan).\n"
+"             Namun, 'python AND javascript' akan menemukan hal-hal yang "
+"hanya dimiliki\n"
+"             kedua istilah. Anda dapat melakukan ini dengan sebanyak mungkin "
+"istilah yang Anda inginkan (mis.\n"
+"             'django AND javascript AND !unholy'). Penting untuk menggunakan "
+"semua\n"
+"             huruf besar atau sintaks alternatif (&&, ||), karena 'and' akan "
+"menjadi\n"
+"             diperlakukan sebagai istilah pencarian lain, tapi 'AND' akan "
+"diperlakukan sebagai \n"
+"             operator logis."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) "
+"allowed."
+msgstr ""
+"Anda telah melampaui batas maksimum ({$ ctrl.settings.general.limit_max $}) "
+"diizinkan."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.polling.interval_max $}) "
+"allowed."
+msgstr ""
+"Anda telah melampaui batas maksimal ({$ ctrl.settings.polling.interval_max "
+"$}) diizinkan."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.general.limit_min $}) "
+"allowed."
+msgstr ""
+"Anda telah berada di bawah minimum ({$ ctrl.settings.general.limit_min $}) "
+"diizinkan."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.polling.interval_min $}) "
+"allowed."
+msgstr ""
+"Anda telah berada di bawah minimum ({$ ctrl.settings.polling.interval_min "
+"$}) diizinkan."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted instance is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
+msgstr[0] "You have selected \"%s\". Deleted instance is not recoverable."
+
+msgid ""
+"You may decide to only look in a certain field for a\n"
+"            search term by setting a specific facet. This is accomplished "
+"by\n"
+"            either selecting a facet from the drop down or by typing the "
+"facet\n"
+"            manually. For example, if you are looking for an image, you\n"
+"            may choose to only look at the name field by adding 'name:foo'.\n"
+"            You may group facets and use logical operators."
+msgstr ""
+"Anda mungkin memutuskan untuk hanya melihat bidang tertentu untuk\n"
+"             cari istilah dengan menetapkan segi tertentu. Hal ini dilakukan "
+"oleh\n"
+"             pilih salah satu sisi dari drop down atau dengan mengetikkan "
+"faset\n"
+"             secara manual. Misalnya, jika Anda mencari image, Anda\n"
+"             dapat memilih untuk hanya melihat bidang nama dengan "
+"menambahkan 'name: foo'.\n"
+"             Anda dapat mengelompokkan faset dan menggunakan operator logis."
+
+msgid "You must re-authenticate yourself."
+msgstr "Anda harus mengautentikasi diri Anda kembali."
+
+msgid "default"
+msgstr "default"
+
+msgid "from"
+msgstr "DARI"
+
+msgid "to"
+msgstr "ke"
+
+msgid "{$ table.queryResponse.statusCode | slQueryStatus $}"
+msgstr "{$ table.queryResponse.statusCode | slQueryStatus $}"
