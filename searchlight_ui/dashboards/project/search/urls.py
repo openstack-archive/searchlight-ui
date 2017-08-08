@@ -18,6 +18,5 @@ from searchlight_ui.dashboards.project.search import views
 
 
 urlpatterns = [
-    'searchlight_ui.dashboards.project.search.views',
     url(r'^$', views.IndexView.as_view(), name='index'),
 ]
