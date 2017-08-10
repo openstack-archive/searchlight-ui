@@ -93,9 +93,9 @@
 
       //TODO: Recurse up parents to find all IDs when more than one parent
       var ids = [];
-      if (hit._parent) {
-        ids.push(hit._parent);
-      }
+      //if (hit._parent) {
+      //  ids.push(hit._parent.split('_')[0]);
+      //}
       // Be default we want to use the source ID, but fall back to hit._id.
       // Searchlight hit._id may include extra information appended after _.
       ids.push(hit._source.id || hit._id.split('_')[0]);
