@@ -18,4 +18,4 @@ Bugs should be filed on Launchpad, not GitHub:
 Further documentation on feature request and bug report processes may be
 found here:
 
-   http://docs.openstack.org/developer/searchlight/feature-requests-bugs.html
+   https://docs.openstack.org/searchlight/latest/contributor/feature-requests-bugs.html
