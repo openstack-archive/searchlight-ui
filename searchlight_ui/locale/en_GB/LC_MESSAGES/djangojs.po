@@ -1,0 +1,1258 @@
+# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
+# Rob Cresswell <robert.cresswell@outlook.com>, 2015. #zanata
+# Andi Chandler <andi@gowling.com>, 2016. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Rob Cresswell <robert.cresswell@outlook.com>, 2016. #zanata
+# Andi Chandler <andi@gowling.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: searchlight-ui 3.0.1.dev4\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-10-08 18:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-10-13 09:21+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>\n"
+"Language-Team: English (United Kingdom)\n"
+"Language: en-GB\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#, python-format
+msgid "%(resourceType)s: %(searchFacet)s"
+msgstr "%(resourceType)s: %(searchFacet)s"
+
+#, python-format
+msgid "%(total)s total results"
+msgstr "%(total)s total results"
+
+#, python-format
+msgid "(%(doc_count)s)"
+msgstr "(%(doc_count)s)"
+
+msgid "(Extension)"
+msgstr "(Extension)"
+
+msgid "-"
+msgstr "-"
+
+msgid ""
+"A snapshot is an image which preserves the disk state of a running instance."
+msgstr ""
+"A snapshot is an image which preserves the disk state of a running instance."
+
+#, python-format
+msgid "ALLOW %(type)s %(direction)s %(target)s"
+msgstr "ALLOW %(type)s %(direction)s %(target)s"
+
+#, python-format
+msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+msgstr "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
+
+msgid "ANY"
+msgstr "ANY"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "Action Log"
+msgstr "Action Log"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Active"
+msgstr "Active"
+
+msgid ""
+"Add a '+' or a '-' to indicate terms that must or must\n"
+"            not appear. For example '+python -apache web' would find\n"
+"            everything that has 'python' does NOT have 'apache' and should "
+"have\n"
+"            'web'. This may also be used with grouping. For example,\n"
+"            'web -(apache AND python)' would find anything with 'web', but "
+"does\n"
+"            not have either 'apache' or 'python'."
+msgstr ""
+"Add a '+' or a '-' to indicate terms that must or must\n"
+"            not appear. For example '+python -apache web' would find\n"
+"            everything that has 'python' does NOT have 'apache' and should "
+"have\n"
+"            'web'. This may also be used with grouping. For example,\n"
+"            'web -(apache AND python)' would find anything with 'web', but "
+"does\n"
+"            not have either 'apache' or 'python'."
+
+msgid "Address"
+msgstr "Address"
+
+msgid "Addresses"
+msgstr "Addresses"
+
+msgid "Admin State"
+msgstr "Admin State"
+
+msgid "Alphabetical Name"
+msgstr "Alphabetical Name"
+
+msgid "Attached Device"
+msgstr "Attached Device"
+
+msgid "Attached Device ID"
+msgstr "Attached Device ID"
+
+msgid "Attached To"
+msgstr "Attached To"
+
+msgid "Availability Zone"
+msgstr "Availability Zone"
+
+msgid "Availability Zone Hints"
+msgstr "Availability Zone Hints"
+
+msgid "Availability Zones"
+msgstr "Availability Zones"
+
+msgid "Available"
+msgstr "Available"
+
+msgid "Binding Host ID"
+msgstr "Binding Host ID"
+
+msgid "Binding Profile"
+msgstr "Binding Profile"
+
+msgid "Binding VIF Details"
+msgstr "Binding VIF Details"
+
+msgid "Binding VIF Type"
+msgstr "Binding VIF Type"
+
+msgid "Binding VNIC Type"
+msgstr "Binding VNIC Type"
+
+msgid "Blocked"
+msgstr "Blocked"
+
+msgid "Boolean Operators"
+msgstr "Boolean Operators"
+
+msgid "Boosting"
+msgstr "Boosting"
+
+msgid "Bootable"
+msgstr "Bootable"
+
+msgid "Build"
+msgstr "Build"
+
+msgid "Building"
+msgstr "Building"
+
+msgid ""
+"By default, each word you type will be searched for\n"
+"            individually. You may also try to search an exact phrase by\n"
+"            using quotes (\"my phrase\") to surround a phrase. The search\n"
+"            service may allow a certain amount of phrase slop - meaning "
+"that\n"
+"            if you have some words out of order in the phrase it may still\n"
+"            match."
+msgstr ""
+"By default, each word you type will be searched for\n"
+"            individually. You may also try to search an exact phrase by\n"
+"            using quotes (\"my phrase\") to surround a phrase. The search\n"
+"            service may allow a certain amount of phrase slop - meaning "
+"that\n"
+"            if you have some words out of order in the phrase it may still\n"
+"            match."
+
+msgid ""
+"By default, each word you type will match full words\n"
+"            only. You may also use wildcards to match parts of words. "
+"Wildcard\n"
+"            searches can be run on individual terms, using ? to replace a\n"
+"            single character, and * to replace zero or more character. "
+"'demo'\n"
+"            will match the full word 'demo' only. However, 'de*'\n"
+"            will match anything that starts with 'de', such as 'demo_1'.\n"
+"            'de*1' will match\n"
+"            anything that starts with 'de' and ends with '1'."
+msgstr ""
+"By default, each word you type will match full words\n"
+"            only. You may also use wildcards to match parts of words. "
+"Wildcard\n"
+"            searches can be run on individual terms, using ? to replace a\n"
+"            single character, and * to replace zero or more character. "
+"'demo'\n"
+"            will match the full word 'demo' only. However, 'de*'\n"
+"            will match anything that starts with 'de', such as 'demo_1'.\n"
+"            'de*1' will match\n"
+"            anything that starts with 'de' and ends with '1'."
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Chassis UUID"
+msgstr "Chassis UUID"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "Code"
+msgstr "Code"
+
+msgid "Confirm Delete Instance"
+msgid_plural "Confirm Delete Instances"
+msgstr[0] "Confirm Delete Instance"
+msgstr[1] "Confirm Delete Instances"
+
+msgid "Confirm Resize"
+msgstr "Confirm Resize"
+
+msgid "Confirm or Revert Resize/Migrate"
+msgstr "Confirm or Revert Resize/Migrate"
+
+msgid "Connect"
+msgstr "Connect"
+
+msgid "Connect in a new window"
+msgstr "Connect in a new window"
+
+msgid "Consistency Group ID"
+msgstr "Consistency Group ID"
+
+msgid "Console"
+msgstr "Console"
+
+msgid "Console Enabled?"
+msgstr "Console Enabled?"
+
+msgid "Console is currently unavailable. Please try again later."
+msgstr "Console is currently unavailable. Please try again later."
+
+msgid "Crashed"
+msgstr "Crashed"
+
+msgid "Create"
+msgstr "Create"
+
+msgid "Create Instance"
+msgstr "Create Instance"
+
+msgid "Create Instance Snapshot"
+msgstr "Create Instance Snapshot"
+
+msgid "Create Snapshot"
+msgstr "Create Snapshot"
+
+msgid "Created"
+msgstr "Created"
+
+msgid "Created At"
+msgstr "Created At"
+
+msgid "Creating Snapshot"
+msgstr "Creating Snapshot"
+
+msgid "DNS Domain"
+msgstr "DNS Domain"
+
+msgid "DNS Domains"
+msgstr "DNS Domains"
+
+msgid "DNS Name"
+msgstr "DNS Name"
+
+msgid "DNS Nameservers"
+msgstr "DNS Nameservers"
+
+msgid "DNS Record"
+msgstr "DNS Record"
+
+msgid "DNS Records"
+msgstr "DNS Records"
+
+msgid ""
+"Date, numeric or string fields can use range queries.\n"
+"            Use square brackets [min TO max] for inclusive ranges and curly\n"
+"            brackets {min TO max} for exclusive ranges."
+msgstr ""
+"Date, numeric or string fields can use range queries.\n"
+"            Use square brackets [min TO max] for inclusive ranges and curly\n"
+"            brackets {min TO max} for exclusive ranges."
+
+msgid "Default Network"
+msgstr "Default Network"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Delete Instance"
+msgid_plural "Delete Instances"
+msgstr[0] "Delete Instance"
+msgstr[1] "Delete Instances"
+
+msgid "Deleted"
+msgstr "Deleted"
+
+#, python-format
+msgid "Deleted Instance: %s."
+msgid_plural "Deleted Instances: %s."
+msgstr[0] "Deleted Instance: %s."
+msgstr[1] "Deleted Instances: %s."
+
+msgid "Deleting Instance"
+msgid_plural "Deleting Instances"
+msgstr[0] "Deleting Instance"
+msgstr[1] "Deleting Instances"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Description:"
+msgstr "Description:"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Direction"
+msgstr "Direction"
+
+msgid "Disk"
+msgstr "Disk"
+
+msgid "Display field matching"
+msgstr "Display field matching"
+
+#, python-format
+msgid "Displaying %(numberDisplayed)s of %(total)s total results"
+msgstr "Displaying %(numberDisplayed)s of %(total)s total results"
+
+msgid "Distributed"
+msgstr "Distributed"
+
+msgid "Down"
+msgstr "Down"
+
+msgid "Down for Maintenance?"
+msgstr "Down for Maintenance?"
+
+msgid "Enable DHCP"
+msgstr "Enable DHCP"
+
+msgid "Encrypted"
+msgstr "Encrypted"
+
+msgid "Ephemeral"
+msgstr "Ephemeral"
+
+msgid "Error"
+msgstr "Error"
+
+#, python-format
+msgid "Error initializing actions for plugin %(type)s: "
+msgstr "Error initialising actions for plugin %(type)s: "
+
+msgid "Ether Type"
+msgstr "Ether Type"
+
+msgid "External"
+msgstr "External"
+
+msgid "External Network"
+msgstr "External Network"
+
+msgid "Facets"
+msgstr "Facets"
+
+msgid "Failed"
+msgstr "Failed"
+
+msgid "Fault"
+msgstr "Fault"
+
+msgid "Field Matches"
+msgstr "Field Matches"
+
+msgid ""
+"Find your cloud resources by selecting specific facets or by specifying\n"
+"    full text search queries.\n"
+"    <sl-search-syntax></sl-search-syntax>"
+msgstr ""
+"Find your cloud resources by selecting specific facets or by specifying\n"
+"    full text search queries.\n"
+"    <sl-search-syntax></sl-search-syntax>"
+
+msgid "Fixed IPs"
+msgstr "Fixed IPs"
+
+msgid "Flavor"
+msgstr "Flavour"
+
+msgid "Flavor ID"
+msgstr "Flavour ID"
+
+msgid "Flavor Name"
+msgstr "Flavour Name"
+
+msgid "Flavors"
+msgstr "Flavours"
+
+msgid "Floating IP"
+msgstr "Floating IP"
+
+msgid "Floating IP Address"
+msgstr "Floating IP Address"
+
+msgid "Floating IPs"
+msgstr "Floating IPs"
+
+msgid "Floating Network ID"
+msgstr "Floating Network ID"
+
+msgid "Full Text Search Syntax"
+msgstr "Full Text Search Syntax"
+
+msgid "Gateway IP"
+msgstr "Gateway IP"
+
+msgid "Grouping"
+msgstr "Grouping"
+
+msgid "Hard Reboot"
+msgstr "Hard Reboot"
+
+msgid "High Availability"
+msgstr "High Availability"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Hostname"
+msgstr "Hostname"
+
+msgid "Hypervisor"
+msgstr "Hypervisor"
+
+msgid "Hypervisors"
+msgstr "Hypervisors"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IP Addresses"
+msgstr "IP Addresses"
+
+msgid "IP Version"
+msgstr "IP Version"
+
+msgid "IPv4 Address Scope"
+msgstr "IPv4 Address Scope"
+
+msgid ""
+"IPv4 addresses may be searched based on ranges and with CIDR\n"
+"            notation."
+msgstr ""
+"IPv4 addresses may be searched based on ranges and with CIDR\n"
+"            notation."
+
+msgid "IPv6 Address Mode"
+msgstr "IPv6 Address Mode"
+
+msgid "IPv6 Address Scope"
+msgstr "IPv6 Address Scope"
+
+msgid "IPv6 RA Mode"
+msgstr "IPv6 RA Mode"
+
+msgid ""
+"If the console is not responding to keyboard input, click the status bar in "
+"the screen below."
+msgstr ""
+"If the console is not responding to keyboard input, click the status bar in "
+"the screen below."
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Image Reference"
+msgstr "Image Reference"
+
+msgid "Instance"
+msgstr "Instance"
+
+msgid "Instance Action Log"
+msgstr "Instance Action Log"
+
+msgid "Instance Console"
+msgstr "Instance Console"
+
+msgid "Instance Console Log"
+msgstr "Instance Console Log"
+
+msgid "Instance UUID"
+msgstr "Instance UUID"
+
+msgid "Instances"
+msgstr "Instances"
+
+msgid "Ironic Chassis"
+msgstr "Ironic Chassis"
+
+msgid "Ironic Node"
+msgstr "Ironic Node"
+
+msgid "Ironic Nodes"
+msgstr "Ironic Nodes"
+
+msgid "Ironic Port"
+msgstr "Ironic Port"
+
+msgid "Ironic Ports"
+msgstr "Ironic Ports"
+
+msgid ""
+"It is typically better to filter results further than to increase\n"
+"          the number of returned results and page through them."
+msgstr ""
+"It is typically better to filter results further than to increase\n"
+"          the number of returned results and page through them."
+
+msgid "Key Pair"
+msgstr "Key Pair"
+
+msgid "Key Pair Name"
+msgstr "Key Pair Name"
+
+msgid "Key Pairs"
+msgstr "Key Pairs"
+
+msgid "Killed"
+msgstr "Killed"
+
+msgid "Last Error"
+msgstr "Last Error"
+
+msgid "Load Balancer Pool"
+msgstr "Load Balancer Pool"
+
+msgid "Load Balancer Pool Member"
+msgstr "Load Balancer Pool Member"
+
+msgid "Load Balancer Pool Members"
+msgstr "Load Balancer Pool Members"
+
+msgid "Load Balancer Pools"
+msgstr "Load Balancer Pools"
+
+msgid "Local GB (total)"
+msgstr "Local GB (total)"
+
+msgid "Log"
+msgstr "Log"
+
+msgid "Log Length"
+msgstr "Log Length"
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Maintenance Reason"
+msgstr "Maintenance Reason"
+
+msgid "Mapped Fixed IP Address"
+msgstr "Mapped Fixed IP Address"
+
+msgid "Max Port"
+msgstr "Max Port"
+
+msgid "Members"
+msgstr "Members"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Metadata"
+msgstr "Metadata"
+
+msgid "Metadata Definition"
+msgstr "Metadata Definition"
+
+msgid "Metadata Definitions"
+msgstr "Metadata Definitions"
+
+msgid "Migrating"
+msgstr "Migrating"
+
+msgid "Min Port"
+msgstr "Min Port"
+
+msgid "More Actions"
+msgstr "More Actions"
+
+msgid "More Actions..."
+msgstr "More Actions..."
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Network"
+msgstr "Network"
+
+msgid "Network Address"
+msgstr "Network Address"
+
+msgid "Network Health Monitor"
+msgstr "Network Health Monitor"
+
+msgid "Network Health Monitors"
+msgstr "Network Health Monitors"
+
+msgid "Network ID"
+msgstr "Network ID"
+
+msgid "Network Interface"
+msgstr "Network Interface"
+
+msgid "Networks"
+msgstr "Networks"
+
+msgid "Newest"
+msgstr "Newest"
+
+msgid "No"
+msgstr "No"
+
+msgid "No State"
+msgstr "No State"
+
+msgid "No Volumes Attached"
+msgstr "No Volumes Attached"
+
+msgid "No rules defined"
+msgstr "No rules defined"
+
+msgid "Node UUID"
+msgstr "Node UUID"
+
+msgid "Object"
+msgstr "Object"
+
+msgid "Object Account"
+msgstr "Object Account"
+
+msgid "Object Accounts"
+msgstr "Object Accounts"
+
+msgid "Object Container"
+msgstr "Object Container"
+
+msgid "Object Containers"
+msgstr "Object Containers"
+
+msgid "Objects"
+msgstr "Objects"
+
+msgid "Off"
+msgstr "Off"
+
+msgid "Oldest"
+msgstr "Oldest"
+
+msgid "On"
+msgstr "On"
+
+msgid "Overview"
+msgstr "Overview"
+
+msgid "Owned by Me"
+msgstr "Owned by Me"
+
+msgid "PXE Enabled?"
+msgstr "PXE Enabled?"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Past 10 Minutes"
+msgstr "Past 10 Minutes"
+
+msgid "Past Day"
+msgstr "Past Day"
+
+msgid "Past Half Hour"
+msgstr "Past Half Hour"
+
+msgid "Past Hour"
+msgstr "Past Hour"
+
+msgid "Past Month"
+msgstr "Past Month"
+
+msgid "Past Week"
+msgstr "Past Week"
+
+msgid "Past Year"
+msgstr "Past Year"
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Pause updates to search results"
+msgstr "Pause updates to search results"
+
+msgid "Paused"
+msgstr "Paused"
+
+msgid "Pending"
+msgstr "Pending"
+
+msgid "Pending Delete"
+msgstr "Pending Delete"
+
+msgid "Phrases"
+msgstr "Phrases"
+
+msgid "Please Wait"
+msgstr "Please Wait"
+
+msgid "Policies"
+msgstr "Policies"
+
+msgid "Poll for Updates"
+msgstr "Poll for Updates"
+
+msgid ""
+"Polling enables you to create a view of the data the updates\n"
+"          periodically."
+msgstr ""
+"Polling enables you to create a view of the data the updates\n"
+"          periodically."
+
+msgid "Pool"
+msgstr "Pool"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Port ID"
+msgstr "Port ID"
+
+msgid "Port Security Enabled"
+msgstr "Port Security Enabled"
+
+msgid "Ports"
+msgstr "Ports"
+
+msgid "Power State"
+msgstr "Power State"
+
+msgid "Project"
+msgstr "Project"
+
+msgid "Project ID"
+msgstr "Project ID"
+
+msgid "Protocol"
+msgstr "Protocol"
+
+msgid "Provider Network Type"
+msgstr "Provider Network Type"
+
+msgid "Provider Physical Network"
+msgstr "Provider Physical Network"
+
+msgid "Provider Segmentation ID"
+msgstr "Provider Segmentation ID"
+
+msgid "Provisioning State"
+msgstr "Provisioning State"
+
+msgid "Public"
+msgstr "Public"
+
+msgid "Queued"
+msgstr "Queued"
+
+msgid "RAM"
+msgstr "RAM"
+
+msgid "Range Queries"
+msgstr "Range Queries"
+
+msgid "Reboot"
+msgstr "Reboot"
+
+msgid "Rebooting"
+msgstr "Rebooting"
+
+msgid "Rebuild"
+msgstr "Rebuild"
+
+msgid "Refresh"
+msgstr "Refresh"
+
+msgid "Relevancy"
+msgstr "Relevancy"
+
+msgid "Remote"
+msgstr "Remote"
+
+msgid "Request"
+msgstr "Request"
+
+msgid "Rescue"
+msgstr "Rescue"
+
+msgid "Rescued"
+msgstr "Rescued"
+
+msgid "Reserved Characters"
+msgstr "Reserved Characters"
+
+msgid "Resize"
+msgstr "Resize"
+
+msgid "Resize/Migrate"
+msgstr "Resize/Migrate"
+
+msgid "Resized"
+msgstr "Resized"
+
+msgid "Result Limit"
+msgstr "Result Limit"
+
+msgid ""
+"Results exceeds pagination limit. Please refine your search or\n"
+"                increase the limit setting."
+msgstr ""
+"Results exceeds pagination limit. Please refine your search or\n"
+"                increase the limit setting."
+
+msgid "Resume"
+msgstr "Resume"
+
+msgid "Resume updates to search results"
+msgstr "Resume updates to search results"
+
+msgid "Reverse Alphabetical Name"
+msgstr "Reverse Alphabetical Name"
+
+msgid "Revert Resize/Migrate"
+msgstr "Revert Resize/Migrate"
+
+msgid "Router"
+msgstr "Router"
+
+msgid "Router ID"
+msgstr "Router ID"
+
+# #-#-#-#-#  intro_networking_components.pot (Networking Guide 0.9)  #-#-#-#-#
+# #-#-#-#-#  intro_os_networking_overview.pot (Networking Guide 0.9)
+# #-#-#-#-#
+# #-#-#-#-#  scenario_legacy_lb.pot (Networking Guide 0.9)  #-#-#-#-#
+# #-#-#-#-#  scenario_legacy_ovs.pot (Networking Guide 0.9)  #-#-#-#-#
+msgid "Routers"
+msgstr "Routers"
+
+msgid "Rules"
+msgstr "Rules"
+
+msgid "Running"
+msgstr "Running"
+
+msgid "Saving"
+msgstr "Saving"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "Search Settings"
+msgstr "Search Settings"
+
+msgid "Search all projects"
+msgstr "Search all projects"
+
+msgid "Security Group"
+msgstr "Security Group"
+
+msgid "Security Groups"
+msgstr "Security Groups"
+
+msgid "Server Group"
+msgstr "Server Group"
+
+msgid "Server Groups"
+msgstr "Server Groups"
+
+msgid "Shared"
+msgstr "Shared"
+
+msgid "Shared by Me"
+msgstr "Shared by Me"
+
+msgid "Shared with Me"
+msgstr "Shared with Me"
+
+msgid "Shelved"
+msgstr "Shelved"
+
+msgid "Shelved Offloaded"
+msgstr "Shelved Offloaded"
+
+msgid "Shutdown"
+msgstr "Shutdown"
+
+msgid "Shutoff"
+msgstr "Shutoff"
+
+msgid "Size"
+msgstr "Size"
+
+#, python-format
+msgid "Snapshot %s was successfully created."
+msgstr "Snapshot %s was successfully created."
+
+msgid "Snapshot ID"
+msgstr "Snapshot ID"
+
+msgid "Snapshot Name"
+msgstr "Snapshot Name"
+
+msgid "Soft Deleted"
+msgstr "Soft Deleted"
+
+msgid "Soft Reboot"
+msgstr "Soft Reboot"
+
+msgid "Sort"
+msgstr "Sort"
+
+msgid "Source Volume ID"
+msgstr "Source Volume ID"
+
+msgid "Specs"
+msgstr "Specs"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Start Time"
+msgstr "Start Time"
+
+msgid "State"
+msgstr "State"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Stopped"
+msgstr "Stopped"
+
+msgid "Subnet"
+msgstr "Subnet"
+
+msgid "Subnet Pool ID"
+msgstr "Subnet Pool ID"
+
+msgid "Subnets"
+msgstr "Subnets"
+
+msgid "Subnets Associated"
+msgstr "Subnets Associated"
+
+msgid "Suspend"
+msgstr "Suspend"
+
+msgid "Suspended"
+msgstr "Suspended"
+
+msgid "Swap"
+msgstr "Swap"
+
+msgid "Target Power State"
+msgstr "Target Power State"
+
+msgid "Target Provisioning State"
+msgstr "Target Provisioning State"
+
+msgid "Task State"
+msgstr "Task State"
+
+msgid "Term Operators"
+msgstr "Term Operators"
+
+msgid "The current query is not valid. Please check your syntax."
+msgstr "The current query is not valid. Please check your syntax."
+
+msgid ""
+"The following characters are reserved and must be\n"
+"            escaped with a leading \\ (backslash):\n"
+"            <code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+msgstr ""
+"The following characters are reserved and must be\n"
+"            escaped with a leading \\ (backslash):\n"
+"            <code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+
+msgid "The requested resource was not found."
+msgstr "The requested resource was not found."
+
+msgid "The search service had an error processing your request."
+msgstr "The search service had an error processing your request."
+
+msgid "There was an error processing your request."
+msgstr "There was an error processing your request."
+
+msgid ""
+"These settings impact the processing of results returned\n"
+"          from the search service. Changing these settings may\n"
+"          impact search performance and results."
+msgstr ""
+"These settings impact the processing of results returned\n"
+"          from the search service. Changing these settings may\n"
+"          impact search performance and results."
+
+msgid "Transfer"
+msgstr "Transfer"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "UUID"
+msgstr "UUID"
+
+#, python-format
+msgid "Unable to delete Instance: %s."
+msgid_plural "Unable to delete Instances: %s."
+msgstr[0] "Unable to delete Instance: %s."
+msgstr[1] "Unable to delete Instances: %s."
+
+msgid "Unable to execute the search."
+msgstr "Unable to execute the search."
+
+msgid "Unable to retrieve Searchlight resources types."
+msgstr "Unable to retrieve Searchlight resources types."
+
+msgid "Unable to retrieve search facets."
+msgstr "Unable to retrieve search facets."
+
+msgid "Unavailable"
+msgstr "Unavailable"
+
+msgid "Unpause"
+msgstr "Unpause"
+
+msgid "Up"
+msgstr "Up"
+
+msgid "Update Interval (seconds)"
+msgstr "Update Interval (seconds)"
+
+msgid "Update Search"
+msgstr "Update Search"
+
+msgid "Updated"
+msgstr "Updated"
+
+msgid "Updated At"
+msgstr "Updated At"
+
+msgid ""
+"Use parenthesis to group different aspects of your\n"
+"            query to form sub-queries. For example, 'web OR (python AND\n"
+"            apache)' will return anything that either has 'web' OR has both\n"
+"            'python' AND 'apache'."
+msgstr ""
+"Use parenthesis to group different aspects of your\n"
+"            query to form sub-queries. For example, 'web OR (python AND\n"
+"            apache)' will return anything that either has 'web' OR has both\n"
+"            'python' AND 'apache'."
+
+msgid "User ID"
+msgstr "User ID"
+
+msgid "VCPUs"
+msgstr "VCPUs"
+
+msgid "Visibility"
+msgstr "Visibility"
+
+msgid ""
+"Visibility is based on derived data. If Owned by Me, please inspect the "
+"resource to determine sharing status."
+msgstr ""
+"Visibility is based on derived data. If Owned by Me, please inspect the "
+"resource to determine sharing status."
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "Volume Backup"
+msgstr "Volume Backup"
+
+msgid "Volume Backups"
+msgstr "Volume Backups"
+
+msgid "Volume ID"
+msgstr "Volume ID"
+
+msgid "Volume Image Metadata"
+msgstr "Volume Image Metadata"
+
+msgid "Volume Snapshot"
+msgstr "Volume Snapshot"
+
+msgid "Volume Snapshots"
+msgstr "Volume Snapshots"
+
+msgid "Volumes"
+msgstr "Volumes"
+
+msgid "Volumes Attached"
+msgstr "Volumes Attached"
+
+msgid ""
+"Warning: Wildcard queries place\n"
+"            a heavy burden on the search service and may perform poorly."
+msgstr ""
+"Warning: Wildcard queries place\n"
+"            a heavy burden on the search service and may perform poorly."
+
+msgid "Wildcards"
+msgstr "Wildcards"
+
+msgid "Yes"
+msgstr "Yes"
+
+#, python-format
+msgid "You are not allowed to delete instances: %s"
+msgstr "You are not allowed to delete instances: %s"
+
+msgid "You are not allowed to perform this request."
+msgstr "You are not allowed to perform this request."
+
+msgid ""
+"You can increase or decrease the relevance of a search\n"
+"            term by boosting different terms, phrases, or groups. Boost one "
+"of\n"
+"            these by adding ^n to the term, phrase, or group where n is a\n"
+"            number greater than 1 to increase relevance and between 0 and 1 "
+"to\n"
+"            decrease relevance. For example 'web^4 python^0.1' would find\n"
+"            anything with both web and python, but would increase the\n"
+"            relevance for anything with 'web' in the result and decrease "
+"the\n"
+"            relevance for anything with 'python' in the result."
+msgstr ""
+"You can increase or decrease the relevance of a search\n"
+"            term by boosting different terms, phrases, or groups. Boost one "
+"of\n"
+"            these by adding ^n to the term, phrase, or group where n is a\n"
+"            number greater than 1 to increase relevance and between 0 and 1 "
+"to\n"
+"            decrease relevance. For example 'web^4 python^0.1' would find\n"
+"            anything with both web and python, but would increase the\n"
+"            relevance for anything with 'web' in the result and decrease "
+"the\n"
+"            relevance for anything with 'python' in the result."
+
+msgid ""
+"You can separate search terms and groups with\n"
+"            AND, OR and NOT (also written &&, || and !). For example,\n"
+"            'python OR javascript' will find anything with either term\n"
+"            (OR is used by default, so does not need to be specified).\n"
+"            However, 'python AND javascript' will find things that only "
+"have\n"
+"            both terms. You can do this with as many terms as you'd like (e."
+"g.\n"
+"            'django AND javascript AND !unholy'). It is important to use "
+"all\n"
+"            caps or the alternate syntax (&&, ||), because 'and' will be\n"
+"            treated as another search term, but 'AND' will be treated as a\n"
+"            logical operator."
+msgstr ""
+"You can separate search terms and groups with\n"
+"            AND, OR and NOT (also written &&, || and !). For example,\n"
+"            'python OR javascript' will find anything with either term\n"
+"            (OR is used by default, so does not need to be specified).\n"
+"            However, 'python AND javascript' will find things that only "
+"have\n"
+"            both terms. You can do this with as many terms as you'd like (e."
+"g.\n"
+"            'django AND javascript AND !unholy'). It is important to use "
+"all\n"
+"            caps or the alternate syntax (&&, ||), because 'and' will be\n"
+"            treated as another search term, but 'AND' will be treated as a\n"
+"            logical operator."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) "
+"allowed."
+msgstr ""
+"You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) "
+"allowed."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.polling.interval_max $}) "
+"allowed."
+msgstr ""
+"You have exceeded the maximum ({$ ctrl.settings.polling.interval_max $}) "
+"allowed."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.general.limit_min $}) "
+"allowed."
+msgstr ""
+"You have gone below the minimum ({$ ctrl.settings.general.limit_min $}) "
+"allowed."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.polling.interval_min $}) "
+"allowed."
+msgstr ""
+"You have gone below the minimum ({$ ctrl.settings.polling.interval_min $}) "
+"allowed."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted instance is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
+msgstr[0] "You have selected \"%s\". Deleted instance is not recoverable."
+msgstr[1] "You have selected \"%s\". Deleted instances are not recoverable."
+
+msgid ""
+"You may decide to only look in a certain field for a\n"
+"            search term by setting a specific facet. This is accomplished "
+"by\n"
+"            either selecting a facet from the drop down or by typing the "
+"facet\n"
+"            manually. For example, if you are looking for an image, you\n"
+"            may choose to only look at the name field by adding 'name:foo'.\n"
+"            You may group facets and use logical operators."
+msgstr ""
+"You may decide to only look in a certain field for a\n"
+"            search term by setting a specific facet. This is accomplished "
+"by\n"
+"            either selecting a facet from the drop down or by typing the "
+"facet\n"
+"            manually. For example, if you are looking for an image, you\n"
+"            may choose to only look at the name field by adding 'name:foo'.\n"
+"            You may group facets and use logical operators."
+
+msgid "You must re-authenticate yourself."
+msgstr "You must re-authenticate yourself."
+
+msgid "default"
+msgstr "default"
+
+msgid "from"
+msgstr "from"
+
+msgid "to"
+msgstr "to"
+
+msgid "{$ table.queryResponse.statusCode | slQueryStatus $}"
+msgstr "{$ table.queryResponse.statusCode | slQueryStatus $}"
