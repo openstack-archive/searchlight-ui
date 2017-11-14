@@ -17,9 +17,9 @@
 # vuuv <froms2008@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: searchlight-ui 2.0.0.0rc2.dev2\n"
+"Project-Id-Version: searchlight-ui 2.0.1.dev4\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-02-09 17:41+0000\n"
+"POT-Creation-Date: 2017-10-08 21:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Last-Translator: vuuv <froms2008@gmail.com>\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh-CN\n"
-"X-Generator: Zanata 3.7.3\n"
+"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 #, python-format
@@ -535,9 +535,6 @@ msgstr "负载均衡池成员"
 
 msgid "Load Balancer Pools"
 msgstr "负载均衡池"
-
-msgid "Loading"
-msgstr "加载中"
 
 msgid "Local GB (total)"
 msgstr "本地盘GB（总计）"
