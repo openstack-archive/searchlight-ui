@@ -23,10 +23,6 @@ set +o xtrace
 # Set up default repos
 
 
-# Tell Tempest this project is present
-TEMPEST_SERVICES+=,searchlight-ui
-
-
 function install_searchlight_ui {
     # NOTE(From magnum_ui): workaround for devstack bug: 1540328
     # where devstack install 'test-requirements' but should not do it
