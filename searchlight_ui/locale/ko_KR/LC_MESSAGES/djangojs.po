@@ -11,19 +11,20 @@
 # SeongSoo Cho <nexusz99@gmail.com>, 2017. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2017. #zanata
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
+# Jaewook Oh <kyle.oh95@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: searchlight-ui 3.0.0.0b4.dev4\n"
+"Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-08-10 15:18+0000\n"
+"POT-Creation-Date: 2018-02-20 19:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-10 10:38+0000\n"
-"Last-Translator: minwook-shin <minwook0106@gmail.com>\n"
+"PO-Revision-Date: 2018-03-12 12:10+0000\n"
+"Last-Translator: Jaewook Oh <kyle.oh95@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
-"Language: ko-KR\n"
-"X-Generator: Zanata 3.9.6\n"
+"Language: ko_KR\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 #, python-format
@@ -137,6 +138,44 @@ msgstr "Build"
 
 msgid "Building"
 msgstr "Building"
+
+msgid ""
+"By default, each word you type will be searched for\n"
+"            individually. You may also try to search an exact phrase by\n"
+"            using quotes (\"my phrase\") to surround a phrase. The search\n"
+"            service may allow a certain amount of phrase slop - meaning "
+"that\n"
+"            if you have some words out of order in the phrase it may still\n"
+"            match."
+msgstr ""
+"기본적으로, 입력되는 모든 단어는 개별적으로 검색됩니다.\n"
+"          (\"my phrase\")와 같이 문구를 따옴표로 둘러싸서\n"
+"          정확한 문구로 검색할 수 있습니다. 검색 서비스는\n"
+"          특정한 양의 구문 슬롭을 허용할 수 있고, 이는\n"
+"          몇몇 단어가 순서에 맞지 않더라도 검색될 수\n"
+"          있다는 것을 의미합니다."
+
+msgid ""
+"By default, each word you type will match full words\n"
+"            only. You may also use wildcards to match parts of words. "
+"Wildcard\n"
+"            searches can be run on individual terms, using ? to replace a\n"
+"            single character, and * to replace zero or more character. "
+"'demo'\n"
+"            will match the full word 'demo' only. However, 'de*'\n"
+"            will match anything that starts with 'de', such as 'demo_1'.\n"
+"            'de*1' will match\n"
+"            anything that starts with 'de' and ends with '1'."
+msgstr ""
+"기본적으로, 입력되는 모든 단어는 전체 단어와 매칭됩니다.\n"
+"          단어의 일부분을 매칭하기 위해 와일드카드 사용이 가능합니다.\n"
+"          한 글자를 대체하기 위한 ? 사용과 0 이상의 글자를 대체하는 *을\n"
+"          사용함으로서 와일드카드 검색은 개별 용어로 실행이 가능합니다.\n"
+"          'demo'는 전체 단어인 'demo'만 매칭될 것입니다.\n"
+"          어쨌든, 'de'는 'de'로 시작하는 'demo_1'와 같은 모든 단어와 매칭될\n"
+"           것입니다. 'de*1'는 'de'로 시작하고 '1'로 끝나는 모든 단어와 매칭"
+"될\n"
+"           것입니다."
 
 msgid "Cancel"
 msgstr "취소"
@@ -265,6 +304,9 @@ msgstr "분산"
 
 msgid "Down"
 msgstr "Down"
+
+msgid "Down for Maintenance?"
+msgstr "유지보수를 위해 다운하겠습니까?"
 
 msgid "Enable DHCP"
 msgstr "DHCP 사용"
@@ -413,6 +455,13 @@ msgstr "Ironic 포트"
 
 msgid "Ironic Ports"
 msgstr "Ironic 포트"
+
+msgid ""
+"It is typically better to filter results further than to increase\n"
+"          the number of returned results and page through them."
+msgstr ""
+"일반적으로 반환된 결과와 페이지의 수를\n"
+"          늘리는 것보다 결과를 필터하는 것이 좋습니다."
 
 msgid "Key Pair"
 msgstr "키 페어"
@@ -564,6 +613,9 @@ msgstr "개요"
 msgid "Owned by Me"
 msgstr "내가 소유함"
 
+msgid "PXE Enabled?"
+msgstr "PXE가 활성화되어 있습니까?"
+
 msgid "Password"
 msgstr "암호"
 
@@ -611,6 +663,13 @@ msgstr "정책"
 
 msgid "Poll for Updates"
 msgstr "업데이트 받아오기"
+
+msgid ""
+"Polling enables you to create a view of the data the updates\n"
+"          periodically."
+msgstr ""
+"폴링으로 주기적인 업데이트 데이터 뷰 생성을\n"
+"          할 수 있습니다."
 
 msgid "Pool"
 msgstr "Pool"
@@ -859,6 +918,15 @@ msgstr "검색 서비스에 요청을 처리 중 에러가 발생했습니다."
 msgid "There was an error processing your request."
 msgstr "요청을 처리중에 에러가 발생했습니다."
 
+msgid ""
+"These settings impact the processing of results returned\n"
+"          from the search service. Changing these settings may\n"
+"          impact search performance and results."
+msgstr ""
+"이러한 설정들은 검색 서비스에서 반환된 결과 처리에\n"
+"          영향을 끼칩니다. 이러한 설정 변경은\n"
+"          검색 성능과 결과에 영향을 끼칠 수 있습니다."
+
 msgid "Transfer"
 msgstr " "
 
@@ -951,6 +1019,29 @@ msgstr "%s 인스턴스 삭제할 수 있는 권한이 없습니다."
 
 msgid "You are not allowed to perform this request."
 msgstr "해당 요청에 대한 권한이 없습니다."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) "
+"allowed."
+msgstr ""
+"허용되는 최대값 ({$ ctrl.settings.general.limit_max $}) 을 초과하였습니다."
+
+msgid ""
+"You have exceeded the maximum ({$ ctrl.settings.polling.interval_max $}) "
+"allowed."
+msgstr ""
+"허용되는 최대값 ({$ ctrl.settings.polling.interval_max $})을 초과하였습니다."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.general.limit_min $}) "
+"allowed."
+msgstr "허용되는 최소 ({$ ctrl.settings.general.limit_min $})보다 아래입니다."
+
+msgid ""
+"You have gone below the minimum ({$ ctrl.settings.polling.interval_min $}) "
+"allowed."
+msgstr ""
+"허용되는 최소값 ({$ ctrl.settings.polling.interval_min $})보다 아래입니다."
 
 #, python-format
 msgid "You have selected \"%s\". Deleted instance is not recoverable."
