@@ -182,7 +182,7 @@
         newMust.query_string = queryString;
       } else {
         // Treat all facets just like query string syntax allowing input to
-        // support a lot of the the same goodness as full text search, just
+        // support a lot of the same goodness as full text search, just
         // limiting to selected facet. Don't try to do anything smart here
         // let the server sort it out.
         queryString = {
