@@ -17,6 +17,7 @@ Horizon panels and libraries for searchlight
 * Documentation: https://docs.openstack.org/searchlight-ui/latest/
 * Source: http://git.openstack.org/cgit/openstack/searchlight-ui
 * Bugs: https://bugs.launchpad.net/searchlight
+* Release notes: https://docs.openstack.org/releasenotes/searchlight-ui/
 
 The Searchlight project provides indexing and search capabilities across
 OpenStack resources. Its goal is to achieve high performance and flexible
