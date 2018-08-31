@@ -15,9 +15,10 @@
       under the License.
 
 Welcome to searchlight-ui's documentation!
-========================================================
+==========================================
 
-Contents:
+Contents
+--------
 
 .. toctree::
    :maxdepth: 2
@@ -27,7 +28,7 @@ Contents:
    contributing
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
