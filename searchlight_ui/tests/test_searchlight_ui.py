@@ -22,7 +22,5 @@ Tests for `searchlight_ui` module.
 from searchlight_ui.tests import base
 
 
-class Test_Searchlight_ui(base.TestCase):
-
-    def test_something(self):
-        pass
+class TestSearchlightUI(base.TestCase):
+    pass
