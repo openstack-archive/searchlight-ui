@@ -17,14 +17,22 @@
 Welcome to searchlight-ui's documentation!
 ==========================================
 
+The Searchlight project provides indexing and search capabilities across
+OpenStack resources. Its goal is to achieve high performance and flexible
+querying combined with near real-time indexing.
+
 Contents
 --------
 
 .. toctree::
    :maxdepth: 2
 
-   readme
+   horizon
    installation
+   devstack
+   dev
+   local
+   npm
    contributing
 
 Indices and tables
