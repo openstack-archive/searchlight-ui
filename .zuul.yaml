@@ -5,8 +5,6 @@
       - publish-openstack-docs-pti
       - check-requirements
       - release-notes-jobs-python3
-      - publish-to-pypi-horizon
-      - translation-jobs-master-stable
     check:
       jobs:
         - nodejs-npm-run-lint:
