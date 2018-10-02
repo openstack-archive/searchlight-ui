@@ -13,14 +13,14 @@
     "karma": "1.1.2",
     "karma-chrome-launcher": "1.0.1",
     "karma-cli": "1.0.1",
-    "karma-coverage": "1.1.1",
+    "karma-coverage": "^1.1.2",
     "karma-jasmine": "1.0.2",
     "karma-ng-html2js-preprocessor": "1.0.0",
-    "karma-phantomjs-launcher": "0.2.0",
     "karma-threshold-reporter": "0.1.15"
   },
   "scripts": {
-    "test": "tox -evenv --notest; karma start searchlight_ui/karma.conf.js --single-run",
+    "postinstall": "if [ ! -d .tox ] || [ ! -d .tox/npm ]; then tox -e npm --notest; python3 -m pip install -U -t ./.tox/npm/lib/`python3 -V|tr -d ' '|tr 'P' 'p'|cut -c -9`/site-packages/ -chttps://git.openstack.org/cgit/openstack/requirements/plain/upper-constraints.txt ../horizon; fi",
+    "test": "karma start searchlight_ui/karma.conf.js --single-run",
     "lint": "eslint --no-color searchlight_ui/static"
   },
   "dependencies": {}

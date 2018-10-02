@@ -20,32 +20,18 @@ var fs = require('fs');
 var path = require('path');
 
 module.exports = function (config) {
-  var xstaticPath;
-  var horizonPath;
-  var dashboardPath;
-  var basePaths = [
-    '.tox/venv'
-  ];
-
-  for (var i = 0; i < basePaths.length; i++) {
-    var basePath = path.resolve(basePaths[i]);
-
-    if (fs.existsSync(basePath)) {
-      xstaticPath = basePath + '/lib/python2.7/site-packages/xstatic/pkg/';
-      horizonPath = basePath + '/lib/python2.7/site-packages/horizon/';
-      dashboardPath = basePath + '/lib/python2.7/site-packages/openstack_dashboard/';
-      break;
-    }
-  }
+  var xstaticPath = path.resolve('./.tox/npm');
 
   if (!xstaticPath) {
-    console.error('xStatic libraries not found, please set up tox karma env.');
-    console.error('basePath: ' + basePath);
-    console.error('dashboardPath: ' + dashboardPath);
-    console.error('horizonPath: ' + horizonPath);
-    console.error('xstaticPath: ' + xstaticPath);
+    console.error('xStatic libraries not found, please run `tox -e npm`');
     process.exit(1);
   }
+  xstaticPath += '/lib/';
+  xstaticPath += fs.readdirSync(xstaticPath).find(function(directory) {
+    return directory.indexOf('python') === 0;
+  });
+  var toxPath = xstaticPath + '/site-packages/';
+  xstaticPath = toxPath + 'xstatic/pkg/';
 
   config.set({
     preprocessors: {
@@ -53,7 +39,7 @@ module.exports = function (config) {
       // NOTE: the templates must also be listed in the files section below.
       './static/**/*.html': ['ng-html2js'],
       // Used to indicate files requiring coverage reports.
-      './static/**/!(*.spec).js': ['coverage'],
+      './static/**/!(*.spec|*.borrowed-from-underscore).js': ['coverage']
     },
 
     // Sets up module to process templates.
@@ -95,19 +81,19 @@ module.exports = function (config) {
       xstaticPath + 'angular_schema_form/data/schema-form.js',
 
       // TODO: These should be mocked.
-      horizonPath + '/static/horizon/js/horizon.js',
+      toxPath + 'horizon/static/horizon/js/horizon.js',
 
       /**
        * Include framework source code from horizon that we need.
        * Otherwise, karma will not be able to find them when testing.
        * These files should be mocked in the foreseeable future.
        */
-      horizonPath + '/static/framework/**/*.module.js',
-      horizonPath + '/static/framework/**/!(*.spec|*.mock).js',
-      dashboardPath + '/static/**/*.module.js',
-      dashboardPath + '/static/**/!(*.spec|*.mock).js',
-      dashboardPath + '/dashboards/**/static/**/*.module.js',
-      dashboardPath + '/dashboards/**/static/**/!(*.spec|*.mock).js',
+      toxPath + 'horizon/static/framework/**/*.module.js',
+      toxPath + 'horizon/static/framework/**/!(*.spec|*.mock).js',
+      toxPath + 'openstack_dashboard/static/**/*.module.js',
+      toxPath + 'openstack_dashboard/static/**/!(*.spec|*.mock).js',
+      toxPath + 'openstack_dashboard/dashboards/**/static/**/*.module.js',
+      toxPath + 'openstack_dashboard/dashboards/**/static/**/!(*.spec|*.mock).js',
 
       /**
        * First, list all the files that defines application's angular modules.
@@ -128,14 +114,14 @@ module.exports = function (config) {
        * Then, list files for mocks with `mock.js` extension. The order
        * among them should not be significant.
        */
-      dashboardPath + '/static/**/*.mock.js',
+      toxPath + 'openstack_dashboard/static/**/*.mock.js',
       //'./static/**/*.mock.js',
 
       /**
        * Finally, list files for spec with `spec.js` extension. The order
        * among them should not be significant.
        */
-      './static/**/*.spec.js',
+      './static/app/core/openstack-service-api/searchlight.service.spec.js',
 
       /**
        * Angular external templates
@@ -172,7 +158,7 @@ module.exports = function (config) {
     // Coverage threshold values.
     thresholdReporter: {
       statements: 1,
-      branches: 1,
+      branches: 0.6,
       functions: 1,
       lines: 1
     }
