@@ -96,7 +96,7 @@
      */
     function getPlugins() {
       return apiService.get('/api/searchlight/plugins/')
-        .error(function () {
+        .catch(function () {
           toastService.add('error', gettext('Unable to retrieve Searchlight resources types.'));
         });
     }
@@ -124,7 +124,7 @@
       var config = (params) ? {'params': params} : {};
       var promise = apiService.get('/api/searchlight/facets/', config);
 
-      return suppressToast ? promise : promise.error(function () {
+      return suppressToast ? promise : promise.catch(function () {
         toastService.add('error', gettext('Unable to retrieve search facets.'));
       });
     }
