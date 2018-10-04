@@ -25,7 +25,6 @@ pip-log.txt
 # Unit test / coverage reports
 .coverage
 .tox
-nosetests.xml
 .stestr/
 .venv
 node_modules
@@ -36,6 +35,8 @@ npm-shrinkwrap.json
 # files created in testing
 searchlight_ui/tests/.secret_key_store
 *.lock
+package-lock.json
+npm-debug.log
 
 #Files created by releasenotes build
 releasenotes/build
