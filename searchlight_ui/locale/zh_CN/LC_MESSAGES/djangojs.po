@@ -5,8 +5,6 @@
 # Jeremy Liu <liujiong@gohighsec.com>, 2016. #zanata
 # Linda <duleish@cn.ibm.com>, 2016. #zanata
 # Tony <tfu@redhat.com>, 2016. #zanata
-# Wu Han <wu.han@h3c.com>, 2016. #zanata
-# Yu Long <yulongxn@163.com>, 2016. #zanata
 # hanchao <han.chaoB@h3c.com>, 2016. #zanata
 # liuyanfu <lyf219@163.com>, 2016. #zanata
 # maoshuai <fwsakura@163.com>, 2016. #zanata
@@ -19,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-20 19:20+0000\n"
+"POT-Creation-Date: 2018-10-05 01:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,26 +46,9 @@ msgstr "（扩展）"
 msgid "-"
 msgstr "-"
 
-msgid ""
-"A snapshot is an image which preserves the disk state of a running instance."
-msgstr "快照是保存了运行中实例的磁盘状态的映像。"
-
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "允许%(type)s %(direction)s %(target)s"
-
-#, python-format
-msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
-msgstr "允许 %(type)s %(ports)s %(direction)s %(target)s"
-
-msgid "ANY"
-msgstr "任意选项"
-
-msgid "Action"
-msgstr "Action"
-
-msgid "Action Log"
-msgstr "操作日志"
 
 msgid "Actions"
 msgstr "行为。"
@@ -93,9 +74,6 @@ msgstr ""
 "排除含有 'apache' 和 'python' 两者之一的内容。"
 
 msgid "Address"
-msgstr "地址"
-
-msgid "Addresses"
 msgstr "地址"
 
 msgid "Admin State"
@@ -140,9 +118,6 @@ msgstr "绑定VIF类型"
 msgid "Binding VNIC Type"
 msgstr "绑定VNIC类型"
 
-msgid "Blocked"
-msgstr "阻塞"
-
 msgid "Boolean Operators"
 msgstr "布尔操作符"
 
@@ -154,9 +129,6 @@ msgstr "可启动"
 
 msgid "Build"
 msgstr "创建"
-
-msgid "Building"
-msgstr "构建中"
 
 msgid ""
 "By default, each word you type will be searched for\n"
@@ -197,60 +169,17 @@ msgstr "机架UUID"
 msgid "Close"
 msgstr "关闭"
 
-msgid "Code"
-msgstr "编码"
-
-msgid "Confirm Delete Instance"
-msgid_plural "Confirm Delete Instances"
-msgstr[0] "确认删除实例"
-
-msgid "Confirm Resize"
-msgstr "确认调整大小"
-
-msgid "Confirm or Revert Resize/Migrate"
-msgstr "确认或放弃调整大小/迁移"
-
-msgid "Connect"
-msgstr "连接"
-
-msgid "Connect in a new window"
-msgstr "在新窗口连接"
-
 msgid "Consistency Group ID"
 msgstr "一致性组ID"
 
-msgid "Console"
-msgstr "控制台"
-
 msgid "Console Enabled?"
 msgstr "是否使能控制台？"
-
-msgid "Console is currently unavailable. Please try again later."
-msgstr "当前控制台不可用，请稍后重试。"
-
-msgid "Crashed"
-msgstr "崩溃"
-
-msgid "Create"
-msgstr "创建"
-
-msgid "Create Instance"
-msgstr "创建实例"
-
-msgid "Create Instance Snapshot"
-msgstr "创建实例快照"
-
-msgid "Create Snapshot"
-msgstr "创建快照"
 
 msgid "Created"
 msgstr "创建时间"
 
 msgid "Created At"
 msgstr "创建于"
-
-msgid "Creating Snapshot"
-msgstr "创建快照"
 
 msgid "DNS Domain"
 msgstr "DNS 域"
@@ -282,33 +211,11 @@ msgstr ""
 msgid "Default Network"
 msgstr "默认网络"
 
-msgid "Delete"
-msgstr "删除"
-
-msgid "Delete Instance"
-msgid_plural "Delete Instances"
-msgstr[0] "删除实例"
-
 msgid "Deleted"
 msgstr "删除"
 
-#, python-format
-msgid "Deleted Instance: %s."
-msgid_plural "Deleted Instances: %s."
-msgstr[0] "删除实例：%s。"
-
-msgid "Deleting Instance"
-msgid_plural "Deleting Instances"
-msgstr[0] "删除实例"
-
 msgid "Description"
 msgstr "描述"
-
-msgid "Description:"
-msgstr "描述："
-
-msgid "Details"
-msgstr "详情"
 
 msgid "Direction"
 msgstr "方向"
@@ -360,12 +267,6 @@ msgstr "外部网络"
 msgid "Facets"
 msgstr "分面"
 
-msgid "Failed"
-msgstr "失败"
-
-msgid "Fault"
-msgstr "故障"
-
 msgid "Field Matches"
 msgstr "字段匹配"
 
@@ -383,12 +284,6 @@ msgstr "固定 IP"
 
 msgid "Flavor"
 msgstr "规格"
-
-msgid "Flavor ID"
-msgstr "规格ID"
-
-msgid "Flavor Name"
-msgstr "规格名称"
 
 msgid "Flavors"
 msgstr "规格"
@@ -414,14 +309,8 @@ msgstr "网关IP"
 msgid "Grouping"
 msgstr "分组"
 
-msgid "Hard Reboot"
-msgstr "硬重启"
-
 msgid "High Availability"
 msgstr "高可用性"
-
-msgid "Host"
-msgstr "主机"
 
 msgid "Hostname"
 msgstr "主机名"
@@ -460,34 +349,11 @@ msgstr "IPv6地址范围"
 msgid "IPv6 RA Mode"
 msgstr "IPv6 RA模式"
 
-msgid ""
-"If the console is not responding to keyboard input, click the status bar in "
-"the screen below."
-msgstr "如果控制台未响应键盘输入，请单击屏幕下方的状态栏。"
-
-msgid "Image"
-msgstr "镜像"
-
 msgid "Image Reference"
 msgstr "镜像参考手册"
 
-msgid "Instance"
-msgstr "实例"
-
-msgid "Instance Action Log"
-msgstr "实例操作日志"
-
-msgid "Instance Console"
-msgstr "实例控制台"
-
-msgid "Instance Console Log"
-msgstr "云主机控制台日志"
-
 msgid "Instance UUID"
 msgstr "实例UUID"
-
-msgid "Instances"
-msgstr "实例"
 
 msgid "Ironic Chassis"
 msgstr "Ironic物理机架"
@@ -511,9 +377,6 @@ msgstr "筛选结果通常远比通过他们增加返回结果和页的数量要
 
 msgid "Key Pair"
 msgstr "密钥对"
-
-msgid "Key Pair Name"
-msgstr "密钥对名称"
 
 msgid "Key Pairs"
 msgstr "密钥对"
@@ -539,12 +402,6 @@ msgstr "负载均衡池"
 msgid "Local GB (total)"
 msgstr "本地盘GB（总计）"
 
-msgid "Log"
-msgstr "日志"
-
-msgid "Log Length"
-msgstr "日志长度"
-
 msgid "MTU"
 msgstr "MTU"
 
@@ -560,20 +417,11 @@ msgstr "最大端口"
 msgid "Members"
 msgstr "成员"
 
-msgid "Message"
-msgstr "消息"
-
-msgid "Metadata"
-msgstr "元数据"
-
 msgid "Metadata Definition"
 msgstr "元数据定义"
 
 msgid "Metadata Definitions"
 msgstr "元数据定义"
-
-msgid "Migrating"
-msgstr "正在迁移"
 
 msgid "Min Port"
 msgstr "最小端口"
@@ -614,15 +462,6 @@ msgstr "最新的"
 msgid "No"
 msgstr "否"
 
-msgid "No State"
-msgstr "无状态"
-
-msgid "No Volumes Attached"
-msgstr "未连接卷"
-
-msgid "No rules defined"
-msgstr "未定义规则"
-
 msgid "Node UUID"
 msgstr "节点UUID"
 
@@ -653,17 +492,11 @@ msgstr "最旧的"
 msgid "On"
 msgstr "打开"
 
-msgid "Overview"
-msgstr "概述"
-
 msgid "Owned by Me"
 msgstr "我所有的"
 
 msgid "PXE Enabled?"
 msgstr "是否使能PXE？"
-
-msgid "Password"
-msgstr "密码"
 
 msgid "Past 10 Minutes"
 msgstr "过去十分钟"
@@ -686,9 +519,6 @@ msgstr "过去一周"
 msgid "Past Year"
 msgstr "过去一年"
 
-msgid "Pause"
-msgstr "暂停"
-
 msgid "Pause updates to search results"
 msgstr "暂停更新查询结果"
 
@@ -703,9 +533,6 @@ msgstr "暂挂删除"
 
 msgid "Phrases"
 msgstr "词汇"
-
-msgid "Please Wait"
-msgstr "请等待"
 
 msgid "Policies"
 msgstr "策略"
@@ -769,17 +596,8 @@ msgstr "内存"
 msgid "Range Queries"
 msgstr "范围查询"
 
-msgid "Reboot"
-msgstr "重启"
-
 msgid "Rebooting"
 msgstr "正在重启"
-
-msgid "Rebuild"
-msgstr "重建"
-
-msgid "Refresh"
-msgstr "刷新"
 
 msgid "Relevancy"
 msgstr "关联"
@@ -787,26 +605,11 @@ msgstr "关联"
 msgid "Remote"
 msgstr "远程"
 
-msgid "Request"
-msgstr "请求"
-
 msgid "Rescue"
 msgstr "恢复"
 
-msgid "Rescued"
-msgstr "已恢复"
-
 msgid "Reserved Characters"
 msgstr "保留字符"
-
-msgid "Resize"
-msgstr "调整大小"
-
-msgid "Resize/Migrate"
-msgstr "调整大小/迁移"
-
-msgid "Resized"
-msgstr "已调整大小"
 
 msgid "Result Limit"
 msgstr "结果限制"
@@ -818,17 +621,11 @@ msgstr ""
 "如果结果超过分页限制。\n"
 "请重新搜索或增大limit配置。"
 
-msgid "Resume"
-msgstr "恢复"
-
 msgid "Resume updates to search results"
 msgstr "重新更新查询结果"
 
 msgid "Reverse Alphabetical Name"
 msgstr "按字母反序排序的名称"
-
-msgid "Revert Resize/Migrate"
-msgstr "放弃调整大小/迁移"
 
 msgid "Router"
 msgstr "路由器"
@@ -841,9 +638,6 @@ msgstr "路由器"
 
 msgid "Rules"
 msgstr "规则"
-
-msgid "Running"
-msgstr "运行中"
 
 msgid "Saving"
 msgstr "保存中"
@@ -884,30 +678,14 @@ msgstr "已搁置"
 msgid "Shelved Offloaded"
 msgstr "已搁置卸载"
 
-msgid "Shutdown"
-msgstr "关闭"
-
 msgid "Shutoff"
 msgstr "关机"
 
 msgid "Size"
 msgstr "大小"
 
-#, python-format
-msgid "Snapshot %s was successfully created."
-msgstr "快照%s创建成功。"
-
 msgid "Snapshot ID"
 msgstr "快照ID"
-
-msgid "Snapshot Name"
-msgstr "快照名称"
-
-msgid "Soft Deleted"
-msgstr "已执行软删除"
-
-msgid "Soft Reboot"
-msgstr "软重启"
 
 msgid "Sort"
 msgstr "排序"
@@ -915,26 +693,11 @@ msgstr "排序"
 msgid "Source Volume ID"
 msgstr "源卷ID"
 
-msgid "Specs"
-msgstr "规范"
-
-msgid "Start"
-msgstr "启动"
-
-msgid "Start Time"
-msgstr "开始时间"
-
 msgid "State"
 msgstr "状态"
 
 msgid "Status"
 msgstr "状态"
-
-msgid "Stop"
-msgstr "关机"
-
-msgid "Stopped"
-msgstr "已停止"
 
 msgid "Subnet"
 msgstr "子网"
@@ -948,9 +711,6 @@ msgstr "子网"
 msgid "Subnets Associated"
 msgstr "已关联子网"
 
-msgid "Suspend"
-msgstr "挂起"
-
 msgid "Suspended"
 msgstr "挂起"
 
@@ -962,9 +722,6 @@ msgstr "标记电源状态"
 
 msgid "Target Provisioning State"
 msgstr "标记配置状态"
-
-msgid "Task State"
-msgstr "任务状态"
 
 msgid "Term Operators"
 msgstr "条件术语"
@@ -1007,11 +764,6 @@ msgstr "类型"
 msgid "UUID"
 msgstr "UUID"
 
-#, python-format
-msgid "Unable to delete Instance: %s."
-msgid_plural "Unable to delete Instances: %s."
-msgstr[0] "不能删除实例：%s。"
-
 msgid "Unable to execute the search."
 msgstr "无法执行搜索。"
 
@@ -1023,9 +775,6 @@ msgstr "无法检索查找方向。"
 
 msgid "Unavailable"
 msgstr "不可用"
-
-msgid "Unpause"
-msgstr "继续运行"
 
 msgid "Up"
 msgstr "启动"
@@ -1091,9 +840,6 @@ msgstr "卷快照"
 msgid "Volumes"
 msgstr "卷"
 
-msgid "Volumes Attached"
-msgstr "已连接卷"
-
 msgid ""
 "Warning: Wildcard queries place\n"
 "            a heavy burden on the search service and may perform poorly."
@@ -1104,10 +850,6 @@ msgstr "通配符"
 
 msgid "Yes"
 msgstr "是"
-
-#, python-format
-msgid "You are not allowed to delete instances: %s"
-msgstr "你不能删除这些实例：%s。"
 
 msgid "You are not allowed to perform this request."
 msgstr "你不允许执行这个请求。"
@@ -1179,11 +921,6 @@ msgid ""
 "You have gone below the minimum ({$ ctrl.settings.polling.interval_min $}) "
 "allowed."
 msgstr "你低于允许的最小值 ({$ ctrl.settings.polling.interval_min $})"
-
-#, python-format
-msgid "You have selected \"%s\". Deleted instance is not recoverable."
-msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
-msgstr[0] "你选择了\"%s\"。删除实例不可恢复。"
 
 msgid ""
 "You may decide to only look in a certain field for a\n"

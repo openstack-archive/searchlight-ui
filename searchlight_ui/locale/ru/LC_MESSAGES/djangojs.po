@@ -9,9 +9,9 @@
 # Yulia Ryndenkova <yryndenkova@hystax.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: searchlight-ui 3.0.0.0b3.dev1\n"
+"Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-06-30 16:36+0000\n"
+"POT-Creation-Date: 2018-10-05 01:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Last-Translator: Aleksey Alekseenko <9118250541@mail.ru>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
@@ -41,27 +41,9 @@ msgstr "(Расширение)"
 msgid "-"
 msgstr "-"
 
-msgid ""
-"A snapshot is an image which preserves the disk state of a running instance."
-msgstr ""
-"Снимок это образ который сохраняет состояние диска запущенной инстансы."
-
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "ALLOW %(type)s %(direction)s %(target)s"
-
-#, python-format
-msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
-msgstr "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
-
-msgid "ANY"
-msgstr "Любой"
-
-msgid "Action"
-msgstr "Действие"
-
-msgid "Action Log"
-msgstr "Лог действий"
 
 msgid "Actions"
 msgstr "Действия"
@@ -87,9 +69,6 @@ msgstr ""
 "Например, запрос 'web -(apache AND python)' найдет все что содержит 'web' "
 "но\n"
 "не содержит ни 'apache' ни 'python'."
-
-msgid "Addresses"
-msgstr "Адреса"
 
 msgid "Admin State"
 msgstr "Административное состояние"
@@ -133,9 +112,6 @@ msgstr "Привязывание типа VIF"
 msgid "Binding VNIC Type"
 msgstr "Привязывание типа VNIC"
 
-msgid "Blocked"
-msgstr "Заблокирован"
-
 msgid "Boolean Operators"
 msgstr "Булевы операторы"
 
@@ -146,9 +122,6 @@ msgid "Bootable"
 msgstr "Загрузочный"
 
 msgid "Build"
-msgstr "Создание"
-
-msgid "Building"
 msgstr "Создание"
 
 msgid ""
@@ -197,59 +170,14 @@ msgstr "Отменить"
 msgid "Close"
 msgstr "Закрыть"
 
-msgid "Code"
-msgstr "Код"
-
-msgid "Confirm Delete Instance"
-msgid_plural "Confirm Delete Instances"
-msgstr[0] "Подтвердите удаление инстанса"
-msgstr[1] "Подтвердите удаление инстансов"
-msgstr[2] "Подтвердите удаление инстансов"
-
-msgid "Confirm Resize"
-msgstr "Подтвердить изменение размера"
-
-msgid "Confirm or Revert Resize/Migrate"
-msgstr "Подтвердить отмену изменения типа/миграции"
-
-msgid "Connect"
-msgstr "Подключиться"
-
-msgid "Connect in a new window"
-msgstr "Подключиться в новом окне"
-
 msgid "Consistency Group ID"
 msgstr "ID Группы согласования"
-
-msgid "Console"
-msgstr "Консоль"
-
-msgid "Console is currently unavailable. Please try again later."
-msgstr "Консоль недоступна. Пожалуйста попробуйте позднее."
-
-msgid "Crashed"
-msgstr "Разбитый"
-
-msgid "Create"
-msgstr "Создать"
-
-msgid "Create Instance"
-msgstr "Создать инстанс"
-
-msgid "Create Instance Snapshot"
-msgstr "Создать снимок инстанса"
-
-msgid "Create Snapshot"
-msgstr "Создать снимок"
 
 msgid "Created"
 msgstr "Создано"
 
 msgid "Created At"
 msgstr "Создано"
-
-msgid "Creating Snapshot"
-msgstr "Создается снимок"
 
 msgid "DNS Domain"
 msgstr "DNS Домен"
@@ -283,39 +211,11 @@ msgstr ""
 msgid "Default Network"
 msgstr "Сеть по умолчанию"
 
-msgid "Delete"
-msgstr "Удалить"
-
-msgid "Delete Instance"
-msgid_plural "Delete Instances"
-msgstr[0] "Удалить инстанс"
-msgstr[1] "Удалить инстансы"
-msgstr[2] "Удалить инстансы"
-
 msgid "Deleted"
 msgstr "Удалено"
 
-#, python-format
-msgid "Deleted Instance: %s."
-msgid_plural "Deleted Instances: %s."
-msgstr[0] "Удален инстанс: %s."
-msgstr[1] "Удалены инстансы: %s."
-msgstr[2] "Удалены инстансы: %s."
-
-msgid "Deleting Instance"
-msgid_plural "Deleting Instances"
-msgstr[0] "Удаление инстанса"
-msgstr[1] "Удаление инстансов"
-msgstr[2] "Удаление инстансов"
-
 msgid "Description"
 msgstr "Описание"
-
-msgid "Description:"
-msgstr "Описание:"
-
-msgid "Details"
-msgstr "Детали"
 
 msgid "Direction"
 msgstr "Направление"
@@ -364,12 +264,6 @@ msgstr "Внешняя сеть"
 msgid "Facets"
 msgstr "Аспекты"
 
-msgid "Failed"
-msgstr "Не удалось"
-
-msgid "Fault"
-msgstr "Ошибка"
-
 msgid "Field Matches"
 msgstr "Совпадение Полей"
 
@@ -387,12 +281,6 @@ msgstr "Фиксированные IP адреса"
 
 msgid "Flavor"
 msgstr "Тип инстанса"
-
-msgid "Flavor ID"
-msgstr "ID типа инстансов"
-
-msgid "Flavor Name"
-msgstr "Имя типа инстансов"
 
 msgid "Flavors"
 msgstr "Типы инстансов"
@@ -418,14 +306,8 @@ msgstr "IP шлюза"
 msgid "Grouping"
 msgstr "Групирование"
 
-msgid "Hard Reboot"
-msgstr "Жесткая перезагрузка"
-
 msgid "High Availability"
 msgstr "Высокая доступность "
-
-msgid "Host"
-msgstr "Хост"
 
 msgid "Hostname"
 msgstr "Имя хоста"
@@ -464,33 +346,8 @@ msgstr "Область адресов IPv6"
 msgid "IPv6 RA Mode"
 msgstr "Режим IPv6 RA"
 
-msgid ""
-"If the console is not responding to keyboard input, click the status bar in "
-"the screen below."
-msgstr ""
-"Если консоль не реагирует на нажатия клавиш нажмите на строку статуса в окне "
-"ниже."
-
-msgid "Image"
-msgstr "Образ"
-
 msgid "Image Reference"
 msgstr "Ссылка на образ"
-
-msgid "Instance"
-msgstr "Инстанс"
-
-msgid "Instance Action Log"
-msgstr "Лог действий инстанса"
-
-msgid "Instance Console"
-msgstr "Консоль инстанса"
-
-msgid "Instance Console Log"
-msgstr "Лог консоли инстанса"
-
-msgid "Instances"
-msgstr "Инстансы"
 
 msgid ""
 "It is typically better to filter results further than to increase\n"
@@ -501,9 +358,6 @@ msgstr ""
 
 msgid "Key Pair"
 msgstr "Ключевая Пара"
-
-msgid "Key Pair Name"
-msgstr "Имя связки ключей"
 
 msgid "Key Pairs"
 msgstr "Ключевые Пары"
@@ -526,12 +380,6 @@ msgstr "Пулы балансировщика нагрузки"
 msgid "Local GB (total)"
 msgstr "Локальных ГБ (всего)"
 
-msgid "Log"
-msgstr "Лог"
-
-msgid "Log Length"
-msgstr "Длина лога"
-
 msgid "MTU"
 msgstr "MTU"
 
@@ -544,20 +392,11 @@ msgstr "По порт"
 msgid "Members"
 msgstr "Участники"
 
-msgid "Message"
-msgstr "Сообщение"
-
-msgid "Metadata"
-msgstr "Метаданные"
-
 msgid "Metadata Definition"
 msgstr "Определение Метаданных "
 
 msgid "Metadata Definitions"
 msgstr "Определение Метаданных "
-
-msgid "Migrating"
-msgstr "Миграция "
 
 msgid "Min Port"
 msgstr "От порта"
@@ -592,15 +431,6 @@ msgstr "Сети"
 msgid "Newest"
 msgstr "Новые"
 
-msgid "No State"
-msgstr "Никакого состояния"
-
-msgid "No Volumes Attached"
-msgstr "Нет подключённых дисков"
-
-msgid "No rules defined"
-msgstr "Нет заданных правил"
-
 msgid "Object"
 msgstr "Объект"
 
@@ -622,14 +452,8 @@ msgstr "Объекты"
 msgid "Oldest"
 msgstr "Старые"
 
-msgid "Overview"
-msgstr "Обзор"
-
 msgid "Owned by Me"
 msgstr "Принадлежащие мне"
-
-msgid "Password"
-msgstr "Пароль"
 
 msgid "Past 10 Minutes"
 msgstr "Последние 10 минут"
@@ -652,9 +476,6 @@ msgstr "Последняя неделя"
 msgid "Past Year"
 msgstr "Последний год"
 
-msgid "Pause"
-msgstr "Пауза"
-
 msgid "Pause updates to search results"
 msgstr "Приостановить обновление результатов поиска"
 
@@ -669,9 +490,6 @@ msgstr "Ожидает удаления"
 
 msgid "Phrases"
 msgstr "Фразы"
-
-msgid "Please Wait"
-msgstr "Пожалуйста подождите"
 
 msgid "Policies"
 msgstr "Политики"
@@ -734,41 +552,17 @@ msgstr "ОЗУ"
 msgid "Range Queries"
 msgstr "Очереди диапазона"
 
-msgid "Reboot"
-msgstr "Перезагрузка"
-
-msgid "Rebuild"
-msgstr "Восстановить"
-
-msgid "Refresh"
-msgstr "Обновить"
-
 msgid "Relevancy"
 msgstr "Релевантность"
 
 msgid "Remote"
 msgstr "Удаленный адрес"
 
-msgid "Request"
-msgstr "Запрос"
-
 msgid "Rescue"
 msgstr "Безопасный режим"
 
-msgid "Rescued"
-msgstr "Восстановлено"
-
 msgid "Reserved Characters"
 msgstr "Зарезервированные символы"
-
-msgid "Resize"
-msgstr "Изменение размера"
-
-msgid "Resize/Migrate"
-msgstr "Изменение типа/Миграция"
-
-msgid "Resized"
-msgstr "Изменён размер"
 
 msgid "Result Limit"
 msgstr "Число результатов"
@@ -781,17 +575,11 @@ msgstr ""
 "поиска \n"
 "или увеличьте настройки предела."
 
-msgid "Resume"
-msgstr "Возобновить"
-
 msgid "Resume updates to search results"
 msgstr "Возобновить обновление результатов поиска"
 
 msgid "Reverse Alphabetical Name"
 msgstr "Алфавит обр. (Имя)"
-
-msgid "Revert Resize/Migrate"
-msgstr "Отменить  изменение типа/Миграцию"
 
 msgid "Router"
 msgstr "Маршрутизатор"
@@ -804,9 +592,6 @@ msgstr "Маршрутизаторы"
 
 msgid "Rules"
 msgstr "Правила"
-
-msgid "Running"
-msgstr "Запущенный"
 
 msgid "Saving"
 msgstr "Сохранение"
@@ -847,30 +632,14 @@ msgstr "Отложен"
 msgid "Shelved Offloaded"
 msgstr "Отложен и выгружен"
 
-msgid "Shutdown"
-msgstr "Выключен"
-
 msgid "Shutoff"
 msgstr "Отключение"
 
 msgid "Size"
 msgstr "Размер"
 
-#, python-format
-msgid "Snapshot %s was successfully created."
-msgstr "Снимок %s создан успешно."
-
 msgid "Snapshot ID"
 msgstr "ID снимка"
-
-msgid "Snapshot Name"
-msgstr "Название снимка"
-
-msgid "Soft Deleted"
-msgstr "Софт удалён"
-
-msgid "Soft Reboot"
-msgstr "Горячая перезагрузка"
 
 msgid "Sort"
 msgstr "Отсортировать"
@@ -878,26 +647,11 @@ msgstr "Отсортировать"
 msgid "Source Volume ID"
 msgstr "ID исходного тома"
 
-msgid "Specs"
-msgstr "Спецификации"
-
-msgid "Start"
-msgstr "Запустить"
-
-msgid "Start Time"
-msgstr "Время начала"
-
 msgid "State"
 msgstr "Состояние"
 
 msgid "Status"
 msgstr "Статус"
-
-msgid "Stop"
-msgstr "Остановить"
-
-msgid "Stopped"
-msgstr "Остановлен"
 
 msgid "Subnet"
 msgstr "Подсеть"
@@ -911,17 +665,11 @@ msgstr "Подсети"
 msgid "Subnets Associated"
 msgstr "Связанные подсети"
 
-msgid "Suspend"
-msgstr "Приостановить"
-
 msgid "Suspended"
 msgstr "Приостановлено"
 
 msgid "Swap"
 msgstr "Подкачка"
-
-msgid "Task State"
-msgstr "Состояние задачи"
 
 msgid "Term Operators"
 msgstr "Операторы параметра запроса"
@@ -962,13 +710,6 @@ msgstr "Передача"
 msgid "Type"
 msgstr "Тип"
 
-#, python-format
-msgid "Unable to delete Instance: %s."
-msgid_plural "Unable to delete Instances: %s."
-msgstr[0] "Не удалось удалить инстанс: %s."
-msgstr[1] "Не удалось удалить инстансы: %s."
-msgstr[2] "Не удалось удалить инстансы: %s."
-
 msgid "Unable to execute the search."
 msgstr "Не удается выполнить поиск."
 
@@ -980,9 +721,6 @@ msgstr "Не удается получить аспекты поиска."
 
 msgid "Unavailable"
 msgstr "Недоступно"
-
-msgid "Unpause"
-msgstr "Снять с паузы"
 
 msgid "Up"
 msgstr "Включен"
@@ -1050,9 +788,6 @@ msgstr "Снимки дисков"
 msgid "Volumes"
 msgstr "Диски"
 
-msgid "Volumes Attached"
-msgstr "Подключенные диски"
-
 msgid ""
 "Warning: Wildcard queries place\n"
 "            a heavy burden on the search service and may perform poorly."
@@ -1062,10 +797,6 @@ msgstr ""
 
 msgid "Wildcards"
 msgstr "Символы подстановки"
-
-#, python-format
-msgid "You are not allowed to delete instances: %s"
-msgstr "Вам не разрешено удалять инстансы: %s"
 
 msgid "You are not allowed to perform this request."
 msgstr "Вам не разрешено выполнять этот запрос."
@@ -1151,13 +882,6 @@ msgid ""
 msgstr ""
 "Вы опустились ниже допустимого минимума ({$ ctrl.settings.polling."
 "interval_min $})."
-
-#, python-format
-msgid "You have selected \"%s\". Deleted instance is not recoverable."
-msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
-msgstr[0] "Вы выбрали \"%s\". Восстановить удаленный инстанс невозможно."
-msgstr[1] "Вы выбрали \"%s\". Восстановить удаленные инстансы невозможно."
-msgstr[2] "Вы выбрали \"%s\". Восстановить удаленные инстансыневозможно."
 
 msgid ""
 "You may decide to only look in a certain field for a\n"

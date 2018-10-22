@@ -5,9 +5,9 @@
 # suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: searchlight-ui 3.0.0.0b3.dev7\n"
+"Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-07-27 18:28+0000\n"
+"POT-Creation-Date: 2018-10-05 01:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 #, python-format
@@ -36,28 +36,9 @@ msgstr "(Extension)"
 msgid "-"
 msgstr "-"
 
-msgid ""
-"A snapshot is an image which preserves the disk state of a running instance."
-msgstr ""
-"Sebuah snapshot adalah image yang mempertahankan disk state dari instance "
-"berjalan."
-
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "ALLOW %(type)s %(direction)s %(target)s"
-
-#, python-format
-msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
-msgstr "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
-
-msgid "ANY"
-msgstr "ANY"
-
-msgid "Action"
-msgstr "Action (aksi)"
-
-msgid "Action Log"
-msgstr "Action Log"
 
 msgid "Actions"
 msgstr "Actions (tindakan)"
@@ -85,9 +66,6 @@ msgstr ""
 
 msgid "Address"
 msgstr "Address (alamat)"
-
-msgid "Addresses"
-msgstr "Addresses (alamat)"
 
 msgid "Admin State"
 msgstr "Admin State"
@@ -132,9 +110,6 @@ msgstr "Binding VIF Type (Tipe VIF mengikat)"
 msgid "Binding VNIC Type"
 msgstr "Binding VNIC Type (Tipe VNIC mengikat)"
 
-msgid "Blocked"
-msgstr "Blocked (diblokir)"
-
 msgid "Boolean Operators"
 msgstr "Boolean Operators (operasi boolean)"
 
@@ -146,9 +121,6 @@ msgstr "Bootable"
 
 msgid "Build"
 msgstr "Build"
-
-msgid "Building"
-msgstr "Building (pembangunan)"
 
 msgid ""
 "By default, each word you type will be searched for\n"
@@ -203,62 +175,17 @@ msgstr "Chassis UUID"
 msgid "Close"
 msgstr "Close (tutup)"
 
-msgid "Code"
-msgstr "Kode"
-
-msgid "Confirm Delete Instance"
-msgid_plural "Confirm Delete Instances"
-msgstr[0] "Confirm Delete Instance"
-
-msgid "Confirm Resize"
-msgstr "Confirm Resize (mengkonfirmasi mengubah ukuran)"
-
-msgid "Confirm or Revert Resize/Migrate"
-msgstr ""
-"Confirm or Revert Resize/Migrate (mengkonfirmasi atau mengembalikan resize/"
-"bermigrasi)"
-
-msgid "Connect"
-msgstr "Connect"
-
-msgid "Connect in a new window"
-msgstr "Hubungkan di jendela baru"
-
 msgid "Consistency Group ID"
 msgstr "Consistency Group ID (ID group konsistensi)"
 
-msgid "Console"
-msgstr "Console (konsol)"
-
 msgid "Console Enabled?"
 msgstr "Console Enabled?"
-
-msgid "Console is currently unavailable. Please try again later."
-msgstr "Konsol saat ini tidak tersedia. Silakan coba lagi nanti."
-
-msgid "Crashed"
-msgstr "Crashed"
-
-msgid "Create"
-msgstr "Create (buat)"
-
-msgid "Create Instance"
-msgstr "Create Instance (buat instance)"
-
-msgid "Create Instance Snapshot"
-msgstr "Create Instance Snapshot (buat instance snapshot)"
-
-msgid "Create Snapshot"
-msgstr "Membuat snapshot"
 
 msgid "Created"
 msgstr "Created (dibuat)"
 
 msgid "Created At"
 msgstr "Created At (dibuat pada)"
-
-msgid "Creating Snapshot"
-msgstr "Pembuatan Snapshot"
 
 # auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
 msgid "DNS Domain"
@@ -295,33 +222,11 @@ msgstr ""
 msgid "Default Network"
 msgstr "Default Network (jaringan default)"
 
-msgid "Delete"
-msgstr "Hapus"
-
-msgid "Delete Instance"
-msgid_plural "Delete Instances"
-msgstr[0] "Delete Instance"
-
 msgid "Deleted"
 msgstr "Deleted"
 
-#, python-format
-msgid "Deleted Instance: %s."
-msgid_plural "Deleted Instances: %s."
-msgstr[0] "Deleted Instance: %s."
-
-msgid "Deleting Instance"
-msgid_plural "Deleting Instances"
-msgstr[0] "Deleting Instance"
-
 msgid "Description"
 msgstr "Description (deskripsi)"
-
-msgid "Description:"
-msgstr "Deskripsi"
-
-msgid "Details"
-msgstr "Details (rincian)"
 
 msgid "Direction"
 msgstr "Direction (arah)"
@@ -374,12 +279,6 @@ msgstr "External Network (jaringan eksternal)"
 msgid "Facets"
 msgstr "Facets (aspek)"
 
-msgid "Failed"
-msgstr "Failed (gagal)"
-
-msgid "Fault"
-msgstr "Fault (kesalahan)"
-
 msgid "Field Matches"
 msgstr "Field Matches (kecocokan field)"
 
@@ -396,12 +295,6 @@ msgstr "Fixed IP (IP tetap)"
 
 msgid "Flavor"
 msgstr "Flavor"
-
-msgid "Flavor ID"
-msgstr "Flavor ID (ID flavor)"
-
-msgid "Flavor Name"
-msgstr "Nama flavor"
 
 # auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
 msgid "Flavors"
@@ -428,14 +321,8 @@ msgstr "IP Gateway"
 msgid "Grouping"
 msgstr "Grouping (pengelompokan)"
 
-msgid "Hard Reboot"
-msgstr "Hard Reboot"
-
 msgid "High Availability"
 msgstr "High Availability (ketersediaan tinggi)"
-
-msgid "Host"
-msgstr "Host (inang)"
 
 msgid "Hostname"
 msgstr "Hostname"
@@ -474,35 +361,11 @@ msgstr "IPv6 Address Scope lingkup alamat IPv6)"
 msgid "IPv6 RA Mode"
 msgstr "IPv6 RA Mode "
 
-msgid ""
-"If the console is not responding to keyboard input, click the status bar in "
-"the screen below."
-msgstr ""
-"Jika konsol tidak merespon input keyboard, klik status bar di layar bawah."
-
-msgid "Image"
-msgstr "Image"
-
 msgid "Image Reference"
 msgstr "Image Reference (referensi image)"
 
-msgid "Instance"
-msgstr "Instance"
-
-msgid "Instance Action Log"
-msgstr "Instance Action Log (catatan tindakan instance)"
-
-msgid "Instance Console"
-msgstr "Instance Console (konsol instance)"
-
-msgid "Instance Console Log"
-msgstr "Instance Console Log (log konsol instance)"
-
 msgid "Instance UUID"
 msgstr "Instance UUID"
-
-msgid "Instances"
-msgstr "Instances (instance)"
 
 msgid "Ironic Chassis"
 msgstr "Ironic Chassis"
@@ -529,9 +392,6 @@ msgstr ""
 
 msgid "Key Pair"
 msgstr "Key Pair"
-
-msgid "Key Pair Name"
-msgstr "Nama Key Pair (nama pasangan kunci)"
 
 msgid "Key Pairs"
 msgstr "Key Pair (pasangan kunci)"
@@ -562,12 +422,6 @@ msgstr "Pool load balancer (plural)"
 msgid "Local GB (total)"
 msgstr "Local GB (total)"
 
-msgid "Log"
-msgstr "Log (catatan)"
-
-msgid "Log Length"
-msgstr "Log Length (panjang catatan)"
-
 msgid "MTU"
 msgstr "MTU"
 
@@ -585,21 +439,12 @@ msgstr "Max Port"
 msgid "Members"
 msgstr "Anggota"
 
-msgid "Message"
-msgstr "Message (pesan)"
-
-msgid "Metadata"
-msgstr "Metadata"
-
 # auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
 msgid "Metadata Definition"
 msgstr "Metadata Definition"
 
 msgid "Metadata Definitions"
 msgstr "Metadata Definitions"
-
-msgid "Migrating"
-msgstr "Migrating"
 
 # auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
 msgid "Min Port"
@@ -643,15 +488,6 @@ msgstr "Newest (terbaru)"
 msgid "No"
 msgstr "No"
 
-msgid "No State"
-msgstr "No State"
-
-msgid "No Volumes Attached"
-msgstr "No Volumes Attached (tidak ada volume terhubung)"
-
-msgid "No rules defined"
-msgstr "Tidak ada aturan yang ditetapkan"
-
 msgid "Node UUID"
 msgstr "Node UUID"
 
@@ -687,17 +523,11 @@ msgstr "Oldest (tertua)"
 msgid "On"
 msgstr "On"
 
-msgid "Overview"
-msgstr "Overview (ikhtisar)"
-
 msgid "Owned by Me"
 msgstr "Owned by Me (dimiliki oleh saya)"
 
 msgid "PXE Enabled?"
 msgstr "PXE Enabled?"
-
-msgid "Password"
-msgstr "Password"
 
 msgid "Past 10 Minutes"
 msgstr "Past 10 Minutes (melampaui 10 menit)"
@@ -720,9 +550,6 @@ msgstr "Past Week (melampaui minggu)"
 msgid "Past Year"
 msgstr "Past Year (melampaui tahun)"
 
-msgid "Pause"
-msgstr "Pause (berhenti sebentar)"
-
 msgid "Pause updates to search results"
 msgstr "Jeda update ke hasil pencarian"
 
@@ -738,9 +565,6 @@ msgstr "Pending Delete"
 
 msgid "Phrases"
 msgstr "Phrases (frase)"
-
-msgid "Please Wait"
-msgstr "Mohon tunggu"
 
 msgid "Policies"
 msgstr "Policies"
@@ -807,17 +631,8 @@ msgstr "RAM"
 msgid "Range Queries"
 msgstr "Range Queries (permintaan rentang)"
 
-msgid "Reboot"
-msgstr "Reboot (booting ulang)"
-
 msgid "Rebooting"
 msgstr "Rebooting"
-
-msgid "Rebuild"
-msgstr "Rebuild (membangun kembali)"
-
-msgid "Refresh"
-msgstr "Refresh (penyegaran)"
 
 msgid "Relevancy"
 msgstr "Relevancy (relevansi)"
@@ -825,26 +640,11 @@ msgstr "Relevancy (relevansi)"
 msgid "Remote"
 msgstr "Remote (jauh)"
 
-msgid "Request"
-msgstr "Request (permintaan)"
-
 msgid "Rescue"
 msgstr "Rescue (menyelamatkan)"
 
-msgid "Rescued"
-msgstr "Rescued"
-
 msgid "Reserved Characters"
 msgstr "Reserved Characters (karakter sudah dicadangkan)"
-
-msgid "Resize"
-msgstr "Resize (merubah ukuran)"
-
-msgid "Resize/Migrate"
-msgstr "Resize/Migrate (mengubah ukuran/bermigrasi)"
-
-msgid "Resized"
-msgstr "Resized"
 
 msgid "Result Limit"
 msgstr "Result Limit (batas hasil)"
@@ -856,17 +656,11 @@ msgstr ""
 "Hasil melebihi batas pagination. Silahkan mempersempit pencarian Anda atau\n"
 "                 meningkatkan pengaturan batas."
 
-msgid "Resume"
-msgstr "Resume (lanjut)"
-
 msgid "Resume updates to search results"
 msgstr "Melanjutkan update ke hasil pencarian"
 
 msgid "Reverse Alphabetical Name"
 msgstr "Reverse Alphabetical Name (nama abjad terbalik)"
-
-msgid "Revert Resize/Migrate"
-msgstr "Revert Resize/Migrate"
 
 msgid "Router"
 msgstr "Router"
@@ -884,9 +678,6 @@ msgstr "Routers"
 
 msgid "Rules"
 msgstr "Rules"
-
-msgid "Running"
-msgstr "Menjalankan"
 
 # auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
 msgid "Saving"
@@ -928,30 +719,14 @@ msgstr "Shelved"
 msgid "Shelved Offloaded"
 msgstr "Shelved Offloaded"
 
-msgid "Shutdown"
-msgstr "Shutdown (matikan)"
-
 msgid "Shutoff"
 msgstr "Shutoff (menutup)"
 
 msgid "Size"
 msgstr "Size (ukuran)"
 
-#, python-format
-msgid "Snapshot %s was successfully created."
-msgstr "Snapshot %s berhasil dibuat."
-
 msgid "Snapshot ID"
 msgstr "Snapshot ID"
-
-msgid "Snapshot Name"
-msgstr "Nama Snapshot"
-
-msgid "Soft Deleted"
-msgstr "Soft Deleted"
-
-msgid "Soft Reboot"
-msgstr "Soft Reboot (reboot lembut)"
 
 msgid "Sort"
 msgstr "Sort (menyortir)"
@@ -959,26 +734,11 @@ msgstr "Sort (menyortir)"
 msgid "Source Volume ID"
 msgstr "Source Volume ID"
 
-msgid "Specs"
-msgstr "Specs (spesifikasi)"
-
-msgid "Start"
-msgstr "Mulai"
-
-msgid "Start Time"
-msgstr "Start Time"
-
 msgid "State"
 msgstr "State (keadaan)"
 
 msgid "Status"
 msgstr "Status (status)"
-
-msgid "Stop"
-msgstr "Stop (berhenti)"
-
-msgid "Stopped"
-msgstr "Stopped"
 
 msgid "Subnet"
 msgstr "Subnet"
@@ -992,9 +752,6 @@ msgstr "Subnets"
 msgid "Subnets Associated"
 msgstr "Subnets Associated (subnet terkait)"
 
-msgid "Suspend"
-msgstr "Suspend (menangguhkan)"
-
 msgid "Suspended"
 msgstr "Suspended (ditangguhkan)"
 
@@ -1006,9 +763,6 @@ msgstr "Target Power State"
 
 msgid "Target Provisioning State"
 msgstr "Target Provisioning State"
-
-msgid "Task State"
-msgstr "Task State (keadaan tugas)"
 
 msgid "Term Operators"
 msgstr "Term Operators (operator tanda)"
@@ -1052,11 +806,6 @@ msgstr "Type (tipe)"
 msgid "UUID"
 msgstr "UUID"
 
-#, python-format
-msgid "Unable to delete Instance: %s."
-msgid_plural "Unable to delete Instances: %s."
-msgstr[0] "Unable to delete Instance: %s."
-
 msgid "Unable to execute the search."
 msgstr "Tidak bisa menjalankan pencarian."
 
@@ -1068,9 +817,6 @@ msgstr "Tidak dapat mengambil search facet."
 
 msgid "Unavailable"
 msgstr "Unavailable (tidak tersedia)"
-
-msgid "Unpause"
-msgstr "Unpause (batalkan jeda)"
 
 msgid "Up"
 msgstr "Up (naik)"
@@ -1141,9 +887,6 @@ msgstr "Volume Snapshot"
 msgid "Volumes"
 msgstr "Volume"
 
-msgid "Volumes Attached"
-msgstr "Volumes Attached"
-
 msgid ""
 "Warning: Wildcard queries place\n"
 "            a heavy burden on the search service and may perform poorly."
@@ -1157,10 +900,6 @@ msgstr "Wildcards"
 
 msgid "Yes"
 msgstr "Yes"
-
-#, python-format
-msgid "You are not allowed to delete instances: %s"
-msgstr "Anda tidak diizinkan untuk menghapus instances: %s"
 
 msgid "You are not allowed to perform this request."
 msgstr "Anda tidak diizinkan untuk melakukan permintaan ini."
@@ -1241,11 +980,6 @@ msgid ""
 msgstr ""
 "Anda telah berada di bawah minimum ({$ ctrl.settings.polling.interval_min "
 "$}) yang diizinkan."
-
-#, python-format
-msgid "You have selected \"%s\". Deleted instance is not recoverable."
-msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
-msgstr[0] "You have selected \"%s\". Deleted instance is not recoverable."
 
 msgid ""
 "You may decide to only look in a certain field for a\n"

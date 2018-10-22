@@ -12,16 +12,17 @@
 # Sungjin Kang <gang.sungjin@gmail.com>, 2017. #zanata
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
 # Jaewook Oh <kyle.oh95@gmail.com>, 2018. #zanata
+# Sungjin Kang <gang.sungjin@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-20 19:20+0000\n"
+"POT-Creation-Date: 2018-10-05 01:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-03-12 12:10+0000\n"
-"Last-Translator: Jaewook Oh <kyle.oh95@gmail.com>\n"
+"PO-Revision-Date: 2018-10-21 07:59+0000\n"
+"Last-Translator: Sungjin Kang <gang.sungjin@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -45,27 +46,9 @@ msgstr "(확장)"
 msgid "-"
 msgstr "-"
 
-msgid ""
-"A snapshot is an image which preserves the disk state of a running instance."
-msgstr ""
-"스냅샷은 실행 중인 인스턴스에 대한 디스크 상태를 보존하는 이미지입니다."
-
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "%(type)s %(direction)s %(target)s 허용"
-
-#, python-format
-msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
-msgstr "%(type)s %(ports)s %(direction)s %(target)s 를 허용합니다."
-
-msgid "ANY"
-msgstr "ANY"
-
-msgid "Action"
-msgstr "동작"
-
-msgid "Action Log"
-msgstr "액션 로그"
 
 msgid "Actions"
 msgstr "작업"
@@ -73,10 +56,26 @@ msgstr "작업"
 msgid "Active"
 msgstr "Active"
 
-msgid "Address"
-msgstr "주소"
+msgid ""
+"Add a '+' or a '-' to indicate terms that must or must\n"
+"            not appear. For example '+python -apache web' would find\n"
+"            everything that has 'python' does NOT have 'apache' and should "
+"have\n"
+"            'web'. This may also be used with grouping. For example,\n"
+"            'web -(apache AND python)' would find anything with 'web', but "
+"does\n"
+"            not have either 'apache' or 'python'."
+msgstr ""
+"반드시 보이거나 보이지 않아야 할 용어를 나타내기 위하여\n"
+"            '+'나 '-'를 추가하세요. 예를들어 '+python -apache web'는\n"
+"          'python'을 포함하고 'apache'를 포함하지 않고 'web'을 포함해야 하"
+"는\n"
+"          모든 것들을 찾을 겁니다. 이는 그룹화에 사용될 수도 있습니다. 예를 "
+"들어,\n"
+"          'web-(apache AND python)'은 'apache'나 'python'이 없지만\n"
+"          'web'이 들어간 모든 단어를 찾습니다."
 
-msgid "Addresses"
+msgid "Address"
 msgstr "주소"
 
 msgid "Admin State"
@@ -121,9 +120,6 @@ msgstr "바인딩 VIF 유형"
 msgid "Binding VNIC Type"
 msgstr "바인딩 VNIC 유형"
 
-msgid "Blocked"
-msgstr "Blocked"
-
 msgid "Boolean Operators"
 msgstr "부울 연산자 "
 
@@ -135,9 +131,6 @@ msgstr "부팅가능"
 
 msgid "Build"
 msgstr "Build"
-
-msgid "Building"
-msgstr "Building"
 
 msgid ""
 "By default, each word you type will be searched for\n"
@@ -186,60 +179,17 @@ msgstr "Chassis UUID"
 msgid "Close"
 msgstr "닫기"
 
-msgid "Code"
-msgstr "코드"
-
-msgid "Confirm Delete Instance"
-msgid_plural "Confirm Delete Instances"
-msgstr[0] "인스턴스 삭제 확인"
-
-msgid "Confirm Resize"
-msgstr "Confirm Resize"
-
-msgid "Confirm or Revert Resize/Migrate"
-msgstr "Confirm or Revert Resize/Migrate"
-
-msgid "Connect"
-msgstr "연결"
-
-msgid "Connect in a new window"
-msgstr "새 창에서 연결하기"
-
 msgid "Consistency Group ID"
 msgstr "정합성 그룹 ID"
 
-msgid "Console"
-msgstr "콘솔"
-
 msgid "Console Enabled?"
 msgstr "콘솔 활성화 하시겠습니까?"
-
-msgid "Console is currently unavailable. Please try again later."
-msgstr "콘솔을 사용할 수 없습니다. 나중에 다시 시도해주세요."
-
-msgid "Crashed"
-msgstr "Crashed"
-
-msgid "Create"
-msgstr "생성"
-
-msgid "Create Instance"
-msgstr "인스턴스 생성"
-
-msgid "Create Instance Snapshot"
-msgstr "인스턴스 스냅샷 생성"
-
-msgid "Create Snapshot"
-msgstr "스냅샷 생성"
 
 msgid "Created"
 msgstr "생성됨"
 
 msgid "Created At"
 msgstr "생성 시점"
-
-msgid "Creating Snapshot"
-msgstr "스냅샷 생성중"
 
 msgid "DNS Domain"
 msgstr "DNS 도메인"
@@ -259,36 +209,23 @@ msgstr "DNS 레코드"
 msgid "DNS Records"
 msgstr "DNS 레코드"
 
+msgid ""
+"Date, numeric or string fields can use range queries.\n"
+"            Use square brackets [min TO max] for inclusive ranges and curly\n"
+"            brackets {min TO max} for exclusive ranges."
+msgstr ""
+"날짜, 숫자나 문자 필드는 범주 쿼리를 사용할 수 있습니다.\n"
+"            포괄 범주는 대괄호 [min TO max]를 사용하고\n"
+"            배타적 범주에는 중괄호 {min TO max}를 사용하세요."
+
 msgid "Default Network"
 msgstr "기본 네트워크"
-
-msgid "Delete"
-msgstr "삭제"
-
-msgid "Delete Instance"
-msgid_plural "Delete Instances"
-msgstr[0] "인스턴스 삭제"
 
 msgid "Deleted"
 msgstr "삭제됨"
 
-#, python-format
-msgid "Deleted Instance: %s."
-msgid_plural "Deleted Instances: %s."
-msgstr[0] "삭제된 인스턴스: %s "
-
-msgid "Deleting Instance"
-msgid_plural "Deleting Instances"
-msgstr[0] "인스턴스 삭제"
-
 msgid "Description"
 msgstr "설명"
-
-msgid "Description:"
-msgstr "설명:"
-
-msgid "Details"
-msgstr "상세 정보"
 
 msgid "Direction"
 msgstr "Direction"
@@ -298,6 +235,10 @@ msgstr "디스크"
 
 msgid "Display field matching"
 msgstr "항목 매칭 확인"
+
+#, python-format
+msgid "Displaying %(numberDisplayed)s of %(total)s total results"
+msgstr "전체 결과 %(total)s 에서 %(numberDisplayed)s 를 표시"
 
 msgid "Distributed"
 msgstr "분산"
@@ -320,6 +261,10 @@ msgstr "Ephemeral"
 msgid "Error"
 msgstr "에러"
 
+#, python-format
+msgid "Error initializing actions for plugin %(type)s: "
+msgstr "다음 초기화 동작에 에러 발생, 플러그인 %(type)s:"
+
 msgid "Ether Type"
 msgstr "Ether 타입"
 
@@ -329,26 +274,26 @@ msgstr "외부"
 msgid "External Network"
 msgstr "외부 네트워크"
 
-msgid "Failed"
-msgstr "실패함"
-
-msgid "Fault"
-msgstr "Fault"
+msgid "Facets"
+msgstr "Facets"
 
 msgid "Field Matches"
 msgstr "필드 일치"
+
+msgid ""
+"Find your cloud resources by selecting specific facets or by specifying\n"
+"    full text search queries.\n"
+"    <sl-search-syntax></sl-search-syntax>"
+msgstr ""
+"특정 패싯을 선택하거나 전체 텍스트 검색 쿼리를 지정함으로서\n"
+"    클라우드 자원을 찾으세요.\n"
+"    <sl-search-syntax></sl-search-syntax>"
 
 msgid "Fixed IPs"
 msgstr "Fixed IP"
 
 msgid "Flavor"
 msgstr "Flavor"
-
-msgid "Flavor ID"
-msgstr "Flavor ID"
-
-msgid "Flavor Name"
-msgstr "Flavor 이름"
 
 msgid "Flavors"
 msgstr "Flavor"
@@ -371,14 +316,11 @@ msgstr "모든 텍스트 검색 문법"
 msgid "Gateway IP"
 msgstr "게이트웨이 IP"
 
-msgid "Hard Reboot"
-msgstr "Hard Reboot"
+msgid "Grouping"
+msgstr "그룹화"
 
 msgid "High Availability"
 msgstr "고 가용성"
-
-msgid "Host"
-msgstr "호스트"
 
 msgid "Hostname"
 msgstr "호스트 이름"
@@ -401,6 +343,13 @@ msgstr "IP 버전"
 msgid "IPv4 Address Scope"
 msgstr "IPv4 주소 Scope"
 
+msgid ""
+"IPv4 addresses may be searched based on ranges and with CIDR\n"
+"            notation."
+msgstr ""
+"IPv4 주소는 범주와 CIDR 표기로 검색될 수\n"
+"            있습니다."
+
 msgid "IPv6 Address Mode"
 msgstr "IPv6 주소 모드"
 
@@ -410,36 +359,11 @@ msgstr "IPv6 주소 Scope"
 msgid "IPv6 RA Mode"
 msgstr "IPv6 RA 모드"
 
-msgid ""
-"If the console is not responding to keyboard input, click the status bar in "
-"the screen below."
-msgstr ""
-"만야갸 콘솔이 키보드 입력에 반응하지 않으면, 화면 아래의 상태바를 클릭해주세"
-"요."
-
-msgid "Image"
-msgstr "이미지"
-
 msgid "Image Reference"
 msgstr "이미지 레퍼런스"
 
-msgid "Instance"
-msgstr "인스턴스"
-
-msgid "Instance Action Log"
-msgstr "인스턴스 액션 로그"
-
-msgid "Instance Console"
-msgstr "인스턴스 콘솔"
-
-msgid "Instance Console Log"
-msgstr "인스턴스 콘솔 로그"
-
 msgid "Instance UUID"
 msgstr "인스턴스 UUID"
-
-msgid "Instances"
-msgstr "인스턴스"
 
 msgid "Ironic Chassis"
 msgstr "Ironic Chassis"
@@ -466,9 +390,6 @@ msgstr ""
 msgid "Key Pair"
 msgstr "키 페어"
 
-msgid "Key Pair Name"
-msgstr "키 페어 이름"
-
 msgid "Key Pairs"
 msgstr "키 페어"
 
@@ -493,12 +414,6 @@ msgstr "로드 밸런서 풀"
 msgid "Local GB (total)"
 msgstr "로컬 용량 GB(전체)"
 
-msgid "Log"
-msgstr "로그"
-
-msgid "Log Length"
-msgstr "로그 길이"
-
 msgid "MTU"
 msgstr "MTU"
 
@@ -514,20 +429,11 @@ msgstr "최대 포트번호"
 msgid "Members"
 msgstr "멤버"
 
-msgid "Message"
-msgstr "메시지"
-
-msgid "Metadata"
-msgstr "메타데이터"
-
 msgid "Metadata Definition"
 msgstr "메타데이터 정의"
 
 msgid "Metadata Definitions"
 msgstr "메타데이터 정의"
-
-msgid "Migrating"
-msgstr "이전중"
 
 msgid "Min Port"
 msgstr "최소 포트번호"
@@ -568,15 +474,6 @@ msgstr "새로운"
 msgid "No"
 msgstr "아니오"
 
-msgid "No State"
-msgstr "No State"
-
-msgid "No Volumes Attached"
-msgstr "연결된 볼륨이 없습니다."
-
-msgid "No rules defined"
-msgstr "정의된 규칙이 없습니다."
-
 msgid "Node UUID"
 msgstr "UUID 노드 "
 
@@ -607,17 +504,11 @@ msgstr "오래된"
 msgid "On"
 msgstr "켜짐"
 
-msgid "Overview"
-msgstr "개요"
-
 msgid "Owned by Me"
 msgstr "내가 소유함"
 
 msgid "PXE Enabled?"
 msgstr "PXE가 활성화되어 있습니까?"
-
-msgid "Password"
-msgstr "암호"
 
 msgid "Past 10 Minutes"
 msgstr "지난 10 분"
@@ -640,8 +531,8 @@ msgstr "지난 주"
 msgid "Past Year"
 msgstr "작년"
 
-msgid "Pause"
-msgstr "정지"
+msgid "Pause updates to search results"
+msgstr "검색 결과 업데이트 일시 중지"
 
 msgid "Paused"
 msgstr "정지함"
@@ -654,9 +545,6 @@ msgstr "Pending Delete"
 
 msgid "Phrases"
 msgstr "구"
-
-msgid "Please Wait"
-msgstr "기다려 주십시오"
 
 msgid "Policies"
 msgstr "정책"
@@ -719,17 +607,11 @@ msgstr "Queued"
 msgid "RAM"
 msgstr "RAM"
 
-msgid "Reboot"
-msgstr "재시작"
+msgid "Range Queries"
+msgstr "범주 쿼리"
 
 msgid "Rebooting"
 msgstr "Rebooting"
-
-msgid "Rebuild"
-msgstr "새로 빌드"
-
-msgid "Refresh"
-msgstr "갱신"
 
 msgid "Relevancy"
 msgstr "적합성"
@@ -737,35 +619,27 @@ msgstr "적합성"
 msgid "Remote"
 msgstr "원격"
 
-msgid "Request"
-msgstr "요청"
-
 msgid "Rescue"
 msgstr "복구"
 
-msgid "Rescued"
-msgstr "Rescued"
-
-msgid "Resize"
-msgstr "크기 변경"
-
-msgid "Resize/Migrate"
-msgstr "Resize/Migrate"
-
-msgid "Resized"
-msgstr "Resized"
+msgid "Reserved Characters"
+msgstr "예약된 문자"
 
 msgid "Result Limit"
 msgstr "결과 제한"
 
-msgid "Resume"
-msgstr "Resume"
+msgid ""
+"Results exceeds pagination limit. Please refine your search or\n"
+"                increase the limit setting."
+msgstr ""
+"결과가 페이지 제한을 초과합니다. 검색어를 가다듬거나\n"
+"                제한 설정을 늘리세요."
+
+msgid "Resume updates to search results"
+msgstr "검색 결과 업데이트 재개"
 
 msgid "Reverse Alphabetical Name"
 msgstr "이름 알파벳 역순"
-
-msgid "Revert Resize/Migrate"
-msgstr "크기 변경 / 이전을 되돌리기"
 
 msgid "Router"
 msgstr "라우터"
@@ -778,9 +652,6 @@ msgstr "라우터"
 
 msgid "Rules"
 msgstr "규칙"
-
-msgid "Running"
-msgstr "실행중"
 
 msgid "Saving"
 msgstr "Saving"
@@ -821,30 +692,14 @@ msgstr "Shelved"
 msgid "Shelved Offloaded"
 msgstr "Shelved Offloaded"
 
-msgid "Shutdown"
-msgstr "Shutdown"
-
 msgid "Shutoff"
 msgstr "Shutoff"
 
 msgid "Size"
 msgstr "크기"
 
-#, python-format
-msgid "Snapshot %s was successfully created."
-msgstr "스냅샷 %s 가 성공적으로 생성되었습니다."
-
 msgid "Snapshot ID"
 msgstr "스냅샷 ID"
-
-msgid "Snapshot Name"
-msgstr "스냅샷 이름"
-
-msgid "Soft Deleted"
-msgstr "Soft Deleted"
-
-msgid "Soft Reboot"
-msgstr "소프트 재시작"
 
 msgid "Sort"
 msgstr "정렬"
@@ -852,26 +707,11 @@ msgstr "정렬"
 msgid "Source Volume ID"
 msgstr "소스 볼륨 ID"
 
-msgid "Specs"
-msgstr "사양"
-
-msgid "Start"
-msgstr "시작"
-
-msgid "Start Time"
-msgstr "시작 시간"
-
 msgid "State"
 msgstr "상태"
 
 msgid "Status"
 msgstr "상태"
-
-msgid "Stop"
-msgstr "Stop"
-
-msgid "Stopped"
-msgstr "중지됨"
 
 msgid "Subnet"
 msgstr "서브넷"
@@ -885,9 +725,6 @@ msgstr "서브넷"
 msgid "Subnets Associated"
 msgstr "관련 서브넷"
 
-msgid "Suspend"
-msgstr "잠자기"
-
 msgid "Suspended"
 msgstr "Suspended"
 
@@ -900,14 +737,21 @@ msgstr "대상 전원 상태"
 msgid "Target Provisioning State"
 msgstr "대상 권한설정 상태"
 
-msgid "Task State"
-msgstr "작업 상태"
-
 msgid "Term Operators"
 msgstr "기간 연산자"
 
 msgid "The current query is not valid. Please check your syntax."
 msgstr "현재 쿼리는 유효하지 않습니다. 문법을 확인해주세요."
+
+msgid ""
+"The following characters are reserved and must be\n"
+"            escaped with a leading \\ (backslash):\n"
+"            <code> + - = && || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </code>"
+msgstr ""
+"다음 단어는 예약되어 있고 앞에 \\(백슬래시)로\n"
+"            에스케이프되어야 합니다:\n"
+"            <code> + - = &amp;&amp; || > < ! ( ) { } [ ] ^ \" ~ * ? : \\ </"
+"code>"
 
 msgid "The requested resource was not found."
 msgstr "요청하신 자원을 찾을 수 없습니다."
@@ -936,11 +780,6 @@ msgstr "유형"
 msgid "UUID"
 msgstr "UUID"
 
-#, python-format
-msgid "Unable to delete Instance: %s."
-msgid_plural "Unable to delete Instances: %s."
-msgstr[0] "삭제할 수 없는 인스턴스: %s"
-
 msgid "Unable to execute the search."
 msgstr "검색을 실행할 수 없습니다."
 
@@ -952,9 +791,6 @@ msgstr "검색 결과를 가져올 수 없습니다."
 
 msgid "Unavailable"
 msgstr "사용할 수 없음"
-
-msgid "Unpause"
-msgstr "Unpause"
 
 msgid "Up"
 msgstr "Up"
@@ -971,6 +807,17 @@ msgstr "업데이트됨"
 msgid "Updated At"
 msgstr "업데이트 시점"
 
+msgid ""
+"Use parenthesis to group different aspects of your\n"
+"            query to form sub-queries. For example, 'web OR (python AND\n"
+"            apache)' will return anything that either has 'web' OR has both\n"
+"            'python' AND 'apache'."
+msgstr ""
+"서브 쿼리를 구성하고 쿼리의 여러 측면을\n"
+"            그룹화하기 위하여 괄호를 사용하세요. 예를 들어,\n"
+"            'web OR (python AND apache)' 는 'web을 포함하거나\n"
+"            'python' AND 'apache' 모두를 포함한 용어를 보여줄겁니다."
+
 msgid "User ID"
 msgstr "사용자 ID"
 
@@ -979,6 +826,13 @@ msgstr "VCPUs"
 
 msgid "Visibility"
 msgstr "가시성"
+
+msgid ""
+"Visibility is based on derived data. If Owned by Me, please inspect the "
+"resource to determine sharing status."
+msgstr ""
+"가시성은 파생 데이터가 기반이 됩니다. 나에게 소유되었다면, 공유 상태를 결정하"
+"기 위해 자원을 검사하세요."
 
 msgid "Volume"
 msgstr "볼륨"
@@ -1004,8 +858,12 @@ msgstr "볼륨 스냅샷"
 msgid "Volumes"
 msgstr "볼륨"
 
-msgid "Volumes Attached"
-msgstr "볼륨 연결"
+msgid ""
+"Warning: Wildcard queries place\n"
+"            a heavy burden on the search service and may perform poorly."
+msgstr ""
+"경고: 와일드카드 질의는 검색 서비스에\n"
+"          많은 부하를 안겨주고 결과의 질이 낮아질 수 있습니다."
 
 msgid "Wildcards"
 msgstr "와일드카드"
@@ -1013,12 +871,56 @@ msgstr "와일드카드"
 msgid "Yes"
 msgstr "예"
 
-#, python-format
-msgid "You are not allowed to delete instances: %s"
-msgstr "%s 인스턴스 삭제할 수 있는 권한이 없습니다."
-
 msgid "You are not allowed to perform this request."
 msgstr "해당 요청에 대한 권한이 없습니다."
+
+msgid ""
+"You can increase or decrease the relevance of a search\n"
+"            term by boosting different terms, phrases, or groups. Boost one "
+"of\n"
+"            these by adding ^n to the term, phrase, or group where n is a\n"
+"            number greater than 1 to increase relevance and between 0 and 1 "
+"to\n"
+"            decrease relevance. For example 'web^4 python^0.1' would find\n"
+"            anything with both web and python, but would increase the\n"
+"            relevance for anything with 'web' in the result and decrease "
+"the\n"
+"            relevance for anything with 'python' in the result."
+msgstr ""
+"다른 용어, 구문 또는 그룹을 늘려서 검색어의\n"
+"            정확성을 높이거나 낮출 수 있습니다. 다른 용어, 구문\n"
+"            또는 그룹에 ^n을 추가하여 연관성을 높이려면\n"
+"            n이 1 보다 커야 하고, 0과 1 사이이면 연관성이\n"
+"            감소됩니다.  예를 들어 'web^4 python^0.1'은\n"
+"            web과 python이 포함된 항목을 검색하겠지만,\n"
+"            'web'과의 연관성을 높이고 'python'과의 연관성을\n"
+"            감소시킨 결과를 보여줍니다."
+
+msgid ""
+"You can separate search terms and groups with\n"
+"            AND, OR and NOT (also written &&, || and !). For example,\n"
+"            'python OR javascript' will find anything with either term\n"
+"            (OR is used by default, so does not need to be specified).\n"
+"            However, 'python AND javascript' will find things that only "
+"have\n"
+"            both terms. You can do this with as many terms as you'd like (e."
+"g.\n"
+"            'django AND javascript AND !unholy'). It is important to use "
+"all\n"
+"            caps or the alternate syntax (&&, ||), because 'and' will be\n"
+"            treated as another search term, but 'AND' will be treated as a\n"
+"            logical operator."
+msgstr ""
+"AND, OR, NOT (&amp;&amp;, ||, ! 으로도 사용됨)을 사용하여\n"
+"            검색어 및 그룹을 분리할 수 있습니다. 예를 들어,\n"
+"            'python OR javascript'은 둘 중 하나가 포함된 용어를\n"
+"            찾을겁니다. (OR은 기본값이므로 지정하지 않아도 됩니다)\n"
+"            'python AND javascript'는 두 단어가 모두 포함된 용어을\n"
+"            찾습니다. 'django AND javascript AND !unholy' 처럼\n"
+"            원하는 만큼 검색 조건을 여러 개 조합하여 사용할\n"
+"            수 있습니다. 'and'는 검색어로 취급되기 때문에\n"
+"            대체 구문(&amp;&amp;, ||)을 사용해야 하지만,\n"
+"            'AND'는논리 연산자로 취급됩니다."
 
 msgid ""
 "You have exceeded the maximum ({$ ctrl.settings.general.limit_max $}) "
@@ -1043,16 +945,34 @@ msgid ""
 msgstr ""
 "허용되는 최소값 ({$ ctrl.settings.polling.interval_min $})보다 아래입니다."
 
-#, python-format
-msgid "You have selected \"%s\". Deleted instance is not recoverable."
-msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
-msgstr[0] "\"%s\" 를 선택하셨습니다. 인스턴스를 삭제하면 복구하실 수 없습니다."
+msgid ""
+"You may decide to only look in a certain field for a\n"
+"            search term by setting a specific facet. This is accomplished "
+"by\n"
+"            either selecting a facet from the drop down or by typing the "
+"facet\n"
+"            manually. For example, if you are looking for an image, you\n"
+"            may choose to only look at the name field by adding 'name:foo'.\n"
+"            You may group facets and use logical operators."
+msgstr ""
+"특정 패싯을 설정하여 검색어로 특정 분야만 보도록\n"
+"            결정할 수 있습니다. 이는 드롭다운에서 패싯을\n"
+"            선택하거나 수동으로 패싯을 타이핑하여 수행될\n"
+"            수 있습니다. 예를 들어, 이미지를 찾는다면 'name:foo'를\n"
+"            추가함으로서 이름 필드만 보도록 선택할 수 있습니다. \n"
+"            패싯을 그룹화하고 논리 연산자를 사용할 수 있습니다."
 
 msgid "You must re-authenticate yourself."
 msgstr "재 인증을 받으시기 바랍니다."
 
 msgid "default"
 msgstr "기본"
+
+msgid "from"
+msgstr "from"
+
+msgid "to"
+msgstr "to"
 
 msgid "{$ table.queryResponse.statusCode | slQueryStatus $}"
 msgstr "{$ table.queryResponse.statusCode | slQueryStatus $}"

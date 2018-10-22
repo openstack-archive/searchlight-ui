@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-20 19:20+0000\n"
+"POT-Creation-Date: 2018-10-05 01:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,27 +38,9 @@ msgstr "(Uzantı)"
 msgid "-"
 msgstr "-"
 
-msgid ""
-"A snapshot is an image which preserves the disk state of a running instance."
-msgstr ""
-"Bir anlık görüntü çalışan bir sunucunun disk durumunu koruyan bir imajdır."
-
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "İZİN VER %(type)s %(direction)s %(target)s"
-
-#, python-format
-msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
-msgstr "İZİN VER %(type)s %(ports)s %(direction)s %(target)s"
-
-msgid "ANY"
-msgstr "ANY"
-
-msgid "Action"
-msgstr "Eylem"
-
-msgid "Action Log"
-msgstr "Eylem Günlüğü"
 
 msgid "Actions"
 msgstr "Aksiyonlar"
@@ -85,9 +67,6 @@ msgstr ""
 
 msgid "Address"
 msgstr "Adres"
-
-msgid "Addresses"
-msgstr "Adresler"
 
 msgid "Admin State"
 msgstr "Yönetici Durumu"
@@ -131,9 +110,6 @@ msgstr "Bağlayıcı VIF Türü"
 msgid "Binding VNIC Type"
 msgstr "Bağlayıcı VNIC Türü"
 
-msgid "Blocked"
-msgstr "Bloklanmış"
-
 msgid "Boolean Operators"
 msgstr "Bool İşleçleri"
 
@@ -145,9 +121,6 @@ msgstr "Başlatılabilir"
 
 msgid "Build"
 msgstr "İnşa Et"
-
-msgid "Building"
-msgstr "İnşa Ediliyor"
 
 msgid ""
 "By default, each word you type will be searched for\n"
@@ -194,61 +167,17 @@ msgstr "Şasi UUID'si"
 msgid "Close"
 msgstr "Kapat"
 
-msgid "Code"
-msgstr "Kod"
-
-msgid "Confirm Delete Instance"
-msgid_plural "Confirm Delete Instances"
-msgstr[0] "Sunucu Silmeyi Onayla"
-msgstr[1] "Sunucuları Silmeyi Onayla"
-
-msgid "Confirm Resize"
-msgstr "Yeniden Boyutlandırmayı Doğrula"
-
-msgid "Confirm or Revert Resize/Migrate"
-msgstr "Yeniden Boyutlama/Göç'ü Doğrula ya da Geri Al"
-
-msgid "Connect"
-msgstr "Baglantı"
-
-msgid "Connect in a new window"
-msgstr "Yeni bir pencerede bağlan"
-
 msgid "Consistency Group ID"
 msgstr "Tutarlılık Grubu Kimliği"
 
-msgid "Console"
-msgstr "Uçbirim"
-
 msgid "Console Enabled?"
 msgstr "Konsol Etkin mi?"
-
-msgid "Console is currently unavailable. Please try again later."
-msgstr "Konsol şu an kullanılabilir değil. Lütfen daha sonra tekrar deneyin."
-
-msgid "Crashed"
-msgstr "Çöktü"
-
-msgid "Create"
-msgstr "Oluştur"
-
-msgid "Create Instance"
-msgstr "Sunucu Oluştur"
-
-msgid "Create Instance Snapshot"
-msgstr "Sunucu Anlık Görüntüsü Oluştur"
-
-msgid "Create Snapshot"
-msgstr "Anlık Görüntü Oluştur"
 
 msgid "Created"
 msgstr "Oluşturuldu"
 
 msgid "Created At"
 msgstr "Oluşturulduğu zaman"
-
-msgid "Creating Snapshot"
-msgstr "Anlık Görüntü Oluşturuluyor"
 
 msgid "DNS Domain"
 msgstr "DNS Domaini"
@@ -281,36 +210,11 @@ msgstr ""
 msgid "Default Network"
 msgstr "Öntanımlı Ağ"
 
-msgid "Delete"
-msgstr "Sil"
-
-msgid "Delete Instance"
-msgid_plural "Delete Instances"
-msgstr[0] "Instance Sil"
-msgstr[1] "Instanceları Sil"
-
 msgid "Deleted"
 msgstr "Silindi"
 
-#, python-format
-msgid "Deleted Instance: %s."
-msgid_plural "Deleted Instances: %s."
-msgstr[0] "Sunucu Silindi: %s."
-msgstr[1] "Sunucular Silindi: %s."
-
-msgid "Deleting Instance"
-msgid_plural "Deleting Instances"
-msgstr[0] "Sunucu Siliniyor"
-msgstr[1] "Sunucular Siliniyor"
-
 msgid "Description"
 msgstr "Açıklama"
-
-msgid "Description:"
-msgstr "Açıklama:"
-
-msgid "Details"
-msgstr "Detaylar"
 
 msgid "Direction"
 msgstr "Yön"
@@ -362,12 +266,6 @@ msgstr "Dış Ağ"
 msgid "Facets"
 msgstr "Taraflar"
 
-msgid "Failed"
-msgstr "Başarısız"
-
-msgid "Fault"
-msgstr "Arıza"
-
 msgid "Field Matches"
 msgstr "Alan Eşleşmeleri"
 
@@ -386,12 +284,6 @@ msgstr "Sabit IP'ler"
 
 msgid "Flavor"
 msgstr "Şablon"
-
-msgid "Flavor ID"
-msgstr "Nitelik ID'si"
-
-msgid "Flavor Name"
-msgstr "Şablon Adı"
 
 msgid "Flavors"
 msgstr "Şablonlar"
@@ -417,14 +309,8 @@ msgstr "Ağ Geçidi IP'si"
 msgid "Grouping"
 msgstr "Gruplandırma"
 
-msgid "Hard Reboot"
-msgstr "Katı Yeniden Başlat"
-
 msgid "High Availability"
 msgstr "Yüksek Kullanılırlık"
-
-msgid "Host"
-msgstr "Host"
 
 msgid "Hostname"
 msgstr "Host adı"
@@ -461,36 +347,11 @@ msgstr "IPv6 Adres Kapsamı"
 msgid "IPv6 RA Mode"
 msgstr "IPv6 RA Kipi"
 
-msgid ""
-"If the console is not responding to keyboard input, click the status bar in "
-"the screen below."
-msgstr ""
-"Konsol klavye girdisine cevap vermiyorsa, aşağıdaki ekrandaki durum çubuğuna "
-"tıklayın."
-
-msgid "Image"
-msgstr "İmaj"
-
 msgid "Image Reference"
 msgstr "İmaj Referansı"
 
-msgid "Instance"
-msgstr "Instance"
-
-msgid "Instance Action Log"
-msgstr "Sunucu Eylem Kaydı"
-
-msgid "Instance Console"
-msgstr "Sunucu Konsolu"
-
-msgid "Instance Console Log"
-msgstr "Sunucu Konsol Günlüğü"
-
 msgid "Instance UUID"
 msgstr "Sunucu UUID'si"
-
-msgid "Instances"
-msgstr "Instancelar"
 
 msgid "Ironic Chassis"
 msgstr "Ironic Şasi"
@@ -517,9 +378,6 @@ msgstr ""
 msgid "Key Pair"
 msgstr "Anahtar Çifti"
 
-msgid "Key Pair Name"
-msgstr "Anahtar Çifti Adı"
-
 msgid "Key Pairs"
 msgstr "Anahtar Çiftleri"
 
@@ -544,12 +402,6 @@ msgstr "Yük Dengeleyici Havuzları"
 msgid "Local GB (total)"
 msgstr "Yerel GB (toplam)"
 
-msgid "Log"
-msgstr "Günlük"
-
-msgid "Log Length"
-msgstr "Günlük Uzunluğu"
-
 msgid "MTU"
 msgstr "MTU"
 
@@ -565,20 +417,11 @@ msgstr "Maksimum Port"
 msgid "Members"
 msgstr "Üyeler"
 
-msgid "Message"
-msgstr "İleti"
-
-msgid "Metadata"
-msgstr "Üstveri"
-
 msgid "Metadata Definition"
 msgstr "Üstveri Tanımlaması"
 
 msgid "Metadata Definitions"
 msgstr "Üstveri Tanımlamaları"
-
-msgid "Migrating"
-msgstr "Göç ediliyor"
 
 msgid "Min Port"
 msgstr "Minimum Port"
@@ -619,15 +462,6 @@ msgstr "En Yeni"
 msgid "No"
 msgstr "Hayır"
 
-msgid "No State"
-msgstr "Durum Yok"
-
-msgid "No Volumes Attached"
-msgstr "Ekli Birim Yok"
-
-msgid "No rules defined"
-msgstr "Kural tanımlanmamış"
-
 msgid "Node UUID"
 msgstr "Düğüm UUID'si"
 
@@ -658,17 +492,11 @@ msgstr "En Eski"
 msgid "On"
 msgstr "Açık"
 
-msgid "Overview"
-msgstr "Önizleme"
-
 msgid "Owned by Me"
 msgstr "Bana Ait"
 
 msgid "PXE Enabled?"
 msgstr "PXE Etkin mi?"
-
-msgid "Password"
-msgstr "Şifre"
 
 msgid "Past 10 Minutes"
 msgstr "Geçen 10 Dakika"
@@ -691,9 +519,6 @@ msgstr "Geçen Hafta"
 msgid "Past Year"
 msgstr "Geçen Yıl"
 
-msgid "Pause"
-msgstr "Durdur"
-
 msgid "Pause updates to search results"
 msgstr "Arama sonuçlarını güncellemeyi durdur"
 
@@ -708,9 +533,6 @@ msgstr "Silme Beklemede"
 
 msgid "Phrases"
 msgstr "Tümceler"
-
-msgid "Please Wait"
-msgstr "Lütfen Bekleyiniz"
 
 msgid "Policies"
 msgstr "İlkeler"
@@ -776,17 +598,8 @@ msgstr "RAM"
 msgid "Range Queries"
 msgstr "Aralık Sorguları"
 
-msgid "Reboot"
-msgstr "Yeniden Başlat"
-
 msgid "Rebooting"
 msgstr "Yeniden başlatılıyor"
-
-msgid "Rebuild"
-msgstr "Yeniden inşa et"
-
-msgid "Refresh"
-msgstr "Tazele"
 
 msgid "Relevancy"
 msgstr "Alaka"
@@ -794,26 +607,11 @@ msgstr "Alaka"
 msgid "Remote"
 msgstr "Uzak"
 
-msgid "Request"
-msgstr "İstek"
-
 msgid "Rescue"
 msgstr "Kurtar"
 
-msgid "Rescued"
-msgstr "Kurtarıldı"
-
 msgid "Reserved Characters"
 msgstr "Ayrılmış Karakterler"
-
-msgid "Resize"
-msgstr "Yeniden boyutlandır"
-
-msgid "Resize/Migrate"
-msgstr "Yeniden boyutlandır/Göç ettir"
-
-msgid "Resized"
-msgstr "Boyutlandırıldı"
 
 msgid "Result Limit"
 msgstr "Sonuç Sınırı"
@@ -825,17 +623,11 @@ msgstr ""
 "Sonuçlar sayfalandırma sınırlarını aşıyor. Lütfen aramanızı daha ince\n"
 "hale getirin veya sınır ayarını artırın."
 
-msgid "Resume"
-msgstr "Sürdü"
-
 msgid "Resume updates to search results"
 msgstr "Arama sonuçlarını güncellemeyi devam ettir"
 
 msgid "Reverse Alphabetical Name"
 msgstr "Ters Alfabetik İsim"
-
-msgid "Revert Resize/Migrate"
-msgstr "Yeniden Boyutlama/Geçirmeyi Geri Al"
 
 msgid "Router"
 msgstr "Router"
@@ -853,9 +645,6 @@ msgstr "Routers"
 
 msgid "Rules"
 msgstr "Kurallar"
-
-msgid "Running"
-msgstr "Çalışıyor"
 
 msgid "Saving"
 msgstr "Kaydediliyor"
@@ -896,30 +685,14 @@ msgstr "Askıda"
 msgid "Shelved Offloaded"
 msgstr "Askıda Yük Dışa Aktarıldı"
 
-msgid "Shutdown"
-msgstr "Kapat"
-
 msgid "Shutoff"
 msgstr "Kapalı"
 
 msgid "Size"
 msgstr "Boyut"
 
-#, python-format
-msgid "Snapshot %s was successfully created."
-msgstr "Anlık görüntü %s başarıyla oluşturuldu."
-
 msgid "Snapshot ID"
 msgstr "Anlık Görüntü Kimliği"
-
-msgid "Snapshot Name"
-msgstr "Anlık Görüntü İsmi"
-
-msgid "Soft Deleted"
-msgstr "Yumuşak Silindi"
-
-msgid "Soft Reboot"
-msgstr "Yumuşak Yeniden Başlatma"
 
 msgid "Sort"
 msgstr "Sırala"
@@ -927,26 +700,11 @@ msgstr "Sırala"
 msgid "Source Volume ID"
 msgstr "Kaynak Birim Kimliği"
 
-msgid "Specs"
-msgstr "Özellikler"
-
-msgid "Start"
-msgstr "Başlat"
-
-msgid "Start Time"
-msgstr "Başlangıç Zamanı"
-
 msgid "State"
 msgstr "Durum"
 
 msgid "Status"
 msgstr "Statü"
-
-msgid "Stop"
-msgstr "Durdur"
-
-msgid "Stopped"
-msgstr "Durduruldu"
 
 msgid "Subnet"
 msgstr "Subnet"
@@ -960,9 +718,6 @@ msgstr "Subnetler"
 msgid "Subnets Associated"
 msgstr "Subnetler İlişkilendirildi"
 
-msgid "Suspend"
-msgstr "Askıya Al"
-
 msgid "Suspended"
 msgstr "Askıda"
 
@@ -974,9 +729,6 @@ msgstr "Hedef Güç Durumu"
 
 msgid "Target Provisioning State"
 msgstr "Hedef Hazırlık Durumu"
-
-msgid "Task State"
-msgstr "Görev Durumu"
 
 msgid "Term Operators"
 msgstr "Terim İşleçleri"
@@ -1019,12 +771,6 @@ msgstr "Tip"
 msgid "UUID"
 msgstr "UUID"
 
-#, python-format
-msgid "Unable to delete Instance: %s."
-msgid_plural "Unable to delete Instances: %s."
-msgstr[0] "Sunucu silinemiyor: %s."
-msgstr[1] "Sunucular silinemiyor: %s."
-
 msgid "Unable to execute the search."
 msgstr "Arama çalıştırılamıyor."
 
@@ -1036,9 +782,6 @@ msgstr "Arama tarafları alınamadı."
 
 msgid "Unavailable"
 msgstr "Kullanılamaz"
-
-msgid "Unpause"
-msgstr "Sürdür"
 
 msgid "Up"
 msgstr "Açık"
@@ -1105,9 +848,6 @@ msgstr "Mantıksal Sürücü Anlık Görüntüleri"
 msgid "Volumes"
 msgstr "Mantıksal Sürücüler"
 
-msgid "Volumes Attached"
-msgstr "Bağlı Mantıksal Sürücüler"
-
 msgid ""
 "Warning: Wildcard queries place\n"
 "            a heavy burden on the search service and may perform poorly."
@@ -1120,10 +860,6 @@ msgstr "Joker karakterler"
 
 msgid "Yes"
 msgstr "Evet"
-
-#, python-format
-msgid "You are not allowed to delete instances: %s"
-msgstr "Sunucu silme yetkiniz yok: %s"
 
 msgid "You are not allowed to perform this request."
 msgstr "Bu isteği gerçekleştirme izniniz yok."
@@ -1202,12 +938,6 @@ msgid ""
 msgstr ""
 "izin verilen asgari ({$ ctrl.settings.polling.interval_min $}) değerin "
 "altına indiniz."
-
-#, python-format
-msgid "You have selected \"%s\". Deleted instance is not recoverable."
-msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
-msgstr[0] "\"%s\" seçtiniz. Silinen sunucu geri getirilemez."
-msgstr[1] "\"%s\" seçtiniz. Silinen sunucular geri getirilemez."
 
 msgid ""
 "You may decide to only look in a certain field for a\n"

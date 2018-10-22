@@ -1,19 +1,19 @@
 # Yuko Katabami <yukokatabami@gmail.com>, 2015. #zanata
-# Shu Muto <shu-mutou@rf.jp.nec.com>, 2016. #zanata
+# Shu Muto <shu.mutow@gmail.com>, 2016. #zanata
 # Yoshiki Eguchi <yoshiki.eguchi@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: searchlight-ui 3.0.0.0b3.dev1\n"
+"Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-06-30 16:36+0000\n"
+"POT-Creation-Date: 2018-10-05 01:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2016-09-30 10:17+0000\n"
-"Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
+"Last-Translator: Shu Muto <shu.mutow@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 #, python-format
@@ -34,37 +34,15 @@ msgstr "（拡張）"
 msgid "-"
 msgstr "-"
 
-msgid ""
-"A snapshot is an image which preserves the disk state of a running instance."
-msgstr ""
-"スナップショットは、実行中のインスタンスのディスク状態を保存したイメージで"
-"す。"
-
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "%(type)s %(direction)s %(target)s を許可します。"
-
-#, python-format
-msgid "ALLOW %(type)s %(ports)s %(direction)s %(target)s"
-msgstr "%(type)s %(ports)s %(direction)s %(target)s を許可します。"
-
-msgid "ANY"
-msgstr "ANY"
-
-msgid "Action"
-msgstr "アクション"
-
-msgid "Action Log"
-msgstr "アクションログ"
 
 msgid "Actions"
 msgstr "アクション"
 
 msgid "Active"
 msgstr "稼働中"
-
-msgid "Addresses"
-msgstr "アドレス"
 
 msgid "Admin State"
 msgstr "管理状態"
@@ -93,9 +71,6 @@ msgstr "アベイラビリティーゾーン"
 msgid "Available"
 msgstr "利用可能"
 
-msgid "Blocked"
-msgstr "実行待ち"
-
 msgid "Boolean Operators"
 msgstr "ブール値の演算子"
 
@@ -105,66 +80,20 @@ msgstr "起動可能"
 msgid "Build"
 msgstr "作成中"
 
-msgid "Building"
-msgstr "作成中"
-
 msgid "Cancel"
 msgstr "取り消し"
 
 msgid "Close"
 msgstr "閉じる"
 
-msgid "Code"
-msgstr "コード"
-
-msgid "Confirm Delete Instance"
-msgid_plural "Confirm Delete Instances"
-msgstr[0] "インスタンスの削除の確認"
-
-msgid "Confirm Resize"
-msgstr "リサイズの確定"
-
-msgid "Confirm or Revert Resize/Migrate"
-msgstr "リサイズ/マイグレーションの確認待ち"
-
-msgid "Connect"
-msgstr "接続"
-
-msgid "Connect in a new window"
-msgstr "新しいウィンドウで接続"
-
 msgid "Consistency Group ID"
 msgstr "整合性グループ ID"
-
-msgid "Console"
-msgstr "コンソール"
-
-msgid "Console is currently unavailable. Please try again later."
-msgstr "コンソールが現在利用できません。後からもう一度お試しください。"
-
-msgid "Crashed"
-msgstr "クラッシュ"
-
-msgid "Create"
-msgstr "作成"
-
-msgid "Create Instance"
-msgstr "インスタンスの作成"
-
-msgid "Create Instance Snapshot"
-msgstr "インスタンスのスナップショットの作成"
-
-msgid "Create Snapshot"
-msgstr "スナップショットの作成"
 
 msgid "Created"
 msgstr "作成時刻"
 
 msgid "Created At"
 msgstr "作成時刻"
-
-msgid "Creating Snapshot"
-msgstr "スナップショットを作成しています"
 
 msgid "DNS Domain"
 msgstr "DNS ドメイン"
@@ -187,33 +116,11 @@ msgstr "DNS レコード"
 msgid "Default Network"
 msgstr "デフォルトネットワーク"
 
-msgid "Delete"
-msgstr "削除"
-
-msgid "Delete Instance"
-msgid_plural "Delete Instances"
-msgstr[0] "インスタンスの削除"
-
 msgid "Deleted"
 msgstr "削除"
 
-#, python-format
-msgid "Deleted Instance: %s."
-msgid_plural "Deleted Instances: %s."
-msgstr[0] "インスタンス %s を削除しました。"
-
-msgid "Deleting Instance"
-msgid_plural "Deleting Instances"
-msgstr[0] "インスタンスを削除しています"
-
 msgid "Description"
 msgstr "説明"
-
-msgid "Description:"
-msgstr "説明:"
-
-msgid "Details"
-msgstr "詳細"
 
 msgid "Direction"
 msgstr "方向"
@@ -259,23 +166,11 @@ msgstr "外部ネットワーク"
 msgid "Facets"
 msgstr "ファセット"
 
-msgid "Failed"
-msgstr "失敗"
-
-msgid "Fault"
-msgstr "失敗"
-
 msgid "Fixed IPs"
 msgstr "固定 IP"
 
 msgid "Flavor"
 msgstr "フレーバー"
-
-msgid "Flavor ID"
-msgstr "フレーバー ID"
-
-msgid "Flavor Name"
-msgstr "フレーバー名"
 
 msgid "Flavors"
 msgstr "フレーバー"
@@ -301,14 +196,8 @@ msgstr "ゲートウェイ IP"
 msgid "Grouping"
 msgstr "グループ化"
 
-msgid "Hard Reboot"
-msgstr "ハードリブート"
-
 msgid "High Availability"
 msgstr "高可用性"
-
-msgid "Host"
-msgstr "ホスト"
 
 msgid "Hostname"
 msgstr "ホスト名"
@@ -340,39 +229,11 @@ msgstr "IPv6 アドレススコープ"
 msgid "IPv6 RA Mode"
 msgstr "IPv6  RA  モード"
 
-msgid ""
-"If the console is not responding to keyboard input, click the status bar in "
-"the screen below."
-msgstr ""
-"コンソールがキーボード入力に応答していない場合には、以下のステータスバーをク"
-"リックしてください。"
-
-msgid "Image"
-msgstr "イメージ"
-
 msgid "Image Reference"
 msgstr "イメージリファレンス"
 
-msgid "Instance"
-msgstr "インスタンス"
-
-msgid "Instance Action Log"
-msgstr "インスタンスのアクションログ"
-
-msgid "Instance Console"
-msgstr "インスタンスのコンソール"
-
-msgid "Instance Console Log"
-msgstr "インスタンスのコンソールログ"
-
-msgid "Instances"
-msgstr "インスタンス"
-
 msgid "Key Pair"
 msgstr "キーペア"
-
-msgid "Key Pair Name"
-msgstr "キーペア名"
 
 msgid "Key Pairs"
 msgstr "キーペア"
@@ -395,12 +256,6 @@ msgstr "ロードバランサープール"
 msgid "Local GB (total)"
 msgstr "ローカル GB  (総量)"
 
-msgid "Log"
-msgstr "ログ"
-
-msgid "Log Length"
-msgstr "ログの表示行数"
-
 msgid "MTU"
 msgstr "MTU"
 
@@ -413,20 +268,11 @@ msgstr "上限ポート番号"
 msgid "Members"
 msgstr "メンバー"
 
-msgid "Message"
-msgstr "メッセージ"
-
-msgid "Metadata"
-msgstr "メタデータ"
-
 msgid "Metadata Definition"
 msgstr "メタデータ定義"
 
 msgid "Metadata Definitions"
 msgstr "メタデータ定義"
-
-msgid "Migrating"
-msgstr "マイグレーション中"
 
 msgid "Min Port"
 msgstr "下限ポート番号"
@@ -461,15 +307,6 @@ msgstr "ネットワーク"
 msgid "Newest"
 msgstr "最新"
 
-msgid "No State"
-msgstr "状態なし"
-
-msgid "No Volumes Attached"
-msgstr "ボリュームが接続されていません"
-
-msgid "No rules defined"
-msgstr "ルールが定義されていません"
-
 msgid "Object"
 msgstr "オブジェクト"
 
@@ -491,14 +328,8 @@ msgstr "オブジェクト"
 msgid "Oldest"
 msgstr "最古"
 
-msgid "Overview"
-msgstr "概要"
-
 msgid "Owned by Me"
 msgstr "自分の所有"
-
-msgid "Password"
-msgstr "パスワード"
 
 msgid "Past 10 Minutes"
 msgstr "過去 10 分間"
@@ -521,9 +352,6 @@ msgstr "過去 1 週間"
 msgid "Past Year"
 msgstr "過去 1 年間"
 
-msgid "Pause"
-msgstr "一時停止"
-
 msgid "Pause updates to search results"
 msgstr "検索結果の更新の一時停止"
 
@@ -538,9 +366,6 @@ msgstr "削除待ち"
 
 msgid "Phrases"
 msgstr "用語"
-
-msgid "Please Wait"
-msgstr "お待ち下さい"
 
 msgid "Policies"
 msgstr "ポリシー"
@@ -596,56 +421,26 @@ msgstr "メモリー"
 msgid "Range Queries"
 msgstr "範囲の問い合わせ"
 
-msgid "Reboot"
-msgstr "再起動"
-
-msgid "Rebuild"
-msgstr "再作成"
-
-msgid "Refresh"
-msgstr "最新表示"
-
 msgid "Relevancy"
 msgstr "関連性"
 
 msgid "Remote"
 msgstr "リモート"
 
-msgid "Request"
-msgstr "リクエスト"
-
 msgid "Rescue"
 msgstr "レスキュー中"
-
-msgid "Rescued"
-msgstr "レスキュー済み"
 
 msgid "Reserved Characters"
 msgstr "予約済みの文字"
 
-msgid "Resize"
-msgstr "リサイズ"
-
-msgid "Resize/Migrate"
-msgstr "リサイズ/マイグレーション中"
-
-msgid "Resized"
-msgstr "リサイズ済み"
-
 msgid "Result Limit"
 msgstr "結果上限"
-
-msgid "Resume"
-msgstr "再開"
 
 msgid "Resume updates to search results"
 msgstr "検索結果の更新の再開"
 
 msgid "Reverse Alphabetical Name"
 msgstr "アルファベット逆順の名前"
-
-msgid "Revert Resize/Migrate"
-msgstr "リサイズ/マイグレーションの取り消し中"
 
 msgid "Router"
 msgstr "ルーター"
@@ -658,9 +453,6 @@ msgstr "ルーター"
 
 msgid "Rules"
 msgstr "ルール"
-
-msgid "Running"
-msgstr "実行中"
 
 msgid "Saving"
 msgstr "保存中"
@@ -701,30 +493,14 @@ msgstr "退避"
 msgid "Shelved Offloaded"
 msgstr "退避オフロード"
 
-msgid "Shutdown"
-msgstr "シャットダウン"
-
 msgid "Shutoff"
 msgstr "電源停止"
 
 msgid "Size"
 msgstr "サイズ"
 
-#, python-format
-msgid "Snapshot %s was successfully created."
-msgstr "スナップショット %s が正常に作成されました。"
-
 msgid "Snapshot ID"
 msgstr "スナップショット ID"
-
-msgid "Snapshot Name"
-msgstr "スナップショット名"
-
-msgid "Soft Deleted"
-msgstr "ソフト削除"
-
-msgid "Soft Reboot"
-msgstr "ソフトリブート"
 
 msgid "Sort"
 msgstr "ソート"
@@ -732,26 +508,11 @@ msgstr "ソート"
 msgid "Source Volume ID"
 msgstr "ソースボリューム ID"
 
-msgid "Specs"
-msgstr "スペック"
-
-msgid "Start"
-msgstr "開始"
-
-msgid "Start Time"
-msgstr "開始時刻"
-
 msgid "State"
 msgstr "状態"
 
 msgid "Status"
 msgstr "ステータス"
-
-msgid "Stop"
-msgstr "停止"
-
-msgid "Stopped"
-msgstr "停止"
 
 msgid "Subnet"
 msgstr "サブネット"
@@ -765,17 +526,11 @@ msgstr "サブネット"
 msgid "Subnets Associated"
 msgstr "割り当てサブネット"
 
-msgid "Suspend"
-msgstr "休止"
-
 msgid "Suspended"
 msgstr "休止"
 
 msgid "Swap"
 msgstr "スワップ"
-
-msgid "Task State"
-msgstr "タスク状態"
 
 msgid "Term Operators"
 msgstr "条件の演算子"
@@ -798,11 +553,6 @@ msgstr "譲渡"
 msgid "Type"
 msgstr "種別"
 
-#, python-format
-msgid "Unable to delete Instance: %s."
-msgid_plural "Unable to delete Instances: %s."
-msgstr[0] "インスタンスを削除できません: %s"
-
 msgid "Unable to execute the search."
 msgstr "検索を実行できません。"
 
@@ -814,9 +564,6 @@ msgstr "検索のファセットを取得できません。"
 
 msgid "Unavailable"
 msgstr "利用不可"
-
-msgid "Unpause"
-msgstr "一時停止解除"
 
 msgid "Up"
 msgstr "動作中"
@@ -866,15 +613,8 @@ msgstr "ボリュームスナップショット"
 msgid "Volumes"
 msgstr "ボリューム"
 
-msgid "Volumes Attached"
-msgstr "接続されているボリューム"
-
 msgid "Wildcards"
 msgstr "ワイルドカード"
-
-#, python-format
-msgid "You are not allowed to delete instances: %s"
-msgstr "インスタンスの削除は許可されていません: %s"
 
 msgid "You are not allowed to perform this request."
 msgstr "このリクエストの実行は許可されていません。"
@@ -902,11 +642,6 @@ msgid ""
 "allowed."
 msgstr ""
 "許可された下限 ({$ ctrl.settings.polling.interval_min $}) を下回っています。"
-
-#, python-format
-msgid "You have selected \"%s\". Deleted instance is not recoverable."
-msgid_plural "You have selected \"%s\". Deleted instances are not recoverable."
-msgstr[0] "\"%s\" を選択しました。削除されたインスタンスは元に戻せません。"
 
 msgid "You must re-authenticate yourself."
 msgstr "再度認証する必要があります。"
