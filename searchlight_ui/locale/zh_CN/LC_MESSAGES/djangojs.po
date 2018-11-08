@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-10-05 01:12+0000\n"
+"POT-Creation-Date: 2018-11-07 07:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -223,9 +223,6 @@ msgstr "方向"
 msgid "Disk"
 msgstr "磁盘"
 
-msgid "Display field matching"
-msgstr "显示字段匹配"
-
 #, python-format
 msgid "Displaying %(numberDisplayed)s of %(total)s total results"
 msgstr "显示总记录 %(total)s 中的%(numberDisplayed)s"
@@ -369,11 +366,6 @@ msgstr "Ironic端口"
 
 msgid "Ironic Ports"
 msgstr "Ironic端口"
-
-msgid ""
-"It is typically better to filter results further than to increase\n"
-"          the number of returned results and page through them."
-msgstr "筛选结果通常远比通过他们增加返回结果和页的数量要好。"
 
 msgid "Key Pair"
 msgstr "密钥对"
@@ -537,14 +529,6 @@ msgstr "词汇"
 msgid "Policies"
 msgstr "策略"
 
-msgid "Poll for Updates"
-msgstr "更新poll"
-
-msgid ""
-"Polling enables you to create a view of the data the updates\n"
-"          periodically."
-msgstr "轮询使你可以创建一个可以定时更新的数据视图。"
-
 msgid "Pool"
 msgstr "资源池"
 
@@ -645,9 +629,6 @@ msgstr "保存中"
 msgid "Search"
 msgstr "搜索"
 
-msgid "Search Settings"
-msgstr "搜索设置"
-
 msgid "Search all projects"
 msgstr "搜索所有项目"
 
@@ -746,14 +727,6 @@ msgstr "搜索服务处理请求发生了一个错误。"
 
 msgid "There was an error processing your request."
 msgstr "这有一个错误的处理请求。"
-
-msgid ""
-"These settings impact the processing of results returned\n"
-"          from the search service. Changing these settings may\n"
-"          impact search performance and results."
-msgstr ""
-"这些设置会影响从搜索服务中返回结果的过程。改变这些设置可能会影响搜索操作和结"
-"果。"
 
 msgid "Transfer"
 msgstr "传输"

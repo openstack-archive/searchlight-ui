@@ -4,15 +4,16 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Rob Cresswell <robert.cresswell@outlook.com>, 2016. #zanata
 # Andi Chandler <andi@gowling.com>, 2017. #zanata
+# Andi Chandler <andi@gowling.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-10-05 01:12+0000\n"
+"POT-Creation-Date: 2018-11-07 07:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-10-13 09:21+0000\n"
+"PO-Revision-Date: 2018-11-07 05:32+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -37,6 +38,9 @@ msgstr "(Extension)"
 msgid "-"
 msgstr "-"
 
+msgid "A name is required for your favorite."
+msgstr "A name is required for your favourite."
+
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "ALLOW %(type)s %(direction)s %(target)s"
@@ -46,6 +50,15 @@ msgstr "Actions"
 
 msgid "Active"
 msgstr "Active"
+
+msgid "Add"
+msgstr "Add"
+
+msgid "Add Favorite"
+msgstr "Add Favourite"
+
+msgid "Add Favorite Query"
+msgstr "Add Favourite Query"
 
 msgid ""
 "Add a '+' or a '-' to indicate terms that must or must\n"
@@ -214,6 +227,9 @@ msgstr ""
 msgid "Default Network"
 msgstr "Default Network"
 
+msgid "Delete favorite"
+msgstr "Delete favourite"
+
 msgid "Deleted"
 msgstr "Deleted"
 
@@ -226,15 +242,15 @@ msgstr "Direction"
 msgid "Disk"
 msgstr "Disk"
 
-msgid "Display field matching"
-msgstr "Display field matching"
-
 #, python-format
 msgid "Displaying %(numberDisplayed)s of %(total)s total results"
 msgstr "Displaying %(numberDisplayed)s of %(total)s total results"
 
 msgid "Distributed"
 msgstr "Distributed"
+
+msgid "Done"
+msgstr "Done"
 
 msgid "Down"
 msgstr "Down"
@@ -272,6 +288,9 @@ msgstr "Facets"
 
 msgid "Field Matches"
 msgstr "Field Matches"
+
+msgid "Filter Options"
+msgstr "Filter Options"
 
 msgid ""
 "Find your cloud resources by selecting specific facets or by specifying\n"
@@ -373,13 +392,6 @@ msgstr "Ironic Port"
 msgid "Ironic Ports"
 msgstr "Ironic Ports"
 
-msgid ""
-"It is typically better to filter results further than to increase\n"
-"          the number of returned results and page through them."
-msgstr ""
-"It is typically better to filter results further than to increase\n"
-"          the number of returned results and page through them."
-
 msgid "Key Pair"
 msgstr "Key Pair"
 
@@ -413,6 +425,12 @@ msgstr "MTU"
 msgid "Maintenance Reason"
 msgstr "Maintenance Reason"
 
+msgid "Manage Favorite Queries"
+msgstr "Manage Favourite Queries"
+
+msgid "Manage Favorites"
+msgstr "Manage Favourites"
+
 msgid "Mapped Fixed IP Address"
 msgstr "Mapped Fixed IP Address"
 
@@ -440,6 +458,9 @@ msgstr "More Actions..."
 msgid "Name"
 msgstr "Name"
 
+msgid "Name must not contain \"/\"."
+msgstr "Name must not contain \"/\"."
+
 msgid "Network"
 msgstr "Network"
 
@@ -466,6 +487,9 @@ msgstr "Newest"
 
 msgid "No"
 msgstr "No"
+
+msgid "No favorites"
+msgstr "No favourites"
 
 msgid "Node UUID"
 msgstr "Node UUID"
@@ -536,21 +560,14 @@ msgstr "Pending"
 msgid "Pending Delete"
 msgstr "Pending Delete"
 
+msgid "Periodically update search results"
+msgstr "Periodically update search results"
+
 msgid "Phrases"
 msgstr "Phrases"
 
 msgid "Policies"
 msgstr "Policies"
-
-msgid "Poll for Updates"
-msgstr "Poll for Updates"
-
-msgid ""
-"Polling enables you to create a view of the data the updates\n"
-"          periodically."
-msgstr ""
-"Polling enables you to create a view of the data the updates\n"
-"          periodically."
 
 msgid "Pool"
 msgstr "Pool"
@@ -594,6 +611,9 @@ msgstr "Provisioning State"
 msgid "Public"
 msgstr "Public"
 
+msgid "Queries"
+msgstr "Queries"
+
 msgid "Queued"
 msgstr "Queued"
 
@@ -617,6 +637,9 @@ msgstr "Rescue"
 
 msgid "Reserved Characters"
 msgstr "Reserved Characters"
+
+msgid "Resource Type"
+msgstr "Resource Type"
 
 msgid "Result Limit"
 msgstr "Result Limit"
@@ -657,9 +680,6 @@ msgstr "Saving"
 msgid "Search"
 msgstr "Search"
 
-msgid "Search Settings"
-msgstr "Search Settings"
-
 msgid "Search all projects"
 msgstr "Search all projects"
 
@@ -668,6 +688,9 @@ msgstr "Security Group"
 
 msgid "Security Groups"
 msgstr "Security Groups"
+
+msgid "Select sort"
+msgstr "Select sort"
 
 msgid "Server Group"
 msgstr "Server Group"
@@ -689,6 +712,9 @@ msgstr "Shelved"
 
 msgid "Shelved Offloaded"
 msgstr "Shelved Offloaded"
+
+msgid "Show reason for search result"
+msgstr "Show reason for search result"
 
 msgid "Shutoff"
 msgstr "Shutoff"
@@ -758,15 +784,6 @@ msgstr "The search service had an error processing your request."
 
 msgid "There was an error processing your request."
 msgstr "There was an error processing your request."
-
-msgid ""
-"These settings impact the processing of results returned\n"
-"          from the search service. Changing these settings may\n"
-"          impact search performance and results."
-msgstr ""
-"These settings impact the processing of results returned\n"
-"          from the search service. Changing these settings may\n"
-"          impact search performance and results."
 
 msgid "Transfer"
 msgstr "Transfer"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-10-05 01:12+0000\n"
+"POT-Creation-Date: 2018-11-07 07:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -223,9 +223,6 @@ msgstr "Направление"
 msgid "Disk"
 msgstr "Диск"
 
-msgid "Display field matching"
-msgstr "Показывать совпадение полей"
-
 #, python-format
 msgid "Displaying %(numberDisplayed)s of %(total)s total results"
 msgstr "Отображаются %(numberDisplayed)s из %(total)s результатов"
@@ -348,13 +345,6 @@ msgstr "Режим IPv6 RA"
 
 msgid "Image Reference"
 msgstr "Ссылка на образ"
-
-msgid ""
-"It is typically better to filter results further than to increase\n"
-"          the number of returned results and page through them."
-msgstr ""
-"Как правило, фильтрация результатов лучше чем увеличение\n"
-"количества возвращаемых результатов и их просмотра по страницам."
 
 msgid "Key Pair"
 msgstr "Ключевая Пара"
@@ -494,16 +484,6 @@ msgstr "Фразы"
 msgid "Policies"
 msgstr "Политики"
 
-msgid "Poll for Updates"
-msgstr "Запрашивать обновления"
-
-msgid ""
-"Polling enables you to create a view of the data the updates\n"
-"          periodically."
-msgstr ""
-"Polling позволяет вам создавать представление о данных обновления\n"
-"          периодически."
-
 msgid "Pool"
 msgstr "Пул"
 
@@ -599,9 +579,6 @@ msgstr "Сохранение"
 msgid "Search"
 msgstr "Поиск"
 
-msgid "Search Settings"
-msgstr "Настройки поиска"
-
 msgid "Search all projects"
 msgstr "Искать во всех проектах"
 
@@ -694,15 +671,6 @@ msgstr "В службе поиска возникла ошибка во врем
 
 msgid "There was an error processing your request."
 msgstr "Во время обработки вашего запроса возникла ошибка."
-
-msgid ""
-"These settings impact the processing of results returned\n"
-"          from the search service. Changing these settings may\n"
-"          impact search performance and results."
-msgstr ""
-"Эти настройки влияют на обработку результатов поиска.\n"
-"Изменение этих настроек может повлиять на производительность\n"
-"и результаты поиска."
 
 msgid "Transfer"
 msgstr "Передача"

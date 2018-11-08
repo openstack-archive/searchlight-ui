@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-10-05 01:12+0000\n"
+"POT-Creation-Date: 2018-11-07 07:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -223,9 +223,6 @@ msgstr "Richtung"
 msgid "Disk"
 msgstr "Festplatte"
 
-msgid "Display field matching"
-msgstr "Anzeigefeldabgleich"
-
 #, python-format
 msgid "Displaying %(numberDisplayed)s of %(total)s total results"
 msgstr "Zeige %(numberDisplayed)s von %(total)s Ergebnissen"
@@ -369,13 +366,6 @@ msgstr "Ironic Port"
 
 msgid "Ironic Ports"
 msgstr "Ironic Ports"
-
-msgid ""
-"It is typically better to filter results further than to increase\n"
-"          the number of returned results and page through them."
-msgstr ""
-"Es ist immer besser, Suchergebnisse weiter zu filtern,\n"
-"          um die Anzahl der Ergebnisse und Seiten zu verkleinern."
 
 msgid "Key Pair"
 msgstr "Schlüsselpaar"
@@ -539,16 +529,6 @@ msgstr "Phrasen"
 msgid "Policies"
 msgstr "Richtlinien"
 
-msgid "Poll for Updates"
-msgstr "Suche nach Updates"
-
-msgid ""
-"Polling enables you to create a view of the data the updates\n"
-"          periodically."
-msgstr ""
-"Polling aktivieren Sie zur periodischen Ansicht der\n"
-"          Datenaktualisierung."
-
 msgid "Pool"
 msgstr "Pool"
 
@@ -650,9 +630,6 @@ msgstr "Sichern"
 msgid "Search"
 msgstr "Suche"
 
-msgid "Search Settings"
-msgstr "Sucheinstellungen"
-
 msgid "Search all projects"
 msgstr "Suche alle Projekte"
 
@@ -751,15 +728,6 @@ msgstr "Der Suchdienst hat bei Ihrer Anfrage einen Fehler gemeldet."
 
 msgid "There was an error processing your request."
 msgstr "Bei Ihrer Anfrage ist ein Fehler aufgetreten."
-
-msgid ""
-"These settings impact the processing of results returned\n"
-"          from the search service. Changing these settings may\n"
-"          impact search performance and results."
-msgstr ""
-"Diese Einstellungen wirken sich auf die Suchergebnisse\n"
-"          des Suchdienstes aus. Änderungen haben Einfluss auf\n"
-"          Performance und Ergebnisse."
 
 msgid "Transfer"
 msgstr "Transfer"
