@@ -1,16 +1,17 @@
 # Frank Kloeker <eumel@arcor.de>, 2016. #zanata
 # Andreas Jaeger <jaegerandi@gmail.com>, 2017. #zanata
 # Frank Kloeker <eumel@arcor.de>, 2017. #zanata
+# Robert Simai <robert.simai@suse.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-11-07 07:24+0000\n"
+"POT-Creation-Date: 2018-12-04 12:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-04 12:55+0000\n"
-"Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
+"PO-Revision-Date: 2019-01-11 02:51+0000\n"
+"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -34,6 +35,9 @@ msgstr "(Extensionen)"
 msgid "-"
 msgstr "-"
 
+msgid "A name is required for your favorite."
+msgstr "Für Ihren Favoriten ist ein Name erforderlich."
+
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "ERLAUBT %(type)s %(direction)s %(target)s"
@@ -43,6 +47,15 @@ msgstr "Aktionen"
 
 msgid "Active"
 msgstr "Aktiv"
+
+msgid "Add"
+msgstr "Hinzufügen"
+
+msgid "Add Favorite"
+msgstr "Favorit hinzufügen"
+
+msgid "Add Favorite Query"
+msgstr "Bevorzugte Abfrage hinzufügen"
 
 msgid ""
 "Add a '+' or a '-' to indicate terms that must or must\n"
@@ -211,6 +224,9 @@ msgstr ""
 msgid "Default Network"
 msgstr "Standardnetzwerk"
 
+msgid "Delete favorite"
+msgstr "Favorit löschen"
+
 msgid "Deleted"
 msgstr "Gelöscht"
 
@@ -229,6 +245,9 @@ msgstr "Zeige %(numberDisplayed)s von %(total)s Ergebnissen"
 
 msgid "Distributed"
 msgstr "Verteilt"
+
+msgid "Done"
+msgstr "Erledigt"
 
 msgid "Down"
 msgstr "Inaktiv"
@@ -266,6 +285,9 @@ msgstr "Facetten"
 
 msgid "Field Matches"
 msgstr "Feldübereinstimmungen"
+
+msgid "Filter Options"
+msgstr "Filteroptionen"
 
 msgid ""
 "Find your cloud resources by selecting specific facets or by specifying\n"
@@ -400,6 +422,12 @@ msgstr "MTU"
 msgid "Maintenance Reason"
 msgstr "Grund der Wartung"
 
+msgid "Manage Favorite Queries"
+msgstr "Bevorzugte Abfragen verwalten"
+
+msgid "Manage Favorites"
+msgstr "Favoriten verwalten"
+
 msgid "Mapped Fixed IP Address"
 msgstr "Zugewiesene feste IP-Adresse"
 
@@ -427,6 +455,9 @@ msgstr "Mehr Aktionen..."
 msgid "Name"
 msgstr "Name"
 
+msgid "Name must not contain \"/\"."
+msgstr "Name darf kein \"/\" enthalten."
+
 msgid "Network"
 msgstr "Netzwerk"
 
@@ -453,6 +484,9 @@ msgstr "Neueste"
 
 msgid "No"
 msgstr "Nein"
+
+msgid "No favorites"
+msgstr "Keine Favoriten"
 
 msgid "Node UUID"
 msgstr "Knoten-UUID"
@@ -523,6 +557,9 @@ msgstr "In Arbeit"
 msgid "Pending Delete"
 msgstr "Löschen in Arbeit"
 
+msgid "Periodically update search results"
+msgstr "Suchergebnisse regelmäßig aktualisieren"
+
 msgid "Phrases"
 msgstr "Phrasen"
 
@@ -571,6 +608,9 @@ msgstr "Provisionierungsstatus"
 msgid "Public"
 msgstr "Öffentlich"
 
+msgid "Queries"
+msgstr "Abfragen"
+
 msgid "Queued"
 msgstr "Wartend"
 
@@ -594,6 +634,9 @@ msgstr "Wiederherstellen"
 
 msgid "Reserved Characters"
 msgstr "Reservierte Charakter"
+
+msgid "Resource Type"
+msgstr "Ressourcentyp"
 
 msgid "Result Limit"
 msgstr "Ergebnislimits"
@@ -639,6 +682,9 @@ msgstr "Sicherheitsgruppen"
 msgid "Security Groups"
 msgstr "Sicherheitsgruppen"
 
+msgid "Select sort"
+msgstr "Sortierung auswählen"
+
 msgid "Server Group"
 msgstr "Servergruppe"
 
@@ -659,6 +705,9 @@ msgstr "Eingelagert"
 
 msgid "Shelved Offloaded"
 msgstr "Eingelagert"
+
+msgid "Show reason for search result"
+msgstr "Zeige Grund für Suchergebnis"
 
 msgid "Shutoff"
 msgstr "Abschaltung"
