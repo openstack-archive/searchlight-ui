@@ -15,10 +15,11 @@
 from django.conf import settings
 from django.views import generic
 import functools
-import json
 import requests
 from requests import exceptions as r_exceptions
 import six
+
+from oslo_serialization import jsonutils
 
 from horizon import exceptions
 from openstack_dashboard.api import base
@@ -173,7 +174,7 @@ def _searchlight_request(request_method, url, request, data=None, params=None):
     response = request_method(
         _get_searchlight_url(request) + url,
         headers={'X-Auth-Token': request.user.token.id},
-        data=json.dumps(data) if data else None,
+        data=jsonutils.dumps(data) if data else None,
         verify=verify,
         params=params
     )
