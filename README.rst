@@ -16,7 +16,7 @@ Horizon panels and libraries for searchlight
 * Free software: Apache license
 * Documentation: https://docs.openstack.org/searchlight-ui/latest/
 * Source: https://git.openstack.org/cgit/openstack/searchlight-ui
-* Bugs: https://storyboard.openstack.org/#!/project_group/93
+* Bugs: https://storyboard.openstack.org/#!/project_group/searchlight
 * Release notes: https://docs.openstack.org/releasenotes/searchlight-ui/
 
 The Searchlight project provides indexing and search capabilities across
