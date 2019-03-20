@@ -7,6 +7,7 @@
 
    mitaka
    unreleased
+   stein
    queens
    pike
    ocata
