@@ -2,7 +2,7 @@
 # Install searchlight-ui
 
 # To enable searchlight-ui
-# enable_plugin searchlight-ui https://git.openstack.org/openstack/searchlight-ui
+# enable_plugin searchlight-ui https://opendev.org/openstack/searchlight-ui
 
 # stack.sh
 # ---------

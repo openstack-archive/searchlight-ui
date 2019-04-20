@@ -15,9 +15,9 @@ where
 
 For example:
 
-    enable_plugin searchlight-ui https://git.openstack.org/openstack/searchlight-ui
+    enable_plugin searchlight-ui https://opendev.org/openstack/searchlight-ui
 
 This plugin also depends on the following services to be enabled: ``horizon``,
 ``searchlight-api``, and ``searchlight-listener``.
 
-* https://github.com/openstack/searchlight/tree/master/devstack
+* https://opendev.org/openstack/searchlight/src/branch/master/devstack

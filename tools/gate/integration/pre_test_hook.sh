@@ -8,7 +8,7 @@ DIR=${BASH_SOURCE%/*}
 source $DIR/commons $@
 
 # Enable Searchlight UI plugin
-DEVSTACK_LOCAL_CONFIG+=$'\n'"enable_plugin enable_plugin searchlight https://git.openstack.org/openstack/searchlight"
+DEVSTACK_LOCAL_CONFIG+=$'\n'"enable_plugin enable_plugin searchlight https://opendev.org/openstack/searchlight"
 DEVSTACK_LOCAL_CONFIG+=$'\n'"enable_service searchlight-api"
 DEVSTACK_LOCAL_CONFIG+=$'\n'"enable_service searchlight-listener"
-DEVSTACK_LOCAL_CONFIG+=$'\n'"enable_plugin searchlight-ui https://git.openstack.org/openstack/searchlight-ui"
+DEVSTACK_LOCAL_CONFIG+=$'\n'"enable_plugin searchlight-ui https://opendev.org/openstack/searchlight-ui"
