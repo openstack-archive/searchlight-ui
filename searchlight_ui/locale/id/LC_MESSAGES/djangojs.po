@@ -3,16 +3,17 @@
 # suhartono <cloudsuhartono@gmail.com>, 2016. #zanata
 # Andreas Jaeger <jaegerandi@gmail.com>, 2017. #zanata
 # suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-11-07 07:24+0000\n"
+"POT-Creation-Date: 2019-07-06 03:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-07-30 07:53+0000\n"
-"Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
+"PO-Revision-Date: 2019-07-17 04:00+0000\n"
+"Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -36,6 +37,9 @@ msgstr "(Extension)"
 msgid "-"
 msgstr "-"
 
+msgid "A name is required for your favorite."
+msgstr "Nama diperlukan untuk favorit Anda."
+
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "ALLOW %(type)s %(direction)s %(target)s"
@@ -45,6 +49,15 @@ msgstr "Actions (tindakan)"
 
 msgid "Active"
 msgstr "Active (aktif)"
+
+msgid "Add"
+msgstr "Menambahkan"
+
+msgid "Add Favorite"
+msgstr "Tambah Favorit"
+
+msgid "Add Favorite Query"
+msgstr "Tambahkan Pertanyaan Favorit"
 
 msgid ""
 "Add a '+' or a '-' to indicate terms that must or must\n"
@@ -222,6 +235,9 @@ msgstr ""
 msgid "Default Network"
 msgstr "Default Network (jaringan default)"
 
+msgid "Delete favorite"
+msgstr "Hapus favorit"
+
 msgid "Deleted"
 msgstr "Deleted"
 
@@ -240,6 +256,9 @@ msgstr "Penampilan %(numberDisplayed)s dari %(total)s hasil total"
 
 msgid "Distributed"
 msgstr "Distributed (tersebar)"
+
+msgid "Done"
+msgstr "Selesai"
 
 msgid "Down"
 msgstr "Down (turun)"
@@ -278,6 +297,9 @@ msgstr "Facets (aspek)"
 
 msgid "Field Matches"
 msgstr "Field Matches (kecocokan field)"
+
+msgid "Filter Options"
+msgstr "Opsi Filter"
 
 msgid ""
 "Find your cloud resources by selecting specific facets or by specifying\n"
@@ -417,6 +439,12 @@ msgstr "MTU"
 msgid "Maintenance Reason"
 msgstr "Maintenance Reason"
 
+msgid "Manage Favorite Queries"
+msgstr "Kelola Pertanyaan Favorit"
+
+msgid "Manage Favorites"
+msgstr "Kelola Favorit"
+
 msgid "Mapped Fixed IP Address"
 msgstr "Mapped Fixed IP Address (alamat IP tetap terpetakan)"
 
@@ -448,6 +476,9 @@ msgstr "More Actions..."
 msgid "Name"
 msgstr "Name (nama)"
 
+msgid "Name must not contain \"/\"."
+msgstr "Nama tidak boleh mengandung \"/\"."
+
 msgid "Network"
 msgstr "Network (jaringan)"
 
@@ -476,6 +507,9 @@ msgstr "Newest (terbaru)"
 
 msgid "No"
 msgstr "No"
+
+msgid "No favorites"
+msgstr "Tidak ada favorit"
 
 msgid "Node UUID"
 msgstr "Node UUID"
@@ -552,6 +586,9 @@ msgstr "Pending (tertunda)"
 msgid "Pending Delete"
 msgstr "Pending Delete"
 
+msgid "Periodically update search results"
+msgstr "Perbarui hasil pencarian secara berkala"
+
 msgid "Phrases"
 msgstr "Phrases (frase)"
 
@@ -600,6 +637,9 @@ msgstr "Provisioning State"
 msgid "Public"
 msgstr "Public (publik)"
 
+msgid "Queries"
+msgstr "Kueri"
+
 # auto translated by TM merge from project: horizon, version: master, DocId: openstack_dashboard/locale/djangojs
 msgid "Queued"
 msgstr "Queued"
@@ -624,6 +664,9 @@ msgstr "Rescue (menyelamatkan)"
 
 msgid "Reserved Characters"
 msgstr "Reserved Characters (karakter sudah dicadangkan)"
+
+msgid "Resource Type"
+msgstr "Tipe Sumber Daya"
 
 msgid "Result Limit"
 msgstr "Result Limit (batas hasil)"
@@ -674,6 +717,9 @@ msgstr "Security Group (kelompok keamanan)"
 msgid "Security Groups"
 msgstr "Security Groups (kelompok keamanan)"
 
+msgid "Select sort"
+msgstr "Pilih sort"
+
 msgid "Server Group"
 msgstr "Server Group"
 
@@ -694,6 +740,9 @@ msgstr "Shelved"
 
 msgid "Shelved Offloaded"
 msgstr "Shelved Offloaded"
+
+msgid "Show reason for search result"
+msgstr "Tampilkan alasan untuk hasil pencarian"
 
 msgid "Shutoff"
 msgstr "Shutoff (menutup)"
