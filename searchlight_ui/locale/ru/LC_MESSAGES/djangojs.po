@@ -7,16 +7,17 @@
 # Maxim Bozhenko <mbozhenko@gmail.com>, 2016. #zanata
 # Valentin Chikunov <vchikunov@hystax.com>, 2016. #zanata
 # Yulia Ryndenkova <yryndenkova@hystax.com>, 2016. #zanata
+# Roman Gorshunov <roman.gorshunov@att.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-11-07 07:24+0000\n"
+"POT-Creation-Date: 2019-07-18 09:46+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-10-12 02:57+0000\n"
-"Last-Translator: Aleksey Alekseenko <9118250541@mail.ru>\n"
+"PO-Revision-Date: 2019-08-05 01:14+0000\n"
+"Last-Translator: Roman Gorshunov <roman.gorshunov@att.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -41,6 +42,9 @@ msgstr "(Расширение)"
 msgid "-"
 msgstr "-"
 
+msgid "A name is required for your favorite."
+msgstr "Требуется указать имя закладки."
+
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "ALLOW %(type)s %(direction)s %(target)s"
@@ -50,6 +54,15 @@ msgstr "Действия"
 
 msgid "Active"
 msgstr "Активный"
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "Add Favorite"
+msgstr "Добавить закладку"
+
+msgid "Add Favorite Query"
+msgstr "Добавить запрос в закладки"
 
 msgid ""
 "Add a '+' or a '-' to indicate terms that must or must\n"
@@ -69,6 +82,9 @@ msgstr ""
 "Например, запрос 'web -(apache AND python)' найдет все что содержит 'web' "
 "но\n"
 "не содержит ни 'apache' ни 'python'."
+
+msgid "Address"
+msgstr "Адрес"
 
 msgid "Admin State"
 msgstr "Административное состояние"
@@ -167,11 +183,17 @@ msgstr ""
 msgid "Cancel"
 msgstr "Отменить"
 
+msgid "Chassis UUID"
+msgstr "UUID шасси"
+
 msgid "Close"
 msgstr "Закрыть"
 
 msgid "Consistency Group ID"
 msgstr "ID Группы согласования"
+
+msgid "Console Enabled?"
+msgstr "Консоль активирована?"
 
 msgid "Created"
 msgstr "Создано"
@@ -211,6 +233,9 @@ msgstr ""
 msgid "Default Network"
 msgstr "Сеть по умолчанию"
 
+msgid "Delete favorite"
+msgstr "Удалить закладку"
+
 msgid "Deleted"
 msgstr "Удалено"
 
@@ -230,8 +255,14 @@ msgstr "Отображаются %(numberDisplayed)s из %(total)s резуль
 msgid "Distributed"
 msgstr "Распределенный"
 
+msgid "Done"
+msgstr "Готово"
+
 msgid "Down"
 msgstr "Выключен"
+
+msgid "Down for Maintenance?"
+msgstr "Отлючен для техобслуживания?"
 
 msgid "Enable DHCP"
 msgstr "Разрешить DHCP"
@@ -263,6 +294,9 @@ msgstr "Аспекты"
 
 msgid "Field Matches"
 msgstr "Совпадение Полей"
+
+msgid "Filter Options"
+msgstr "Настройки фильтра"
 
 msgid ""
 "Find your cloud resources by selecting specific facets or by specifying\n"
@@ -346,6 +380,24 @@ msgstr "Режим IPv6 RA"
 msgid "Image Reference"
 msgstr "Ссылка на образ"
 
+msgid "Instance UUID"
+msgstr "UUID инстанса"
+
+msgid "Ironic Chassis"
+msgstr "Шасси Ironic"
+
+msgid "Ironic Node"
+msgstr "Нода Ironic"
+
+msgid "Ironic Nodes"
+msgstr "Ноды Ironic"
+
+msgid "Ironic Port"
+msgstr "Порт Ironic"
+
+msgid "Ironic Ports"
+msgstr "Порты Ironic"
+
 msgid "Key Pair"
 msgstr "Ключевая Пара"
 
@@ -354,6 +406,9 @@ msgstr "Ключевые Пары"
 
 msgid "Killed"
 msgstr "Убито"
+
+msgid "Last Error"
+msgstr "Последняя ошибка"
 
 msgid "Load Balancer Pool"
 msgstr "Пул балансировщика нагрузки"
@@ -372,6 +427,15 @@ msgstr "Локальных ГБ (всего)"
 
 msgid "MTU"
 msgstr "MTU"
+
+msgid "Maintenance Reason"
+msgstr "Причина технического обслуживания"
+
+msgid "Manage Favorite Queries"
+msgstr "Управление закладками запросов"
+
+msgid "Manage Favorites"
+msgstr "Управление закладками"
 
 msgid "Mapped Fixed IP Address"
 msgstr "Сопоставлен фиксированный IP-адрес"
@@ -400,6 +464,9 @@ msgstr "Дополнительные Действия..."
 msgid "Name"
 msgstr "Имя"
 
+msgid "Name must not contain \"/\"."
+msgstr "Имя не может содержать \"/\"."
+
 msgid "Network"
 msgstr "Сеть"
 
@@ -415,11 +482,23 @@ msgstr "Мониторы работоспособности сети"
 msgid "Network ID"
 msgstr "ИД сети"
 
+msgid "Network Interface"
+msgstr "Сетевой интерфейс"
+
 msgid "Networks"
 msgstr "Сети"
 
 msgid "Newest"
 msgstr "Новые"
+
+msgid "No"
+msgstr "Нет"
+
+msgid "No favorites"
+msgstr "Нет закладок"
+
+msgid "Node UUID"
+msgstr "UUID ноды"
 
 msgid "Object"
 msgstr "Объект"
@@ -439,11 +518,20 @@ msgstr "Объект Контейнеров"
 msgid "Objects"
 msgstr "Объекты"
 
+msgid "Off"
+msgstr "Выключен"
+
 msgid "Oldest"
 msgstr "Старые"
 
+msgid "On"
+msgstr "Включен"
+
 msgid "Owned by Me"
 msgstr "Принадлежащие мне"
+
+msgid "PXE Enabled?"
+msgstr "Включен PXE?"
 
 msgid "Past 10 Minutes"
 msgstr "Последние 10 минут"
@@ -477,6 +565,9 @@ msgstr "Ожидание"
 
 msgid "Pending Delete"
 msgstr "Ожидает удаления"
+
+msgid "Periodically update search results"
+msgstr "Обновлять результаты поиска"
 
 msgid "Phrases"
 msgstr "Фразы"
@@ -520,8 +611,14 @@ msgstr "Физическая сеть провайдера"
 msgid "Provider Segmentation ID"
 msgstr "ID сегмента провайдера"
 
+msgid "Provisioning State"
+msgstr "Статус развертывания"
+
 msgid "Public"
 msgstr "Публичный"
+
+msgid "Queries"
+msgstr "Запросы"
 
 msgid "Queued"
 msgstr "Запланировано"
@@ -531,6 +628,9 @@ msgstr "ОЗУ"
 
 msgid "Range Queries"
 msgstr "Очереди диапазона"
+
+msgid "Rebooting"
+msgstr "Перезагрузка"
 
 msgid "Relevancy"
 msgstr "Релевантность"
@@ -543,6 +643,9 @@ msgstr "Безопасный режим"
 
 msgid "Reserved Characters"
 msgstr "Зарезервированные символы"
+
+msgid "Resource Type"
+msgstr "Тип ресурса"
 
 msgid "Result Limit"
 msgstr "Число результатов"
@@ -588,6 +691,9 @@ msgstr "Группа безопасности"
 msgid "Security Groups"
 msgstr "Группы безопасности"
 
+msgid "Select sort"
+msgstr "Отсортировать"
+
 msgid "Server Group"
 msgstr "Группа серверов"
 
@@ -608,6 +714,9 @@ msgstr "Отложен"
 
 msgid "Shelved Offloaded"
 msgstr "Отложен и выгружен"
+
+msgid "Show reason for search result"
+msgstr "Показать настройку поиска"
 
 msgid "Shutoff"
 msgstr "Отключение"
@@ -648,6 +757,12 @@ msgstr "Приостановлено"
 msgid "Swap"
 msgstr "Подкачка"
 
+msgid "Target Power State"
+msgstr "Целевое состояние"
+
+msgid "Target Provisioning State"
+msgstr "Целевой статус развертывания"
+
 msgid "Term Operators"
 msgstr "Операторы параметра запроса"
 
@@ -677,6 +792,9 @@ msgstr "Передача"
 
 msgid "Type"
 msgstr "Тип"
+
+msgid "UUID"
+msgstr "UUID"
 
 msgid "Unable to execute the search."
 msgstr "Не удается выполнить поиск."
@@ -765,6 +883,9 @@ msgstr ""
 
 msgid "Wildcards"
 msgstr "Символы подстановки"
+
+msgid "Yes"
+msgstr "Да"
 
 msgid "You are not allowed to perform this request."
 msgstr "Вам не разрешено выполнять этот запрос."
