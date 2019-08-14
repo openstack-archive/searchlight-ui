@@ -1,15 +1,16 @@
 # Aleksey Alekseenko <9118250541@mail.ru>, 2016. #zanata
 # Alexander <ainikitenkov@gmail.com>, 2016. #zanata
+# Roman Gorshunov <roman.gorshunov@att.com>, 2019. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Searchlight UI Release Notes\n"
+"Project-Id-Version: searchlight-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 19:19+0000\n"
+"POT-Creation-Date: 2019-08-06 08:04+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-10-19 02:48+0000\n"
-"Last-Translator: Aleksey Alekseenko <9118250541@mail.ru>\n"
+"PO-Revision-Date: 2019-08-13 06:27+0000\n"
+"Last-Translator: Roman Gorshunov <roman.gorshunov@att.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -28,15 +29,42 @@ msgstr "Унифицированная межресурная панель по�
 msgid "Cinder volumes and snapshots summary view"
 msgstr "Сводка по дискам и снимкам Cinder"
 
+msgid "Current Series Release Notes"
+msgstr "Примечания к текущему релизу"
+
 msgid "Glance images summary view"
 msgstr "Сводка по образам Glance"
 
+msgid "Mitaka Series Release Notes"
+msgstr "Примечания к релизу Mitaka"
+
 msgid "New Features"
-msgstr "Новые Свойства"
+msgstr "Новый функционал"
+
+msgid "Newton Series Release Notes"
+msgstr "Примечания к релизу Newton"
+
+msgid "Ocata Series Release Notes"
+msgstr "Примечания к релизу Ocata"
 
 msgid "Persistent search settings"
 msgstr "Постоянные настройки поиска"
 
+msgid "Pike Series Release Notes"
+msgstr "Примечания к релизу Pike"
+
+msgid "Prelude"
+msgstr "Введение"
+
+msgid "Queens Series Release Notes"
+msgstr "Примечания к релизу Queens"
+
+msgid "Searchlight Release Notes"
+msgstr "Примечания о панели Searchlight"
+
 msgid "Sort by relevancy, last updated, alphabetical"
 msgstr ""
 "Отсортировано по релевантности, последнему обновлению, в алфавитном порядке"
+
+msgid "Stein Series Release Notes"
+msgstr "Примечания к релизу Stein"
