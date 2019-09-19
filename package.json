@@ -19,7 +19,7 @@
     "karma-threshold-reporter": "0.1.15"
   },
   "scripts": {
-    "postinstall": "if [ ! -d .tox ] || [ ! -d .tox/npm ]; then tox -e npm --notest; python3 -m pip install -U -t ./.tox/npm/lib/`python3 -V|tr -d ' '|tr 'P' 'p'|cut -c -9`/site-packages/ -chttps://opendev.org/openstack/requirements/raw/branch/master/upper-constraints.txt ../horizon; fi",
+    "postinstall": "if [ ! -d .tox ] || [ ! -d .tox/npm ]; then tox -e npm --notest; python3 -m pip install -U -t ./.tox/npm/lib/`python3 -V|tr -d ' '|tr 'P' 'p'|cut -c -9`/site-packages/ -chttps://releases.openstack.org/constraints/upper/master ../horizon; fi",
     "test": "karma start searchlight_ui/karma.conf.js --single-run",
     "lint": "eslint --no-color searchlight_ui/static"
   },
