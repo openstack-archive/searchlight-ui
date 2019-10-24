@@ -22,7 +22,8 @@ sys.path.insert(0, os.path.abspath('../..'))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'openstackdocstheme'
+    'openstackdocstheme',
+    'sphinxcontrib.rsvgconverter'
 ]
 
 # autodoc generation is a bit aggressive and a nuisance when doing heavy
@@ -61,14 +62,28 @@ html_theme = 'openstackdocs'
 # Output file base name for HTML help builder.
 htmlhelp_basename = '%sdoc' % project
 
+# Disable usage of xindy https://bugzilla.redhat.com/show_bug.cgi?id=1643664
+latex_use_xindy = False
+
+latex_domain_indices = False
+
+latex_elements = {
+    # Additional stuff for the LaTeX preamble.
+    # openany: Skip blank pages in generated PDFs
+    'extraclassoptions': 'openany,oneside',
+    'makeindex': '',
+    'printindex': '',
+    'preamble': r'\setcounter{tocdepth}{3}',
+}
+
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass
 # [howto/manual]).
 latex_documents = [
     ('index',
-     '%s.tex' % project,
+     'doc-%s.tex' % project,
      u'%s Documentation' % project,
-     u'OpenStack Foundation', 'manual'),
+     u'OpenStack Foundation', 'manual', True),
 ]
 
 man_pages = [
