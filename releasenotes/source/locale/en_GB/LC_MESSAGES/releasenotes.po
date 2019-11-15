@@ -1,15 +1,16 @@
 # Andi Chandler <andi@gowling.com>, 2016. #zanata
 # Andi Chandler <andi@gowling.com>, 2017. #zanata
 # Andi Chandler <andi@gowling.com>, 2018. #zanata
+# Andi Chandler <andi@gowling.com>, 2019. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Searchlight UI Release Notes\n"
+"Project-Id-Version: searchlight-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 19:19+0000\n"
+"POT-Creation-Date: 2019-10-28 06:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-03-02 12:01+0000\n"
+"PO-Revision-Date: 2019-11-14 11:30+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -21,6 +22,9 @@ msgstr "0.1.0"
 
 msgid "1.0.0"
 msgstr "1.0.0"
+
+msgid "7.0.0-6"
+msgstr "7.0.0-6"
 
 msgid "A unified cross resource search panel for the Mitaka release"
 msgstr "A unified cross resource search panel for the Mitaka release"
@@ -78,6 +82,13 @@ msgstr "Pike Series Release Notes"
 msgid "Prelude"
 msgstr "Prelude"
 
+msgid ""
+"Python 2.7 support has been dropped. The minimum version of Python now "
+"supported by searchlight-ui is Python 3.6."
+msgstr ""
+"Python 2.7 support has been dropped. The minimum version of Python now "
+"supported by Searchlight-UI is Python 3.6."
+
 msgid "Queens Series Release Notes"
 msgstr "Queens Series Release Notes"
 
@@ -115,6 +126,9 @@ msgstr ""
 msgid "Sort by relevancy, last updated, alphabetical"
 msgstr "Sort by relevancy, last updated, alphabetical"
 
+msgid "Stein Series Release Notes"
+msgstr "Stein Series Release Notes"
+
 msgid ""
 "The search panel shows a resource type's registered drawer, or a searchlight-"
 "specific default drawer if none."
@@ -122,8 +136,14 @@ msgstr ""
 "The search panel shows a resource type's registered drawer, or a searchlight-"
 "specific default drawer if none."
 
+msgid "Train Series Release Notes"
+msgstr "Train Series Release Notes"
+
 msgid "Translation build support"
 msgstr "Translation build support"
+
+msgid "Upgrade Notes"
+msgstr "Upgrade Notes"
 
 msgid ""
 "sl-drawer widget produces markup to use/display a standard Horizon drawer"
