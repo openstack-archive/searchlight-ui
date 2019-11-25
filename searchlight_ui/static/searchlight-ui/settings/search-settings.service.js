@@ -143,7 +143,7 @@
     }
 
     function initPlugins() {
-      searchlight.getPlugins().success(pluginsReceived);
+      searchlight.getPlugins().then(pluginsReceived);
 
       function pluginsReceived(response) {
         service.settings.availablePlugins = response.plugins;

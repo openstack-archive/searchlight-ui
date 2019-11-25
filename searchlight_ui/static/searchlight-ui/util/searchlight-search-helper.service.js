@@ -89,7 +89,7 @@
 
       searchlight
         .postSearch(searchlightQuery, true)
-        .success(function (response) {
+        .then(function (response) {
           deferred.resolve(onSearchSuccess(response));
         })
         .error(function (response) {

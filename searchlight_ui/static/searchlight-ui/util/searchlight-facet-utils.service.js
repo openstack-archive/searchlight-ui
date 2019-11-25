@@ -138,7 +138,7 @@
       }
 
       if (!hasResourceTypeFacets(resourceType, allFacetDefinitions)) {
-        searchlight.getFacets({type: resourceType}).success(updateAvailableFacetsForType);
+        searchlight.getFacets({type: resourceType}).then(updateAvailableFacetsForType);
       }
 
       function updateAvailableFacetsForType(response) {
