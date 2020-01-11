@@ -17,7 +17,6 @@ from django.views import generic
 import functools
 import requests
 from requests import exceptions as r_exceptions
-import six
 
 from oslo_serialization import jsonutils
 
@@ -153,11 +152,11 @@ class Facets(generic.View):
             return facet_res
 
         # Check for old-format responses
-        first_value = six.itervalues(facet_res).next()
+        first_value = facet_res.values().next()
         if isinstance(first_value, list):
             # Old-style
             return {rt: {'facets': val}
-                    for rt, val in six.iteritems(facet_res)}
+                    for rt, val in facet_res.items()}
         return facet_res
 
 
