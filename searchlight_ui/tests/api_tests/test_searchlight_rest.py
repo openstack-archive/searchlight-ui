@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import mock
+from unittest import mock
+
 from openstack_dashboard.test import helpers as test
 
 from searchlight_ui.api.rest import searchlight
