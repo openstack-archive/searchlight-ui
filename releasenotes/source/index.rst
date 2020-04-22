@@ -7,6 +7,7 @@
 
    mitaka
    unreleased
+   ussuri
    train
    stein
    queens
