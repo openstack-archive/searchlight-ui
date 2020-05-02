@@ -42,7 +42,7 @@ function configure_searchlight_ui {
     # NOTE: If locale directory does not exist, compilemessages will fail,
     # so check for an existence of locale directory is required.
     if [ -d ${SEARCHLIGHT_UI_DIR}/searchlight_ui/locale ]; then
-        (cd ${SEARCHLIGHT_UI_DIR}/searchlight_ui; DJANGO_SETTINGS_MODULE=openstack_dashboard.settings ../manage.py compilemessages)
+        (cd ${SEARCHLIGHT_UI_DIR}/searchlight_ui; DJANGO_SETTINGS_MODULE=openstack_dashboard.settings python3 ../manage.py compilemessages)
     fi
 }
 
