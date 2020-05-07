@@ -8,21 +8,23 @@
 # Taekho Nam <career.thnam@gmail.com>, 2016. #zanata
 # skywalker54 <shpark@rockplace.co.kr>, 2016. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
-# SeongSoo Cho <nexusz99@gmail.com>, 2017. #zanata
+# SeongSoo Cho <ppiyakk2@printf.kr>, 2017. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2017. #zanata
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
 # Jaewook Oh <kyle.oh95@gmail.com>, 2018. #zanata
+# SEEUNG KANG <seeung0305@naver.com>, 2018. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2018. #zanata
+# Ian Y. Choi <ianyrchoi@gmail.com>, 2020. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: searchlight-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-11-07 07:24+0000\n"
+"POT-Creation-Date: 2020-05-03 12:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-10-21 07:59+0000\n"
-"Last-Translator: Sungjin Kang <gang.sungjin@gmail.com>\n"
+"PO-Revision-Date: 2020-05-05 11:55+0000\n"
+"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -46,6 +48,9 @@ msgstr "(확장)"
 msgid "-"
 msgstr "-"
 
+msgid "A name is required for your favorite."
+msgstr "즐겨찾기에 이름은 필수 항목입니다."
+
 #, python-format
 msgid "ALLOW %(type)s %(direction)s %(target)s"
 msgstr "%(type)s %(direction)s %(target)s 허용"
@@ -55,6 +60,15 @@ msgstr "작업"
 
 msgid "Active"
 msgstr "Active"
+
+msgid "Add"
+msgstr "추가"
+
+msgid "Add Favorite"
+msgstr "즐겨찾기 추가"
+
+msgid "Add Favorite Query"
+msgstr "즐겨찾기 쿼리 추가"
 
 msgid ""
 "Add a '+' or a '-' to indicate terms that must or must\n"
@@ -221,6 +235,9 @@ msgstr ""
 msgid "Default Network"
 msgstr "기본 네트워크"
 
+msgid "Delete favorite"
+msgstr "즐겨찾기 삭제"
+
 msgid "Deleted"
 msgstr "삭제됨"
 
@@ -239,6 +256,9 @@ msgstr "전체 결과 %(total)s 에서 %(numberDisplayed)s 를 표시"
 
 msgid "Distributed"
 msgstr "분산"
+
+msgid "Done"
+msgstr "완료"
 
 msgid "Down"
 msgstr "Down"
@@ -276,6 +296,9 @@ msgstr "Facets"
 
 msgid "Field Matches"
 msgstr "필드 일치"
+
+msgid "Filter Options"
+msgstr "필터 옵션"
 
 msgid ""
 "Find your cloud resources by selecting specific facets or by specifying\n"
@@ -410,6 +433,12 @@ msgstr "MTU"
 msgid "Maintenance Reason"
 msgstr "유지보수 사유"
 
+msgid "Manage Favorite Queries"
+msgstr "즐겨찾기 쿼리 관리"
+
+msgid "Manage Favorites"
+msgstr "즐겨찾기 관리"
+
 msgid "Mapped Fixed IP Address"
 msgstr "Fixed IP 주소 맵핑함"
 
@@ -437,6 +466,9 @@ msgstr "기타 작업..."
 msgid "Name"
 msgstr "이름"
 
+msgid "Name must not contain \"/\"."
+msgstr "이름에 \"/\"가 포함되지 않아야 합니다."
+
 msgid "Network"
 msgstr "네트워크"
 
@@ -463,6 +495,9 @@ msgstr "새로운"
 
 msgid "No"
 msgstr "아니오"
+
+msgid "No favorites"
+msgstr "즐겨찾기 없음"
 
 msgid "Node UUID"
 msgstr "UUID 노드 "
@@ -533,6 +568,9 @@ msgstr "대기중"
 msgid "Pending Delete"
 msgstr "Pending Delete"
 
+msgid "Periodically update search results"
+msgstr "검색 결과에 대한 주기적인 업데이트"
+
 msgid "Phrases"
 msgstr "구"
 
@@ -581,6 +619,9 @@ msgstr "권한설정 상태"
 msgid "Public"
 msgstr "공용"
 
+msgid "Queries"
+msgstr "쿼리"
+
 msgid "Queued"
 msgstr "Queued"
 
@@ -604,6 +645,9 @@ msgstr "복구"
 
 msgid "Reserved Characters"
 msgstr "예약된 문자"
+
+msgid "Resource Type"
+msgstr "자원 유형"
 
 msgid "Result Limit"
 msgstr "결과 제한"
@@ -648,6 +692,9 @@ msgstr "보안 그룹"
 msgid "Security Groups"
 msgstr "보안 그룹"
 
+msgid "Select sort"
+msgstr "정렬 선택"
+
 msgid "Server Group"
 msgstr "서버 그룹"
 
@@ -668,6 +715,9 @@ msgstr "Shelved"
 
 msgid "Shelved Offloaded"
 msgstr "Shelved Offloaded"
+
+msgid "Show reason for search result"
+msgstr "검색 결과에 대한 이유 표시"
 
 msgid "Shutoff"
 msgstr "Shutoff"
