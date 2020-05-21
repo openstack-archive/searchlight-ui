@@ -95,7 +95,7 @@ exclude_patterns = []
 # show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'native'
 
 # A list of ignored prefixes for module index sorting.
 # modindex_common_prefix = []
@@ -103,6 +103,10 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 # keep_warnings = False
 
+# openstackdocstheme options
+openstackdocs_repo_name = 'openstack/searchlight-ui'
+openstackdocs_use_storyboard = True
+openstackdocs_auto_name = False
 
 # -- Options for HTML output ----------------------------------------------
 
