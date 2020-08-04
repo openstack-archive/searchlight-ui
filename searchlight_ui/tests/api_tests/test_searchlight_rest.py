@@ -44,7 +44,7 @@ class SearchlightRestTestCase(test.TestCase):
     @mock.patch.object(searchlight, 'searchlight_post')
     def test_run_search(self, sl_post):
         sl_post.return_value = mock_es_search
-        request = self.mock_rest_request(body='''{"limit": 100,
+        request = self.mock_rest_request(body='''{
             "query": {"term": {"name": "foo"}}, "offset": 10,
             "limit": 20, "sort": {"name": "desc"}}''')
 
@@ -53,7 +53,6 @@ class SearchlightRestTestCase(test.TestCase):
         self.assertEqual(mock_response, response.json)
 
         expected_search = {
-            'limit': 100,
             'offset': 10,
             'limit': 20,
             'query': {'term': {'name': 'foo'}},
