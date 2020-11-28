@@ -1,28 +1,10 @@
-========================
-Team and repository tags
-========================
+This project is no longer maintained.
 
-.. image:: https://governance.openstack.org/tc/badges/searchlight-ui.svg
-    :target: https://governance.openstack.org/tc/reference/tags/index.html
+The contents of this repository are still available in the Git
+source code management system.  To see the contents of this
+repository before it reached its end of life, please check out the
+previous commit with "git checkout HEAD^1".
 
-.. Change things from this point on
-
-==============
-searchlight-ui
-==============
-
-Horizon panels and libraries for searchlight
-
-* Free software: Apache license
-* Documentation: https://docs.openstack.org/searchlight-ui/latest/
-* Source: https://opendev.org/openstack/searchlight-ui
-* Bugs: https://storyboard.openstack.org/#!/project_group/searchlight
-* Release notes: https://docs.openstack.org/releasenotes/searchlight-ui/
-
-The Searchlight project provides indexing and search capabilities across
-OpenStack resources. Its goal is to achieve high performance and flexible
-querying combined with near real-time indexing.
-
-Use the following resources to learn more:
-
-* `Official Searchlight documentation <https://docs.openstack.org/searchlight/latest/>`_
+For any further questions, please email
+openstack-discuss@lists.openstack.org or join #openstack-dev on
+Freenode.
